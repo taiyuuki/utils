@@ -16,7 +16,7 @@
     "dev": "rollup -c --watch",
     "build": "rollup -c",
     "test": "vitest",
-    "publish": "publish --registry=https://registry.npmjs.org --access=public"
+    "publish": "npm publish --registry=https://registry.npmjs.org --access=public"
   },
   "keywords": [],
   "sideEffects": false,
