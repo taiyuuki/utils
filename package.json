@@ -1,6 +1,6 @@
 {
   "name": "@taiyuuki/utils",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Utils by Taiyuuki",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
@@ -15,7 +15,8 @@
     "lint": "eslint --ext .js,.ts ./",
     "dev": "rollup -c --watch",
     "build": "rollup -c",
-    "test": "vitest"
+    "test": "vitest",
+    "publish": "publish --registry=https://registry.npmjs.org --access=public"
   },
   "keywords": [],
   "sideEffects": false,

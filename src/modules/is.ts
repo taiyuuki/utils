@@ -31,19 +31,19 @@ export function isNumber(n: any): n is number {
 }
 
 /**
- * 判断是否是空值，空值包括null、undefined，不包括NaN
- * @category is
- */
-export function isNotVoid<T>(t: T): t is NonNullable<T> {
-  return t !== void 0 && t !== null
-}
-
-/**
- * 判断是否是空值，空值包括null、undefined，不包括NaN
+ * 判断是否是空值，空值包括null、undefined、NaN
  * @category is
  */
 export function isVoid(t: any): t is null | undefined {
-  return t === void 0 || t === null
+  return t === void 0 || t === null || isNaN(t)
+}
+
+/**
+ * 判断是否是空值，空值包括null、undefined、NaN
+ * @category is
+ */
+export function isNotVoid<T>(t: T): t is NonNullable<T> {
+  return !isVoid(t)
 }
 
 /**

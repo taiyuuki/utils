@@ -1,10 +1,10 @@
-import { isNotVoid } from '../is'
+import { isNotVoid } from './is'
 
 /**
  * 函数节流
  * @category function
  */
-export function throttle<T extends(...args: unknown[]) => unknown>(
+export function throttle<T extends (...args: unknown[]) => unknown>(
   func: T,
   timeFrame: number,
   immediately?: boolean
@@ -34,7 +34,7 @@ export function throttle<T extends(...args: unknown[]) => unknown>(
  * 函数防抖
  * @category function
  */
-export function debounce<T extends(...args: unknown[]) => unknown>(
+export function debounce<T extends (...args: unknown[]) => unknown>(
   func: T,
   timeFrame: number,
 ) {
@@ -47,4 +47,16 @@ export function debounce<T extends(...args: unknown[]) => unknown>(
     }
     lastTime = now
   } as T
+}
+
+/**
+ * 函数值组合，前一个函数的返回值作为下一个函数的参数
+ * @category function
+ */
+export function compose<T extends (...args: any[]) => any>(...fns: T[]) {
+  return function (arg: unknown) {
+    return fns.reduce((pre, fn) => {
+      return fn(pre)
+    }, arg)
+  }
 }

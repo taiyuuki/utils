@@ -10,7 +10,7 @@ describe('is', () => {
 
     expect(isVoid(null)).toEqual(true)
     expect(isVoid(undefined)).toEqual(true)
-    expect(isVoid(NaN)).toEqual(false)
+    expect(isVoid(NaN)).toEqual(true)
     expect(isVoid(0)).toEqual(false)
     expect(isVoid('')).toEqual(false)
 

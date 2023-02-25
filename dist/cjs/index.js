@@ -2,34 +2,37 @@
 
 Object.defineProperty(exports, '__esModule', { value: true });
 
-var index = require('./modules/array/index.js');
-var index$1 = require('./modules/function/index.js');
-var index$2 = require('./modules/is/index.js');
-var index$3 = require('./modules/math/index.js');
-var index$4 = require('./modules/overwrite/index.js');
-var index$5 = require('./modules/string/index.js');
+var array = require('./modules/array.js');
+var equal = require('./modules/equal.js');
+var _function = require('./modules/function.js');
+var is = require('./modules/is.js');
+var math = require('./modules/math.js');
+var obj = require('./modules/obj.js');
+var string = require('./modules/string.js');
 
 
 
-exports.arrMove = index.arrMove;
-exports.arrRandom = index.arrRandom;
-exports.arrRemove = index.arrRemove;
-exports.arrToObj = index.arrToObj;
-exports.arrUniq = index.arrUniq;
-exports.debounce = index$1.debounce;
-exports.throttle = index$1.throttle;
-exports.isDate = index$2.isDate;
-exports.isEmptyArray = index$2.isEmptyArray;
-exports.isEmptyObj = index$2.isEmptyObj;
-exports.isEmptyString = index$2.isEmptyString;
-exports.isNotVoid = index$2.isNotVoid;
-exports.isNumber = index$2.isNumber;
-exports.isObject = index$2.isObject;
-exports.isRegexp = index$2.isRegexp;
-exports.isVoid = index$2.isVoid;
-exports.mathBetween = index$3.mathBetween;
-exports.mathRandomInt = index$3.mathRandomInt;
-exports.mathToFixed = index$3.mathToFixed;
-exports.getKeys = index$4.getKeys;
-exports.strRandom = index$5.strRandom;
-exports.strUuid = index$5.strUuid;
+exports.arrMove = array.arrMove;
+exports.arrRandom = array.arrRandom;
+exports.arrRemove = array.arrRemove;
+exports.arrToObj = array.arrToObj;
+exports.arrUnique = array.arrUnique;
+exports.deepEqual = equal.deepEqual;
+exports.compose = _function.compose;
+exports.debounce = _function.debounce;
+exports.throttle = _function.throttle;
+exports.isDate = is.isDate;
+exports.isEmptyArray = is.isEmptyArray;
+exports.isEmptyObj = is.isEmptyObj;
+exports.isEmptyString = is.isEmptyString;
+exports.isNotVoid = is.isNotVoid;
+exports.isNumber = is.isNumber;
+exports.isObject = is.isObject;
+exports.isRegexp = is.isRegexp;
+exports.isVoid = is.isVoid;
+exports.mathBetween = math.mathBetween;
+exports.mathRandomInt = math.mathRandomInt;
+exports.mathToFixed = math.mathToFixed;
+exports.getKeys = obj.getKeys;
+exports.strRandom = string.strRandom;
+exports.strUuid = string.strUuid;

@@ -1,4 +1,4 @@
-import { arrMove, arrRemove, arrToObj, arrUniq } from '../src/modules/array'
+import { arrMove, arrRemove, arrToObj, arrUnique } from '../src/modules/array'
 import { describe, expect, it } from 'vitest'
 
 describe('array', () => {
@@ -13,7 +13,7 @@ describe('array', () => {
   })
 
   it('数组去重', () => {
-    expect(arrUniq([1, 1, 2, 3, 4, 'abc', 'xyz', 0, 1, 'abc'])).toMatchInlineSnapshot(`
+    expect(arrUnique([1, 1, 2, 3, 4, 'abc', 'xyz', 0, 1, 'abc'])).toMatchInlineSnapshot(`
       [
         1,
         2,

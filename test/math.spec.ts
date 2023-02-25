@@ -1,6 +1,6 @@
 import { mathToFixed, mathRandomInt, mathBetween } from '../src/modules/math'
 import { describe, expect, it } from 'vitest'
-import { getKeys } from '../src/modules/overwrite'
+import { getKeys } from '../src/modules/obj'
 
 describe('math', () => {
   it('四舍五入', () => {

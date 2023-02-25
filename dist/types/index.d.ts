@@ -19,7 +19,7 @@ declare function arrToObj<T extends Array<string | number>, V = boolean>(a: T, v
  * 数组去重
  * @category array
  */
-declare function arrUniq<T>(array: T[]): T[];
+declare function arrUnique<T>(array: T[]): T[];
 /**
  * 移除数组中的一项
  * @category array
@@ -36,6 +36,8 @@ declare function arrMove<T extends any[]>(arr: T, from: number, to: number): T;
  */
 declare function arrRandom<T>(arr: T[]): T;
 
+declare function deepEqual(a: any, b: any): boolean;
+
 /**
  * 函数节流
  * @category function
@@ -46,6 +48,11 @@ declare function throttle<T extends (...args: unknown[]) => unknown>(func: T, ti
  * @category function
  */
 declare function debounce<T extends (...args: unknown[]) => unknown>(func: T, timeFrame: number): T;
+/**
+ * 函数值组合，前一个函数的返回值作为下一个函数的参数
+ * @category function
+ */
+declare function compose<T extends (...args: any[]) => any>(...fns: T[]): (arg: unknown) => unknown;
 
 /**
  * 判断是否是对象，不包括数组和null
@@ -68,15 +75,15 @@ declare function isRegexp(r: any): r is RegExp;
  */
 declare function isNumber(n: any): n is number;
 /**
- * 判断是否是空值，空值包括null、undefined，不包括NaN
- * @category is
- */
-declare function isNotVoid<T>(t: T): t is NonNullable<T>;
-/**
- * 判断是否是空值，空值包括null、undefined，不包括NaN
+ * 判断是否是空值，空值包括null、undefined、NaN
  * @category is
  */
 declare function isVoid(t: any): t is null | undefined;
+/**
+ * 判断是否是空值，空值包括null、undefined、NaN
+ * @category is
+ */
+declare function isNotVoid<T>(t: T): t is NonNullable<T>;
 /**
  * 判断是否是空字符串
  * @category is
@@ -115,7 +122,7 @@ declare function mathBetween(v: number, min: number, max: number): number;
 
 /**
  * Object.keys的返回值，提供类型推断
- * @category overwrite
+ * @category obj
  */
 declare function getKeys<T extends Record<any, any>>(o: T): UnionToTuple<keyof T>;
 
@@ -136,4 +143,4 @@ declare function strRandom(count: number, digit?: number): string;
  */
 declare function strUuid(): string;
 
-export { arrMove, arrRandom, arrRemove, arrToObj, arrUniq, debounce, getKeys, isDate, isEmptyArray, isEmptyObj, isEmptyString, isNotVoid, isNumber, isObject, isRegexp, isVoid, mathBetween, mathRandomInt, mathToFixed, strRandom, strUuid, throttle };
+export { arrMove, arrRandom, arrRemove, arrToObj, arrUnique, compose, debounce, deepEqual, getKeys, isDate, isEmptyArray, isEmptyObj, isEmptyString, isNotVoid, isNumber, isObject, isRegexp, isVoid, mathBetween, mathRandomInt, mathToFixed, strRandom, strUuid, throttle };

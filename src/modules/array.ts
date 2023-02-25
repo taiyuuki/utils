@@ -1,5 +1,5 @@
-import { mathRandomInt } from '../math'
-import type { TupleToObject } from '../../types'
+import { mathRandomInt } from './math'
+import type { TupleToObject } from '../types'
 
 /**
  * 将数组转换为对象
@@ -17,7 +17,7 @@ export function arrToObj<T extends Array<string | number>, V = boolean>(a: T, v 
  * 数组去重
  * @category array
  */
-export function arrUniq<T>(array: T[]): T[] {
+export function arrUnique<T>(array: T[]): T[] {
   return Array.from(new Set(array))
 }
 

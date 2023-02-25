@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { getKeys } from '../src/modules/overwrite'
+import { getKeys } from '../src/modules/obj'
 
 describe('overwrite', () => {
   const t1 = {
