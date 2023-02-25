@@ -1,5 +1,5 @@
 import { mathRandomInt } from '../math'
-import type { TupleToObject } from 'src/types'
+import type { TupleToObject } from '../../types'
 
 /**
  * 将数组转换为对象
@@ -17,7 +17,7 @@ export function arrToObj<T extends Array<string | number>, V = boolean>(a: T, v 
  * 数组去重
  * @category array
  */
-export function arrUniq<T extends any[]>(array: T): T[] {
+export function arrUniq<T>(array: T[]): T[] {
   return Array.from(new Set(array))
 }
 
@@ -26,7 +26,7 @@ export function arrUniq<T extends any[]>(array: T): T[] {
  * @category array
  */
 export function arrRemove<T>(array: T[], value: T) {
-  if (!array) {return false}
+  if (!array) { return false }
   const index = array.indexOf(value)
   if (index >= 0) {
     array.splice(index, 1)

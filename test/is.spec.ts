@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { isNotVoid, isVoid, isEmptyString, isEmptyArray, isEmptyObj, isObject, isDate, isRegexp, isNumber } from '../src'
+import { isNotVoid, isVoid, isEmptyString, isEmptyArray, isEmptyObj, isObject, isDate, isRegexp, isNumber } from '../src/modules/is'
 
 describe('is', () => {
   it('类型判断', () => {

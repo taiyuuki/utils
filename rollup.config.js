@@ -8,6 +8,7 @@ import builtins from 'rollup-plugin-node-builtins'
 import terser from '@rollup/plugin-terser'
 import json from '@rollup/plugin-json'
 import dts from 'rollup-plugin-dts'
+import { importExportPlugin } from 'rollup-plugin-import-export'
 
 const config = defineConfig([
   {
@@ -25,6 +26,7 @@ const config = defineConfig([
       },
     ],
     plugins: [
+      importExportPlugin(),
       ts(),
       babelPlugin({ exclude: '**/node_modules/**' }),
       json(),
@@ -41,6 +43,7 @@ const config = defineConfig([
       },
     ],
     plugins: [
+      importExportPlugin(),
       ts(),
       babelPlugin({ exclude: '**/node_modules/**' }),
       json(),
@@ -56,9 +59,11 @@ const config = defineConfig([
     output: {
       dir: 'dist/types',
       format: 'esm',
-      preserveModules: true,
     },
-    plugins: [dts()],
+    plugins: [
+      importExportPlugin(),
+      dts(),
+    ],
   },
 ])
 

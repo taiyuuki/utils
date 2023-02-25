@@ -1,4 +1,4 @@
-import { arrMove, arrRemove, arrToObj, arrUniq } from '../src/array'
+import { arrMove, arrRemove, arrToObj, arrUniq } from '../src/modules/array'
 import { describe, expect, it } from 'vitest'
 
 describe('array', () => {

@@ -12,6 +12,7 @@ specifiers:
   eslint: ^8.10.0
   rollup: ^2.79.0
   rollup-plugin-dts: ^4.2.2
+  rollup-plugin-import-export: ^0.0.1
   rollup-plugin-node-builtins: ^2.1.2
   rollup-plugin-node-globals: ^1.4.0
   rollup-plugin-typescript2: ^0.34.0
@@ -30,6 +31,7 @@ devDependencies:
   eslint: 8.34.0
   rollup: 2.79.1
   rollup-plugin-dts: 4.2.3_zptcx3kz3uwp66hzhyyt545weq
+  rollup-plugin-import-export: 0.0.1
   rollup-plugin-node-builtins: 2.1.2
   rollup-plugin-node-globals: 1.4.0
   rollup-plugin-typescript2: 0.34.1_zptcx3kz3uwp66hzhyyt545weq
@@ -2903,6 +2905,10 @@ packages:
       typescript: 4.9.5
     optionalDependencies:
       '@babel/code-frame': 7.18.6
+    dev: true
+
+  /rollup-plugin-import-export/0.0.1:
+    resolution: {integrity: sha512-LeuMxKa2HfI+6aql2G5wyzYVypDG6lIz7vugdmVnrG8al3nr0Ps6yAeyHsUPr8DxlMJO89RGqIbtGds2OVH0mw==}
     dev: true
 
   /rollup-plugin-node-builtins/2.1.2:

@@ -31,7 +31,7 @@ export function isNumber(n: any): n is number {
 }
 
 /**
- * 判断是否是空值，包括null、undefined，不包括NaN
+ * 判断是否是空值，空值包括null、undefined，不包括NaN
  * @category is
  */
 export function isNotVoid<T>(t: T): t is NonNullable<T> {
@@ -39,7 +39,7 @@ export function isNotVoid<T>(t: T): t is NonNullable<T> {
 }
 
 /**
- * 判断是否是空值，包括null、undefined，不包括NaN
+ * 判断是否是空值，空值包括null、undefined，不包括NaN
  * @category is
  */
 export function isVoid(t: any): t is null | undefined {
@@ -52,7 +52,7 @@ export function isVoid(t: any): t is null | undefined {
  */
 export function isEmptyString(s: any, trim?: boolean) {
   if (typeof s === 'string') {
-    return trim === true ? s.trim() === '' : s === ''
+    return (trim === true ? s.trim() : s).length === 0
   }
   else {
     return false
@@ -64,7 +64,7 @@ export function isEmptyString(s: any, trim?: boolean) {
  * @category is
  */
 export function isEmptyArray(a: any): a is [] {
-  return a?.length === 0
+  return Array.isArray(a) ? a.length === 0 : false
 }
 
 /**

@@ -1,4 +1,4 @@
-import type { UnionToTuple } from '../types'
+import type { UnionToTuple } from '../../types'
 
 /**
  * Object.keys的返回值，提供类型推断

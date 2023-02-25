@@ -1,6 +1,6 @@
-import { mathToFixed, mathRandomInt } from '../src/math'
+import { mathToFixed, mathRandomInt, mathBetween } from '../src/modules/math'
 import { describe, expect, it } from 'vitest'
-import { getKeys } from '../src/overwrite'
+import { getKeys } from '../src/modules/overwrite'
 
 describe('math', () => {
   it('四舍五入', () => {
@@ -17,7 +17,7 @@ describe('math', () => {
       return `${i}`
     })
     const list = {} as Record<string, number>
-    for (let i = 0;i <= count;i++) {
+    for (let i = 0; i <= count; i++) {
       const n = mathRandomInt(0, 5)
       if (list[n] === void 0) {
         list[n] = 0
@@ -34,5 +34,14 @@ describe('math', () => {
       const r = mathToFixed((list[n] / count), 2)
       return numbers.includes(n) && r >= (1 / length) - 0.02 && r <= (1 / length) + 0.02
     })).equal(true)
+  })
+
+  it('两数之间', () => {
+    const a = 20, b = 100
+    expect(mathBetween(0, a, b)).equal(20)
+    expect(mathBetween(21, b, a)).equal(21)
+    expect(mathBetween(50, a, b)).equal(50)
+    expect(mathBetween(120, a, b)).equal(100)
+    expect(mathBetween(30, b, a)).equal(30)
   })
 })
