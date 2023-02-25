@@ -1,6 +1,6 @@
 /**
  * 四舍五入
- * @category math
+ * @kind math
  * @param digit 小数点后位数
  */
 export function mathToFixed(n: number, digit = 0) {
@@ -9,7 +9,7 @@ export function mathToFixed(n: number, digit = 0) {
 
 /**
  * 随机整数
- * @category math
+ * @kind math
  */
 export function mathRandomInt(from: number, to: number) {
   return parseInt(((Math.random() * (to - from + 1)) + from).toString())
@@ -17,7 +17,7 @@ export function mathRandomInt(from: number, to: number) {
 
 /**
  * 给定一个数字，返回一个保持位于两数之间的数
- * @category math
+ * @kind math
  * @param v 给定数字
  * @param min 下限
  * @param max 上限
@@ -27,4 +27,20 @@ export function mathBetween(v: number, min: number, max: number) {
     [min, max] = [max, min]
   }
   return Math.min(max, Math.max(min, v))
+}
+
+/**
+ * 为数字补0
+ * @kind math
+ */
+export function mathDigitComplement(n: number | string) {
+  return String(n).length === 1 ? `0${n}` : String(n)
+}
+
+/**
+ * 10进制转16进制
+ * @kind math
+ */
+export function mathToHex(n: number) {
+  return `${n > 15 ? '' : 0}${n.toString(16)}`
 }

@@ -1,8 +1,8 @@
 import { describe, expect, it } from 'vitest'
-import { isNotVoid, isVoid, isEmptyString, isEmptyArray, isEmptyObj, isObject, isDate, isRegexp, isNumber } from '../src/modules/is'
+import { isNotVoid, isVoid, isEmptyString, isEmptyArray, isEmptyObj, isObject, isDate, isRegexp, isNumber, isRgbColor, isHexColor } from '../src/modules/is'
 
 describe('is', () => {
-  it('类型判断', () => {
+  it('值判断', () => {
     expect(isNotVoid(null)).toEqual(false)
     expect(isNotVoid(undefined)).toEqual(false)
     expect(isNotVoid(0)).toEqual(true)
@@ -43,5 +43,17 @@ describe('is', () => {
     expect(isNumber(Number.MAX_SAFE_INTEGER)).toEqual(true)
     expect(isNumber(Number.NEGATIVE_INFINITY)).toEqual(false)
     expect(isNumber(Number.POSITIVE_INFINITY)).toEqual(false)
+
+    expect(isRgbColor([1, 2, 3])).toEqual(true)
+    expect(isRgbColor([100, 184, 300])).toEqual(false)
+    expect(isRgbColor([125, 200, 3])).toEqual(true)
+    expect(isRgbColor([32, 120, 3, 1])).toEqual(true)
+    expect(isRgbColor([25, 220, 3, 2])).toEqual(false)
+
+    expect(isHexColor('66ccff')).toEqual(true)
+    expect(isHexColor('#66ccff')).toEqual(true)
+    expect(isHexColor('#66abll')).toEqual(false)
+    expect(isHexColor('fff')).toEqual(true)
+    expect(isHexColor('#aaa')).toEqual(true)
   })
 })

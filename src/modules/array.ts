@@ -3,7 +3,7 @@ import type { TupleToObject } from '../types'
 
 /**
  * 将数组转换为对象
- * @category array
+ * @kind array
  */
 export function arrToObj<T extends Array<string | number>, V = boolean>(a: T, v = true) {
   const result = {} as Record<string, any>
@@ -15,7 +15,7 @@ export function arrToObj<T extends Array<string | number>, V = boolean>(a: T, v 
 
 /**
  * 数组去重
- * @category array
+ * @kind array
  */
 export function arrUnique<T>(array: T[]): T[] {
   return Array.from(new Set(array))
@@ -23,7 +23,7 @@ export function arrUnique<T>(array: T[]): T[] {
 
 /**
  * 移除数组中的一项
- * @category array
+ * @kind array
  */
 export function arrRemove<T>(array: T[], value: T) {
   if (!array) { return false }
@@ -37,7 +37,7 @@ export function arrRemove<T>(array: T[], value: T) {
 
 /**
  * 移动数组中某一项至指定位置
- * @category array
+ * @kind array
  */
 export function arrMove<T extends any[]>(arr: T, from: number, to: number) {
   arr.splice(to, 0, arr.splice(from, 1)[0])
@@ -46,7 +46,7 @@ export function arrMove<T extends any[]>(arr: T, from: number, to: number) {
 
 /**
  * 获取数组中随机一项
- * @category array
+ * @kind array
  */
 export function arrRandom<T>(arr: T[]): T {
   return arr[mathRandomInt(0, arr.length)]

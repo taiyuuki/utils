@@ -1,5 +1,9 @@
 import { isObject } from './is'
 
+/**
+ * 对比两值
+ * @kind equal
+ */
 export function deepEqual(a: any, b: any): boolean {
   if (a === b) {
     return true
