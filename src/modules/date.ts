@@ -1,4 +1,4 @@
-import { mathDigitComplement } from './math'
+import { strComplement } from './string'
 
 /**
  * 获取今天的日期
@@ -12,7 +12,7 @@ import { mathDigitComplement } from './math'
 export function getToday(format = 'yyyy-mm-dd') {
   const time = new Date()
   const result = format.replace('yyyy', `${time.getFullYear()}`)
-    .replace('mm', mathDigitComplement(time.getMonth() + 1))
-    .replace('dd', mathDigitComplement(time.getDate()))
+    .replace('mm', strComplement(time.getMonth() + 1))
+    .replace('dd', strComplement(time.getDate()))
   return result
 }

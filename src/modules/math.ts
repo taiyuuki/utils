@@ -30,14 +30,6 @@ export function mathBetween(v: number, min: number, max: number) {
 }
 
 /**
- * 为数字补0
- * @kind math
- */
-export function mathDigitComplement(n: number | string) {
-  return String(n).length === 1 ? `0${n}` : String(n)
-}
-
-/**
  * 10进制转16进制
  * @kind math
  */

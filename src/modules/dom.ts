@@ -1,6 +1,5 @@
 import type  { CSSStyleName } from '../types'
 import { isElement, isWindow } from './is'
-import { getKeys } from './obj'
 
 /**
  * 获取dom元素

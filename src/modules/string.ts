@@ -68,3 +68,22 @@ export function strNoPrefix(s: string, prefix: string) {
 export function strNoSuffix(s: string, suffix: string) {
   return s.endsWith(suffix) ? s.substring(0, s.length - suffix.length) : s
 }
+
+/**
+ * 首字母大写
+ * @kind string
+ */
+export function strCapital(str: string) {
+  return str.charAt(0).toUpperCase() + str.slice(1)
+}
+
+/**
+ * 根据需要的长度，在字符前串补足指定字符（比如0）
+ * @kind string
+ * @len 长度
+ * @char 补充
+ */
+export function strComplement(n: number | string, len = 2, char = '0') {
+  n = n + ''
+  return n.length >= len ? n : Array.from({ length: len - n.length + 1 }).join(char) + n
+}

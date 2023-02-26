@@ -1,4 +1,4 @@
-import { strNoPrefix, strNoSuffix, strRandom, strUuid } from '../src/modules/string'
+import { strCapital, strComplement, strNoPrefix, strNoSuffix, strRandom, strUuid } from '../src/modules/string'
 import { describe, expect, it } from 'vitest'
 
 describe('string', () => {
@@ -20,5 +20,19 @@ describe('string', () => {
   it('确保没有后缀', () => {
     expect(strNoSuffix('abc.jpg', '.jpg')).equal('abc')
     expect(strNoSuffix('123:xyz', ':xyz')).equal('123')
+  })
+
+  it('首字母大写', () => {
+    expect(strCapital('1abc')).equal('1abc')
+    expect(strCapital('this')).equal('This')
+  })
+
+  it('字符串补零', () => {
+    expect(strComplement('1')).equal('01')
+    expect(strComplement('56')).equal('56')
+    expect(strComplement('106', 4)).equal('0106')
+    expect(strComplement('106', 2)).equal('106')
+    expect(strComplement('1', 3)).equal('001')
+    expect(strComplement('3', 4, '1')).equal('1113')
   })
 })

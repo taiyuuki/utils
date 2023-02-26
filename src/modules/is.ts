@@ -116,3 +116,7 @@ export function isWindow(win: any): win is Window {
 export function isElement(el: any): el is Element {
   return el instanceof Element
 }
+
+export function isWindowOrElement(el: any): el is Element | Window {
+  return isElement(el) || isWindow(el)
+}
