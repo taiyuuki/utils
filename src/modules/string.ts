@@ -1,8 +1,8 @@
 /**
  * 获取指定长度随机字符
- * @kind string
- * @count 长度
- * @digit 进制 0-36
+ * @public
+ * @param count - 长度
+ * @param digit - 进制 0-36
  * @example
  * ```ts
  * const str = strRandom(6, 16)// 获取取长度为6的随机16进制字符
@@ -19,7 +19,7 @@ export function strRandom(count: number, digit = 16) {
 
 /**
  * 生成UUID
- * @kind string
+ * @public
  */
 export function strUuid(): string {
   let uuid = ''
@@ -39,7 +39,10 @@ export function strUuid(): string {
 
 /**
  * 确保字符串有特定前缀，没有则添加
- * @kind string
+ * @public
+ * @param s - 字符串
+ * @param prefix - 前缀
+ * @returns 确保有前缀的字符串
  */
 export function strEnsurePrefix(s: string, prefix: string) {
   return s.startsWith(prefix) ? s : `${prefix}${s}`
@@ -47,7 +50,10 @@ export function strEnsurePrefix(s: string, prefix: string) {
 
 /**
  * 确保字符串有特定后缀，没有则添加
- * @kind string
+ * @public
+ * @param s - 字符串
+ * @param suffix - 后缀
+ * @returns 确保有后缀的字符串
  */
 export function strEnsureSuffix(s: string, suffix: string) {
   return s.endsWith(suffix) ? s : `${s}${suffix}`
@@ -55,7 +61,10 @@ export function strEnsureSuffix(s: string, suffix: string) {
 
 /**
  * 确保字符串没有特定前缀，有则删除
- * @kind string
+ * @public
+ * @param s - 字符串
+ * @param prefix - 前缀
+ * @returns 确保移除前缀的字符串
  */
 export function strNoPrefix(s: string, prefix: string) {
   return s.startsWith(prefix) ? s.substring(prefix.length) : s
@@ -63,7 +72,10 @@ export function strNoPrefix(s: string, prefix: string) {
 
 /**
  * 确保字符串没有特定后缀，有则删除
- * @kind string
+ * @public
+ * @param s - 字符串
+ * @param suffix - 后缀
+ * @returns 确保移除后缀的字符串
  */
 export function strNoSuffix(s: string, suffix: string) {
   return s.endsWith(suffix) ? s.substring(0, s.length - suffix.length) : s
@@ -71,7 +83,7 @@ export function strNoSuffix(s: string, suffix: string) {
 
 /**
  * 首字母大写
- * @kind string
+ * @public
  */
 export function strCapital(str: string) {
   return str.charAt(0).toUpperCase() + str.slice(1)
@@ -79,9 +91,9 @@ export function strCapital(str: string) {
 
 /**
  * 根据需要的长度，在字符前串补足指定字符（比如0）
- * @kind string
- * @len 长度
- * @char 补充
+ * @public
+ * @param len - 字符串总长度
+ * @param char - 补充的字符
  */
 export function strComplement(n: number | string, len = 2, char = '0') {
   n = n + ''

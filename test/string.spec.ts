@@ -1,4 +1,4 @@
-import { strCapital, strComplement, strNoPrefix, strNoSuffix, strRandom, strUuid } from '../src/modules/string'
+import { strCapital, strComplement, strEnsurePrefix, strEnsureSuffix, strNoPrefix, strNoSuffix, strRandom, strUuid } from '../src/modules/string'
 import { describe, expect, it } from 'vitest'
 
 describe('string', () => {
@@ -10,6 +10,16 @@ describe('string', () => {
 
   it('uuid', () => {
     expect(strUuid().match(/[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}/g) === null).equal(false)
+  })
+
+  it('确保有前缀', () => {
+    expect(strEnsurePrefix('primary', '--')).equal('--primary')
+    expect(strEnsurePrefix('--primary', '--')).equal('--primary')
+  })
+
+  it('确保有后缀', () => {
+    expect(strEnsureSuffix('output', '.epub')).equal('output.epub')
+    expect(strEnsureSuffix('output.epub', '.epub')).equal('output.epub')
   })
 
   it('确保没有前缀', () => {

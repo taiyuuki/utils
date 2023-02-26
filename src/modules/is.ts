@@ -1,8 +1,8 @@
 import type { RgbColor } from '../types'
 
 /**
- * 判断是否是对象，不包括数组和null
- * @kind is
+ *  * 判断是否是对象，不包括数组和null
+ * @public
  */
 export function isObject(o: any): o is Exclude<Object, Array<any>> {
   return o !== null && typeof o === 'object' && !Array.isArray(o)
@@ -10,7 +10,7 @@ export function isObject(o: any): o is Exclude<Object, Array<any>> {
 
 /**
  * 判断是否是Date对象
- * @kind is
+ * @public
  */
 export function isDate(d: any): d is Date {
   return Object.prototype.toString.call(d) === '[object Date]'
@@ -18,7 +18,7 @@ export function isDate(d: any): d is Date {
 
 /**
  * 判断是否是正则表达式
- * @kind is
+ * @public
  */
 export function isRegexp(r: any): r is RegExp {
   return Object.prototype.toString.call(r) === '[object RegExp]'
@@ -26,7 +26,7 @@ export function isRegexp(r: any): r is RegExp {
 
 /**
  * 判断是否是数字，不包括NaN、INFINITY
- * @kind is
+ * @public
  */
 export function isNumber(n: any): n is number {
   return typeof n === 'number' && isFinite(n)
@@ -34,7 +34,7 @@ export function isNumber(n: any): n is number {
 
 /**
  * 判断是否是空值，空值包括null、undefined、NaN
- * @kind is
+ * @public
  */
 export function isVoid(t: any): t is null | undefined {
   return t === void 0 || t === null || isNaN(t)
@@ -42,7 +42,7 @@ export function isVoid(t: any): t is null | undefined {
 
 /**
  * 判断是否是空值，空值包括null、undefined、NaN
- * @kind is
+ * @public
  */
 export function isNotVoid<T>(t: T): t is NonNullable<T> {
   return !isVoid(t)
@@ -50,7 +50,7 @@ export function isNotVoid<T>(t: T): t is NonNullable<T> {
 
 /**
  * 判断是否是空字符串
- * @kind is
+ * @public
  */
 export function isEmptyString(s: any, trim?: boolean) {
   if (typeof s === 'string') {
@@ -63,7 +63,7 @@ export function isEmptyString(s: any, trim?: boolean) {
 
 /**
  * 判断是否是空数组
- * @kind is
+ * @public
  */
 export function isEmptyArray(a: any): a is [] {
   return Array.isArray(a) ? a.length === 0 : false
@@ -71,7 +71,7 @@ export function isEmptyArray(a: any): a is [] {
 
 /**
  * 判断是否是空对象
- * @kind is
+ * @public
  */
 export function isEmptyObj(o: any): o is {} {
   return isObject(o) ? isEmptyArray(Object.keys(o)) : false
@@ -79,7 +79,7 @@ export function isEmptyObj(o: any): o is {} {
 
 /**
  * 判断是否是合法的RGB值
- * @kind is
+ * @public
  */
 export function isRgbColor(color: any): color is RgbColor {
   if (!Array.isArray(color)) {return false}
@@ -95,7 +95,7 @@ export function isRgbColor(color: any): color is RgbColor {
 
 /**
  * 判断是否是合法的hex颜色值
- * @kind is
+ * @public
  */
 export function isHexColor(color: string) {
   return color.match(/^#?[0-9a-fA-F]{3,8}$/) !== null
@@ -103,7 +103,7 @@ export function isHexColor(color: string) {
 
 /**
  * 判断元素是否是wnidow
- * @kind is
+ * @public
  */
 export function isWindow(win: any): win is Window {
   return win === window
@@ -111,12 +111,16 @@ export function isWindow(win: any): win is Window {
 
 /**
  * 判断元素是否是DOM元素
- * @kind is
+ * @public
  */
 export function isElement(el: any): el is Element {
   return el instanceof Element
 }
 
+/**
+ * 判断元素是否是window或DOM元素
+ * @public
+ */
 export function isWindowOrElement(el: any): el is Element | Window {
   return isElement(el) || isWindow(el)
 }

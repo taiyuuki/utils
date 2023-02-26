@@ -1,18 +1,21 @@
 import type  { CSSStyleName } from '../types'
 import { isElement, isWindow } from './is'
+import { strEnsurePrefix } from './string'
 
 /**
  * 获取dom元素
- * @kind dom
+ * @public
+ * @param selector - 选择器
+ * @returns DOM元素
  */
-export function domGetEl(el: string) {
-  if (el === void 0 || el === null) {
+export function domGetEl(selector: string) {
+  if (selector === void 0 || selector === null) {
     return void 0
   }
 
-  if (typeof el === 'string') {
+  if (typeof selector === 'string') {
     try {
-      return document.querySelector(el) || void 0
+      return document.querySelector(selector) || void 0
     }
     catch (err) {
       return void 0
@@ -22,9 +25,10 @@ export function domGetEl(el: string) {
 
 /**
  * 获取dom元素的CSS属性
- * @kind dom
- * @param el
- * @param prop 属性名
+ * @public
+ * @param el - DOM元素
+ * @param prop - 指定CSS属性名
+ * @returns 指定元素的指定CSS值
  */
 export function domGetCSS<T extends Element>(el: T, prop: CSSStyleName) {
   return window.getComputedStyle(el).getPropertyValue(prop)
@@ -32,20 +36,22 @@ export function domGetCSS<T extends Element>(el: T, prop: CSSStyleName) {
 
 /**
  * 给dom元素设置CSS属性
- * @kind dom
- * @param el
- * @param CSS 包含CSS属性的对象
+ * @public
+ * @param el - DOM元素
+ * @param css - 包含CSS属性的对象
  */
-export function domSetCSS(el: HTMLElement, CSS: Partial<CSSStyleDeclaration>) {
+export function domSetCSS(el: HTMLElement, css: Partial<CSSStyleDeclaration>) {
   const style = el.style
-  for (const prop in CSS) {
-    style[prop] = CSS[prop] ?? style[prop]
+  for (const prop in css) {
+    style[prop] = css[prop] ?? style[prop]
   }
 }
 
 /**
  * 获取dom尺寸
- * @kind dom
+ * @public
+ * @param el - DOM元素
+ * @returns 一个包含width、height属性的对象
  */
 export function domGetSize(el: Element | Window) {
   if (isWindow(el)) {
@@ -68,11 +74,11 @@ export function domGetSize(el: Element | Window) {
 
 /**
  * 给DOM元素添加CSS变量
- * @kind
- * @varName 变量名 不需要--
- * @value 变量值
+ * @public
+ * @param varName - CSS变量名 不需要--前缀
+ * @param value - CSS变量值
  */
-export default function domSetCssVar(varName: string, value: string, el = document.body) {
+export function domSetCssVar(varName: string, value: string, el = document.body) {
   if (typeof varName !== 'string') {
     throw new TypeError('Expected a string as propName')
   }
@@ -83,5 +89,5 @@ export default function domSetCssVar(varName: string, value: string, el = docume
     throw new TypeError('Expected a DOM element')
   }
 
-  el.style.setProperty(`--${ varName }`, value)
+  el.style.setProperty(strEnsurePrefix(varName, '--'), value)
 }

@@ -2,8 +2,9 @@ import { strComplement } from './string'
 
 /**
  * 获取今天的日期
- * @kind date
- * @param format string 年: yyyy 月: mm 日: dd
+ * @public
+ * @param format - string 年: yyyy 月: mm 日: dd
+ * @returns 日期
  * @example
  * ```ts
  * const now = getToday('yyyy-mm-dd')// 1999-10-01

@@ -2,7 +2,7 @@ import { isObject } from './is'
 
 /**
  * 对比两值
- * @kind equal
+ * @public
  */
 export function deepEqual(a: any, b: any): boolean {
   if (a === b) {

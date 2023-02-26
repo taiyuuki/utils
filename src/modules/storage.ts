@@ -2,7 +2,9 @@ import { isNotVoid } from './is'
 
 /**
  * 保存至localStorage
- * @kind storage
+ * @public
+ * @param key - 键名
+ * @param value - 值
  */
 export const setStorage = <T>(key: string, value: T) => {
   try {
@@ -15,7 +17,10 @@ export const setStorage = <T>(key: string, value: T) => {
 
 /**
  * 从localStorage读取
- * @kind storage
+ * @public
+ * @param key - 键名
+ * @param empty - 值为空时的填充值，默认是空字符串
+ * @returns 值
  */
 export const getStorage = <T>(key: string, empty?: T) => {
   try {
@@ -29,7 +34,8 @@ export const getStorage = <T>(key: string, empty?: T) => {
 
 /**
  * 从localStorage移除
- * @kind storage
+ * @public
+ * @param key - 键名
  */
 export const removeStorage = (key: string) => {
   localStorage.removeItem(key)

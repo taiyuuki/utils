@@ -1,13 +1,18 @@
 import type { Color, RgbColor } from '../types'
+import { isRgbColor } from './is'
 import { mathToHex } from './math'
 import { strNoPrefix } from './string'
 
 /**
  * rgb转hex
- * @kind color
- * @param rgb
+ * @public
+ * @param rgb - rgb值，是一个数组
+ * @returns 16进制颜色值
  */
 export function rgbToHex(rgb: RgbColor) {
+  if (!isRgbColor(rgb)) {
+    throw new TypeError('Expected a array as rgb value')
+  }
   const r = mathToHex(rgb[0])
   const g = mathToHex(rgb[1])
   const b = mathToHex(rgb[2])
@@ -20,8 +25,9 @@ export function rgbToHex(rgb: RgbColor) {
 
 /**
  * hux转rgb
- * @kind color
- * @param rgb
+ * @public
+ * @param hex - rgb 16进制颜色值
+ * @returns rgb颜色值
  */
 export function hexToRgb(hex: string) {
   hex = strNoPrefix(hex, '#')
@@ -33,7 +39,9 @@ export function hexToRgb(hex: string) {
 
 /**
  * 获取对比色
- * @kind color
+ * @public
+ * @param color - rgb或16进制颜色值
+ * @returns 对比色
  */
 export function colorGetContrast(color: Color) {
   if (typeof color !== 'string') {

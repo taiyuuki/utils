@@ -1,7 +1,7 @@
 /**
  * 四舍五入
- * @kind math
- * @param digit 小数点后位数
+ * @public
+ * @param digit - 小数点后位数
  */
 export function mathToFixed(n: number, digit = 0) {
   return Number(n.toFixed(digit))
@@ -9,7 +9,7 @@ export function mathToFixed(n: number, digit = 0) {
 
 /**
  * 随机整数
- * @kind math
+ * @public
  */
 export function mathRandomInt(from: number, to: number) {
   return parseInt(((Math.random() * (to - from + 1)) + from).toString())
@@ -17,10 +17,10 @@ export function mathRandomInt(from: number, to: number) {
 
 /**
  * 给定一个数字，返回一个保持位于两数之间的数
- * @kind math
- * @param v 给定数字
- * @param min 下限
- * @param max 上限
+ * @public
+ * @param v - 给定数字
+ * @param min - 下限
+ * @param max - 上限
  */
 export function mathBetween(v: number, min: number, max: number) {
   if (min >= max) {
@@ -31,8 +31,10 @@ export function mathBetween(v: number, min: number, max: number) {
 
 /**
  * 10进制转16进制
- * @kind math
+ * @public
+ * @param n - 10进制数字
+ * @returns 16进制数字
  */
 export function mathToHex(n: number) {
-  return `${n > 15 ? '' : 0}${n.toString(16)}`
+  return parseInt(`${n}`, 16)
 }

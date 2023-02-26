@@ -2,7 +2,11 @@ import { isNotVoid } from './is'
 
 /**
  * 函数节流
- * @kind function
+ * @public
+ * @param func - 需要节流的函数
+ * @param timeFrame - 时间间隔
+ * @param immediately - 是否立即执行
+ * @returns 节流后的函数
  */
 export function throttle<T extends (...args: unknown[]) => unknown>(
   func: T,
@@ -32,7 +36,10 @@ export function throttle<T extends (...args: unknown[]) => unknown>(
 
 /**
  * 函数防抖
- * @kind function
+ * @public
+ * @param func - 需要防抖的函数
+ * @param timeFrame - 时间间隔
+ * @returns 防抖后的函数
  */
 export function debounce<T extends (...args: unknown[]) => unknown>(
   func: T,
@@ -51,7 +58,7 @@ export function debounce<T extends (...args: unknown[]) => unknown>(
 
 /**
  * 函数组合，前一个函数的返回值作为下一个函数的参数
- * @kind function
+ * @public
  */
 export function compose<T extends (...args: any[]) => any>(...fns: T[]) {
   return function (arg: unknown) {
