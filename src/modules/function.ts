@@ -50,7 +50,7 @@ export function debounce<T extends (...args: unknown[]) => unknown>(
 }
 
 /**
- * 函数值组合，前一个函数的返回值作为下一个函数的参数
+ * 函数组合，前一个函数的返回值作为下一个函数的参数
  * @kind function
  */
 export function compose<T extends (...args: any[]) => any>(...fns: T[]) {

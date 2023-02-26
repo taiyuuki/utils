@@ -25,3 +25,5 @@ export type TupleToObject<T extends ObjectKey[], V = boolean> = {
 export type RgbColor = [number, number, number, number?]
 
 export type Color = string | RgbColor
+
+export type CSSStyleName<T = keyof CSSStyleDeclaration> = T extends string ? T : never

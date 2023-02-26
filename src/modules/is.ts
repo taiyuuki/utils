@@ -100,3 +100,19 @@ export function isRgbColor(color: any): color is RgbColor {
 export function isHexColor(color: string) {
   return color.match(/^#?[0-9a-fA-F]{3,8}$/) !== null
 }
+
+/**
+ * 判断元素是否是wnidow
+ * @kind is
+ */
+export function isWindow(win: any): win is Window {
+  return win === window
+}
+
+/**
+ * 判断元素是否是DOM元素
+ * @kind is
+ */
+export function isElement(el: any): el is Element {
+  return el instanceof Element
+}

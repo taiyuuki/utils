@@ -7,10 +7,10 @@
   "types": "./dist/types/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "https://github.com/taiyuuki/taiyuuki/utils"
+    "url": "https://github.com/taiyuuki/utils"
   },
-  "bugs": "https://github.com/taiyuuki/taiyuuki/utils/issues",
-  "homepage": "https://github.com/taiyuuki/taiyuuki/utils#readme",
+  "bugs": "https://github.com/taiyuuki/utils/issues",
+  "homepage": "https://github.com/taiyuuki/utils#readme",
   "scripts": {
     "lint": "eslint --ext .js,.ts ./",
     "dev": "rollup -c --watch",
