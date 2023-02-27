@@ -4,7 +4,7 @@
 
 ## isObject() function
 
-\* 判断是否是对象，不包括数组和null
+判断是否是对象，不包括数组和null
 
 **Signature:**
 

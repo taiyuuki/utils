@@ -9,7 +9,7 @@
 **Signature:**
 
 ```typescript
-declare function compose<T extends (...args: any[]) => any>(...fns: T[]): (arg: unknown) => unknown;
+declare function compose<T extends Fn>(...fns: T[]): (arg: unknown) => unknown;
 ```
 
 ## Parameters

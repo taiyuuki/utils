@@ -1,3 +1,5 @@
+import type { ArgumentsType } from '../types'
+
 interface EventItem {
   target: EventTarget
   type: string
@@ -5,8 +7,17 @@ interface EventItem {
 }
 
 /**
- * 管理多个事件，在需要解除事件时，不再需要一个一个的解除，只需clear()即可。
- * @alpha
+ * 用于管理多个DOM事件，适用于组件销毁时，注销组件内绑定的所有事件。
+ * @beta
+ * @example
+ * ```ts
+ * const evtCtrl = new EventControler()
+ * // 绑定事件
+ * evtCtrl.addEvt(el1, 'click', callback1)
+ * evtCtrl.addEvt(el2, 'keypress', callback2)
+ * // 解除所有绑定
+ * evtCtrl.clear()
+ * ```
  */
 export class EventsControler {
   private _events: EventItem[]
@@ -20,7 +31,7 @@ export class EventsControler {
      * @param type - 事件类型
      * @param callback - 回调
      */
-  addEvt(target: EventTarget, type: string, callback: EventListenerOrEventListenerObject) {
+  addEvt<T extends EventTarget>(target: T, type: ArgumentsType<T['addEventListener']>[0], callback: EventListenerOrEventListenerObject) {
     this._events.push({
       target,
       type,
@@ -31,7 +42,7 @@ export class EventsControler {
   }
 
   /**
-   * 解除所有事件的绑定
+   * 解除所有绑定的事件
    */
   clear() {
     this._events.forEach(item => {

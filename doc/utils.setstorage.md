@@ -2,12 +2,24 @@
 
 [Home](./index.md) &gt; [@taiyuuki/utils](./utils.md) &gt; [setStorage](./utils.setstorage.md)
 
-## setStorage variable
+## setStorage() function
 
 保存至localStorage
 
 **Signature:**
 
 ```typescript
-setStorage: <T>(key: string, value: T) => void
+declare function setStorage<T>(key: string, value: T): void;
 ```
+
+## Parameters
+
+|  Parameter | Type | Description |
+|  --- | --- | --- |
+|  key | string | 键名 |
+|  value | T | 值 |
+
+**Returns:**
+
+void
+

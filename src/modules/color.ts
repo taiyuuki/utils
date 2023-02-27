@@ -24,7 +24,7 @@ export function rgbToHex(rgb: RgbColor) {
 }
 
 /**
- * hux转rgb
+ * hex转rgb
  * @public
  * @param hex - rgb 16进制颜色值
  * @returns rgb颜色值

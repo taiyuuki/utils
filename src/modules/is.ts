@@ -1,7 +1,7 @@
 import type { RgbColor } from '../types'
 
 /**
- *  * 判断是否是对象，不包括数组和null
+ * 判断是否是对象，不包括数组和null
  * @public
  */
 export function isObject(o: any): o is Exclude<Object, Array<any>> {
@@ -123,4 +123,33 @@ export function isElement(el: any): el is Element {
  */
 export function isWindowOrElement(el: any): el is Element | Window {
   return isElement(el) || isWindow(el)
+}
+
+/**
+ * 判断字符串是否是base64格式的
+ * @public
+ * @param str - 字符串
+ * @returns true or false
+ */
+export function isBase64(str: string) {
+  const reg = /^\s*data:([a-z]+\/[a-z0-9-+.]+(;[a-z-]+=[a-z0-9-]+)?)?(;base64)?,([a-z0-9!$&',()*+;=\-._~:@/?%\s]*?)\s*$/i
+  return reg.test(str)
+}
+
+/**
+ * 判断是否是Blob对象
+ * @public
+ * @param blob - blbo对象
+ */
+export function isBlob(blob: any): blob is Blob {
+  return blob instanceof Blob
+}
+
+/**
+ * 判断是否是File对象
+ * @public
+ * @param file - file对象
+ */
+export function isFile(file: any): file is File {
+  return file instanceof File
 }

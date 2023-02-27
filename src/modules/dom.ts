@@ -1,4 +1,5 @@
 import type  { CSSStyleName } from '../types'
+import { throwTypeError } from './error'
 import { isElement, isWindow } from './is'
 import { strEnsurePrefix } from './string'
 
@@ -48,10 +49,10 @@ export function domSetCSS(el: HTMLElement, css: Partial<CSSStyleDeclaration>) {
 }
 
 /**
- * 获取dom尺寸
+ * 获取dom元素或window的大小
  * @public
  * @param el - DOM元素
- * @returns 一个包含width、height属性的对象
+ * @returns 包含width和height的对象
  */
 export function domGetSize(el: Element | Window) {
   if (isWindow(el)) {
@@ -80,13 +81,13 @@ export function domGetSize(el: Element | Window) {
  */
 export function domSetCssVar(varName: string, value: string, el = document.body) {
   if (typeof varName !== 'string') {
-    throw new TypeError('Expected a string as propName')
+    throwTypeError('string', 'propName')
   }
   if (typeof value !== 'string') {
-    throw new TypeError('Expected a string as value')
+    throwTypeError('string', 'value')
   }
   if (!isElement(el)) {
-    throw new TypeError('Expected a DOM element')
+    throwTypeError('DOM element', 'el')
   }
 
   el.style.setProperty(strEnsurePrefix(varName, '--'), value)

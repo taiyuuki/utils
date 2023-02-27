@@ -4,7 +4,7 @@
 
 ## hexToRgb() function
 
-hux转rgb
+hex转rgb
 
 **Signature:**
 

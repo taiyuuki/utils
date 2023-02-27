@@ -14,6 +14,8 @@ export type UnionToTuple<T, Result extends Array<string> = []>
         GetCrossLast<UnionToCross<T>>,
       ]
 
+export type Fn = (...args: any[]) => any
+
 export type ObjectKey = string | number | symbol
 
 export type TupleToUnion<Tuple extends Array<unknown>> = Tuple[number]
@@ -27,3 +29,5 @@ export type RgbColor = [number, number, number, number?]
 export type Color = string | RgbColor
 
 export type CSSStyleName<T = keyof CSSStyleDeclaration> = T extends string ? T : never
+
+export type ArgumentsType<T extends Fn> = T extends (...args: infer A) => any ? A : never

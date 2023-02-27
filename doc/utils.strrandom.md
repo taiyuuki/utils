@@ -9,7 +9,7 @@
 **Signature:**
 
 ```typescript
-declare function strRandom(count: number, digit?: number): string;
+declare function strRandom(count: number, radix?: number): string;
 ```
 
 ## Parameters
@@ -17,7 +17,7 @@ declare function strRandom(count: number, digit?: number): string;
 |  Parameter | Type | Description |
 |  --- | --- | --- |
 |  count | number | 长度 |
-|  digit | number | _(Optional)_ 进制 0-36 |
+|  radix | number | _(Optional)_ 进制 0-36 |
 
 **Returns:**
 

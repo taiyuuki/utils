@@ -6,7 +6,7 @@ import { isNotVoid } from './is'
  * @param key - 键名
  * @param value - 值
  */
-export const setStorage = <T>(key: string, value: T) => {
+export function setStorage<T>(key: string, value: T) {
   try {
     localStorage.setItem(key, JSON.stringify(value))
   }
@@ -22,7 +22,7 @@ export const setStorage = <T>(key: string, value: T) => {
  * @param empty - 值为空时的填充值，默认是空字符串
  * @returns 值
  */
-export const getStorage = <T>(key: string, empty?: T) => {
+export function getStorage<T>(key: string, empty?: T) {
   try {
     const data = localStorage.getItem(key)
     return isNotVoid(data) ? JSON.parse(data) : (empty ?? '')
@@ -37,6 +37,6 @@ export const getStorage = <T>(key: string, empty?: T) => {
  * @public
  * @param key - 键名
  */
-export const removeStorage = (key: string) => {
+export function removeStorage(key: string) {
   localStorage.removeItem(key)
 }

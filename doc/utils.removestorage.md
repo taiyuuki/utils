@@ -2,12 +2,23 @@
 
 [Home](./index.md) &gt; [@taiyuuki/utils](./utils.md) &gt; [removeStorage](./utils.removestorage.md)
 
-## removeStorage variable
+## removeStorage() function
 
 从localStorage移除
 
 **Signature:**
 
 ```typescript
-removeStorage: (key: string) => void
+declare function removeStorage(key: string): void;
 ```
+
+## Parameters
+
+|  Parameter | Type | Description |
+|  --- | --- | --- |
+|  key | string | 键名 |
+
+**Returns:**
+
+void
+

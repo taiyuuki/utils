@@ -1,3 +1,4 @@
+import type { Fn } from '../types'
 import { isNotVoid } from './is'
 
 /**
@@ -8,7 +9,7 @@ import { isNotVoid } from './is'
  * @param immediately - 是否立即执行
  * @returns 节流后的函数
  */
-export function throttle<T extends (...args: unknown[]) => unknown>(
+export function throttle<T extends Fn>(
   func: T,
   timeFrame: number,
   immediately?: boolean
@@ -41,18 +42,21 @@ export function throttle<T extends (...args: unknown[]) => unknown>(
  * @param timeFrame - 时间间隔
  * @returns 防抖后的函数
  */
-export function debounce<T extends (...args: unknown[]) => unknown>(
+export function debounce<T extends Fn>(
   func: T,
   timeFrame: number,
 ) {
   let lastTime = 0
   return function (...args: unknown[]) {
     const now = Date.now()
-    if (now - lastTime >= timeFrame) {
-      lastTime = now
-      return func(...args)
+    try {
+      if (now - lastTime >= timeFrame) {
+        return func(...args)
+      }
     }
-    lastTime = now
+    finally {
+      lastTime = now
+    }
   } as T
 }
 
@@ -60,7 +64,7 @@ export function debounce<T extends (...args: unknown[]) => unknown>(
  * 函数组合，前一个函数的返回值作为下一个函数的参数
  * @public
  */
-export function compose<T extends (...args: any[]) => any>(...fns: T[]) {
+export function compose<T extends Fn>(...fns: T[]) {
   return function (arg: unknown) {
     return fns.reduce((pre, fn) => {
       return fn(pre)

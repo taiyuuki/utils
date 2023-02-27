@@ -2,12 +2,26 @@
 
 [Home](./index.md) &gt; [@taiyuuki/utils](./utils.md) &gt; [getStorage](./utils.getstorage.md)
 
-## getStorage variable
+## getStorage() function
 
 从localStorage读取
 
 **Signature:**
 
 ```typescript
-getStorage: <T>(key: string, empty?: T | undefined) => any
+declare function getStorage<T>(key: string, empty?: T): any;
 ```
+
+## Parameters
+
+|  Parameter | Type | Description |
+|  --- | --- | --- |
+|  key | string | 键名 |
+|  empty | T | _(Optional)_ 值为空时的填充值，默认是空字符串 |
+
+**Returns:**
+
+any
+
+值
+

@@ -59,6 +59,7 @@ const config = defineConfig([
     output: {
       dir: 'dist/types',
       format: 'esm',
+      preserveModules: true,
     },
     plugins: [
       importExportPlugin(),

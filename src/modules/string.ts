@@ -2,17 +2,17 @@
  * 获取指定长度随机字符
  * @public
  * @param count - 长度
- * @param digit - 进制 0-36
+ * @param radix - 进制 0-36
  * @example
  * ```ts
  * const str = strRandom(6, 16)// 获取取长度为6的随机16进制字符
  * ```
  */
-export function strRandom(count: number, digit = 16) {
-  digit = digit > 36 ? 36 : digit
+export function strRandom(count: number, radix = 16) {
+  radix = radix > 36 ? 36 : radix
   let result = ''
   for (let i = 1; i <= count; i++) {
-    result += Math.floor(Math.random() * digit).toString(digit)
+    result += Math.floor(Math.random() * radix).toString(radix)
   }
   return result
 }
@@ -90,7 +90,7 @@ export function strCapital(str: string) {
 }
 
 /**
- * 根据需要的长度，在字符前串补足指定字符（比如0）
+ * 根据需要的长度，在字符串前补足指定字符（比如0）
  * @public
  * @param len - 字符串总长度
  * @param char - 补充的字符

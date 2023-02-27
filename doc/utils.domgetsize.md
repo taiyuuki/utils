@@ -4,7 +4,7 @@
 
 ## domGetSize() function
 
-获取dom尺寸
+获取dom元素或window的大小
 
 **Signature:**
 
@@ -25,5 +25,5 @@ declare function domGetSize(el: Element | Window): {
 
 { width: number; height: number; }
 
-一个包含width、height属性的对象
+包含width和height的对象
 
