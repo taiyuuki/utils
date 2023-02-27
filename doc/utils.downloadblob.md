@@ -9,7 +9,7 @@
 **Signature:**
 
 ```typescript
-declare function downloadBlob(blob: Blob): void;
+declare function downloadBlob(blob: Blob, imageName?: string): void;
 ```
 
 ## Parameters
@@ -17,6 +17,7 @@ declare function downloadBlob(blob: Blob): void;
 |  Parameter | Type | Description |
 |  --- | --- | --- |
 |  blob | Blob | blob对象 |
+|  imageName | string | _(Optional)_ |
 
 **Returns:**
 

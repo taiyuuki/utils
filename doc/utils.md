@@ -20,6 +20,8 @@
 |  [arrToObj(arr, v)](./utils.arrtoobj.md) | 将数组转换为对象 |
 |  [arrUnique(arr)](./utils.arrunique.md) | 数组去重 |
 |  [blobToDateURI(blob)](./utils.blobtodateuri.md) | Blob转base64 |
+|  [canvasToBlob(cvs)](./utils.canvastoblob.md) | 异步的方式转换canvas为blob |
+|  [canvasToImage(cvs)](./utils.canvastoimage.md) | canvas转image |
 |  [colorGetContrast(color)](./utils.colorgetcontrast.md) | 获取对比色 |
 |  [compose(fns)](./utils.compose.md) | 函数组合，前一个函数的返回值作为下一个函数的参数 |
 |  [dataURIToBlob(dataURI, mimeType)](./utils.datauritoblob.md) | base64转blob |
@@ -31,11 +33,11 @@
 |  [domGetSize(el)](./utils.domgetsize.md) | 获取dom元素或window的大小 |
 |  [domSetCSS(el, css)](./utils.domsetcss.md) | 给dom元素设置CSS属性 |
 |  [domSetCssVar(varName, value, el)](./utils.domsetcssvar.md) | 给DOM元素添加CSS变量 |
-|  [downloadBlob(blob)](./utils.downloadblob.md) | 下载blob文件 |
+|  [downloadBlob(blob, imageName)](./utils.downloadblob.md) | 下载blob文件 |
 |  [downloadByURL(URL, fileName)](./utils.downloadbyurl.md) | 通过URL下载文件 |
+|  [downloadCanvas(cvs, imageName)](./utils.downloadcanvas.md) | 下载canvas图片 |
 |  [downloadImage(img, imageName)](./utils.downloadimage.md) | 图片下载 |
 |  [getKeys(o)](./utils.getkeys.md) | Object.keys的返回值，提供类型推断 |
-|  [getStorage(key, empty)](./utils.getstorage.md) | 从localStorage读取 |
 |  [hexToRgb(hex)](./utils.hextorgb.md) | hex转rgb |
 |  [imageGetType(filename)](./utils.imagegettype.md) | 获取图片类型 |
 |  [imageResize(img, size, type)](./utils.imageresize.md) | 改变图片尺寸 |
@@ -63,9 +65,10 @@
 |  [mathRandomInt(from, to)](./utils.mathrandomint.md) | 随机整数 |
 |  [mathToFixed(n, digit)](./utils.mathtofixed.md) | 四舍五入 |
 |  [mathToHex(n)](./utils.mathtohex.md) | 10进制转16进制 |
-|  [removeStorage(key)](./utils.removestorage.md) | 从localStorage移除 |
 |  [rgbToHex(rgb)](./utils.rgbtohex.md) | rgb转hex |
-|  [setStorage(key, value)](./utils.setstorage.md) | 保存至localStorage |
+|  [storageGet(key, empty)](./utils.storageget.md) | 从localStorage读取 |
+|  [storageRemove(key)](./utils.storageremove.md) | 从localStorage移除 |
+|  [storageSet(key, value)](./utils.storageset.md) | 保存至localStorage |
 |  [strCapital(str)](./utils.strcapital.md) | 首字母大写 |
 |  [strComplement(n, len, char)](./utils.strcomplement.md) | 根据需要的长度，在字符串前补足指定字符（比如0） |
 |  [strEnsurePrefix(s, prefix)](./utils.strensureprefix.md) | 确保字符串有特定前缀，没有则添加 |
@@ -76,5 +79,5 @@
 |  [strUuid()](./utils.struuid.md) | 生成UUID |
 |  [throttle(func, timeFrame, immediately)](./utils.throttle.md) | 函数节流 |
 |  [throwTypeError(type, name)](./utils.throwtypeerror.md) | 抛出类型错误 |
-|  [urlToDateURI(url, type)](./utils.urltodateuri.md) | 通过图片url转换base64图片 |
+|  [urlToDateURI(url, type)](./utils.urltodateuri.md) | 通过图片url转换base64 |
 

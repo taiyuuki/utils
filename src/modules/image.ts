@@ -37,7 +37,7 @@ export function imageToDataURI(img: HTMLImageElement, type = DEFAULT_MIMETYPE) {
  * image元素转blob
  * @public
  * @param img - image元素
- * @returns Promise&lt;Blob&gt;
+ * @returns Blob对象
  */
 export function imageToBlob(img: HTMLImageElement): Promise<Blob> {
   const cvs = imageToCanvas(img)

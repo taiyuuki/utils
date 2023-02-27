@@ -4,7 +4,7 @@ import { isNotVoid } from './is'
  * Blob转base64
  * @public
  * @param blob - Blob对象
- * @returns Promise&lt;string | ArrayBuffer&gt;
+ * @returns Promise
  */
 export function blobToDateURI(blob: Blob): Promise<string | ArrayBuffer> {
   const reader = new FileReader()

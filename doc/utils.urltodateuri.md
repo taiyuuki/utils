@@ -4,7 +4,7 @@
 
 ## urlToDateURI() function
 
-通过图片url转换base64图片
+通过图片url转换base64
 
 **Signature:**
 

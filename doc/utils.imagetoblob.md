@@ -22,5 +22,5 @@ declare function imageToBlob(img: HTMLImageElement): Promise<Blob>;
 
 Promise&lt;Blob&gt;
 
-Promise&amp;lt;Blob&amp;gt;
+Blob对象
 

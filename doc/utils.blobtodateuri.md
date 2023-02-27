@@ -22,5 +22,5 @@ declare function blobToDateURI(blob: Blob): Promise<string | ArrayBuffer>;
 
 Promise&lt;string \| ArrayBuffer&gt;
 
-Promise&amp;lt;string \| ArrayBuffer&amp;gt;
+Promise
 

@@ -10,17 +10,14 @@ import { strEnsurePrefix } from './string'
  * @returns DOM元素
  */
 export function domGetEl(selector: string) {
-  if (selector === void 0 || selector === null) {
+  if (selector === void 0 || selector === null || typeof selector !== 'string') {
     return void 0
   }
-
-  if (typeof selector === 'string') {
-    try {
-      return document.querySelector(selector) || void 0
-    }
-    catch (err) {
-      return void 0
-    }
+  try {
+    return document.querySelector(selector) || void 0
+  }
+  catch (err) {
+    return void 0
   }
 }
 

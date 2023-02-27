@@ -31,7 +31,7 @@ export function dataURIToBlob(dataURI: string, mimeType?: string) {
 }
 
 /**
- * 通过图片url转换base64图片
+ * 通过图片url转换base64
  * @public
  * @param url - 图片URL
  * @param type - 图片类型

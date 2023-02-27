@@ -24,6 +24,12 @@ export function arrUnique<T>(arr: T[]): T[];
 // @public
 export function blobToDateURI(blob: Blob): Promise<string | ArrayBuffer>;
 
+// @public
+export function canvasToBlob(cvs: HTMLCanvasElement): Promise<Blob>;
+
+// @public
+export function canvasToImage(cvs: HTMLCanvasElement): HTMLImageElement;
+
 // Warning: (ae-forgotten-export) The symbol "Color" needs to be exported by the entry point index.d.ts
 //
 // @public
@@ -67,10 +73,13 @@ export function domSetCSS(el: HTMLElement, css: Partial<CSSStyleDeclaration>): v
 export function domSetCssVar(varName: string, value: string, el?: HTMLElement): void;
 
 // @public
-export function downloadBlob(blob: Blob): void;
+export function downloadBlob(blob: Blob, imageName?: string): void;
 
 // @public
 export function downloadByURL(URL: string, fileName?: string): void;
+
+// @public
+export function downloadCanvas(cvs: HTMLCanvasElement, imageName?: string): void;
 
 // @public
 export function downloadImage(img: HTMLImageElement, imageName?: string): void;
@@ -87,9 +96,6 @@ export class EventsControler {
 //
 // @public
 export function getKeys<T extends Record<any, any>>(o: T): UnionToTuple<keyof T>;
-
-// @public
-export function getStorage<T>(key: string, empty?: T): any;
 
 // @public
 export function hexToRgb(hex: string): number[];
@@ -177,13 +183,16 @@ export function mathToFixed(n: number, digit?: number): number;
 export function mathToHex(n: number): number;
 
 // @public
-export function removeStorage(key: string): void;
-
-// @public
 export function rgbToHex(rgb: RgbColor): string;
 
 // @public
-export function setStorage<T>(key: string, value: T): void;
+export function storageGet<T>(key: string, empty?: T): any;
+
+// @public
+export function storageRemove(key: string): void;
+
+// @public
+export function storageSet<T>(key: string, value: T): void;
 
 // @public
 export function strCapital(str: string): string;

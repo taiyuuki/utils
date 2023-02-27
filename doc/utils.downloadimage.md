@@ -17,7 +17,7 @@ declare function downloadImage(img: HTMLImageElement, imageName?: string): void;
 |  Parameter | Type | Description |
 |  --- | --- | --- |
 |  img | HTMLImageElement | image元素 |
-|  imageName | string | _(Optional)_ iamge名称 |
+|  imageName | string | _(Optional)_ image名称 |
 
 **Returns:**
 
