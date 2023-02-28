@@ -145,6 +145,9 @@ export function isFile(file: any): file is File;
 export function isHexColor(color: string): boolean;
 
 // @public
+export function isNotEmptyString(s: any, trim?: boolean): boolean;
+
+// @public
 export function isNotVoid<T>(t: T): t is NonNullable<T>;
 
 // @public

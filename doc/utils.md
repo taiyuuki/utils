@@ -53,6 +53,7 @@
 |  [isEmptyString(s, trim)](./utils.isemptystring.md) | 判断是否是空字符串 |
 |  [isFile(file)](./utils.isfile.md) | 判断是否是File对象 |
 |  [isHexColor(color)](./utils.ishexcolor.md) | 判断是否是合法的hex颜色值 |
+|  [isNotEmptyString(s, trim)](./utils.isnotemptystring.md) | 判断是否是空字符串 |
 |  [isNotVoid(t)](./utils.isnotvoid.md) | 判断是否是空值，空值包括null、undefined、NaN |
 |  [isNumber(n)](./utils.isnumber.md) | 判断是否是数字，不包括NaN、INFINITY |
 |  [isObject(o)](./utils.isobject.md) | 判断是否是对象，不包括数组和null |

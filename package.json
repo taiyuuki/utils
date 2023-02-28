@@ -1,6 +1,6 @@
 {
   "name": "@taiyuuki/utils",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Utils by Taiyuuki",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",

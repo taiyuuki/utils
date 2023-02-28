@@ -57,7 +57,20 @@ export function isEmptyString(s: any, trim?: boolean) {
     return (trim === true ? s.trim() : s).length === 0
   }
   else {
-    return false
+    return isVoid(s)
+  }
+}
+
+/**
+ * 判断是否是空字符串
+ * @public
+ */
+export function isNotEmptyString(s: any, trim?: boolean) {
+  if (typeof s === 'string') {
+    return (trim === true ? s.trim() : s).length > 0
+  }
+  else {
+    return isNotVoid(s)
   }
 }
 
@@ -132,8 +145,8 @@ export function isWindowOrElement(el: any): el is Element | Window {
  * @returns true or false
  */
 export function isBase64(str: string) {
-  const reg = /^\s*data:([a-z]+\/[a-z0-9-+.]+(;[a-z-]+=[a-z0-9-]+)?)?(;base64)?,([a-z0-9!$&',()*+;=\-._~:@/?%\s]*?)\s*$/i
-  return reg.test(str)
+  const reg = /^data:([a-z]+\/[a-z0-9-+.]+(;[a-z-]+=[a-z0-9-]+)?)?(;base64)?,([a-z0-9!$&',()*+;=\-._~:@/?%\s]*?)$/i
+  return reg.test(str.trim())
 }
 
 /**
