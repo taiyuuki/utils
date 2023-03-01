@@ -17,12 +17,20 @@ describe('is', () => {
     expect(isEmptyString('')).toEqual(true)
     expect(isEmptyString('  ')).toEqual(false)
     expect(isEmptyString('  ', true)).toEqual(true)
+    expect(isEmptyString(null)).toEqual(true)
+    expect(isEmptyString(undefined)).toEqual(true)
 
     expect(isEmptyArray([])).toEqual(true)
+    expect(isEmptyArray(null)).toEqual(false)
+    expect(isEmptyArray(NaN)).toEqual(false)
+    expect(isEmptyArray(undefined, false)).toEqual(true)
     expect(isEmptyArray([[]])).toEqual(false)
 
     expect(isEmptyObj([])).toEqual(false)
     expect(isEmptyObj({})).toEqual(true)
+    expect(isEmptyObj(undefined)).toEqual(false)
+    expect(isEmptyObj(NaN)).toEqual(false)
+    expect(isEmptyObj(NaN, false)).toEqual(true)
     expect(isEmptyObj([{}])).toEqual(false)
 
     expect(isObject({})).toEqual(true)

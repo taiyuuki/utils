@@ -9,16 +9,26 @@
 **Signature:**
 
 ```typescript
-declare function isEmptyObj(o: any): o is {};
+declare function isEmptyObj(v: any, nullable?: boolean): v is {};
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  o | any |  |
+|  v | any | 需要判断的值 |
+|  nullable | boolean | _(Optional)_ 是否允许空值 |
 
 **Returns:**
 
-o is {}
+v is {}
+
+## Example
+
+
+```ts
+isEmptyObj({})// true
+isEmptyObj(null)// false
+isEmptyObj(null, false)// true
+```
 

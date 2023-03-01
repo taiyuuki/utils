@@ -9,16 +9,26 @@
 **Signature:**
 
 ```typescript
-declare function isEmptyArray(a: any): a is [];
+declare function isEmptyArray(v: any, nullable?: boolean): v is [];
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  a | any |  |
+|  v | any | 需要判断的值 |
+|  nullable | boolean | _(Optional)_ 是否允许空值 |
 
 **Returns:**
 
-a is \[\]
+v is \[\]
+
+## Example
+
+
+```ts
+isEmptyArray([])// true
+isEmptyArray(null)// false
+isEmptyArray(null, false)// true
+```
 

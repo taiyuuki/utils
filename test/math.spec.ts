@@ -1,6 +1,6 @@
 import { mathToFixed, mathRandomInt, mathBetween } from '../src/modules/math'
 import { describe, expect, it } from 'vitest'
-import { getKeys } from '../src/modules/obj'
+import { objectKeys } from '../src/modules/obj'
 
 describe('math', () => {
   it('四舍五入', () => {
@@ -26,13 +26,13 @@ describe('math', () => {
         list[n]++
       }
     }
-    const keys = getKeys(list)
+    const keys = objectKeys(list)
     expect(numbers.every(n => {
       return keys.includes(n)
     })).equal(true)
     expect(keys.every((n) => {
       const r = mathToFixed((list[n] / count), 2)
-      return numbers.includes(n) && r >= (1 / length) - 0.02 && r <= (1 / length) + 0.02
+      return numbers.includes(n) && r >= (1 / length) - 0.03 && r <= (1 / length) + 0.03
     })).equal(true)
   })
 

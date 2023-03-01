@@ -1,4 +1,4 @@
-import type { RgbColor } from '../types'
+import type { Fn, RgbColor } from '../types'
 
 /**
  * 判断是否是对象，不包括数组和null
@@ -33,11 +33,35 @@ export function isNumber(n: any): n is number {
 }
 
 /**
+ * 判断是否是方法
+ * @public
+ */
+export function isFn(fn: any): fn is Fn {
+  return typeof fn === 'function'
+}
+
+/**
+ * 判断是否是undefined
+ * @public
+ */
+export function isUndefined(u: any): u is undefined {
+  return u === void 0
+}
+
+/**
+ * 判断是否是null
+ * @public
+ */
+export function isNull(n: any): n is null {
+  return n === null
+}
+
+/**
  * 判断是否是空值，空值包括null、undefined、NaN
  * @public
  */
 export function isVoid(t: any): t is null | undefined {
-  return t === void 0 || t === null || isNaN(t)
+  return isNull(t) || isUndefined(t) || isNaN(t)
 }
 
 /**
@@ -49,7 +73,7 @@ export function isNotVoid<T>(t: T): t is NonNullable<T> {
 }
 
 /**
- * 判断是否是空字符串
+ * 判断是否是空字符串或空值
  * @public
  */
 export function isEmptyString(s: any, trim?: boolean) {
@@ -62,7 +86,7 @@ export function isEmptyString(s: any, trim?: boolean) {
 }
 
 /**
- * 判断是否是空字符串
+ * 判断是否是空字符串，同时不能是空值
  * @public
  */
 export function isNotEmptyString(s: any, trim?: boolean) {
@@ -77,17 +101,35 @@ export function isNotEmptyString(s: any, trim?: boolean) {
 /**
  * 判断是否是空数组
  * @public
+ * @param v - 需要判断的值
+ * @param nullable - 是否允许空值
+ * @example
+ * ```ts
+ * isEmptyArray([])// true
+ * isEmptyArray(null)// false
+ * isEmptyArray(null, false)// true
+ * ```
  */
-export function isEmptyArray(a: any): a is [] {
-  return Array.isArray(a) ? a.length === 0 : false
+export function isEmptyArray(v: any, nullable = true): v is [] {
+  const nullCheck = nullable ? false : isVoid(v)
+  return Array.isArray(v) ? v.length === 0 : nullCheck
 }
 
 /**
  * 判断是否是空对象
  * @public
+ * @param v - 需要判断的值
+ * @param nullable - 是否允许空值
+ * @example
+ * ```ts
+ * isEmptyObj({})// true
+ * isEmptyObj(null)// false
+ * isEmptyObj(null, false)// true
+ * ```
  */
-export function isEmptyObj(o: any): o is {} {
-  return isObject(o) ? isEmptyArray(Object.keys(o)) : false
+export function isEmptyObj(v: any, nullable = true): v is {} {
+  const nullCheck = nullable ? false : isVoid(v)
+  return isObject(v) ? isEmptyArray(Object.keys(v)) : nullCheck
 }
 
 /**
@@ -128,6 +170,14 @@ export function isWindow(win: any): win is Window {
  */
 export function isElement(el: any): el is Element {
   return el instanceof Element
+}
+
+/**
+ * 判断元素是否是html元素
+ * @public
+ */
+export function isHTMLElement(hel: any): hel is HTMLElement {
+  return hel instanceof HTMLElement
 }
 
 /**

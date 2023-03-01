@@ -1,6 +1,6 @@
 import type  { CSSStyleName } from '../types'
 import { throwTypeError } from './error'
-import { isElement, isWindow } from './is'
+import { isElement, isVoid, isWindow } from './is'
 import { strEnsurePrefix } from './string'
 
 /**
@@ -10,7 +10,7 @@ import { strEnsurePrefix } from './string'
  * @returns DOM元素
  */
 export function domGetEl(selector: string) {
-  if (selector === void 0 || selector === null || typeof selector !== 'string') {
+  if (isVoid(selector) || typeof selector !== 'string') {
     return void 0
   }
   try {
@@ -41,7 +41,7 @@ export function domGetCSS<T extends Element>(el: T, prop: CSSStyleName) {
 export function domSetCSS(el: HTMLElement, css: Partial<CSSStyleDeclaration>) {
   const style = el.style
   for (const prop in css) {
-    style[prop] = css[prop] ?? style[prop]
+    style[prop] = css[prop] as string
   }
 }
 

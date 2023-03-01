@@ -92,11 +92,6 @@ export class EventsControler {
     clear(): void;
 }
 
-// Warning: (ae-forgotten-export) The symbol "UnionToTuple" needs to be exported by the entry point index.d.ts
-//
-// @public
-export function getKeys<T extends Record<any, any>>(o: T): UnionToTuple<keyof T>;
-
 // @public
 export function hexToRgb(hex: string): number[];
 
@@ -130,10 +125,10 @@ export function isDate(d: any): d is Date;
 export function isElement(el: any): el is Element;
 
 // @public
-export function isEmptyArray(a: any): a is [];
+export function isEmptyArray(v: any, nullable?: boolean): v is [];
 
 // @public
-export function isEmptyObj(o: any): o is {};
+export function isEmptyObj(v: any, nullable?: boolean): v is {};
 
 // @public
 export function isEmptyString(s: any, trim?: boolean): boolean;
@@ -142,13 +137,22 @@ export function isEmptyString(s: any, trim?: boolean): boolean;
 export function isFile(file: any): file is File;
 
 // @public
+export function isFn(fn: any): fn is Fn;
+
+// @public
 export function isHexColor(color: string): boolean;
+
+// @public
+export function isHTMLElement(hel: any): hel is HTMLElement;
 
 // @public
 export function isNotEmptyString(s: any, trim?: boolean): boolean;
 
 // @public
 export function isNotVoid<T>(t: T): t is NonNullable<T>;
+
+// @public
+export function isNull(n: any): n is null;
 
 // @public
 export function isNumber(n: any): n is number;
@@ -165,6 +169,9 @@ export function isRegexp(r: any): r is RegExp;
 export function isRgbColor(color: any): color is RgbColor;
 
 // @public
+export function isUndefined(u: any): u is undefined;
+
+// @public
 export function isVoid(t: any): t is null | undefined;
 
 // @public
@@ -172,6 +179,9 @@ export function isWindow(win: any): win is Window;
 
 // @public
 export function isWindowOrElement(el: any): el is Element | Window;
+
+// @public
+export function keyIn<T extends object>(key: keyof T, obj: T): key is keyof T;
 
 // @public
 export function mathBetween(v: number, min: number, max: number): number;
@@ -184,6 +194,19 @@ export function mathToFixed(n: number, digit?: number): number;
 
 // @public
 export function mathToHex(n: number): number;
+
+// Warning: (ae-forgotten-export) The symbol "Entries" needs to be exported by the entry point index.d.ts
+//
+// @public
+export function objectEntries<T extends object>(obj: T): Entries<T>;
+
+// Warning: (ae-forgotten-export) The symbol "Keys" needs to be exported by the entry point index.d.ts
+//
+// @public
+export function objectKeys<T extends object>(o: T): Keys<T>;
+
+// @public
+export function objectPick<T extends object, K extends keyof T>(obj: T, keys: K[]): Pick<T, K>;
 
 // @public
 export function rgbToHex(rgb: RgbColor): string;

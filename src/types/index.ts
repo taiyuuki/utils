@@ -24,6 +24,10 @@ export type TupleToObject<T extends ObjectKey[], V = boolean> = {
   [k in TupleToUnion<T>]: V
 }
 
+export type Keys<T extends object> = UnionToTuple<keyof T>
+
+export type Entries<T extends object, K extends keyof T = keyof T> = [K, T[K]][]
+
 export type RgbColor = [number, number, number, number?]
 
 export type Color = string | RgbColor

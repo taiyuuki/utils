@@ -4,7 +4,7 @@
 
 ## isNotEmptyString() function
 
-判断是否是空字符串
+判断是否是空字符串，同时不能是空值
 
 **Signature:**
 

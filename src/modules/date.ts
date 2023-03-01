@@ -7,7 +7,7 @@ import { strComplement } from './string'
  * @returns 日期
  * @example
  * ```ts
- * const now = dateNow('yyyy-mm-dd')// 1999-10-01
+ * const now = dateNow('yyyy-MM-dd')// 1999-10-01
  * ```
  */
 export function dateNow(format = 'yyyy-MM-dd|HH:mm:ss') {

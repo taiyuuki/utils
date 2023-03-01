@@ -28,6 +28,6 @@ string
 
 
 ```ts
-const now = dateNow('yyyy-mm-dd')// 1999-10-01
+const now = dateNow('yyyy-MM-dd')// 1999-10-01
 ```
 
