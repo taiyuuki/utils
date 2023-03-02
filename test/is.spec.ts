@@ -13,6 +13,8 @@ describe('is', () => {
     expect(isVoid(NaN)).toEqual(true)
     expect(isVoid(0)).toEqual(false)
     expect(isVoid('')).toEqual(false)
+    expect(isVoid({})).toEqual(false)
+    expect(isVoid(new RegExp('abc'))).toEqual(false)
 
     expect(isEmptyString('')).toEqual(true)
     expect(isEmptyString('  ')).toEqual(false)

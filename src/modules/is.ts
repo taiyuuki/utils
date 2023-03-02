@@ -61,7 +61,10 @@ export function isNull(n: any): n is null {
  * @public
  */
 export function isVoid(t: any): t is null | undefined {
-  return isNull(t) || isUndefined(t) || isNaN(t)
+  if (typeof t === 'number') {
+    return isNaN(t)
+  }
+  return isNull(t) || isUndefined(t)
 }
 
 /**
