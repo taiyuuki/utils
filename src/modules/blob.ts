@@ -30,6 +30,7 @@ export function blobToDateURI(blob: Blob): Promise<string | ArrayBuffer> {
 export function urlToBlob(url: string): Promise<Blob> {
   const xhr = new XMLHttpRequest()
   xhr.open('get', url, true)
+  xhr.responseType = 'arraybuffer'
   return new Promise((resolve, reject) => {
     xhr.onload = function () {
       const blob = new Blob([this.response])
