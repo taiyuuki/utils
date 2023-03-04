@@ -87,5 +87,6 @@
 |  [strUuid()](./utils.struuid.md) | 生成UUID |
 |  [throttle(func, timeFrame, immediately)](./utils.throttle.md) | 函数节流 |
 |  [throwTypeError(type, name)](./utils.throwtypeerror.md) | 抛出类型错误 |
+|  [urlToBlob(url)](./utils.urltoblob.md) | 请求url数据并转换为blob |
 |  [urlToDateURI(url, type)](./utils.urltodateuri.md) | 通过图片url转换base64 |
 

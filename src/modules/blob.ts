@@ -21,3 +21,21 @@ export function blobToDateURI(blob: Blob): Promise<string | ArrayBuffer> {
     reader.readAsDataURL(blob)
   })
 }
+
+/**
+ * 请求url数据并转换为blob
+ * @public
+ * @param url URL
+ */
+export function urlToBlob(url: string): Promise<Blob> {
+  const xhr = new XMLHttpRequest()
+  xhr.open('get', url, true)
+  return new Promise((resolve, reject) => {
+    xhr.onload = function () {
+      const blob = new Blob([this.response])
+      resolve(blob)
+    }
+    xhr.onerror = reject
+    xhr.send()
+  })
+}

@@ -251,6 +251,9 @@ export function throttle<T extends Fn>(func: T, timeFrame: number, immediately?:
 export function throwTypeError(type: string, name: string): void;
 
 // @public
+export function urlToBlob(url: string): Promise<Blob>;
+
+// @public
 export function urlToDateURI(url: string, type?: string): Promise<string>;
 
 // (No @packageDocumentation comment for this package)
