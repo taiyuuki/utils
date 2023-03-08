@@ -14,6 +14,7 @@
 
 |  Function | Description |
 |  --- | --- |
+|  [addKeyboardEvents(type, eventsOptions)](./utils.addkeyboardevents.md) | 给document绑定键盘事件，可以给每一个按键绑定不同的方法。 |
 |  [arrMove(arr, from, to)](./utils.arrmove.md) | 移动数组中的某一项至指定位置 |
 |  [arrRandom(arr)](./utils.arrrandom.md) | 获取数组中随机一项 |
 |  [arrRemove(arr, value)](./utils.arrremove.md) | 移除数组中的一项 |
@@ -24,6 +25,7 @@
 |  [canvasToImage(cvs)](./utils.canvastoimage.md) | canvas转image |
 |  [colorGetContrast(color)](./utils.colorgetcontrast.md) | 获取对比色 |
 |  [compose(fns)](./utils.compose.md) | 函数组合，前一个函数的返回值作为下一个函数的参数 |
+|  [copyText(target, addition)](./utils.copytext.md) | 复制文本到剪切板 |
 |  [dataURIToBlob(dataURI, mimeType)](./utils.datauritoblob.md) | base64转blob |
 |  [dateNow(format)](./utils.datenow.md) | 获取现在的时间 |
 |  [debounce(func, timeFrame)](./utils.debounce.md) | 函数防抖 |
@@ -61,6 +63,7 @@
 |  [isObject(o)](./utils.isobject.md) | 判断是否是对象，不包括数组和null |
 |  [isRegexp(r)](./utils.isregexp.md) | 判断是否是正则表达式 |
 |  [isRgbColor(color)](./utils.isrgbcolor.md) | 判断是否是合法的RGB值 |
+|  [isStringLike(target)](./utils.isstringlike.md) | 判断是否是数字或字符串，不包括NaN和infinity。 |
 |  [isUndefined(u)](./utils.isundefined.md) | 判断是否是undefined |
 |  [isVoid(t)](./utils.isvoid.md) | 判断是否是空值，空值包括null、undefined、NaN |
 |  [isWindow(win)](./utils.iswindow.md) | 判断元素是否是wnidow |
@@ -81,6 +84,7 @@
 |  [strComplement(n, len, char)](./utils.strcomplement.md) | 根据需要的长度，在字符串前补足指定字符（比如0） |
 |  [strEnsurePrefix(s, prefix)](./utils.strensureprefix.md) | 确保字符串有特定前缀，没有则添加 |
 |  [strEnsureSuffix(s, suffix)](./utils.strensuresuffix.md) | 确保字符串有特定后缀，没有则添加 |
+|  [strMaybeNumber(target)](./utils.strmaybenumber.md) | 可能是数字或字符串，转为字符串 |
 |  [strNoPrefix(s, prefix)](./utils.strnoprefix.md) | 确保字符串没有特定前缀，有则删除 |
 |  [strNoSuffix(s, suffix)](./utils.strnosuffix.md) | 确保字符串没有特定后缀，有则删除 |
 |  [strRandom(count, radix)](./utils.strrandom.md) | 获取指定长度随机字符 |

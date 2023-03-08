@@ -25,7 +25,7 @@ export function blobToDateURI(blob: Blob): Promise<string | ArrayBuffer> {
 /**
  * 请求url数据并转换为blob
  * @public
- * @param url URL
+ * @param url - URL
  */
 export function urlToBlob(url: string): Promise<Blob> {
   const xhr = new XMLHttpRequest()

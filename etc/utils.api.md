@@ -4,6 +4,17 @@
 
 ```ts
 
+// Warning: (ae-forgotten-export) The symbol "KeyboardEventOptions" needs to be exported by the entry point index.d.ts
+// Warning: (ae-forgotten-export) The symbol "KeyboardEventType" needs to be exported by the entry point index.d.ts
+//
+// @public
+export function addKeyboardEvents<T extends KeyboardEventOptions>(type: KeyboardEventType, eventsOptions: T): {
+    close(): void;
+    off(): void;
+    on(): void;
+    emit: (code: keyof typeof eventsOptions) => void;
+};
+
 // @public
 export function arrMove<T extends any[]>(arr: T, from: number, to: number): T;
 
@@ -39,6 +50,9 @@ export function colorGetContrast(color: Color): "black" | "white";
 //
 // @public
 export function compose<T extends Fn>(...fns: T[]): (arg: unknown) => unknown;
+
+// @public
+export function copyText(target: string | number | HTMLElement, addition?: string): void;
 
 // @public
 export function dataURIToBlob(dataURI: string, mimeType?: string): Blob;
@@ -169,6 +183,9 @@ export function isRegexp(r: any): r is RegExp;
 export function isRgbColor(color: any): color is RgbColor;
 
 // @public
+export function isStringLike(target: any): target is string | number;
+
+// @public
 export function isUndefined(u: any): u is undefined;
 
 // @public
@@ -231,6 +248,9 @@ export function strEnsurePrefix(s: string, prefix: string): string;
 
 // @public
 export function strEnsureSuffix(s: string, suffix: string): string;
+
+// @public
+export function strMaybeNumber(target: number | string): string;
 
 // @public
 export function strNoPrefix(s: string, prefix: string): string;

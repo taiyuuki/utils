@@ -35,3 +35,7 @@ export type Color = string | RgbColor
 export type CSSStyleName<T = keyof CSSStyleDeclaration> = T extends string ? T : never
 
 export type ArgumentsType<T extends Fn> = T extends (...args: infer A) => any ? A : never
+
+export type KeyboardEventType = 'keydown' | 'keypress' | 'keyup'
+
+export type KeyboardEventOptions = Record<KeyboardEvent['code'], Fn>

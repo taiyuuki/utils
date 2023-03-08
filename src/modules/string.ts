@@ -1,4 +1,14 @@
 /**
+ * 可能是数字或字符串，转为字符串
+ * @public
+ * @param target - string或number
+ * @returns 字符串
+ */
+export function strMaybeNumber(target: number | string) {
+  return target.toString()
+}
+
+/**
  * 获取指定长度随机字符
  * @public
  * @param count - 长度

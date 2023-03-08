@@ -140,10 +140,10 @@ export function isEmptyObj(v: any, nullable = true): v is {} {
  * @public
  */
 export function isRgbColor(color: any): color is RgbColor {
-  if (!Array.isArray(color)) {return false}
+  if (!Array.isArray(color)) { return false }
   return (color.length === 4 || color.length === 3) && color.every((v, i) => {
     if (i === 3) {
-      return  Number(v) <= 1
+      return Number(v) <= 1
     }
     else {
       return Number(v) <= 255
@@ -218,4 +218,12 @@ export function isBlob(blob: any): blob is Blob {
  */
 export function isFile(file: any): file is File {
   return file instanceof File
+}
+
+/**
+ * 判断是否是数字或字符串，不包括NaN和infinity。
+ * @public
+ */
+export function isStringLike(target: any): target is string | number {
+  return !isFinite(target) && (typeof target === 'string' || typeof target === 'number')
 }
