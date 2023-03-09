@@ -12,7 +12,7 @@ export function addKeyboardEvents<T extends KeyboardEventOptions>(type: Keyboard
     close(): void;
     off(): void;
     on(): void;
-    emit: (code: keyof typeof eventsOptions) => void;
+    emit: (code: KeyboardEventKeys<T>) => void;
 };
 
 // @public
@@ -101,8 +101,7 @@ export function downloadImage(img: HTMLImageElement, imageName?: string): void;
 // @beta
 export class EventsControler {
     constructor();
-    // Warning: (ae-forgotten-export) The symbol "ArgumentsType" needs to be exported by the entry point index.d.ts
-    addEvt<T extends EventTarget>(target: T, type: ArgumentsType<T['addEventListener']>[0], callback: EventListenerOrEventListenerObject): this;
+    addEvt<T extends EventTarget>(target: T, type: Parameters<T['addEventListener']>[0], callback: EventListenerOrEventListenerObject): this;
     clear(): void;
 }
 
@@ -275,6 +274,10 @@ export function urlToBlob(url: string): Promise<Blob>;
 
 // @public
 export function urlToDateURI(url: string, type?: string): Promise<string>;
+
+// Warnings were encountered during analysis:
+//
+// dist/types/modules/keyboard.d.ts:47:5 - (ae-forgotten-export) The symbol "KeyboardEventKeys" needs to be exported by the entry point index.d.ts
 
 // (No @packageDocumentation comment for this package)
 

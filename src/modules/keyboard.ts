@@ -1,11 +1,15 @@
-import type { KeyboardEventType, KeyboardEventOptions } from '../types'
+import type { KeyboardEventType, KeyboardEventOptions, KeyboardEventKeys, KeyboardEventCallback } from '../types'
 import { keyIn } from './obj'
+
+function resolveOptions<T extends KeyboardEventOptions>(options: T) {
+  return typeof options === 'function' ? options() : options
+}
 
 /**
  * 给document绑定键盘事件，可以给每一个按键绑定不同的方法。
  * @public
  * @param type - 事件类型
- * @param eventsOptions - 配置对象
+ * @param eventsOptions - 配置对象，可以是函数。
  * @returns 控制事件的对象
  * @example
  * ```ts
@@ -30,17 +34,14 @@ import { keyIn } from './obj'
  */
 export function addKeyboardEvents<T extends KeyboardEventOptions>(type: KeyboardEventType, eventsOptions: T) {
   let valid = true
-  function emit(code: keyof typeof eventsOptions) {
-    if (keyIn(code, eventsOptions)) {
-      eventsOptions[code]()
+  const events = resolveOptions(eventsOptions) as Record<KeyboardEventKeys<T>, KeyboardEventCallback>
+  function emit(code: keyof typeof events) {
+    if (keyIn(code, events)) {
+      events[code]()
     }
   }
   function handler(e: KeyboardEvent) {
-    if (e.isComposing && !valid) {
-      return
-    }
-    const code = e.code
-    emit(code)
+    valid && !e.isComposing && emit(e.code as KeyboardEventKeys<T>)
   }
   document.addEventListener(type, handler)
   return {
@@ -57,14 +58,14 @@ export function addKeyboardEvents<T extends KeyboardEventOptions>(type: Keyboard
       valid = false
     },
     /**
-     * 取消事件绑定，无法再开启。
+     * 重新开启事件。
      */
     on() {
       valid = true
     },
     /**
      * 手动触发按键事件，即使已经取消了绑定，也能触发。
-     * @param code - Keyboard.code
+     * @param code - KeyboardEvent.code
      */
     emit,
   }

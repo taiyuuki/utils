@@ -13,7 +13,7 @@ declare function addKeyboardEvents<T extends KeyboardEventOptions>(type: Keyboar
     close(): void;
     off(): void;
     on(): void;
-    emit: (code: keyof typeof eventsOptions) => void;
+    emit: (code: KeyboardEventKeys<T>) => void;
 };
 ```
 
@@ -22,11 +22,11 @@ declare function addKeyboardEvents<T extends KeyboardEventOptions>(type: Keyboar
 |  Parameter | Type | Description |
 |  --- | --- | --- |
 |  type | KeyboardEventType | 事件类型 |
-|  eventsOptions | T | 配置对象 |
+|  eventsOptions | T | 配置对象，可以是函数。 |
 
 **Returns:**
 
-{ close(): void; off(): void; on(): void; emit: (code: keyof typeof eventsOptions) =&gt; void; }
+{ close(): void; off(): void; on(): void; emit: (code: KeyboardEventKeys&lt;T&gt;) =&gt; void; }
 
 控制事件的对象
 
