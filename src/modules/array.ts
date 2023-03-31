@@ -8,10 +8,10 @@ import type { TupleToObject } from '../types'
  * @param v - 对象每一项的值
  * @returns 对象
  */
-export function arrToObj<T extends Array<string | number>, V = boolean>(arr: T, v = true) {
+export function arrToObj<T extends Array<string | number>, V = boolean>(arr: T, v?: V) {
   const result = {} as Record<string, any>
   arr.forEach(i => {
-    result[i] = v
+    result[i] = v ?? true
   })
   return result as TupleToObject<T, V>
 }

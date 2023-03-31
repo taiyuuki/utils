@@ -1,3 +1,5 @@
+import type { FnNoArgs } from 'src/types'
+
 interface EventItem {
   target: EventTarget
   type: string
@@ -29,7 +31,7 @@ export class EventsControler {
      * @param type - 事件类型
      * @param callback - 回调
      */
-  addEvt<T extends EventTarget>(target: T, type: Parameters<T['addEventListener']>[0], callback: EventListenerOrEventListenerObject) {
+  addEvt<T extends EventTarget>(target: T, type: Parameters<T['addEventListener']>[0], callback: FnNoArgs) {
     this._events.push({
       target,
       type,

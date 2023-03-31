@@ -66,7 +66,7 @@ export function domGetSize(el: Element | Window) {
     }
   }
   else {
-    throw new TypeError('Expected a DOM element or window.')
+    throwTypeError('DOM element or window', 'el')
   }
 }
 

@@ -43,7 +43,7 @@ export function hexToRgb(hex: string) {
  * @param color - rgb或16进制颜色值
  * @returns 对比色
  */
-export function colorGetContrast(color: Color) {
+export function getContrastColor(color: Color) {
   if (typeof color !== 'string') {
     color = rgbToHex(color)
   }

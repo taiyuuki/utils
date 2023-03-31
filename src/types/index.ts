@@ -16,6 +16,8 @@ export type UnionToTuple<T, Result extends Array<string> = []>
 
 export type Fn = (...args: any[]) => any
 
+export type FnNoArgs = () => any
+
 export type ObjectKey = string | number | symbol
 
 export type TupleToUnion<Tuple extends Array<unknown>> = Tuple[number]
