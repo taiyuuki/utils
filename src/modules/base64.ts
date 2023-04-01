@@ -14,7 +14,7 @@ export function dataURIToBlob(dataURI: string, mimeType?: string) {
     throwTypeError('base64', 'dataURI')
   }
   const arr = dataURI.split(',')
-  mimeType = arr[0].match(/:(.*?);/)?.[1]
+  mimeType ??= arr[0].match(/:(.*?);/)?.[1]
   let baseStr = ''
   try {
     baseStr = atob(arr[1])

@@ -3,7 +3,7 @@ import type { FnNoArgs } from 'src/types'
 interface EventItem {
   target: EventTarget
   type: string
-  callback: EventListenerOrEventListenerObject
+  callback: FnNoArgs
 }
 
 /**
@@ -16,7 +16,7 @@ interface EventItem {
  * evtCtrl.addEvt(el1, 'click', callback1)
  * evtCtrl.addEvt(el2, 'keypress', callback2)
  * // 解除所有绑定
- * evtCtrl.clear()
+ * evtCtrl.close()
  * ```
  */
 export class EventsControler {
@@ -44,7 +44,7 @@ export class EventsControler {
   /**
    * 解除所有绑定的事件
    */
-  clear() {
+  close() {
     this._events.forEach(item => {
       item.target.removeEventListener(item.type, item.callback)
     })

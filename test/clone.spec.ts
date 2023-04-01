@@ -1,4 +1,4 @@
-import { deepClone } from '../src/modules/clone'
+import { cloneDeep } from '../src/modules/clone'
 import { describe, expect, it } from 'vitest'
 
 describe('clone', () => {
@@ -24,7 +24,7 @@ describe('clone', () => {
     } as any
     source.b.test = source
     source.__proto__.a = '123'
-    const target = deepClone(source)
+    const target = cloneDeep(source)
 
     expect(target).toEqual(source)
     expect(target === target.b.test).toEqual(true)
