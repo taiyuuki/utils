@@ -23,7 +23,9 @@
 |  [blobToDateURI(blob)](./utils.blobtodateuri.md) | Blob转base64 |
 |  [canvasToBlob(cvs)](./utils.canvastoblob.md) | 异步的方式转换canvas为blob |
 |  [canvasToImage(cvs)](./utils.canvastoimage.md) | canvas转image |
-|  [colorGetContrast(color)](./utils.colorgetcontrast.md) | 获取对比色 |
+|  [clone(source)](./utils.clone.md) | 深克隆 |
+|  [cloneDeep(source)](./utils.clonedeep.md) | 深克隆，包含方法、循环引用时可用 |
+|  [cloneSimple(source)](./utils.clonesimple.md) | 简单深克隆，适用于不含方法、不含循环引用的普通对象。 |
 |  [compose(fns)](./utils.compose.md) | 函数组合，前一个函数的返回值作为下一个函数的参数 |
 |  [copyText(target, addition)](./utils.copytext.md) | 复制文本到剪切板 |
 |  [dataURIToBlob(dataURI, mimeType)](./utils.datauritoblob.md) | base64转blob |
@@ -39,6 +41,7 @@
 |  [downloadByURL(URL, fileName)](./utils.downloadbyurl.md) | 通过URL下载文件 |
 |  [downloadCanvas(cvs, imageName)](./utils.downloadcanvas.md) | 下载canvas图片 |
 |  [downloadImage(img, imageName)](./utils.downloadimage.md) | 图片下载 |
+|  [getContrastColor(color)](./utils.getcontrastcolor.md) | 获取对比色 |
 |  [hexToRgb(hex)](./utils.hextorgb.md) | hex转rgb |
 |  [imageGetType(filename)](./utils.imagegettype.md) | 获取图片类型 |
 |  [imageResize(img, size, type)](./utils.imageresize.md) | 改变图片尺寸 |
@@ -89,6 +92,7 @@
 |  [strNoSuffix(s, suffix)](./utils.strnosuffix.md) | 确保字符串没有特定后缀，有则删除 |
 |  [strRandom(count, radix)](./utils.strrandom.md) | 获取指定长度随机字符 |
 |  [strUuid()](./utils.struuid.md) | 生成UUID |
+|  [tempCompiler(temp, data)](./utils.tempcompiler.md) | 简单的模板解析 |
 |  [throttle(func, timeFrame, immediately)](./utils.throttle.md) | 函数节流 |
 |  [throwTypeError(type, name)](./utils.throwtypeerror.md) | 抛出类型错误 |
 |  [urlToBlob(url)](./utils.urltoblob.md) | 请求url数据并转换为blob |

@@ -12,7 +12,7 @@
 **Signature:**
 
 ```typescript
-addEvt<T extends EventTarget>(target: T, type: Parameters<T['addEventListener']>[0], callback: EventListenerOrEventListenerObject): this;
+addEvt<T extends EventTarget>(target: T, type: Parameters<T['addEventListener']>[0], callback: FnNoArgs): this;
 ```
 
 ## Parameters
@@ -21,7 +21,7 @@ addEvt<T extends EventTarget>(target: T, type: Parameters<T['addEventListener']>
 |  --- | --- | --- |
 |  target | T | 需要绑定事件的对象，比如DOM元素 |
 |  type | Parameters&lt;T\['addEventListener'\]&gt;\[0\] | 事件类型 |
-|  callback | EventListenerOrEventListenerObject | 回调 |
+|  callback | FnNoArgs | 回调 |
 
 **Returns:**
 

@@ -5,15 +5,18 @@
  * @param data - 数据对象
  * @example
  * ```ts
- *  const temp = '<div>name: ${name}, age: ${age}</div>'
+ *  const temp = '<div>name: ${name}, score: ${score()}, pass: ${pass ? "yes" : "no"}</div>'
  *  const data = {
  *    name: 'Jack',
- *    age: 18,
+ *    score(){
+ *      return 59
+ *    },
+ *    pass: false
  *  }
- *  console.log(tempCompiler(temp, data)) // "<div>name: Jack, age: 18</div>"
+ *  console.log(tempCompiler(temp, data)) // "<div>name: Jack, score: 59, pass: no</div>"
  * ```
  */
-export function tempCompiler<T extends object>(temp: string, data: T) {
+export function tempCompiler<T extends object>(temp: string, data: T): string {
   const keys = Object.keys(data)
   const values = Object.values(data)
   const parser = new Function(...keys, `return \`${temp}\``)

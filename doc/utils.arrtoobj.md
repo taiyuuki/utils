@@ -9,7 +9,7 @@
 **Signature:**
 
 ```typescript
-declare function arrToObj<T extends Array<string | number>, V = boolean>(arr: T, v?: boolean): TupleToObject<T, V>;
+declare function arrToObj<T extends Array<string | number>, V = boolean>(arr: T, v?: V): TupleToObject<T, V>;
 ```
 
 ## Parameters
@@ -17,7 +17,7 @@ declare function arrToObj<T extends Array<string | number>, V = boolean>(arr: T,
 |  Parameter | Type | Description |
 |  --- | --- | --- |
 |  arr | T | 数组 |
-|  v | boolean | _(Optional)_ 对象每一项的值 |
+|  v | V | _(Optional)_ 对象每一项的值 |
 
 **Returns:**
 

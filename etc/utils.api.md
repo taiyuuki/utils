@@ -27,7 +27,7 @@ export function arrRemove<T>(arr: T[], value: T): boolean;
 // Warning: (ae-forgotten-export) The symbol "TupleToObject" needs to be exported by the entry point index.d.ts
 //
 // @public
-export function arrToObj<T extends Array<string | number>, V = boolean>(arr: T, v?: boolean): TupleToObject<T, V>;
+export function arrToObj<T extends Array<string | number>, V = boolean>(arr: T, v?: V): TupleToObject<T, V>;
 
 // @public
 export function arrUnique<T>(arr: T[]): T[];
@@ -41,10 +41,14 @@ export function canvasToBlob(cvs: HTMLCanvasElement): Promise<Blob>;
 // @public
 export function canvasToImage(cvs: HTMLCanvasElement): HTMLImageElement;
 
-// Warning: (ae-forgotten-export) The symbol "Color" needs to be exported by the entry point index.d.ts
-//
 // @public
-export function colorGetContrast(color: Color): "black" | "white";
+export function clone<T extends object>(source: T): T;
+
+// @public
+export function cloneDeep<T extends object>(source: T): T;
+
+// @public
+export function cloneSimple<T extends object>(source: T): T;
 
 // Warning: (ae-forgotten-export) The symbol "Fn" needs to be exported by the entry point index.d.ts
 //
@@ -78,7 +82,7 @@ export function domGetEl(selector: string): Element | undefined;
 export function domGetSize(el: Element | Window): {
     width: number;
     height: number;
-};
+} | undefined;
 
 // @public
 export function domSetCSS(el: HTMLElement, css: Partial<CSSStyleDeclaration>): void;
@@ -101,9 +105,15 @@ export function downloadImage(img: HTMLImageElement, imageName?: string): void;
 // @beta
 export class EventsControler {
     constructor();
-    addEvt<T extends EventTarget>(target: T, type: Parameters<T['addEventListener']>[0], callback: EventListenerOrEventListenerObject): this;
-    clear(): void;
+    // Warning: (ae-forgotten-export) The symbol "FnNoArgs" needs to be exported by the entry point index.d.ts
+    addEvt<T extends EventTarget>(target: T, type: Parameters<T['addEventListener']>[0], callback: FnNoArgs): this;
+    close(): void;
 }
+
+// Warning: (ae-forgotten-export) The symbol "Color" needs to be exported by the entry point index.d.ts
+//
+// @public
+export function getContrastColor(color: Color): "black" | "white";
 
 // @public
 export function hexToRgb(hex: string): number[];
@@ -262,6 +272,9 @@ export function strRandom(count: number, radix?: number): string;
 
 // @public
 export function strUuid(): string;
+
+// @public
+export function tempCompiler<T extends object>(temp: string, data: T): string;
 
 // @public
 export function throttle<T extends Fn>(func: T, timeFrame: number, immediately?: boolean): T;

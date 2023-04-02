@@ -24,7 +24,7 @@ const evtCtrl = new EventControler()
 evtCtrl.addEvt(el1, 'click', callback1)
 evtCtrl.addEvt(el2, 'keypress', callback2)
 // 解除所有绑定
-evtCtrl.clear()
+evtCtrl.close()
 ```
 
 ## Constructors
@@ -38,5 +38,5 @@ evtCtrl.clear()
 |  Method | Modifiers | Description |
 |  --- | --- | --- |
 |  [addEvt(target, type, callback)](./utils.eventscontroler.addevt.md) |  | **_(BETA)_** 绑定事件 |
-|  [clear()](./utils.eventscontroler.clear.md) |  | **_(BETA)_** 解除所有绑定的事件 |
+|  [close()](./utils.eventscontroler.close.md) |  | **_(BETA)_** 解除所有绑定的事件 |
 

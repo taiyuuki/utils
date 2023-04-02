@@ -12,7 +12,7 @@
 declare function domGetSize(el: Element | Window): {
     width: number;
     height: number;
-};
+} | undefined;
 ```
 
 ## Parameters
@@ -23,7 +23,7 @@ declare function domGetSize(el: Element | Window): {
 
 **Returns:**
 
-{ width: number; height: number; }
+{ width: number; height: number; } \| undefined
 
 包含width和height的对象
 
