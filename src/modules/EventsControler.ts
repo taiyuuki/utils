@@ -1,4 +1,4 @@
-import type { FnNoArgs } from 'src/types'
+import type { FnNoArgs } from '../types'
 
 interface EventItem {
   target: EventTarget

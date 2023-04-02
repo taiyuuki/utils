@@ -92,7 +92,7 @@
 |  [strNoSuffix(s, suffix)](./utils.strnosuffix.md) | 确保字符串没有特定后缀，有则删除 |
 |  [strRandom(count, radix)](./utils.strrandom.md) | 获取指定长度随机字符 |
 |  [strUuid()](./utils.struuid.md) | 生成UUID |
-|  [tempCompiler(temp, data)](./utils.tempcompiler.md) | 简单的模板解析 |
+|  [tempCompiler(temp, data)](./utils.tempcompiler.md) | 简单的模板编译 |
 |  [throttle(func, timeFrame, immediately)](./utils.throttle.md) | 函数节流 |
 |  [throwTypeError(type, name)](./utils.throwtypeerror.md) | 抛出类型错误 |
 |  [urlToBlob(url)](./utils.urltoblob.md) | 请求url数据并转换为blob |

@@ -1,7 +1,7 @@
 import { tempCompiler } from '../src/modules/template'
 import { describe, expect, it } from 'vitest'
 
-describe('模板解析', () => {
+describe('模板编译', () => {
   it('tempCompiler', () => {
     const data = {
       name: 'Jack',

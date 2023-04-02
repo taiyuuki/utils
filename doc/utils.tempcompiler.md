@@ -4,7 +4,7 @@
 
 ## tempCompiler() function
 
-简单的模板解析
+简单的模板编译
 
 **Signature:**
 

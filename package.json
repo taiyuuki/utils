@@ -17,13 +17,15 @@
     "build": "rollup -c",
     "test": "vitest",
     "doc": "npx api-extractor run --local --verbose && npx api-documenter markdown -i temp -o doc",
+    "doc debug": "npx api-extractor run --local --verbose --diagnostics && npx api-documenter markdown -i temp -o doc",
+    "trace": "npx tsc dist/types/index.d.ts --traceResolution > trace.log",
     "publish": "npm publish --registry=https://registry.npmjs.org --access=public"
   },
   "keywords": [],
   "sideEffects": false,
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
+      "types": "./dist/types/index.d.ts",
       "import": "./dist/esm/index.js",
       "require": "./dist/cjs/index.js"
     }

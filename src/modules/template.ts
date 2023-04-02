@@ -1,5 +1,5 @@
 /**
- * 简单的模板解析
+ * 简单的模板编译
  * @public
  * @param temp - 模板
  * @param data - 数据对象

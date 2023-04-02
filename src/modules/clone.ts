@@ -15,7 +15,7 @@ export function cloneSimple<T extends object>(source: T): T {
 export function cloneDeep<T extends object>(source: T) {
   const target = Object.create(Object.getPrototypeOf(source)) as T
   const loopStack = [[target, source]] as [Record<string, any>, Record<string, any>][]
-  const map = new Map()
+  const map = new WeakMap()
   map.set(source, target)
 
   while (loopStack.length > 0) {
@@ -37,6 +37,10 @@ export function cloneDeep<T extends object>(source: T) {
         target[key] = source[key]
       }
     }
+  }
+
+  if (!Object.isExtensible(source)) {
+    Object.preventExtensions(target)
   }
 
   return target
