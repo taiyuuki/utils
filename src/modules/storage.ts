@@ -19,13 +19,13 @@ export function storageSet<T>(key: string, value: T) {
  * 从localStorage读取
  * @public
  * @param key - 键名
- * @param empty - 值为空时的填充值，默认是空字符串
+ * @param empty - 值为空时的填充值，默认是undefined
  * @returns 值
  */
 export function storageGet<T>(key: string, empty?: T) {
   try {
     const data = localStorage.getItem(key)
-    return isNotVoid(data) ? JSON.parse(data) : (empty ?? '')
+    return isNotVoid(data) ? JSON.parse(data) : (empty ?? void 0)
   }
   catch (e) {
     console.error(e)
