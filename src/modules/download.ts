@@ -18,9 +18,9 @@ export function downloadByURL(URL: string, fileName = strUuid()) {
  * @public
  * @param blob - blob对象
  */
-export function downloadBlob(blob: Blob, imageName?: string) {
+export function downloadBlob(blob: Blob, fileName?: string) {
   const url = URL.createObjectURL(blob)
-  downloadByURL(url, imageName)
+  downloadByURL(url, fileName)
   URL.revokeObjectURL(url)
 }
 
