@@ -37,7 +37,7 @@
 |  [domGetSize(el)](./utils.domgetsize.md) | 获取dom元素或window的大小 |
 |  [domSetCSS(el, css)](./utils.domsetcss.md) | 给dom元素设置CSS属性 |
 |  [domSetCssVar(varName, value, el)](./utils.domsetcssvar.md) | 给DOM元素添加CSS变量 |
-|  [downloadBlob(blob, imageName)](./utils.downloadblob.md) | 下载blob文件 |
+|  [downloadBlob(blob, fileName)](./utils.downloadblob.md) | 下载blob文件 |
 |  [downloadByURL(URL, fileName)](./utils.downloadbyurl.md) | 通过URL下载文件 |
 |  [downloadCanvas(cvs, imageName)](./utils.downloadcanvas.md) | 下载canvas图片 |
 |  [downloadImage(img, imageName)](./utils.downloadimage.md) | 图片下载 |
@@ -72,6 +72,7 @@
 |  [isWindow(win)](./utils.iswindow.md) | 判断元素是否是wnidow |
 |  [isWindowOrElement(el)](./utils.iswindoworelement.md) | 判断元素是否是window或DOM元素 |
 |  [keyIn(key, obj)](./utils.keyin.md) | 判断某个对象是否有某个属性 |
+|  [logTypeError(type, name)](./utils.logtypeerror.md) | 控制台打印类型错误 |
 |  [mathBetween(v, min, max)](./utils.mathbetween.md) | 给定一个数字，返回一个保持位于两数之间的数 |
 |  [mathRandomInt(from, to)](./utils.mathrandomint.md) | 随机整数 |
 |  [mathToFixed(n, digit)](./utils.mathtofixed.md) | 四舍五入 |

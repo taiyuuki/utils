@@ -4,6 +4,11 @@
 
 ## strComplement() function
 
+> Warning: This API is now obsolete.
+> 
+> 已废弃，建议用字符串自带的padEnd或padStart方法
+> 
+
 根据需要的长度，在字符串前补足指定字符（比如0）
 
 **Signature:**

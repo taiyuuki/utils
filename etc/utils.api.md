@@ -91,7 +91,7 @@ export function domSetCSS(el: HTMLElement, css: Partial<CSSStyleDeclaration>): v
 export function domSetCssVar(varName: string, value: string, el?: HTMLElement): void;
 
 // @public
-export function downloadBlob(blob: Blob, imageName?: string): void;
+export function downloadBlob(blob: Blob, fileName?: string): void;
 
 // @public
 export function downloadByURL(URL: string, fileName?: string): void;
@@ -210,6 +210,9 @@ export function isWindowOrElement(el: any): el is Element | Window;
 export function keyIn<T extends object>(key: keyof T, obj: T): key is keyof T;
 
 // @public
+export function logTypeError(type: string, name: string): void;
+
+// @public
 export function mathBetween(v: number, min: number, max: number): number;
 
 // @public
@@ -249,7 +252,7 @@ export function storageSet<T>(key: string, value: T): void;
 // @public
 export function strCapital(str: string): string;
 
-// @public
+// @public @deprecated
 export function strComplement(n: number | string, len?: number, char?: string): string;
 
 // @public

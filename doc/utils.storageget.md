@@ -17,7 +17,7 @@ declare function storageGet<T>(key: string, empty?: T): any;
 |  Parameter | Type | Description |
 |  --- | --- | --- |
 |  key | string | 键名 |
-|  empty | T | _(Optional)_ 值为空时的填充值，默认是空字符串 |
+|  empty | T | _(Optional)_ 值为空时的填充值，默认是undefined |
 
 **Returns:**
 
