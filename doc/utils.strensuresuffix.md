@@ -4,7 +4,7 @@
 
 ## strEnsureSuffix() function
 
-确保字符串有特定后缀，没有则添加
+确保字符串有特定后缀，没有则添加 The function ensures that a given string ends with a specified suffix.
 
 **Signature:**
 
@@ -16,12 +16,10 @@ declare function strEnsureSuffix(s: string, suffix: string): string;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  s | string | 字符串 |
-|  suffix | string | 后缀 |
+|  s | string | The original string that we want to ensure has a certain suffix. |
+|  suffix | string | The <code>suffix</code> parameter is a string that we want to ensure is at the end of the <code>s</code> string. If <code>s</code> already ends with <code>suffix</code>, then the function should return <code>s</code> unchanged. If <code>s</code> does not end with <code>suffix</code>, then the function should append |
 
 **Returns:**
 
 string
-
-确保有后缀的字符串
 

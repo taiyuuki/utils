@@ -5,9 +5,13 @@ import { strNoPrefix } from './string'
 
 /**
  * rgb转hex
+ * This function converts an RGB color value to a hexadecimal color value.
  * @public
- * @param rgb - rgb值，是一个数组
- * @returns 16进制颜色值
+ * @param rgb - The `rgb` parameter is an array of numbers representing the red, green, and
+ * blue values of a color. It can also optionally include an alpha value as the fourth element of the
+ * array.
+ * @returns a string representing the hexadecimal value of the given RGB color. If the RGB color has an
+ * alpha channel, the function returns a string representing the hexadecimal value of the RGBA color.
  */
 export function rgbToHex(rgb: RgbColor) {
   if (!isRgbColor(rgb)) {
@@ -25,9 +29,13 @@ export function rgbToHex(rgb: RgbColor) {
 
 /**
  * hex转rgb
+ * The function converts a hexadecimal color code to its corresponding RGB values.
  * @public
- * @param hex - rgb 16进制颜色值
- * @returns rgb颜色值
+ * @param hex - The hex parameter is a string representing a hexadecimal color value, such as
+ * "#FF0000" for red or "#00FF00" for green. The function converts this hex value to an RGB array,
+ * where each element represents the red, green, and blue values of the color, respectively.
+ * @returns The function `hexToRgb` takes a hexadecimal color code as a string and returns an array of
+ * three integers representing the corresponding RGB values.
  */
 export function hexToRgb(hex: string) {
   hex = strNoPrefix(hex, '#')
@@ -39,9 +47,13 @@ export function hexToRgb(hex: string) {
 
 /**
  * 获取对比色
+ * The function takes a color as input and returns either black or white as the contrasting color based
+ * on the brightness of the input color.
  * @public
- * @param color - rgb或16进制颜色值
- * @returns 对比色
+ * @param color - The color parameter is of type Color, which could be either a string
+ * representing a color in hexadecimal format (e.g. "#FF0000" for red) or an object with properties for
+ * red, green, and blue values [255, 0, 0].
+ * @returns either the string 'black' or 'white' based on the contrast of the input color.
  */
 export function getContrastColor(color: Color) {
   if (typeof color !== 'string') {

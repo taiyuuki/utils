@@ -4,7 +4,7 @@
 
 ## addKeyboardEvents() function
 
-给document绑定键盘事件，可以给每一个按键绑定不同的方法。
+给document绑定键盘事件，可以给每一个按键绑定不同的方法。 This function adds keyboard events with specified options.
 
 **Signature:**
 
@@ -21,14 +21,12 @@ declare function addKeyboardEvents<T extends KeyboardEventOptions>(type: Keyboar
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  type | KeyboardEventType | 事件类型 |
-|  eventsOptions | T | 配置对象，可以是函数。 |
+|  type | KeyboardEventType | KeyboardEventType is a type alias that represents the different types of keyboard events that can be listened to, such as "keydown", "keyup", or "keypress". |
+|  eventsOptions | T | <code>eventsOptions</code> is a generic type parameter that extends <code>KeyboardEventOptions</code>. It is used to specify additional options for the keyboard event listener, such as whether the event should be captured or not. |
 
 **Returns:**
 
 { close(): void; off(): void; on(): void; emit: (code: KeyboardEventKeys&lt;T&gt;) =&gt; void; }
-
-控制事件的对象
 
 ## Example
 

@@ -4,7 +4,7 @@
 
 ## getContrastColor() function
 
-获取对比色
+获取对比色 The function takes a color as input and returns either black or white as the contrasting color based on the brightness of the input color.
 
 **Signature:**
 
@@ -16,11 +16,11 @@ declare function getContrastColor(color: Color): "black" | "white";
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  color | Color | rgb或16进制颜色值 |
+|  color | Color | The color parameter is of type Color, which could be either a string representing a color in hexadecimal format (e.g. "\#FF0000" for red) or an object with properties for red, green, and blue values \[255, 0, 0\]. |
 
 **Returns:**
 
 "black" \| "white"
 
-对比色
+either the string 'black' or 'white' based on the contrast of the input color.
 

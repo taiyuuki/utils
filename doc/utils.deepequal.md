@@ -4,7 +4,7 @@
 
 ## deepEqual() function
 
-对比两值
+对比两值 The function checks if two values are deeply equal.
 
 **Signature:**
 
@@ -16,10 +16,12 @@ declare function deepEqual(a: any, b: any): boolean;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  a | any |  |
-|  b | any |  |
+|  a | any | The first parameter of the function, which can be of any type (primitive or object). |
+|  b | any | The parameter "b" is a variable of any data type that is being compared to another variable "a" using the deepEqual function. |
 
 **Returns:**
 
 boolean
+
+a boolean value indicating whether the two input values are deeply equal or not.
 

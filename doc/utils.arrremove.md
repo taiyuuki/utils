@@ -4,7 +4,7 @@
 
 ## arrRemove() function
 
-移除数组中的一项
+移除数组中的一项 This function removes a specific value from an array of any type.
 
 **Signature:**
 
@@ -16,12 +16,10 @@ declare function arrRemove<T>(arr: T[], value: T): boolean;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  arr | T\[\] | 数组 |
-|  value | T | 需要移除的值 |
+|  arr | T\[\] | an array of type T, where T can be any data type such as string, number, object, etc. |
+|  value | T | The value parameter is the element that needs to be removed from the array. |
 
 **Returns:**
 
 boolean
-
-成功或失败的布尔值
 

@@ -1,7 +1,9 @@
 /**
  * 简单深克隆，适用于不含方法、不含循环引用的普通对象。
+ * The function `cloneSimple` creates a shallow copy of an object in TypeScript.
  * @public
- * @param source - 克隆对象
+ * @param source - The `source` parameter is of type `T`, which is a generic type that extends the
+ * `object` type. It represents the object that needs to be cloned.
  */
 export function cloneSimple<T extends object>(source: T): T {
   return JSON.parse(JSON.stringify(source))
@@ -9,8 +11,12 @@ export function cloneSimple<T extends object>(source: T): T {
 
 /**
  * 深克隆，包含方法、循环引用时可用
+ * This function creates a deep copy of an object in TypeScript.
  * @public
- * @param source - 克隆对象
+ * @param source - The `source` parameter is of type `T`, which is a generic type that extends the
+ * `object` type. It represents the object that needs to be cloned deeply, meaning that a new object
+ * with the same properties and values as the original object is created, but with no reference to the
+ * original
  */
 export function cloneDeep<T extends object>(source: T) {
   const target = Object.create(Object.getPrototypeOf(source)) as T
@@ -48,8 +54,10 @@ export function cloneDeep<T extends object>(source: T) {
 
 /**
  * 深克隆
+ * The function `clone` creates a deep copy of an object in TypeScript.
  * @public
- * @param source - 克隆对象
+ * @param source - The `source` parameter is of type `T`, which is a generic type that extends the
+ * `object` type. It represents the object that needs to be cloned.
  */
 export function clone<T extends object>(source: T): T {
   try {

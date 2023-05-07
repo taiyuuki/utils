@@ -18,9 +18,10 @@ export function arrToObj<T extends Array<string | number>, V = boolean>(arr: T, 
 
 /**
  * 数组去重
+ * This function takes an array of any type and returns a new array with only unique values.
  * @public
- * @param arr - 数组
- * @returns 去重后的数组
+ * @param arr - arr is an array of type T, which means it can hold any type of data. The function
+ * arrUnique takes this array as input and returns a new array with all the duplicate elements removed.
  */
 export function arrUnique<T>(arr: T[]): T[] {
   return Array.from(new Set(arr))
@@ -28,10 +29,11 @@ export function arrUnique<T>(arr: T[]): T[] {
 
 /**
  * 移除数组中的一项
+ * This function removes a specific value from an array of any type.
  * @public
- * @param arr - 数组
- * @param value - 需要移除的值
- * @returns 成功或失败的布尔值
+ * @param arr - an array of type T, where T can be any data type such as string, number, object,
+ * etc.
+ * @param value - The value parameter is the element that needs to be removed from the array.
  */
 export function arrRemove<T>(arr: T[], value: T) {
   if (!arr) { return false }
@@ -45,11 +47,12 @@ export function arrRemove<T>(arr: T[], value: T) {
 
 /**
  * 移动数组中的某一项至指定位置
+ * This function moves an element in an array from one index to another.
  * @public
- * @param arr - 数组
- * @param from - 移动项索引
- * @param to - 移动位置索引
- * @returns 移动后的数组
+ * @param arr - The `arr` parameter is an array of any type `T`.
+ * @param from - The index of the element in the array that needs to be moved.
+ * @param to - The "to" parameter is the index where the element in the array should be moved
+ * to.
  */
 export function arrMove<T extends any[]>(arr: T, from: number, to: number) {
   arr.splice(to, 0, arr.splice(from, 1)[0])
@@ -58,8 +61,11 @@ export function arrMove<T extends any[]>(arr: T, from: number, to: number) {
 
 /**
  * 获取数组中随机一项
+ * This function returns a random element from an array of any type.
  * @public
- * @param arr - 数组
+ * @param arr - The parameter "arr" is an array of type T, which means it can be an array of any
+ * type. The function "arrRandom" takes in this array as input and returns a random element from the
+ * array.
  */
 export function arrRandom<T>(arr: T[]): T {
   return arr[mathRandomInt(0, arr.length)]

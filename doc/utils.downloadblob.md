@@ -4,7 +4,7 @@
 
 ## downloadBlob() function
 
-下载blob文件
+下载blob文件 This function downloads a Blob object by creating a URL and revoking it after the download is complete.
 
 **Signature:**
 
@@ -16,8 +16,8 @@ declare function downloadBlob(blob: Blob, fileName?: string): void;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  blob | Blob | blob对象 |
-|  fileName | string | _(Optional)_ |
+|  blob | Blob | The <code>blob</code> parameter is a Blob object, which represents a file-like object of immutable, raw data. It can be used to represent data that isn't necessarily in a JavaScript-native format. The <code>downloadBlob</code> function takes this Blob object and downloads it as a file with a specified file name |
+|  fileName | string | _(Optional)_ The fileName parameter is a string that represents the name of the file that will be downloaded. If no value is provided for fileName, a random UUID (Universally Unique Identifier) string will be generated as the file name. |
 
 **Returns:**
 

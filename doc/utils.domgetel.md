@@ -4,7 +4,7 @@
 
 ## domGetEl() function
 
-获取dom元素
+获取dom元素 The function returns a DOM element selected by a given selector string or undefined if the selector is invalid or the element is not found.
 
 **Signature:**
 
@@ -16,11 +16,11 @@ declare function domGetEl(selector: string): Element | undefined;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  selector | string | 选择器 |
+|  selector | string | A string representing a CSS selector used to select an element in the DOM. |
 
 **Returns:**
 
 Element \| undefined
 
-DOM元素
+This function returns either the DOM element that matches the given selector or `undefined` if the selector is invalid or no element is found.
 

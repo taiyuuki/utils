@@ -4,7 +4,7 @@
 
 ## strMaybeNumber() function
 
-可能是数字或字符串，转为字符串
+可能是数字或字符串，转为字符串 The function takes in a parameter that can be either a number or a string and returns the parameter as a string.
 
 **Signature:**
 
@@ -16,11 +16,11 @@ declare function strMaybeNumber(target: number | string): string;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  target | number \| string | string或number |
+|  target | number \| string | The parameter "target" is a variable that can accept either a number or a string data type. |
 
 **Returns:**
 
 string
 
-字符串
+the string representation of the input parameter, whether it is a number or a string.
 

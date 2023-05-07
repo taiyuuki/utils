@@ -4,7 +4,7 @@
 
 ## domGetSize() function
 
-获取dom元素或window的大小
+获取dom元素或window的大小 The function `domGetSize` takes an element or window as input and returns its size.
 
 **Signature:**
 
@@ -19,11 +19,9 @@ declare function domGetSize(el: Element | Window): {
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  el | Element \| Window | DOM元素 |
+|  el | Element \| Window | The <code>el</code> parameter is a reference to an HTML element or the window object. It is used to determine the size of the element or the viewport. |
 
 **Returns:**
 
 { width: number; height: number; } \| undefined
-
-包含width和height的对象
 

@@ -4,7 +4,7 @@
 
 ## objectPick() function
 
-提取对象中部分属性
+提取对象中部分属性 The function `objectPick` takes an object and an array of keys and returns a new object with only the specified keys from the original object.
 
 **Signature:**
 
@@ -16,12 +16,10 @@ declare function objectPick<T extends object, K extends keyof T>(obj: T, keys: K
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  obj | T | 对象 |
-|  keys | K\[\] | 属性构成的数组 |
+|  obj | T | The first parameter <code>obj</code> is an object of type <code>T</code> which is a generic type that extends the <code>object</code> type. This means that <code>obj</code> can be any object that has properties and methods. |
+|  keys | K\[\] | <code>keys</code> is an array of keys of type <code>K</code> that we want to pick from the object <code>obj</code> of type <code>T</code>. The <code>K</code> type parameter is a generic type that extends the keys of the object <code>T</code>. This means that <code>K</code> can only be a key |
 
 **Returns:**
 
 Pick&lt;T, K&gt;
-
-提取属性后的对象
 

@@ -4,7 +4,7 @@
 
 ## strNoSuffix() function
 
-确保字符串没有特定后缀，有则删除
+确保字符串没有特定后缀，有则删除 The function takes in a string and a suffix, and returns the string without the suffix if it exists.
 
 **Signature:**
 
@@ -16,12 +16,10 @@ declare function strNoSuffix(s: string, suffix: string): string;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  s | string | 字符串 |
-|  suffix | string | 后缀 |
+|  s | string | A string that we want to remove the suffix from. |
+|  suffix | string | The <code>suffix</code> parameter is a string that represents the ending characters of a word or phrase that we want to remove from the input string <code>s</code>. |
 
 **Returns:**
 
 string
-
-确保移除后缀的字符串
 

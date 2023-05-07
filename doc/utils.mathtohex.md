@@ -4,7 +4,7 @@
 
 ## mathToHex() function
 
-10进制转16进制
+10进制转16进制 The function takes a number as input and returns its hexadecimal equivalent.
 
 **Signature:**
 
@@ -16,11 +16,9 @@ declare function mathToHex(n: number): number;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  n | number | 10进制数字 |
+|  n | number | The parameter "n" is a number that we want to convert to a hexadecimal string. |
 
 **Returns:**
 
 number
-
-16进制数字
 

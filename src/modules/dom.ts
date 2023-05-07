@@ -5,9 +5,13 @@ import { strEnsurePrefix } from './string'
 
 /**
  * 获取dom元素
+ * The function returns a DOM element selected by a given selector string or undefined if the selector
+ * is invalid or the element is not found.
  * @public
- * @param selector - 选择器
- * @returns DOM元素
+ * @param selector - A string representing a CSS selector used to select an element in the
+ * DOM.
+ * @returns This function returns either the DOM element that matches the given selector or `undefined`
+ * if the selector is invalid or no element is found.
  */
 export function domGetEl(selector: string) {
   if (isVoid(selector) || typeof selector !== 'string') {
@@ -23,10 +27,15 @@ export function domGetEl(selector: string) {
 
 /**
  * 获取dom元素的CSS属性
+ * The function returns the value of a specified CSS property for a given DOM element.
  * @public
- * @param el - DOM元素
- * @param prop - 指定CSS属性名
- * @returns 指定元素的指定CSS值
+ * @param el - The DOM element for which we want to get the computed CSS property value.
+ * @param prop - prop is a string representing the name of the CSS property whose value
+ * is to be retrieved from the computed style of the given element. Examples of CSS properties include
+ * "color", "font-size", "background-image", etc.
+ * @returns The function `domGetCSS` returns the value of the specified CSS property (`prop`) for the
+ * given DOM element (`el`). The value is obtained using the `window.getComputedStyle` method and
+ * returned as a string.
  */
 export function domGetCSS<T extends Element>(el: T, prop: CSSStyleName) {
   return window.getComputedStyle(el).getPropertyValue(prop)
@@ -34,9 +43,13 @@ export function domGetCSS<T extends Element>(el: T, prop: CSSStyleName) {
 
 /**
  * 给dom元素设置CSS属性
+ * The function sets CSS styles on a given HTML element.
  * @public
- * @param el - DOM元素
- * @param css - 包含CSS属性的对象
+ * @param el - HTMLElement - a reference to the HTML element that you want to apply the
+ * CSS styles to.
+ * @param css - The `css` parameter is an object that contains a partial CSSStyleDeclaration. It is
+ * used to set the CSS properties of an HTMLElement. The properties of the `css` object are the CSS
+ * property names, and their values are the corresponding CSS property values.
  */
 export function domSetCSS(el: HTMLElement, css: Partial<CSSStyleDeclaration>) {
   const style = el.style
@@ -47,9 +60,10 @@ export function domSetCSS(el: HTMLElement, css: Partial<CSSStyleDeclaration>) {
 
 /**
  * 获取dom元素或window的大小
+ * The function `domGetSize` takes an element or window as input and returns its size.
  * @public
- * @param el - DOM元素
- * @returns 包含width和height的对象
+ * @param el - The `el` parameter is a reference to an HTML element or the window
+ * object. It is used to determine the size of the element or the viewport.
  */
 export function domGetSize(el: Element | Window) {
   if (isWindow(el)) {
@@ -72,9 +86,15 @@ export function domGetSize(el: Element | Window) {
 
 /**
  * 给DOM元素添加CSS变量
+ * This function sets a CSS variable with a given name and value on a specified element or the document
+ * body.
  * @public
- * @param varName - CSS变量名 不需要--前缀
- * @param value - CSS变量值
+ * @param varName - A string representing the name of the CSS variable to be set.
+ * @param value - The value parameter is a string that represents the new value for the CSS
+ * variable being set.
+ * @param el - The `el` parameter is an optional parameter that specifies the element to which the CSS
+ * variable should be applied. If no element is specified, the CSS variable will be applied to the
+ * `document.body` element by default.
  */
 export function domSetCssVar(varName: string, value: string, el = document.body) {
   if (typeof varName !== 'string') {

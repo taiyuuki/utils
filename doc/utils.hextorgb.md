@@ -4,7 +4,7 @@
 
 ## hexToRgb() function
 
-hex转rgb
+hex转rgb The function converts a hexadecimal color code to its corresponding RGB values.
 
 **Signature:**
 
@@ -16,11 +16,11 @@ declare function hexToRgb(hex: string): number[];
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  hex | string | rgb 16进制颜色值 |
+|  hex | string | The hex parameter is a string representing a hexadecimal color value, such as "\#FF0000" for red or "\#00FF00" for green. The function converts this hex value to an RGB array, where each element represents the red, green, and blue values of the color, respectively. |
 
 **Returns:**
 
 number\[\]
 
-rgb颜色值
+The function `hexToRgb` takes a hexadecimal color code as a string and returns an array of three integers representing the corresponding RGB values.
 

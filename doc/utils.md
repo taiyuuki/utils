@@ -14,40 +14,40 @@
 
 |  Function | Description |
 |  --- | --- |
-|  [addKeyboardEvents(type, eventsOptions)](./utils.addkeyboardevents.md) | 给document绑定键盘事件，可以给每一个按键绑定不同的方法。 |
-|  [arrMove(arr, from, to)](./utils.arrmove.md) | 移动数组中的某一项至指定位置 |
-|  [arrRandom(arr)](./utils.arrrandom.md) | 获取数组中随机一项 |
-|  [arrRemove(arr, value)](./utils.arrremove.md) | 移除数组中的一项 |
+|  [addKeyboardEvents(type, eventsOptions)](./utils.addkeyboardevents.md) | 给document绑定键盘事件，可以给每一个按键绑定不同的方法。 This function adds keyboard events with specified options. |
+|  [arrMove(arr, from, to)](./utils.arrmove.md) | 移动数组中的某一项至指定位置 This function moves an element in an array from one index to another. |
+|  [arrRandom(arr)](./utils.arrrandom.md) | 获取数组中随机一项 This function returns a random element from an array of any type. |
+|  [arrRemove(arr, value)](./utils.arrremove.md) | 移除数组中的一项 This function removes a specific value from an array of any type. |
 |  [arrToObj(arr, v)](./utils.arrtoobj.md) | 将数组转换为对象 |
-|  [arrUnique(arr)](./utils.arrunique.md) | 数组去重 |
-|  [blobToDateURI(blob)](./utils.blobtodateuri.md) | Blob转base64 |
-|  [canvasToBlob(cvs)](./utils.canvastoblob.md) | 异步的方式转换canvas为blob |
-|  [canvasToImage(cvs)](./utils.canvastoimage.md) | canvas转image |
-|  [clone(source)](./utils.clone.md) | 深克隆 |
-|  [cloneDeep(source)](./utils.clonedeep.md) | 深克隆，包含方法、循环引用时可用 |
-|  [cloneSimple(source)](./utils.clonesimple.md) | 简单深克隆，适用于不含方法、不含循环引用的普通对象。 |
+|  [arrUnique(arr)](./utils.arrunique.md) | 数组去重 This function takes an array of any type and returns a new array with only unique values. |
+|  [blobToDateURI(blob)](./utils.blobtodateuri.md) | Blob转base64 This TypeScript function converts a Blob object to a data URI string or ArrayBuffer. |
+|  [canvasToBlob(cvs)](./utils.canvastoblob.md) | 异步的方式转换canvas为blob This function converts an HTML canvas element to a Blob object and returns a Promise. |
+|  [canvasToImage(cvs)](./utils.canvastoimage.md) | canvas转image This function converts a canvas element to an image element in TypeScript. |
+|  [clone(source)](./utils.clone.md) | 深克隆 The function <code>clone</code> creates a deep copy of an object in TypeScript. |
+|  [cloneDeep(source)](./utils.clonedeep.md) | 深克隆，包含方法、循环引用时可用 This function creates a deep copy of an object in TypeScript. |
+|  [cloneSimple(source)](./utils.clonesimple.md) | 简单深克隆，适用于不含方法、不含循环引用的普通对象。 The function <code>cloneSimple</code> creates a shallow copy of an object in TypeScript. |
 |  [compose(fns)](./utils.compose.md) | 函数组合，前一个函数的返回值作为下一个函数的参数 |
-|  [copyText(target, addition)](./utils.copytext.md) | 复制文本到剪切板 |
-|  [dataURIToBlob(dataURI, mimeType)](./utils.datauritoblob.md) | base64转blob |
-|  [dateNow(format)](./utils.datenow.md) | 获取现在的时间 |
+|  [copyText(target, addition)](./utils.copytext.md) | 复制文本到剪切板 The function copies text to the clipboard using the Clipboard API if available, otherwise it falls back to creating a temporary textarea element and using the execCommand method. |
+|  [dataURIToBlob(dataURI, mimeType)](./utils.datauritoblob.md) | base64转blob This function converts a data URI to a Blob object. |
+|  [dateNow(format)](./utils.datenow.md) | 获取现在的时间 The function returns the current date and time in a specified format. |
 |  [debounce(func, timeFrame)](./utils.debounce.md) | 函数防抖 |
-|  [deepEqual(a, b)](./utils.deepequal.md) | 对比两值 |
-|  [domGetCSS(el, prop)](./utils.domgetcss.md) | 获取dom元素的CSS属性 |
-|  [domGetEl(selector)](./utils.domgetel.md) | 获取dom元素 |
-|  [domGetSize(el)](./utils.domgetsize.md) | 获取dom元素或window的大小 |
-|  [domSetCSS(el, css)](./utils.domsetcss.md) | 给dom元素设置CSS属性 |
-|  [domSetCssVar(varName, value, el)](./utils.domsetcssvar.md) | 给DOM元素添加CSS变量 |
-|  [downloadBlob(blob, fileName)](./utils.downloadblob.md) | 下载blob文件 |
-|  [downloadByURL(URL, fileName)](./utils.downloadbyurl.md) | 通过URL下载文件 |
-|  [downloadCanvas(cvs, imageName)](./utils.downloadcanvas.md) | 下载canvas图片 |
-|  [downloadImage(img, imageName)](./utils.downloadimage.md) | 图片下载 |
-|  [getContrastColor(color)](./utils.getcontrastcolor.md) | 获取对比色 |
-|  [hexToRgb(hex)](./utils.hextorgb.md) | hex转rgb |
-|  [imageGetType(filename)](./utils.imagegettype.md) | 获取图片类型 |
-|  [imageResize(img, size, type)](./utils.imageresize.md) | 改变图片尺寸 |
-|  [imageToBlob(img)](./utils.imagetoblob.md) | image元素转blob |
-|  [imageToCanvas(img, size)](./utils.imagetocanvas.md) | image元素转canvas |
-|  [imageToDataURI(img, type)](./utils.imagetodatauri.md) | image元素转base64 |
+|  [deepEqual(a, b)](./utils.deepequal.md) | 对比两值 The function checks if two values are deeply equal. |
+|  [domGetCSS(el, prop)](./utils.domgetcss.md) | 获取dom元素的CSS属性 The function returns the value of a specified CSS property for a given DOM element. |
+|  [domGetEl(selector)](./utils.domgetel.md) | 获取dom元素 The function returns a DOM element selected by a given selector string or undefined if the selector is invalid or the element is not found. |
+|  [domGetSize(el)](./utils.domgetsize.md) | 获取dom元素或window的大小 The function <code>domGetSize</code> takes an element or window as input and returns its size. |
+|  [domSetCSS(el, css)](./utils.domsetcss.md) | 给dom元素设置CSS属性 The function sets CSS styles on a given HTML element. |
+|  [domSetCssVar(varName, value, el)](./utils.domsetcssvar.md) | 给DOM元素添加CSS变量 This function sets a CSS variable with a given name and value on a specified element or the document body. |
+|  [downloadBlob(blob, fileName)](./utils.downloadblob.md) | 下载blob文件 This function downloads a Blob object by creating a URL and revoking it after the download is complete. |
+|  [downloadByURL(URL, fileName)](./utils.downloadbyurl.md) | 通过URL下载文件 This function downloads a file from a given URL with an optional filename. |
+|  [downloadCanvas(cvs, imageName)](./utils.downloadcanvas.md) | 下载canvas图片 This function downloads an HTML canvas element as an image with a default or specified name. |
+|  [downloadImage(img, imageName)](./utils.downloadimage.md) | 图片下载 This function downloads an image by its URL and saves it with a generated or provided name. |
+|  [getContrastColor(color)](./utils.getcontrastcolor.md) | 获取对比色 The function takes a color as input and returns either black or white as the contrasting color based on the brightness of the input color. |
+|  [hexToRgb(hex)](./utils.hextorgb.md) | hex转rgb The function converts a hexadecimal color code to its corresponding RGB values. |
+|  [imageGetType(filename)](./utils.imagegettype.md) | 获取图片类型 The function "imageGetType" takes a filename as input and returns the file type of the image. |
+|  [imageResize(img, size, type)](./utils.imageresize.md) | 改变图片尺寸 This function resizes an HTML image element to a specified size and MIME type. |
+|  [imageToBlob(img)](./utils.imagetoblob.md) | image元素转blob This function converts an HTML image element to a blob object using a canvas. |
+|  [imageToCanvas(img, size)](./utils.imagetocanvas.md) | image元素转canvas This function converts an HTML image element to a canvas element with a specified size. |
+|  [imageToDataURI(img, type)](./utils.imagetodatauri.md) | image元素转base64 This function converts an HTML image element to a data URI. |
 |  [isBase64(str)](./utils.isbase64.md) | 判断字符串是否是base64格式的 |
 |  [isBlob(blob)](./utils.isblob.md) | 判断是否是Blob对象 |
 |  [isDate(d)](./utils.isdate.md) | 判断是否是Date对象 |
@@ -71,31 +71,31 @@
 |  [isVoid(t)](./utils.isvoid.md) | 判断是否是空值，空值包括null、undefined、NaN |
 |  [isWindow(win)](./utils.iswindow.md) | 判断元素是否是wnidow |
 |  [isWindowOrElement(el)](./utils.iswindoworelement.md) | 判断元素是否是window或DOM元素 |
-|  [keyIn(key, obj)](./utils.keyin.md) | 判断某个对象是否有某个属性 |
-|  [logTypeError(type, name)](./utils.logtypeerror.md) | 控制台打印类型错误 |
-|  [mathBetween(v, min, max)](./utils.mathbetween.md) | 给定一个数字，返回一个保持位于两数之间的数 |
+|  [keyIn(key, obj)](./utils.keyin.md) | 判断某个对象是否有某个属性 This function checks if a given key exists in a given object and returns a boolean value. |
+|  [logTypeError(type, name)](./utils.logtypeerror.md) | 控制台打印类型错误 The function logs an error message indicating an expected type and name. |
+|  [mathBetween(v, min, max)](./utils.mathbetween.md) | 给定一个数字，返回一个保持位于两数之间的数 The function returns a value within a specified range. |
 |  [mathRandomInt(from, to)](./utils.mathrandomint.md) | 随机整数 |
 |  [mathToFixed(n, digit)](./utils.mathtofixed.md) | 四舍五入 |
-|  [mathToHex(n)](./utils.mathtohex.md) | 10进制转16进制 |
-|  [objectEntries(obj)](./utils.objectentries.md) | Object.entries的返回值，提供类型推断 |
-|  [objectKeys(o)](./utils.objectkeys.md) | Object.keys的返回值，提供类型推断 |
-|  [objectPick(obj, keys)](./utils.objectpick.md) | 提取对象中部分属性 |
-|  [rgbToHex(rgb)](./utils.rgbtohex.md) | rgb转hex |
-|  [storageGet(key, empty)](./utils.storageget.md) | 从localStorage读取 |
-|  [storageRemove(key)](./utils.storageremove.md) | 从localStorage移除 |
-|  [storageSet(key, value)](./utils.storageset.md) | 保存至localStorage |
-|  [strCapital(str)](./utils.strcapital.md) | 首字母大写 |
-|  [strComplement(n, len, char)](./utils.strcomplement.md) | 根据需要的长度，在字符串前补足指定字符（比如0） |
-|  [strEnsurePrefix(s, prefix)](./utils.strensureprefix.md) | 确保字符串有特定前缀，没有则添加 |
-|  [strEnsureSuffix(s, suffix)](./utils.strensuresuffix.md) | 确保字符串有特定后缀，没有则添加 |
-|  [strMaybeNumber(target)](./utils.strmaybenumber.md) | 可能是数字或字符串，转为字符串 |
-|  [strNoPrefix(s, prefix)](./utils.strnoprefix.md) | 确保字符串没有特定前缀，有则删除 |
-|  [strNoSuffix(s, suffix)](./utils.strnosuffix.md) | 确保字符串没有特定后缀，有则删除 |
-|  [strRandom(count, radix)](./utils.strrandom.md) | 获取指定长度随机字符 |
-|  [strUuid()](./utils.struuid.md) | 生成UUID |
-|  [tempCompiler(temp, data)](./utils.tempcompiler.md) | 简单的模板编译 |
+|  [mathToHex(n)](./utils.mathtohex.md) | 10进制转16进制 The function takes a number as input and returns its hexadecimal equivalent. |
+|  [objectEntries(obj)](./utils.objectentries.md) | Object.entries的返回值，提供类型推断 This function returns the entries of an object as an array of key-value pairs. |
+|  [objectKeys(o)](./utils.objectkeys.md) | Object.keys的返回值，提供类型推断 This function returns the keys of an object as an array. |
+|  [objectPick(obj, keys)](./utils.objectpick.md) | 提取对象中部分属性 The function <code>objectPick</code> takes an object and an array of keys and returns a new object with only the specified keys from the original object. |
+|  [rgbToHex(rgb)](./utils.rgbtohex.md) | rgb转hex This function converts an RGB color value to a hexadecimal color value. |
+|  [storageGet(key, empty)](./utils.storageget.md) | 从localStorage读取 The function retrieves data from local storage and returns it as a parsed JSON object or an optional default value. |
+|  [storageRemove(key)](./utils.storageremove.md) | 从localStorage移除 The function removes an item from local storage based on a given key. |
+|  [storageSet(key, value)](./utils.storageset.md) | 保存至localStorage The function stores a value of any type in the browser's local storage using a specified key. |
+|  [strCapital(str)](./utils.strcapital.md) | 首字母大写 The function takes a string as input and capitalizes the first letter of the string. |
+|  [strComplement(n, len, char)](./utils.strcomplement.md) | 根据需要的长度，在字符串前补足指定字符（比如0） The function takes a number or string and returns a string with a specified length, padded with a specified character. |
+|  [strEnsurePrefix(s, prefix)](./utils.strensureprefix.md) | 确保字符串有特定前缀，没有则添加 The function ensures that a given string has a specified prefix. |
+|  [strEnsureSuffix(s, suffix)](./utils.strensuresuffix.md) | 确保字符串有特定后缀，没有则添加 The function ensures that a given string ends with a specified suffix. |
+|  [strMaybeNumber(target)](./utils.strmaybenumber.md) | 可能是数字或字符串，转为字符串 The function takes in a parameter that can be either a number or a string and returns the parameter as a string. |
+|  [strNoPrefix(s, prefix)](./utils.strnoprefix.md) | 确保字符串没有特定前缀，有则删除 The function removes a specified prefix from a given string. |
+|  [strNoSuffix(s, suffix)](./utils.strnosuffix.md) | 确保字符串没有特定后缀，有则删除 The function takes in a string and a suffix, and returns the string without the suffix if it exists. |
+|  [strRandom(count, radix)](./utils.strrandom.md) | 获取指定长度随机字符 The function generates a random string of a specified length and radix. |
+|  [strUuid()](./utils.struuid.md) | 生成UUID The function returns a string representation of a UUID. |
+|  [tempCompiler(temp, data)](./utils.tempcompiler.md) | 简单的模板编译 The function takes a string template and an object of data, and returns a compiled string with the data values inserted into the template. |
 |  [throttle(func, timeFrame, immediately)](./utils.throttle.md) | 函数节流 |
-|  [throwTypeError(type, name)](./utils.throwtypeerror.md) | 抛出类型错误 |
-|  [urlToBlob(url)](./utils.urltoblob.md) | 请求url数据并转换为blob |
-|  [urlToDateURI(url, type)](./utils.urltodateuri.md) | 通过图片url转换base64 |
+|  [throwTypeError(type, name)](./utils.throwtypeerror.md) | 抛出类型错误 The function throws a TypeError with a specific message. |
+|  [urlToBlob(url)](./utils.urltoblob.md) | 请求url数据并转换为blob This function takes a URL and returns a Promise that resolves to a Blob object obtained by making an XMLHttpRequest to the URL and converting the response to an array buffer. |
+|  [urlToDateURI(url, type)](./utils.urltodateuri.md) | 通过图片url转换base64 This function converts a URL to a data URI for an image. |
 

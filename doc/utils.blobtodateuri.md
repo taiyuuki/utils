@@ -4,7 +4,7 @@
 
 ## blobToDateURI() function
 
-Blob转base64
+Blob转base64 This TypeScript function converts a Blob object to a data URI string or ArrayBuffer.
 
 **Signature:**
 
@@ -16,11 +16,11 @@ declare function blobToDateURI(blob: Blob): Promise<string | ArrayBuffer>;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  blob | Blob | Blob对象 |
+|  blob | Blob | The <code>blob</code> parameter is a <code>Blob</code> object, which represents a file-like object of immutable, raw data. It can be used to represent data that is not necessarily in a JavaScript-native format. |
 
 **Returns:**
 
 Promise&lt;string \| ArrayBuffer&gt;
 
-Promise
+A Promise that resolves to a string or ArrayBuffer, depending on the result of reading the provided Blob as a data URL.
 

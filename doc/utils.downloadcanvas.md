@@ -4,7 +4,7 @@
 
 ## downloadCanvas() function
 
-下载canvas图片
+下载canvas图片 This function downloads an HTML canvas element as an image with a default or specified name.
 
 **Signature:**
 
@@ -16,8 +16,8 @@ declare function downloadCanvas(cvs: HTMLCanvasElement, imageName?: string): voi
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  cvs | HTMLCanvasElement | canvas元素 |
-|  imageName | string | _(Optional)_ |
+|  cvs | HTMLCanvasElement | HTMLCanvasElement - This is the canvas element that you want to download as an image. |
+|  imageName | string | _(Optional)_ The imageName parameter is a string that represents the name of the downloaded image file. If no name is provided, a random UUID (Universally Unique Identifier) string will be generated as the file name. |
 
 **Returns:**
 

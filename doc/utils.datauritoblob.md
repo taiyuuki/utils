@@ -4,7 +4,7 @@
 
 ## dataURIToBlob() function
 
-base64转blob
+base64转blob This function converts a data URI to a Blob object.
 
 **Signature:**
 
@@ -16,12 +16,12 @@ declare function dataURIToBlob(dataURI: string, mimeType?: string): Blob;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  dataURI | string | base64 |
-|  mimeType | string | _(Optional)_ 文件类型 |
+|  dataURI | string | A string representing a data URI, which includes the data and metadata of a file in a single string format. |
+|  mimeType | string | _(Optional)_ The MIME type of the dataURI, which specifies the type of data being represented in the URI. It is an optional parameter, and if not provided, the function tries to extract it from the dataURI itself. |
 
 **Returns:**
 
 Blob
 
-blob
+a Blob object.
 

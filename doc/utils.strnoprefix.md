@@ -4,7 +4,7 @@
 
 ## strNoPrefix() function
 
-确保字符串没有特定前缀，有则删除
+确保字符串没有特定前缀，有则删除 The function removes a specified prefix from a given string.
 
 **Signature:**
 
@@ -16,12 +16,10 @@ declare function strNoPrefix(s: string, prefix: string): string;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  s | string | 字符串 |
-|  prefix | string | 前缀 |
+|  s | string | The <code>s</code> parameter is a string that we want to remove a prefix from. |
+|  prefix | string | The prefix parameter is a string that we want to remove from the beginning of the input string (s). |
 
 **Returns:**
 
 string
-
-确保移除前缀的字符串
 

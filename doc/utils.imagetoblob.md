@@ -4,7 +4,7 @@
 
 ## imageToBlob() function
 
-image元素转blob
+image元素转blob This function converts an HTML image element to a blob object using a canvas.
 
 **Signature:**
 
@@ -16,11 +16,11 @@ declare function imageToBlob(img: HTMLImageElement): Promise<Blob>;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  img | HTMLImageElement | image元素 |
+|  img | HTMLImageElement | HTMLImageElement - an image element in the HTML document. |
 
 **Returns:**
 
 Promise&lt;Blob&gt;
 
-Blob对象
+A Promise that resolves to a Blob object.
 

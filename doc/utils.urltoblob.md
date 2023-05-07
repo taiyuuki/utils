@@ -4,7 +4,7 @@
 
 ## urlToBlob() function
 
-请求url数据并转换为blob
+请求url数据并转换为blob This function takes a URL and returns a Promise that resolves to a Blob object obtained by making an XMLHttpRequest to the URL and converting the response to an array buffer.
 
 **Signature:**
 
@@ -16,9 +16,11 @@ declare function urlToBlob(url: string): Promise<Blob>;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  url | string | URL |
+|  url | string | The URL of the resource that needs to be converted to a Blob object. |
 
 **Returns:**
 
 Promise&lt;Blob&gt;
+
+The function `urlToBlob` returns a Promise that resolves to a Blob object.
 

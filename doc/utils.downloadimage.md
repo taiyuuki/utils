@@ -4,7 +4,7 @@
 
 ## downloadImage() function
 
-图片下载
+图片下载 This function downloads an image by its URL and saves it with a generated or provided name.
 
 **Signature:**
 
@@ -16,8 +16,8 @@ declare function downloadImage(img: HTMLImageElement, imageName?: string): void;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  img | HTMLImageElement | image元素 |
-|  imageName | string | _(Optional)_ image名称 |
+|  img | HTMLImageElement | HTMLImageElement - this is an object that represents an image element in an HTML document. |
+|  imageName | string | _(Optional)_ The imageName parameter is a string that represents the name of the image file that will be downloaded. If no value is provided for imageName, the function will generate a random UUID string as the file name. |
 
 **Returns:**
 

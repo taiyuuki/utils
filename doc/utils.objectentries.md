@@ -4,7 +4,7 @@
 
 ## objectEntries() function
 
-Object.entries的返回值，提供类型推断
+Object.entries的返回值，提供类型推断 This function returns the entries of an object as an array of key-value pairs.
 
 **Signature:**
 
@@ -16,9 +16,11 @@ declare function objectEntries<T extends object>(obj: T): Entries<T>;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  obj | T |  |
+|  obj | T | The <code>obj</code> parameter is of type <code>T</code>, which extends the <code>object</code> type. It represents an object whose entries we want to retrieve. |
 
 **Returns:**
 
 Entries&lt;T&gt;
+
+The function `objectEntries` is returning an array of key-value pairs of the input object `obj`<!-- -->. The type of the returned array is `Entries<T>`<!-- -->, which is a type alias defined elsewhere in the code. The `as Entries<T>` syntax is used to assert the type of the returned value as `Entries<T>`<!-- -->.
 

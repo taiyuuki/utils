@@ -4,7 +4,7 @@
 
 ## mathBetween() function
 
-给定一个数字，返回一个保持位于两数之间的数
+给定一个数字，返回一个保持位于两数之间的数 The function returns a value within a specified range.
 
 **Signature:**
 
@@ -16,9 +16,9 @@ declare function mathBetween(v: number, min: number, max: number): number;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  v | number | 给定数字 |
-|  min | number | 下限 |
-|  max | number | 上限 |
+|  v | number | a number that you want to check if it falls between the range of min and max. |
+|  min | number | The minimum value that the input number <code>v</code> can take. If <code>v</code> is less than <code>min</code>, the function will return <code>min</code>. |
+|  max | number | The <code>max</code> parameter is a number representing the maximum value that <code>v</code> can take. The <code>mathBetween</code> function is designed to ensure that <code>v</code> is always within the range of <code>min</code> and <code>max</code>. |
 
 **Returns:**
 

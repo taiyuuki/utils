@@ -4,7 +4,7 @@
 
 ## arrRandom() function
 
-获取数组中随机一项
+获取数组中随机一项 This function returns a random element from an array of any type.
 
 **Signature:**
 
@@ -16,7 +16,7 @@ declare function arrRandom<T>(arr: T[]): T;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  arr | T\[\] | 数组 |
+|  arr | T\[\] | The parameter "arr" is an array of type T, which means it can be an array of any type. The function "arrRandom" takes in this array as input and returns a random element from the array. |
 
 **Returns:**
 

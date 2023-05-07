@@ -4,7 +4,7 @@
 
 ## cloneDeep() function
 
-深克隆，包含方法、循环引用时可用
+深克隆，包含方法、循环引用时可用 This function creates a deep copy of an object in TypeScript.
 
 **Signature:**
 
@@ -16,7 +16,7 @@ declare function cloneDeep<T extends object>(source: T): T;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  source | T | 克隆对象 |
+|  source | T | The <code>source</code> parameter is of type <code>T</code>, which is a generic type that extends the <code>object</code> type. It represents the object that needs to be cloned deeply, meaning that a new object with the same properties and values as the original object is created, but with no reference to the original |
 
 **Returns:**
 

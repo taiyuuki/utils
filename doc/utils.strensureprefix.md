@@ -4,7 +4,7 @@
 
 ## strEnsurePrefix() function
 
-确保字符串有特定前缀，没有则添加
+确保字符串有特定前缀，没有则添加 The function ensures that a given string has a specified prefix.
 
 **Signature:**
 
@@ -16,12 +16,10 @@ declare function strEnsurePrefix(s: string, prefix: string): string;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  s | string | 字符串 |
-|  prefix | string | 前缀 |
+|  s | string | The input string that we want to ensure has a certain prefix. |
+|  prefix | string | The prefix parameter is a string that we want to ensure is at the beginning of the input string s. If s already starts with prefix, then the function should return s unchanged. If s does not start with prefix, then the function should return prefix followed by s. |
 
 **Returns:**
 
 string
-
-确保有前缀的字符串
 

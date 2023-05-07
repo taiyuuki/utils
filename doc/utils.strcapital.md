@@ -4,7 +4,7 @@
 
 ## strCapital() function
 
-首字母大写
+首字母大写 The function takes a string as input and capitalizes the first letter of the string.
 
 **Signature:**
 
@@ -16,7 +16,7 @@ declare function strCapital(str: string): string;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  str | string |  |
+|  str | string | The parameter "str" is a string type variable that represents the input string that needs to be capitalized. |
 
 **Returns:**
 

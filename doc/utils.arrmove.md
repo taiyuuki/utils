@@ -4,7 +4,7 @@
 
 ## arrMove() function
 
-移动数组中的某一项至指定位置
+移动数组中的某一项至指定位置 This function moves an element in an array from one index to another.
 
 **Signature:**
 
@@ -16,13 +16,11 @@ declare function arrMove<T extends any[]>(arr: T, from: number, to: number): T;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  arr | T | 数组 |
-|  from | number | 移动项索引 |
-|  to | number | 移动位置索引 |
+|  arr | T | The <code>arr</code> parameter is an array of any type <code>T</code>. |
+|  from | number | The index of the element in the array that needs to be moved. |
+|  to | number | The "to" parameter is the index where the element in the array should be moved to. |
 
 **Returns:**
 
 T
-
-移动后的数组
 

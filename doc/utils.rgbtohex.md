@@ -4,7 +4,7 @@
 
 ## rgbToHex() function
 
-rgb转hex
+rgb转hex This function converts an RGB color value to a hexadecimal color value.
 
 **Signature:**
 
@@ -16,11 +16,11 @@ declare function rgbToHex(rgb: RgbColor): string;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  rgb | RgbColor | rgb值，是一个数组 |
+|  rgb | RgbColor | The <code>rgb</code> parameter is an array of numbers representing the red, green, and blue values of a color. It can also optionally include an alpha value as the fourth element of the array. |
 
 **Returns:**
 
 string
 
-16进制颜色值
+a string representing the hexadecimal value of the given RGB color. If the RGB color has an alpha channel, the function returns a string representing the hexadecimal value of the RGBA color.
 

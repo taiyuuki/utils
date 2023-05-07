@@ -4,9 +4,13 @@ import { strMaybeNumber } from './string'
 
 /**
  * 复制文本到剪切板
+ * The function copies text to the clipboard using the Clipboard API if available, otherwise it falls
+ * back to creating a temporary textarea element and using the execCommand method.
  * @public
- * @param target - 字符串或DOM元素
- * @param addition - 复制时在后面添加额外字符
+ * @param target - The target can be a string, number, or HTMLElement
+ * that contains the text to be copied.
+ * @param addition - Optional string parameter that can be added to the end of the text to
+ * be copied. If not provided, the copied text will be the same as the target.
  */
 export function copyText(target: string | number | HTMLElement, addition?: string) {
   let text = isStringLike(target) ? strMaybeNumber(target) : target.innerText

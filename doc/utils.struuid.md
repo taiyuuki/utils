@@ -4,7 +4,7 @@
 
 ## strUuid() function
 
-生成UUID
+生成UUID The function returns a string representation of a UUID.
 
 **Signature:**
 

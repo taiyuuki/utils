@@ -4,7 +4,7 @@
 
 ## imageResize() function
 
-改变图片尺寸
+改变图片尺寸 This function resizes an HTML image element to a specified size and MIME type.
 
 **Signature:**
 
@@ -16,13 +16,13 @@ declare function imageResize(img: HTMLImageElement, size: ImageSize, type?: stri
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  img | HTMLImageElement | 原image元素 |
-|  size | ImageSize | 尺寸对象，包含属性： width: number, height: number |
-|  type | string | _(Optional)_ 图片MIMETYPE |
+|  img | HTMLImageElement | An HTMLImageElement object representing the image that needs to be resized. |
+|  size | ImageSize | ImageSize is likely a custom type or interface that defines the desired dimensions of the resized image. It could include properties such as width and height. Without seeing the specific implementation of ImageSize, it's difficult to provide more information. |
+|  type | string | _(Optional)_ The <code>type</code> parameter is an optional parameter that specifies the MIME type of the output image. If no value is provided, the default MIME type is used. |
 
 **Returns:**
 
 HTMLImageElement
 
-改变尺寸后的image元素
+a new HTMLImageElement that has been resized based on the input parameters.
 

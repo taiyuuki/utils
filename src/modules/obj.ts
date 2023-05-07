@@ -2,7 +2,13 @@ import type { Entries, Keys } from '../types'
 
 /**
  * Object.keys的返回值，提供类型推断
+ * This function returns the keys of an object as an array.
  * @public
+ * @param o - o is a generic parameter of type T that extends the object type. It represents the
+ * object whose keys we want to retrieve.
+ * @returns The function `objectKeys` returns an array of keys of the input object `o`, with the type
+ * of the keys being inferred based on the type of the input object. The type of the returned value is
+ * `Keys<T>`, which is a type alias defined elsewhere in the code.
  */
 export function objectKeys<T extends object>(o: T): Keys<T> {
   return Object.keys(o) as Keys<T>
@@ -10,7 +16,14 @@ export function objectKeys<T extends object>(o: T): Keys<T> {
 
 /**
  * Object.entries的返回值，提供类型推断
+ * This function returns the entries of an object as an array of key-value pairs.
  * @public
+ * @param obj - The `obj` parameter is of type `T`, which extends the `object` type. It represents
+ * an object whose entries we want to retrieve.
+ * @returns The function `objectEntries` is returning an array of key-value pairs of the input object
+ * `obj`. The type of the returned array is `Entries<T>`, which is a type alias defined elsewhere in
+ * the code. The `as Entries<T>` syntax is used to assert the type of the returned value as
+ * `Entries<T>`.
  */
 export function objectEntries<T extends object>(obj: T): Entries<T> {
   return Object.entries(obj) as Entries<T>
@@ -18,10 +31,12 @@ export function objectEntries<T extends object>(obj: T): Entries<T> {
 
 /**
  * 判断某个对象是否有某个属性
+ * This function checks if a given key exists in a given object and returns a boolean value.
  * @public
- * @param key - 键名
- * @param obj - 对象
- * @returns 布尔值
+ * @param key - The first parameter `key` is a generic type that extends the keys of an object `T`. It
+ * represents the key that we want to check if it exists in the object `obj`.
+ * @param obj - The `obj` parameter is an object of type `T`. The `T` type is a generic type that
+ * extends the `object` type, which means that `obj` can be any object type.
  */
 export function keyIn<T extends object>(key: keyof T, obj: T): key is keyof T {
   return key in obj
@@ -29,10 +44,14 @@ export function keyIn<T extends object>(key: keyof T, obj: T): key is keyof T {
 
 /**
  * 提取对象中部分属性
+ * The function `objectPick` takes an object and an array of keys and returns a new object with only
+ * the specified keys from the original object.
  * @public
- * @param obj - 对象
- * @param keys - 属性构成的数组
- * @returns 提取属性后的对象
+ * @param obj - The first parameter `obj` is an object of type `T` which is a generic type that
+ * extends the `object` type. This means that `obj` can be any object that has properties and methods.
+ * @param keys - `keys` is an array of keys of type `K` that we want to pick from the object
+ * `obj` of type `T`. The `K` type parameter is a generic type that extends the keys of the object `T`.
+ * This means that `K` can only be a key
  */
 export function objectPick<T extends object, K extends keyof T>(obj: T, keys: K[]) {
   return keys.reduce((result, key) => {

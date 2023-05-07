@@ -2,7 +2,13 @@ import { isObject } from './is'
 
 /**
  * 对比两值
+ * The function checks if two values are deeply equal.
  * @public
+ * @param a - The first parameter of the function, which can be of any type (primitive or
+ * object).
+ * @param b - The parameter "b" is a variable of any data type that is being compared to another
+ * variable "a" using the deepEqual function.
+ * @returns a boolean value indicating whether the two input values are deeply equal or not.
  */
 export function deepEqual(a: any, b: any): boolean {
   if (a === b) {

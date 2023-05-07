@@ -4,7 +4,7 @@
 
 ## canvasToImage() function
 
-canvas转image
+canvas转image This function converts a canvas element to an image element in TypeScript.
 
 **Signature:**
 
@@ -16,11 +16,11 @@ declare function canvasToImage(cvs: HTMLCanvasElement): HTMLImageElement;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  cvs | HTMLCanvasElement | canvas元素 |
+|  cvs | HTMLCanvasElement | HTMLCanvasElement - This is a reference to an HTML canvas element that contains the image data that we want to convert to an image. |
 
 **Returns:**
 
 HTMLImageElement
 
-image元素
+an HTMLImageElement object.
 

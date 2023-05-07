@@ -4,7 +4,7 @@
 
 ## urlToDateURI() function
 
-通过图片url转换base64
+通过图片url转换base64 This function converts a URL to a data URI for an image.
 
 **Signature:**
 
@@ -16,12 +16,12 @@ declare function urlToDateURI(url: string, type?: string): Promise<string>;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  url | string | 图片URL |
-|  type | string | _(Optional)_ 图片类型 |
+|  url | string | The URL of the image that needs to be converted to a data URI. |
+|  type | string | _(Optional)_ The optional parameter "type" specifies the image format of the data URI to be returned. If not provided, the default format is PNG. Possible values for "type" include "image/jpeg", "image/png", "image/gif", etc. |
 
 **Returns:**
 
 Promise&lt;string&gt;
 
-base64
+A Promise that resolves to a string representing the data URI of the image loaded from the provided URL.
 

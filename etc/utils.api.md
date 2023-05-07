@@ -293,7 +293,7 @@ export function urlToDateURI(url: string, type?: string): Promise<string>;
 
 // Warnings were encountered during analysis:
 //
-// dist/types/modules/keyboard.d.ts:47:5 - (ae-forgotten-export) The symbol "KeyboardEventKeys" needs to be exported by the entry point index.d.ts
+// dist/types/modules/keyboard.d.ts:50:5 - (ae-forgotten-export) The symbol "KeyboardEventKeys" needs to be exported by the entry point index.d.ts
 
 // (No @packageDocumentation comment for this package)
 

@@ -4,7 +4,7 @@
 
 ## throwTypeError() function
 
-抛出类型错误
+抛出类型错误 The function throws a TypeError with a specific message.
 
 **Signature:**
 
@@ -16,8 +16,8 @@ declare function throwTypeError(type: string, name: string): void;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  type | string | 正确的类型 |
-|  name | string | 变量名 |
+|  type | string | a string representing the expected data type |
+|  name | string | The name of the variable or parameter that is expected to have a certain type. |
 
 **Returns:**
 

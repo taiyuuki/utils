@@ -7,10 +7,13 @@ function resolveOptions<T extends KeyboardEventOptions>(options: T) {
 
 /**
  * 给document绑定键盘事件，可以给每一个按键绑定不同的方法。
+ * This function adds keyboard events with specified options.
  * @public
- * @param type - 事件类型
- * @param eventsOptions - 配置对象，可以是函数。
- * @returns 控制事件的对象
+ * @param type - KeyboardEventType is a type alias that represents the different
+ * types of keyboard events that can be listened to, such as "keydown", "keyup", or "keypress".
+ * @param eventsOptions - `eventsOptions` is a generic type parameter that extends
+ * `KeyboardEventOptions`. It is used to specify additional options for the keyboard event listener,
+ * such as whether the event should be captured or not.
  * @example
  * ```ts
  * // 绑定事件

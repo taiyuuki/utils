@@ -4,7 +4,7 @@
 
 ## arrUnique() function
 
-数组去重
+数组去重 This function takes an array of any type and returns a new array with only unique values.
 
 **Signature:**
 
@@ -16,11 +16,9 @@ declare function arrUnique<T>(arr: T[]): T[];
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  arr | T\[\] | 数组 |
+|  arr | T\[\] | arr is an array of type T, which means it can hold any type of data. The function arrUnique takes this array as input and returns a new array with all the duplicate elements removed. |
 
 **Returns:**
 
 T\[\]
-
-去重后的数组
 

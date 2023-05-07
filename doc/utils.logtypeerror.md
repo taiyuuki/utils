@@ -4,7 +4,7 @@
 
 ## logTypeError() function
 
-控制台打印类型错误
+控制台打印类型错误 The function logs an error message indicating an expected type and name.
 
 **Signature:**
 
@@ -16,8 +16,8 @@ declare function logTypeError(type: string, name: string): void;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  type | string | 正确的类型 |
-|  name | string | 变量名 |
+|  type | string | string - This parameter is used to specify the expected data type of the variable. |
+|  name | string | The name parameter is a string that represents the name of the variable or parameter that is expected to have a certain type. |
 
 **Returns:**
 

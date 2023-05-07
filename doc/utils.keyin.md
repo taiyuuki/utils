@@ -4,7 +4,7 @@
 
 ## keyIn() function
 
-判断某个对象是否有某个属性
+判断某个对象是否有某个属性 This function checks if a given key exists in a given object and returns a boolean value.
 
 **Signature:**
 
@@ -16,12 +16,10 @@ declare function keyIn<T extends object>(key: keyof T, obj: T): key is keyof T;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  key | keyof T | 键名 |
-|  obj | T | 对象 |
+|  key | keyof T | The first parameter <code>key</code> is a generic type that extends the keys of an object <code>T</code>. It represents the key that we want to check if it exists in the object <code>obj</code>. |
+|  obj | T | The <code>obj</code> parameter is an object of type <code>T</code>. The <code>T</code> type is a generic type that extends the <code>object</code> type, which means that <code>obj</code> can be any object type. |
 
 **Returns:**
 
 key is keyof T
-
-布尔值
 

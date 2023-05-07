@@ -4,7 +4,7 @@
 
 ## downloadByURL() function
 
-通过URL下载文件
+通过URL下载文件 This function downloads a file from a given URL with an optional filename.
 
 **Signature:**
 
@@ -16,8 +16,8 @@ declare function downloadByURL(URL: string, fileName?: string): void;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  URL | string | url |
-|  fileName | string | _(Optional)_ 文件名 |
+|  URL | string | The URL parameter is a string that represents the URL of the file that needs to be downloaded. |
+|  fileName | string | _(Optional)_ The fileName parameter is a string that represents the name of the file that will be downloaded. If no value is provided for fileName, the function will generate a random UUID string as the file name. |
 
 **Returns:**
 

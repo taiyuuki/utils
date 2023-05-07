@@ -17,10 +17,14 @@ export function mathRandomInt(from: number, to: number) {
 
 /**
  * 给定一个数字，返回一个保持位于两数之间的数
+ * The function returns a value within a specified range.
  * @public
- * @param v - 给定数字
- * @param min - 下限
- * @param max - 上限
+ * @param v - a number that you want to check if it falls between the range of min and max.
+ * @param min - The minimum value that the input number `v` can take. If `v` is less than
+ * `min`, the function will return `min`.
+ * @param max - The `max` parameter is a number representing the maximum value that `v` can
+ * take. The `mathBetween` function is designed to ensure that `v` is always within the range of `min`
+ * and `max`.
  */
 export function mathBetween(v: number, min: number, max: number) {
   if (min >= max) {
@@ -31,9 +35,9 @@ export function mathBetween(v: number, min: number, max: number) {
 
 /**
  * 10进制转16进制
+ * The function takes a number as input and returns its hexadecimal equivalent.
  * @public
- * @param n - 10进制数字
- * @returns 16进制数字
+ * @param n - The parameter "n" is a number that we want to convert to a hexadecimal string.
  */
 export function mathToHex(n: number) {
   return parseInt(`${n}`, 16)

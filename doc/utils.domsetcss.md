@@ -4,7 +4,7 @@
 
 ## domSetCSS() function
 
-给dom元素设置CSS属性
+给dom元素设置CSS属性 The function sets CSS styles on a given HTML element.
 
 **Signature:**
 
@@ -16,8 +16,8 @@ declare function domSetCSS(el: HTMLElement, css: Partial<CSSStyleDeclaration>): 
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  el | HTMLElement | DOM元素 |
-|  css | Partial&lt;CSSStyleDeclaration&gt; | 包含CSS属性的对象 |
+|  el | HTMLElement | HTMLElement - a reference to the HTML element that you want to apply the CSS styles to. |
+|  css | Partial&lt;CSSStyleDeclaration&gt; | The <code>css</code> parameter is an object that contains a partial CSSStyleDeclaration. It is used to set the CSS properties of an HTMLElement. The properties of the <code>css</code> object are the CSS property names, and their values are the corresponding CSS property values. |
 
 **Returns:**
 

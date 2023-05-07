@@ -4,7 +4,7 @@
 
 ## domSetCssVar() function
 
-给DOM元素添加CSS变量
+给DOM元素添加CSS变量 This function sets a CSS variable with a given name and value on a specified element or the document body.
 
 **Signature:**
 
@@ -16,9 +16,9 @@ declare function domSetCssVar(varName: string, value: string, el?: HTMLElement):
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  varName | string | CSS变量名 不需要--前缀 |
-|  value | string | CSS变量值 |
-|  el | HTMLElement | _(Optional)_ |
+|  varName | string | A string representing the name of the CSS variable to be set. |
+|  value | string | The value parameter is a string that represents the new value for the CSS variable being set. |
+|  el | HTMLElement | _(Optional)_ The <code>el</code> parameter is an optional parameter that specifies the element to which the CSS variable should be applied. If no element is specified, the CSS variable will be applied to the <code>document.body</code> element by default. |
 
 **Returns:**
 

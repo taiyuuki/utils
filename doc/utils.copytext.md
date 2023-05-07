@@ -4,7 +4,7 @@
 
 ## copyText() function
 
-复制文本到剪切板
+复制文本到剪切板 The function copies text to the clipboard using the Clipboard API if available, otherwise it falls back to creating a temporary textarea element and using the execCommand method.
 
 **Signature:**
 
@@ -16,8 +16,8 @@ declare function copyText(target: string | number | HTMLElement, addition?: stri
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  target | string \| number \| HTMLElement | 字符串或DOM元素 |
-|  addition | string | _(Optional)_ 复制时在后面添加额外字符 |
+|  target | string \| number \| HTMLElement | The target can be a string, number, or HTMLElement that contains the text to be copied. |
+|  addition | string | _(Optional)_ Optional string parameter that can be added to the end of the text to be copied. If not provided, the copied text will be the same as the target. |
 
 **Returns:**
 

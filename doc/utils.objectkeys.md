@@ -4,7 +4,7 @@
 
 ## objectKeys() function
 
-Object.keys的返回值，提供类型推断
+Object.keys的返回值，提供类型推断 This function returns the keys of an object as an array.
 
 **Signature:**
 
@@ -16,9 +16,11 @@ declare function objectKeys<T extends object>(o: T): Keys<T>;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  o | T |  |
+|  o | T | o is a generic parameter of type T that extends the object type. It represents the object whose keys we want to retrieve. |
 
 **Returns:**
 
 Keys&lt;T&gt;
+
+The function `objectKeys` returns an array of keys of the input object `o`<!-- -->, with the type of the keys being inferred based on the type of the input object. The type of the returned value is `Keys<T>`<!-- -->, which is a type alias defined elsewhere in the code.
 

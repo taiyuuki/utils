@@ -4,7 +4,7 @@
 
 ## imageGetType() function
 
-获取图片类型
+获取图片类型 The function "imageGetType" takes a filename as input and returns the file type of the image.
 
 **Signature:**
 
@@ -16,11 +16,9 @@ declare function imageGetType(filename: string): string;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  filename | string | 含后缀的文件名 |
+|  filename | string | The filename parameter is a string that represents the name of an image file. |
 
 **Returns:**
 
 string
-
-mimetype
 

@@ -4,7 +4,7 @@
 
 ## imageToDataURI() function
 
-image元素转base64
+image元素转base64 This function converts an HTML image element to a data URI.
 
 **Signature:**
 
@@ -16,12 +16,12 @@ declare function imageToDataURI(img: HTMLImageElement, type?: string): string;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  img | HTMLImageElement | image元素 |
-|  type | string | _(Optional)_ |
+|  img | HTMLImageElement | An HTMLImageElement object representing the image that needs to be converted to a data URI. |
+|  type | string | _(Optional)_ The type parameter is the MIME type of the image format to be used in the data URI. If no type is specified, the default MIME type is used. |
 
 **Returns:**
 
 string
 
-base64
+a data URI (Uniform Resource Identifier) of the image passed as an argument. The data URI is a string that represents the image data in a format that can be used as a source for an image element in HTML.
 

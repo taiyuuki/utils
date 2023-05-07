@@ -4,7 +4,7 @@
 
 ## storageRemove() function
 
-从localStorage移除
+从localStorage移除 The function removes an item from local storage based on a given key.
 
 **Signature:**
 
@@ -16,7 +16,7 @@ declare function storageRemove(key: string): void;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  key | string | 键名 |
+|  key | string | The key parameter is a string that represents the name of the item to be removed from the browser's local storage. |
 
 **Returns:**
 

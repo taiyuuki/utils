@@ -4,7 +4,7 @@
 
 ## strRandom() function
 
-获取指定长度随机字符
+获取指定长度随机字符 The function generates a random string of a specified length and radix.
 
 **Signature:**
 
@@ -16,8 +16,8 @@ declare function strRandom(count: number, radix?: number): string;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  count | number | 长度 |
-|  radix | number | _(Optional)_ 进制 0-36 |
+|  count | number | The number of characters in the random string that will be generated. |
+|  radix | number | _(Optional)_ Radix refers to the base number system used for representing numbers. In this case, the default radix is 16, which means the function will generate a random string using hexadecimal characters (0-9 and A-F). However, you can also specify a different radix if you want to use a different |
 
 **Returns:**
 
