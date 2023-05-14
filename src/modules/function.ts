@@ -2,11 +2,12 @@ import type { Fn } from '../types'
 import { is_not_void } from './is'
 
 /**
+ * This is a function that implements throttle functionality for a given function.
  * @public
- * This is a function that implements throttle functionality for a given function. It takes
- * in three parameters: `func`, which is the function to be throttled, `timeFrame`, which is the time
- * interval in milliseconds, and `immediately`, which is an optional boolean parameter that determines
- * whether the function should be executed immediately or not.
+ * @param func - The function to be throttled
+ * @param timeFrame - The time interval in milliseconds
+ * @param immediately - Whether the function should be executed immediately or not
+ * @returns The throttled function is implementing the throttle functionality for a given function.
  */
 function throttle<T extends Fn>(
     func: T,
@@ -35,12 +36,11 @@ function throttle<T extends Fn>(
 }
 
 /**
+ * This is a function that implements debounce functionality for a given function.
  * @public
- * The `debounce` function is implementing the debounce functionality for a given function. It takes in
- * Ttwo parameters: `func`, which is the function to be debounced, and `timeFrame`, which is the time
- * Tinterval in milliseconds. The returned function will only execute `func` if `timeFrame` milliseconds
- * Thave passed since the last time it was called. If it is called again before `timeFrame` milliseconds
- * Thave passed, the timer is reset and the function will not be executed.
+ * @param func - The function to be debounced
+ * @param timeFrame - The time interval in milliseconds
+ * @returns The debounced function is implementing the debounce functionality for a given function.
  */
 function debounce<T extends Fn>(
     func: T,

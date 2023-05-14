@@ -30,7 +30,7 @@
 |  [copy\_text(target, addition)](./utils.copy_text.md) | The function copies text to the clipboard using the Clipboard API if available, otherwise it falls back to creating a temporary textarea element and using the execCommand method. |
 |  [data\_URI\_to\_blob(dataURI, mimeType)](./utils.data_uri_to_blob.md) | This function converts a data URI to a Blob object. |
 |  [date\_now(format)](./utils.date_now.md) | The function returns the current date and time in a specified format. |
-|  [debounce(func, timeFrame)](./utils.debounce.md) | The <code>debounce</code> function is implementing the debounce functionality for a given function. It takes in Ttwo parameters: <code>func</code>, which is the function to be debounced, and <code>timeFrame</code>, which is the time Tinterval in milliseconds. The returned function will only execute <code>func</code> if <code>timeFrame</code> milliseconds Thave passed since the last time it was called. If it is called again before <code>timeFrame</code> milliseconds Thave passed, the timer is reset and the function will not be executed. |
+|  [debounce(func, timeFrame)](./utils.debounce.md) | This is a function that implements debounce functionality for a given function. |
 |  [deep\_equal(a, b)](./utils.deep_equal.md) | The function checks if two values are deeply equal. |
 |  [dom\_get\_css(el, prop)](./utils.dom_get_css.md) | The function returns the value of a specified CSS property for a given DOM element. |
 |  [dom\_get\_el(selector)](./utils.dom_get_el.md) | The function returns a DOM element selected by a given selector string or undefined if the selector is invalid or the element is not found. |
@@ -94,7 +94,7 @@
 |  [str\_random(count, radix)](./utils.str_random.md) | The function generates a random string of a specified length and radix. |
 |  [str\_uuid()](./utils.str_uuid.md) | The function returns a string representation of a UUID. |
 |  [temp\_compiler(temp, data)](./utils.temp_compiler.md) | The function takes a string template and an object of data, and returns a compiled string with the data values inserted into the template. |
-|  [throttle(func, timeFrame, immediately)](./utils.throttle.md) | This is a function that implements throttle functionality for a given function. It takes in three parameters: <code>func</code>, which is the function to be throttled, <code>timeFrame</code>, which is the time interval in milliseconds, and <code>immediately</code>, which is an optional boolean parameter that determines whether the function should be executed immediately or not. |
+|  [throttle(func, timeFrame, immediately)](./utils.throttle.md) | This is a function that implements throttle functionality for a given function. |
 |  [throw\_type\_error(type, name)](./utils.throw_type_error.md) | The function throws a TypeError with a specific message. |
 |  [url\_to\_blob(url)](./utils.url_to_blob.md) | This function takes a URL and returns a Promise that resolves to a Blob object obtained by making an XMLHttpRequest to the URL and converting the response to an array buffer. |
 |  [url\_to\_date\_URI(url, type)](./utils.url_to_date_uri.md) | This function converts a URL to a data URI for an image. |

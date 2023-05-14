@@ -4,7 +4,7 @@
 
 ## throttle() function
 
-This is a function that implements throttle functionality for a given function. It takes in three parameters: `func`<!-- -->, which is the function to be throttled, `timeFrame`<!-- -->, which is the time interval in milliseconds, and `immediately`<!-- -->, which is an optional boolean parameter that determines whether the function should be executed immediately or not.
+This is a function that implements throttle functionality for a given function.
 
 **Signature:**
 
@@ -16,11 +16,13 @@ declare function throttle<T extends Fn>(func: T, timeFrame: number, immediately?
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  func | T |  |
-|  timeFrame | number |  |
-|  immediately | boolean | _(Optional)_ |
+|  func | T | The function to be throttled |
+|  timeFrame | number | The time interval in milliseconds |
+|  immediately | boolean | _(Optional)_ Whether the function should be executed immediately or not |
 
 **Returns:**
 
 T
+
+The throttled function is implementing the throttle functionality for a given function.
 
