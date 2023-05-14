@@ -9,7 +9,7 @@ specifiers:
   '@rollup/plugin-json': ^6.0.0
   '@rollup/plugin-node-resolve': ^14.1.0
   '@rollup/plugin-terser': ^0.4.0
-  '@taiyuuki/eslint-config-ts': ^0.0.5
+  '@taiyuuki/eslint-config-ts': ^0.0.6
   '@types/jsdom': ^21.1.0
   '@types/node': ^18.11.18
   eslint: ^8.10.0
@@ -32,7 +32,7 @@ devDependencies:
   '@rollup/plugin-json': 6.0.0_rollup@2.79.1
   '@rollup/plugin-node-resolve': 14.1.0_rollup@2.79.1
   '@rollup/plugin-terser': 0.4.0_rollup@2.79.1
-  '@taiyuuki/eslint-config-ts': 0.0.5_eslint@8.34.0
+  '@taiyuuki/eslint-config-ts': 0.0.6_eslint@8.34.0
   '@types/jsdom': 21.1.0
   '@types/node': 18.14.0
   eslint: 8.34.0
@@ -579,10 +579,10 @@ packages:
       string-argv: 0.3.1
     dev: true
 
-  /@taiyuuki/eslint-config-ts/0.0.5_eslint@8.34.0:
-    resolution: {integrity: sha512-GBeZ4w6y3f0GH3MM9oSzf3UN3UzL+n0h03rRlMYI13e4J2bCxPo0IxfESiaw4bwOR7EuXsyg8Q/Ig81WnEvqag==}
+  /@taiyuuki/eslint-config-ts/0.0.6_eslint@8.34.0:
+    resolution: {integrity: sha512-wqgSH/3BXSbD9J8iKCd4cdYSmnSzuc+CO1teLSzlxtAo60xqmwlXNT2UFUQsFYN051TV1H62Ced/7uqOvjxjFg==}
     dependencies:
-      '@taiyuuki/eslint-config': 0.0.4_dbs2zxbe2aiqaiiio3svelvkai
+      '@taiyuuki/eslint-config': 0.0.6_dbs2zxbe2aiqaiiio3svelvkai
       '@typescript-eslint/eslint-plugin': 5.53.0_ny4s7qc6yg74faf3d6xty2ofzy
       '@typescript-eslint/parser': 5.53.0_7kw3g6rralp5ps6mg3uyzz6azm
       eslint-plugin-import: 2.27.5_dbs2zxbe2aiqaiiio3svelvkai
@@ -594,8 +594,8 @@ packages:
       - supports-color
     dev: true
 
-  /@taiyuuki/eslint-config/0.0.4_dbs2zxbe2aiqaiiio3svelvkai:
-    resolution: {integrity: sha512-tNlJUyrZBwKXFdUs+9lV3GfAKNkxjliSfPwIIr1+uRsauo74BIsSNokLJsFFOifR6CGozh5DfrUkQ1kftHjfFw==}
+  /@taiyuuki/eslint-config/0.0.6_dbs2zxbe2aiqaiiio3svelvkai:
+    resolution: {integrity: sha512-4ZJMy+JMBU66+qzjYruQc0DFs48/fzodFC1nir0Ho/Y9VKoSm1zpr279wZBjJ9aG96MkF7HkBx8JE1Nh436GeA==}
     dependencies:
       eslint-plugin-eslint-comments: 3.2.0_eslint@8.34.0
       eslint-plugin-html: 7.1.0

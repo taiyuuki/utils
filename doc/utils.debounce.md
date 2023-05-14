@@ -4,7 +4,7 @@
 
 ## debounce() function
 
-函数防抖
+The `debounce` function is implementing the debounce functionality for a given function. It takes in Ttwo parameters: `func`<!-- -->, which is the function to be debounced, and `timeFrame`<!-- -->, which is the time Tinterval in milliseconds. The returned function will only execute `func` if `timeFrame` milliseconds Thave passed since the last time it was called. If it is called again before `timeFrame` milliseconds Thave passed, the timer is reset and the function will not be executed.
 
 **Signature:**
 
@@ -16,12 +16,10 @@ declare function debounce<T extends Fn>(func: T, timeFrame: number): T;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  func | T | 需要防抖的函数 |
-|  timeFrame | number | 时间间隔 |
+|  func | T |  |
+|  timeFrame | number |  |
 
 **Returns:**
 
 T
-
-防抖后的函数
 

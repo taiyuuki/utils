@@ -1,12 +1,11 @@
 import type { KeyboardEventType, KeyboardEventOptions, KeyboardEventKeys, KeyboardEventCallback } from '../types'
-import { keyIn } from './obj'
+import { key_in } from './obj'
 
-function resolveOptions<T extends KeyboardEventOptions>(options: T) {
-  return typeof options === 'function' ? options() : options
+function resolve_options<T extends KeyboardEventOptions>(options: T) {
+    return typeof options === 'function' ? options() : options
 }
 
 /**
- * 给document绑定键盘事件，可以给每一个按键绑定不同的方法。
  * This function adds keyboard events with specified options.
  * @public
  * @param type - KeyboardEventType is a type alias that represents the different
@@ -17,17 +16,15 @@ function resolveOptions<T extends KeyboardEventOptions>(options: T) {
  * @example
  * ```ts
  * // 绑定事件
- * const ctrl = addKeyboardEvents('keydown', {
+ * const ctrl = add_keyboard_events('keydown', {
  *  KeyW(){
- *    console.log('按下了W键')
+ *    console.log('w')
  *  },
  *  Enter(){
- *    console.log('按下了回车键')
+ *    console.log('enter')
  *  }
  * })
- * // 手动触发W键
  * ctrl.emit('KeyW')
- * // 临时关闭事件，可以再开启。
  * ctrl.off()
  * // 重新开启事件。
  * ctrl.on()
@@ -35,41 +32,43 @@ function resolveOptions<T extends KeyboardEventOptions>(options: T) {
  * ctrl.close()
  * ```
  */
-export function addKeyboardEvents<T extends KeyboardEventOptions>(type: KeyboardEventType, eventsOptions: T) {
-  let valid = true
-  const events = resolveOptions(eventsOptions) as Record<KeyboardEventKeys<T>, KeyboardEventCallback>
-  function emit(code: keyof typeof events) {
-    if (keyIn(code, events)) {
-      events[code]()
+function add_keyboard_events<T extends KeyboardEventOptions>(type: KeyboardEventType, eventsOptions: T) {
+    let valid = true
+    const events = resolve_options(eventsOptions) as Record<KeyboardEventKeys<T>, KeyboardEventCallback>
+    function emit(code: keyof typeof events) {
+        if (key_in(code, events)) {
+            events[code]()
+        }
     }
-  }
-  function handler(e: KeyboardEvent) {
-    valid && !e.isComposing && emit(e.code as KeyboardEventKeys<T>)
-  }
-  document.addEventListener(type, handler)
-  return {
+    function handler(e: KeyboardEvent) {
+        valid && !e.isComposing && emit(e.code as KeyboardEventKeys<T>)
+    }
+    document.addEventListener(type, handler)
+    return {
     /**
      * 取消事件绑定，无法再开启。
      */
-    close() {
-      document.removeEventListener(type, handler)
-    },
-    /**
+        close() {
+            document.removeEventListener(type, handler)
+        },
+        /**
      * 临时关闭事件，可以再开启。
      */
-    off() {
-      valid = false
-    },
-    /**
+        off() {
+            valid = false
+        },
+        /**
      * 重新开启事件。
      */
-    on() {
-      valid = true
-    },
-    /**
+        on() {
+            valid = true
+        },
+        /**
      * 手动触发按键事件，即使已经取消了绑定，也能触发。
      * @param code - KeyboardEvent.code
      */
-    emit,
-  }
+        emit,
+    }
 }
+
+export { add_keyboard_events }

@@ -1,17 +1,17 @@
-import { objectPick } from '../src/modules/obj'
+import { object_pick } from '../src/modules/obj'
 import { describe, expect, it } from 'vitest'
 
 describe('object', () => {
-  it('object pick', () => {
-    expect(objectPick({
-      name: 'abc',
-      value: false,
-      age: 28,
-    }, ['name', 'age'])).toMatchInlineSnapshot(`
+    it('object pick', () => {
+        expect(object_pick({
+            name: 'abc',
+            value: false,
+            age: 28,
+        }, ['name', 'age'])).toMatchInlineSnapshot(`
       {
         "age": 28,
         "name": "abc",
       }
     `)
-  })
+    })
 })

@@ -7,7 +7,7 @@
 > This API is provided as a preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 > 
 
-用于管理多个DOM事件，适用于组件销毁时，注销组件内绑定的所有事件。
+DOM Event Controler
 
 **Signature:**
 
@@ -19,12 +19,10 @@ declare class EventsControler
 
 
 ```ts
-const evtCtrl = new EventControler()
-// 绑定事件
-evtCtrl.addEvt(el1, 'click', callback1)
-evtCtrl.addEvt(el2, 'keypress', callback2)
-// 解除所有绑定
-evtCtrl.close()
+const evt_ctrl = new EventControler()
+evt_ctrl.add_evt(el1, 'click', callback1)
+evt_ctrl.add_evt(el2, 'keypress', callback2)
+evt_ctrl.close()
 ```
 
 ## Constructors
@@ -37,6 +35,6 @@ evtCtrl.close()
 
 |  Method | Modifiers | Description |
 |  --- | --- | --- |
-|  [addEvt(target, type, callback)](./utils.eventscontroler.addevt.md) |  | **_(BETA)_** 绑定事件 |
+|  [add\_evt(target, type, callback)](./utils.eventscontroler.add_evt.md) |  | **_(BETA)_** 绑定事件 |
 |  [close()](./utils.eventscontroler.close.md) |  | **_(BETA)_** 解除所有绑定的事件 |
 

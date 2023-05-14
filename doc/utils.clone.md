@@ -4,7 +4,7 @@
 
 ## clone() function
 
-深克隆 The function `clone` creates a deep copy of an object in TypeScript.
+The function `clone` creates a deep copy of an object in TypeScript.
 
 **Signature:**
 

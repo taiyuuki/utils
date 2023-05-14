@@ -8,7 +8,7 @@
 // Warning: (ae-forgotten-export) The symbol "KeyboardEventType" needs to be exported by the entry point index.d.ts
 //
 // @public
-export function addKeyboardEvents<T extends KeyboardEventOptions>(type: KeyboardEventType, eventsOptions: T): {
+export function add_keyboard_events<T extends KeyboardEventOptions>(type: KeyboardEventType, eventsOptions: T): {
     close(): void;
     off(): void;
     on(): void;
@@ -16,39 +16,39 @@ export function addKeyboardEvents<T extends KeyboardEventOptions>(type: Keyboard
 };
 
 // @public
-export function arrMove<T extends any[]>(arr: T, from: number, to: number): T;
+export function arr_move<T extends any[]>(arr: T, from: number, to: number): T;
 
 // @public
-export function arrRandom<T>(arr: T[]): T;
+export function arr_random<T>(arr: T[]): T;
 
 // @public
-export function arrRemove<T>(arr: T[], value: T): boolean;
+export function arr_remove<T>(arr: T[], value: T): boolean;
 
 // Warning: (ae-forgotten-export) The symbol "TupleToObject" needs to be exported by the entry point index.d.ts
 //
 // @public
-export function arrToObj<T extends Array<string | number>, V = boolean>(arr: T, v?: V): TupleToObject<T, V>;
+export function arr_to_obj<T extends Array<string | number>, V = boolean>(arr: T, v?: V): TupleToObject<T, V>;
 
 // @public
-export function arrUnique<T>(arr: T[]): T[];
+export function arr_unique<T>(arr: T[]): T[];
 
 // @public
-export function blobToDateURI(blob: Blob): Promise<string | ArrayBuffer>;
+export function blob_to_date_uri(blob: Blob): Promise<string | ArrayBuffer>;
 
 // @public
-export function canvasToBlob(cvs: HTMLCanvasElement): Promise<Blob>;
+export function canvas_to_blob(cvs: HTMLCanvasElement): Promise<Blob>;
 
 // @public
-export function canvasToImage(cvs: HTMLCanvasElement): HTMLImageElement;
+export function canvas_to_image(cvs: HTMLCanvasElement): HTMLImageElement;
 
 // @public
 export function clone<T extends object>(source: T): T;
 
 // @public
-export function cloneDeep<T extends object>(source: T): T;
+export function clone_deep<T extends object>(source: T): T;
 
 // @public
-export function cloneSimple<T extends object>(source: T): T;
+export function clone_simple<T extends object>(source: T): T;
 
 // Warning: (ae-forgotten-export) The symbol "Fn" needs to be exported by the entry point index.d.ts
 //
@@ -56,244 +56,244 @@ export function cloneSimple<T extends object>(source: T): T;
 export function compose<T extends Fn>(...fns: T[]): (arg: unknown) => unknown;
 
 // @public
-export function copyText(target: string | number | HTMLElement, addition?: string): void;
+export function copy_text(target: string | number | HTMLElement, addition?: string): void;
 
 // @public
-export function dataURIToBlob(dataURI: string, mimeType?: string): Blob;
+export function data_URI_to_blob(dataURI: string, mimeType?: string): Blob;
 
 // @public
-export function dateNow(format?: string): string;
+export function date_now(format?: string): string;
 
 // @public
 export function debounce<T extends Fn>(func: T, timeFrame: number): T;
 
 // @public
-export function deepEqual(a: any, b: any): boolean;
+export function deep_equal(a: any, b: any): boolean;
 
 // Warning: (ae-forgotten-export) The symbol "CSSStyleName" needs to be exported by the entry point index.d.ts
 //
 // @public
-export function domGetCSS<T extends Element>(el: T, prop: CSSStyleName): string;
+export function dom_get_css<T extends Element>(el: T, prop: CSSStyleName): string;
 
 // @public
-export function domGetEl(selector: string): Element | undefined;
+export function dom_get_el(selector: string): Element | undefined;
 
 // @public
-export function domGetSize(el: Element | Window): {
+export function dom_get_size(el: Element | Window): {
     width: number;
     height: number;
 } | undefined;
 
 // @public
-export function domSetCSS(el: HTMLElement, css: Partial<CSSStyleDeclaration>): void;
+export function dom_set_css(el: HTMLElement, css: Partial<CSSStyleDeclaration>): void;
 
 // @public
-export function domSetCssVar(varName: string, value: string, el?: HTMLElement): void;
+export function dom_set_css_var(varName: string, value: string, el?: HTMLElement): void;
 
 // @public
-export function downloadBlob(blob: Blob, fileName?: string): void;
+export function download_blob(blob: Blob, fileName?: string): void;
 
 // @public
-export function downloadByURL(URL: string, fileName?: string): void;
+export function download_by_url(URL: string, fileName?: string): void;
 
 // @public
-export function downloadCanvas(cvs: HTMLCanvasElement, imageName?: string): void;
+export function download_canvas(cvs: HTMLCanvasElement, imageName?: string): void;
 
 // @public
-export function downloadImage(img: HTMLImageElement, imageName?: string): void;
+export function download_image(img: HTMLImageElement, imageName?: string): void;
 
 // @beta
 export class EventsControler {
     constructor();
     // Warning: (ae-forgotten-export) The symbol "FnNoArgs" needs to be exported by the entry point index.d.ts
-    addEvt<T extends EventTarget>(target: T, type: Parameters<T['addEventListener']>[0], callback: FnNoArgs): this;
+    add_evt<T extends EventTarget>(target: T, type: Parameters<T['addEventListener']>[0], callback: FnNoArgs): this;
     close(): void;
 }
 
 // Warning: (ae-forgotten-export) The symbol "Color" needs to be exported by the entry point index.d.ts
 //
 // @public
-export function getContrastColor(color: Color): "black" | "white";
+export function get_contrast_color(color: Color): "black" | "white";
 
 // @public
-export function hexToRgb(hex: string): number[];
+export function hex_to_rgb(hex: string): number[];
 
 // @public
-export function imageGetType(filename: string): string;
+export function image_get_type(filename: string): string;
 
 // Warning: (ae-forgotten-export) The symbol "ImageSize" needs to be exported by the entry point index.d.ts
 //
 // @public
-export function imageResize(img: HTMLImageElement, size: ImageSize, type?: string): HTMLImageElement;
+export function image_resize(img: HTMLImageElement, size: ImageSize, type?: string): HTMLImageElement;
 
 // @public
-export function imageToBlob(img: HTMLImageElement): Promise<Blob>;
+export function image_to_blob(img: HTMLImageElement): Promise<Blob>;
 
 // @public
-export function imageToCanvas(img: HTMLImageElement, size?: ImageSize): HTMLCanvasElement;
+export function image_to_canvas(img: HTMLImageElement, size?: ImageSize): HTMLCanvasElement;
 
 // @public
-export function imageToDataURI(img: HTMLImageElement, type?: string): string;
+export function image_to_data_uri(img: HTMLImageElement, type?: string): string;
 
 // @public
-export function isBase64(str: string): boolean;
+export function is_base64(str: string): boolean;
 
 // @public
-export function isBlob(blob: any): blob is Blob;
+export function is_blob(blob: any): blob is Blob;
 
 // @public
-export function isDate(d: any): d is Date;
+export function is_date(d: any): d is Date;
 
 // @public
-export function isElement(el: any): el is Element;
+export function is_element(el: any): el is Element;
 
 // @public
-export function isEmptyArray(v: any, nullable?: boolean): v is [];
+export function is_empty_array(v: any, nullable?: boolean): v is [];
 
 // @public
-export function isEmptyObj(v: any, nullable?: boolean): v is {};
+export function is_empty_obj(v: any, nullable?: boolean): v is {};
 
 // @public
-export function isEmptyString(s: any, trim?: boolean): boolean;
+export function is_empty_string(s: any, trim?: boolean): boolean;
 
 // @public
-export function isFile(file: any): file is File;
+export function is_file(file: any): file is File;
 
 // @public
-export function isFn(fn: any): fn is Fn;
+export function is_fn(fn: any): fn is Fn;
 
 // @public
-export function isHexColor(color: string): boolean;
+export function is_hex_color(color: string): boolean;
 
 // @public
-export function isHTMLElement(hel: any): hel is HTMLElement;
+export function is_html_element(hel: any): hel is HTMLElement;
 
 // @public
-export function isNotEmptyString(s: any, trim?: boolean): boolean;
+export function is_not_empty_string(s: any, trim?: boolean): boolean;
 
 // @public
-export function isNotVoid<T>(t: T): t is NonNullable<T>;
+export function is_not_void<T>(t: T): t is NonNullable<T>;
 
 // @public
-export function isNull(n: any): n is null;
+export function is_null(n: any): n is null;
 
 // @public
-export function isNumber(n: any): n is number;
+export function is_number(n: any): n is number;
 
 // @public
-export function isObject(o: any): o is Exclude<Object, Array<any>>;
+export function is_object(o: any): o is Exclude<Object, Array<any>>;
 
 // @public
-export function isRegexp(r: any): r is RegExp;
+export function is_regexp(r: any): r is RegExp;
 
 // Warning: (ae-forgotten-export) The symbol "RgbColor" needs to be exported by the entry point index.d.ts
 //
 // @public
-export function isRgbColor(color: any): color is RgbColor;
+export function is_rgb_color(color: any): color is RgbColor;
 
 // @public
-export function isStringLike(target: any): target is string | number;
+export function is_string_like(target: any): target is string | number;
 
 // @public
-export function isUndefined(u: any): u is undefined;
+export function is_undefined(u: any): u is undefined;
 
 // @public
-export function isVoid(t: any): t is null | undefined;
+export function is_void(t: any): t is null | undefined;
 
 // @public
-export function isWindow(win: any): win is Window;
+export function is_window(win: any): win is Window;
 
 // @public
-export function isWindowOrElement(el: any): el is Element | Window;
+export function is_window_or_element(el: any): el is Element | Window;
 
 // @public
-export function keyIn<T extends object>(key: keyof T, obj: T): key is keyof T;
+export function key_in<T extends object>(key: keyof T, obj: T): key is keyof T;
 
 // @public
-export function logTypeError(type: string, name: string): void;
+export function log_type_error(type: string, name: string): void;
 
 // @public
-export function mathBetween(v: number, min: number, max: number): number;
+export function math_between(v: number, min: number, max: number): number;
 
 // @public
-export function mathRandomInt(from: number, to: number): number;
+export function math_random_int(from: number, to: number): number;
 
 // @public
-export function mathToFixed(n: number, digit?: number): number;
+export function math_to_fixed(n: number, digit?: number): number;
 
 // @public
-export function mathToHex(n: number): number;
+export function math_to_hex(n: number): number;
 
 // Warning: (ae-forgotten-export) The symbol "Entries" needs to be exported by the entry point index.d.ts
 //
 // @public
-export function objectEntries<T extends object>(obj: T): Entries<T>;
+export function object_entries<T extends object>(obj: T): Entries<T>;
 
 // Warning: (ae-forgotten-export) The symbol "Keys" needs to be exported by the entry point index.d.ts
 //
 // @public
-export function objectKeys<T extends object>(o: T): Keys<T>;
+export function object_keys<T extends object>(o: T): Keys<T>;
 
 // @public
-export function objectPick<T extends object, K extends keyof T>(obj: T, keys: K[]): Pick<T, K>;
+export function object_pick<T extends object, K extends keyof T>(obj: T, keys: K[]): Pick<T, K>;
 
 // @public
-export function rgbToHex(rgb: RgbColor): string;
+export function rgb_to_hex(rgb: RgbColor): string;
 
 // @public
-export function storageGet<T>(key: string, empty?: T): any;
+export function storage_get<T>(key: string, empty?: T): any;
 
 // @public
-export function storageRemove(key: string): void;
+export function storage_remove(key: string): void;
 
 // @public
-export function storageSet<T>(key: string, value: T): void;
+export function storage_set<T>(key: string, value: T): void;
 
 // @public
-export function strCapital(str: string): string;
+export function str_capital(str: string): string;
 
 // @public @deprecated
-export function strComplement(n: number | string, len?: number, char?: string): string;
+export function str_complement(n: number | string, len?: number, char?: string): string;
 
 // @public
-export function strEnsurePrefix(s: string, prefix: string): string;
+export function str_ensure_prefix(s: string, prefix: string): string;
 
 // @public
-export function strEnsureSuffix(s: string, suffix: string): string;
+export function str_ensure_suffix(s: string, suffix: string): string;
 
 // @public
-export function strMaybeNumber(target: number | string): string;
+export function str_maybe_number(target: number | string): string;
 
 // @public
-export function strNoPrefix(s: string, prefix: string): string;
+export function str_no_prefix(s: string, prefix: string): string;
 
 // @public
-export function strNoSuffix(s: string, suffix: string): string;
+export function str_no_suffix(s: string, suffix: string): string;
 
 // @public
-export function strRandom(count: number, radix?: number): string;
+export function str_random(count: number, radix?: number): string;
 
 // @public
-export function strUuid(): string;
+export function str_uuid(): string;
 
 // @public
-export function tempCompiler<T extends object>(temp: string, data: T): string;
+export function temp_compiler<T extends object>(temp: string, data: T): string;
 
 // @public
 export function throttle<T extends Fn>(func: T, timeFrame: number, immediately?: boolean): T;
 
 // @public
-export function throwTypeError(type: string, name: string): void;
+export function throw_type_error(type: string, name: string): void;
 
 // @public
-export function urlToBlob(url: string): Promise<Blob>;
+export function url_to_blob(url: string): Promise<Blob>;
 
 // @public
-export function urlToDateURI(url: string, type?: string): Promise<string>;
+export function url_to_date_URI(url: string, type?: string): Promise<string>;
 
 // Warnings were encountered during analysis:
 //
-// dist/types/modules/keyboard.d.ts:50:5 - (ae-forgotten-export) The symbol "KeyboardEventKeys" needs to be exported by the entry point index.d.ts
+// dist/types/modules/keyboard.d.ts:47:5 - (ae-forgotten-export) The symbol "KeyboardEventKeys" needs to be exported by the entry point index.d.ts
 
 // (No @packageDocumentation comment for this package)
 

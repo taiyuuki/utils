@@ -1,7 +1,6 @@
-import { strComplement } from './string'
+import { str_complement } from './string'
 
 /**
- * 获取现在的时间
  * The function returns the current date and time in a specified format.
  * @public
  * @param format - The format parameter is a string that specifies the desired
@@ -12,16 +11,18 @@ import { strComplement } from './string'
  * year, month, day, hour, minute, and second, separated by the specified delimiters.
  * @example
  * ```ts
- * const now = dateNow('yyyy-MM-dd')// 1999-10-01
+ * const now = date_now('yyyy-MM-dd')// 1999-10-01
  * ```
  */
-export function dateNow(format = 'yyyy-MM-dd|HH:mm:ss') {
-  const time = new Date()
-  const result = format.replace('yyyy', `${time.getFullYear()}`)
-    .replace('MM', strComplement(time.getMonth() + 1))
-    .replace('dd', strComplement(time.getDate()))
-    .replace('HH', strComplement(time.getHours()))
-    .replace('mm', strComplement(time.getMinutes()))
-    .replace('ss', strComplement(time.getSeconds()))
-  return result
+function date_now(format = 'yyyy-MM-dd|HH:mm:ss') {
+    const time = new Date()
+    const result = format.replace('yyyy', `${time.getFullYear()}`)
+        .replace('MM', str_complement(time.getMonth() + 1))
+        .replace('dd', str_complement(time.getDate()))
+        .replace('HH', str_complement(time.getHours()))
+        .replace('mm', str_complement(time.getMinutes()))
+        .replace('ss', str_complement(time.getSeconds()))
+    return result
 }
+
+export { date_now }

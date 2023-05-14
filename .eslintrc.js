@@ -1,5 +1,5 @@
 module.exports = {
-  root: true,
-  extends: ['@taiyuuki/eslint-config-ts'],
-  rules: { 'import/no-unresolved': ['error', { ignore: ['iem:./modules/*'] }] },
+    root: true,
+    extends: ['@taiyuuki/eslint-config-ts'],
+    rules: { 'import/no-unresolved': ['error', { ignore: ['iem:./modules/*'] }] },
 }

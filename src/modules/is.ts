@@ -1,229 +1,330 @@
 import type { Fn, RgbColor } from '../types'
 
 /**
- * 判断是否是对象，不包括数组和null
+ * The function checks if a given value is an object and not an array.
  * @public
+ * @param o - any type, which means it can be any data type including objects, arrays, strings,
+ * numbers, etc.
+ * @returns a boolean value indicating whether the input parameter `o` is an object or not. The return
+ * type of the function is `o is Exclude<Object, Array<any>>`, which is a type predicate indicating
+ * that `o` is of type `Object` but not of type `Array<any>`.
  */
-export function isObject(o: any): o is Exclude<Object, Array<any>> {
-  return o !== null && typeof o === 'object' && !Array.isArray(o)
+function is_object(o: any): o is Exclude<Object, Array<any>> {
+    return o !== null && typeof o === 'object' && !Array.isArray(o)
 }
 
 /**
- * 判断是否是Date对象
+ * The function checks if a given value is a Date object.
  * @public
+ * @param d - The parameter `d` is of type `any`, which means it can be any data type. However,
+ * the function is checking if `d` is a `Date` object using the `Object.prototype.toString.call()`
+ * method.
+ * @returns The function `is_date` is returning a boolean value. It returns `true` if the input `d` is
+ * a `Date` object, and `false` otherwise.
  */
-export function isDate(d: any): d is Date {
-  return Object.prototype.toString.call(d) === '[object Date]'
+function is_date(d: any): d is Date {
+    return Object.prototype.toString.call(d) === '[object Date]'
 }
 
 /**
- * 判断是否是正则表达式
+ * The function checks if a given value is a regular expression.
  * @public
+ * @param r - The parameter `r` is of type `any`, which means it can be any data type.
+ * @returns The function `is_regexp` returns a boolean value indicating whether the input parameter `r`
+ * is a regular expression (`RegExp`) or not. It returns `true` if `r` is a `RegExp` object, and
+ * `false` otherwise.
  */
-export function isRegexp(r: any): r is RegExp {
-  return Object.prototype.toString.call(r) === '[object RegExp]'
+function is_regexp(r: any): r is RegExp {
+    return Object.prototype.toString.call(r) === '[object RegExp]'
 }
 
 /**
- * 判断是否是数字，不包括NaN、INFINITY
+ * The function checks if a given value is a finite number.
  * @public
+ * @param n - The parameter `n` is of type `any`, which means it can be any data type.
+ * @returns The function `is_number` is returning a boolean value. It returns `true` if the input `n`
+ * is a finite number, and `false` otherwise.
  */
-export function isNumber(n: any): n is number {
-  return typeof n === 'number' && isFinite(n)
+function is_number(n: any): n is number {
+    return typeof n === 'number' && isFinite(n)
 }
 
 /**
- * 判断是否是方法
  * @public
+ * The `is_fn` function is a type guard that checks if the input parameter `fn` is a function.
  */
-export function isFn(fn: any): fn is Fn {
-  return typeof fn === 'function'
+
+function is_fn(fn: any): fn is Fn {
+    return typeof fn === 'function'
 }
 
 /**
- * 判断是否是undefined
+ * The function checks if a given value is undefined.
  * @public
+ * @param u - The parameter "u" is of type "any", which means it can be any data type (string,
+ * number, boolean, object, etc.).
+ * @returns The function `is_undefined` returns a boolean value indicating whether the input parameter
+ * `u` is `undefined` or not. The function uses the `void` operator to obtain the `undefined` value and
+ * then compares it with the input parameter `u`. The function returns `true` if `u` is `undefined`,
+ * and `false` otherwise.
  */
-export function isUndefined(u: any): u is undefined {
-  return u === void 0
+function is_undefined(u: any): u is undefined {
+    return u === void 0
 }
 
 /**
- * 判断是否是null
+ * The function checks if a given value is null.
  * @public
+ * @param n - The parameter `n` is of type `any`, which means it can be any data type.
+ * @returns The function `is_null` is returning a boolean value indicating whether the input `n` is
+ * null or not. The return type of the function is `n is null`, which is a type predicate indicating
+ * that if the function returns `true`, then the input `n` is of type `null`.
  */
-export function isNull(n: any): n is null {
-  return n === null
+function is_null(n: any): n is null {
+    return n === null
 }
 
 /**
- * 判断是否是空值，空值包括null、undefined、NaN
+ * The function checks if a given value is null or undefined, or if it is a number that is NaN.
  * @public
+ * @param t - The parameter `t` is of type `any`, which means it can be any data type.
+ * @returns a boolean value indicating whether the input parameter `t` is either `null` or `undefined`.
+ * The return type of the function is a type guard, which means that if the function returns `true`,
+ * TypeScript will narrow the type of `t` to `null` or `undefined`.
  */
-export function isVoid(t: any): t is null | undefined {
-  if (typeof t === 'number') {
-    return isNaN(t)
-  }
-  return isNull(t) || isUndefined(t)
+function is_void(t: any): t is null | undefined {
+    if (typeof t === 'number') {
+        return isNaN(t)
+    }
+    return is_null(t) || is_undefined(t)
 }
 
 /**
- * 判断是否是空值，空值包括null、undefined、NaN
+ * The function checks if a given value is not null and undefined, or if it is a number that is not NaN.
  * @public
+ * @param t - The parameter `t` is of type `any`, which means it can be any data type.
+ * @returns a boolean value indicating whether the input parameter `t` is either `null` or `undefined`.
  */
-export function isNotVoid<T>(t: T): t is NonNullable<T> {
-  return !isVoid(t)
+function is_not_void<T>(t: T): t is NonNullable<T> {
+    return !is_void(t)
 }
 
 /**
- * 判断是否是空字符串或空值
+ * The `is_empty_string` function is checking if a given value is an empty string or a null or
+ * undefined value.
  * @public
+ * @param s - The parameter `s` is of type `any`, which means it can be any data type.
+ * @param trim - The parameter `trim` is of type `boolean`, which means it can be `true` or `false`.
  */
-export function isEmptyString(s: any, trim?: boolean) {
-  if (typeof s === 'string') {
-    return (trim === true ? s.trim() : s).length === 0
-  }
-  else {
-    return isVoid(s)
-  }
-}
-
-/**
- * 判断是否是空字符串，同时不能是空值
- * @public
- */
-export function isNotEmptyString(s: any, trim?: boolean) {
-  if (typeof s === 'string') {
-    return (trim === true ? s.trim() : s).length > 0
-  }
-  else {
-    return isNotVoid(s)
-  }
-}
-
-/**
- * 判断是否是空数组
- * @public
- * @param v - 需要判断的值
- * @param nullable - 是否允许空值
- * @example
- * ```ts
- * isEmptyArray([])// true
- * isEmptyArray(null)// false
- * isEmptyArray(null, false)// true
- * ```
- */
-export function isEmptyArray(v: any, nullable = true): v is [] {
-  const nullCheck = nullable ? false : isVoid(v)
-  return Array.isArray(v) ? v.length === 0 : nullCheck
-}
-
-/**
- * 判断是否是空对象
- * @public
- * @param v - 需要判断的值
- * @param nullable - 是否允许空值
- * @example
- * ```ts
- * isEmptyObj({})// true
- * isEmptyObj(null)// false
- * isEmptyObj(null, false)// true
- * ```
- */
-export function isEmptyObj(v: any, nullable = true): v is {} {
-  const nullCheck = nullable ? false : isVoid(v)
-  return isObject(v) ? isEmptyArray(Object.keys(v)) : nullCheck
-}
-
-/**
- * 判断是否是合法的RGB值
- * @public
- */
-export function isRgbColor(color: any): color is RgbColor {
-  if (!Array.isArray(color)) { return false }
-  return (color.length === 4 || color.length === 3) && color.every((v, i) => {
-    if (i === 3) {
-      return Number(v) <= 1
+function is_empty_string(s: any, trim?: boolean) {
+    if (typeof s === 'string') {
+        return (trim === true ? s.trim() : s).length === 0
     }
     else {
-      return Number(v) <= 255
+        return is_void(s)
     }
-  })
 }
 
 /**
- * 判断是否是合法的hex颜色值
+ * The `is_not_empty_string` function is checking if a given value is not an empty string or a
+ * null or undefined value.
  * @public
+ * @param s - The parameter `s` is of type `any`, which means it can be any data type.
+ * @param trim - The parameter `trim` is of type `boolean`, which means it can be `true` or `false`.
  */
-export function isHexColor(color: string) {
-  return color.match(/^#?[0-9a-fA-F]{3,8}$/) !== null
+function is_not_empty_string(s: any, trim?: boolean) {
+    if (typeof s === 'string') {
+        return (trim === true ? s.trim() : s).length > 0
+    }
+    else {
+        return is_not_void(s)
+    }
 }
 
 /**
- * 判断元素是否是wnidow
+ * The `is_empty_array` function is checking if a given value is an empty array or a null or
+ * undefined value.
  * @public
+ * @param v - The parameter `v` is of type `any`, which means it can be any data type.
+ * @param nullable - The parameter `nullable` is of type `boolean`, which means it can be `true` or
+ * `false`.
+ * @example
+ * ```ts
+ * is_empty_array([])// true
+ * is_empty_array(null)// false
+ * is_empty_array(null, false)// true
+ * ```
  */
-export function isWindow(win: any): win is Window {
-  return win === window
+function is_empty_array(v: any, nullable = true): v is [] {
+    const nullCheck = nullable ? false : is_void(v)
+    return Array.isArray(v) ? v.length === 0 : nullCheck
 }
 
 /**
- * 判断元素是否是DOM元素
+ * The `is_not_empty_array` function is checking if a given value is not an empty array or a
+ * null or undefined value.
  * @public
+ * @param v - The parameter `v` is of type `any`, which means it can be any data type.
+ * @param nullable - The parameter `nullable` is of type `boolean`, which means it can be `true` or
+ * `false`.
+ * @returns The function `is_not_empty_array` returns a boolean value indicating whether the input
+ * parameter `v` is not an empty array.
+ * @example
+ * ```ts
+ * is_empty_obj({})// true
+ * is_empty_obj(null)// false
+ * is_empty_obj(null, false)// true
+ * ```
  */
-export function isElement(el: any): el is Element {
-  return el instanceof Element
+function is_empty_obj(v: any, nullable = true): v is {} {
+    const nullCheck = nullable ? false : is_void(v)
+    return is_object(v) ? is_empty_array(Object.keys(v)) : nullCheck
 }
 
 /**
- * 判断元素是否是html元素
+ * The `is_not_empty_obj` function is checking if a given value is not an empty object or a
+ * null or undefined value.
  * @public
+ * @param v - The parameter `v` is of type `any`, which means it can be any data type.
+ * @param nullable - The parameter `nullable` is of type `boolean`, which means it can be `true` or
+ * `false`.
+ * @returns The function `is_not_empty_obj` returns a boolean value indicating whether the input
+ * parameter `v` is not an empty object.
  */
-export function isHTMLElement(hel: any): hel is HTMLElement {
-  return hel instanceof HTMLElement
+function is_rgb_color(color: any): color is RgbColor {
+    if (!Array.isArray(color)) { return false }
+    return (color.length === 4 || color.length === 3) && color.every((v, i) => {
+        if (i === 3) {
+            return Number(v) <= 1
+        }
+        else {
+            return Number(v) <= 255
+        }
+    })
 }
 
 /**
- * 判断元素是否是window或DOM元素
+ * The function checks if a given value is a hex color.
  * @public
+ * @param color - The parameter `color` is of type `string`.
+ * @returns The function `is_hex_color` returns a boolean value indicating whether the input
+ * parameter `color` is a hex color.
  */
-export function isWindowOrElement(el: any): el is Element | Window {
-  return isElement(el) || isWindow(el)
+function is_hex_color(color: string) {
+    return color.match(/^#?[0-9a-fA-F]{3,8}$/) !== null
 }
 
 /**
- * 判断字符串是否是base64格式的
+ * The function checks if a given value is a window.
  * @public
- * @param str - 字符串
- * @returns true or false
+ * @param win - The parameter `win` is of type `any`.
+ * @returns The function `is_window` returns a boolean value indicating whether the input
+ * parameter `win` is a window.
  */
-export function isBase64(str: string) {
-  const reg = /^data:([a-z]+\/[a-z0-9-+.]+(;[a-z-]+=[a-z0-9-]+)?)?(;base64)?,([a-z0-9!$&',()*+;=\-._~:@/?%\s]*?)$/i
-  return reg.test(str.trim())
+function is_window(win: any): win is Window {
+    return win === window
 }
 
 /**
- * 判断是否是Blob对象
+ * the function checks if a given value is an element.
  * @public
- * @param blob - blbo对象
+ * @param el - The parameter `el` is of type `any`.
+ * @returns The function `is_element` returns a boolean value indicating whether the input
+ * parameter `el` is an element.
  */
-export function isBlob(blob: any): blob is Blob {
-  return blob instanceof Blob
+function is_element(el: any): el is Element {
+    return el instanceof Element
 }
 
 /**
- * 判断是否是File对象
+ * The function checks if a given value is an HTML element.
  * @public
- * @param file - file对象
+ * @param hel - The parameter `hel` is of type `any`.
+ * @returns The function `is_html_element` returns a boolean value indicating whether the input
+ * parameter `hel` is an HTML element.
  */
-export function isFile(file: any): file is File {
-  return file instanceof File
+function is_html_element(hel: any): hel is HTMLElement {
+    return hel instanceof HTMLElement
 }
 
 /**
- * 判断是否是数字或字符串，不包括NaN和infinity。
+ * The function checks if a given value is a window or an element.
  * @public
+ * @param el - The parameter `el` is of type `any`.
+ * @returns The function `is_window_or_element` returns a boolean value indicating whether the input
+ * parameter `el` is a window or an element.
  */
-export function isStringLike(target: any): target is string | number {
-  return !isFinite(target) && (typeof target === 'string' || typeof target === 'number')
+function is_window_or_element(el: any): el is Element | Window {
+    return is_element(el) || is_window(el)
+}
+
+/**
+ * The function checks if a given value is a base64 encoded string.
+ * @public
+ * @param str - The parameter `str` is of type `string`.
+ * @returns The function `is_base64` returns a boolean value indicating whether the input
+ * parameter `str` is a base64 encoded string.
+ */
+function is_base64(str: string) {
+    const reg = /^data:([a-z]+\/[a-z0-9-+.]+(;[a-z-]+=[a-z0-9-]+)?)?(;base64)?,([a-z0-9!$&',()*+;=\-._~:@/?%\s]*?)$/i
+    return reg.test(str.trim())
+}
+
+/**
+ * The function checks if a
+ * @public
+ * @param blob - The parameter `blob` is of type `Blob`.
+ * @returns The function `is_blob` returns a boolean value indicating whether the input
+ * parameter `blob` is a blob.
+ */
+function is_blob(blob: any): blob is Blob {
+    return blob instanceof Blob
+}
+
+/**
+ * The function checks if a given value is a file.
+ * @public
+ * @param file - The parameter `file` is of type `File`.
+ * @returns The function `is_file` returns a boolean value indicating whether the input
+ * parameter `file` is a file.
+ */
+function is_file(file: any): file is File {
+    return file instanceof File
+}
+
+/**
+ * The function checks if a given value is a function.
+ * @public
+ * @param fn - The parameter `fn` is of type `Function`.
+ * @returns The function `is_fn` returns a boolean value indicating whether the input
+ * parameter `fn` is a function.
+ */
+function is_string_like(target: any): target is string | number {
+    return !isFinite(target) && (typeof target === 'string' || typeof target === 'number')
+}
+
+export {
+    is_base64,
+    is_blob,
+    is_file,
+    is_fn,
+    is_null,
+    is_not_void,
+    is_rgb_color,
+    is_hex_color,
+    is_window,
+    is_window_or_element,
+    is_string_like,
+    is_empty_array,
+    is_empty_obj,
+    is_empty_string,
+    is_not_empty_string,
+    is_date,
+    is_element,
+    is_html_element,
+    is_number,
+    is_object,
+    is_undefined,
+    is_void,
+    is_regexp,
 }

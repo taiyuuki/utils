@@ -1,73 +1,84 @@
 import type { Fn } from '../types'
-import { isNotVoid } from './is'
+import { is_not_void } from './is'
 
 /**
- * 函数节流
  * @public
- * @param func - 需要节流的函数
- * @param timeFrame - 时间间隔
- * @param immediately - 是否立即执行
- * @returns 节流后的函数
+ * This is a function that implements throttle functionality for a given function. It takes
+ * in three parameters: `func`, which is the function to be throttled, `timeFrame`, which is the time
+ * interval in milliseconds, and `immediately`, which is an optional boolean parameter that determines
+ * whether the function should be executed immediately or not.
  */
-export function throttle<T extends Fn>(
-  func: T,
-  timeFrame: number,
-  immediately?: boolean
+function throttle<T extends Fn>(
+    func: T,
+    timeFrame: number,
+    immediately?: boolean
 ): T {
-  let lastTime = 0
-  let timer: NodeJS.Timeout | undefined
-  immediately = immediately ?? true
-  return function (...args: unknown[]) {
-    const now = Date.now()
-    if (isNotVoid(timer)) {
-      clearTimeout(timer)
-    }
-    if (now - lastTime >= timeFrame && immediately) {
-      lastTime = now
-      return func(...args)
-    }
-    else {
-      timer = setTimeout(() => {
-        func(...args)
-        timer = void 0
-      }, timeFrame)
-    }
-  } as T
+    let lastTime = 0
+    let timer: NodeJS.Timeout | undefined
+    immediately = immediately ?? true
+    return function (...args: unknown[]) {
+        const now = Date.now()
+        if (is_not_void(timer)) {
+            clearTimeout(timer)
+        }
+        if (now - lastTime >= timeFrame && immediately) {
+            lastTime = now
+            return func(...args)
+        }
+        else {
+            timer = setTimeout(() => {
+                func(...args)
+                timer = void 0
+            }, timeFrame)
+        }
+    } as T
 }
 
 /**
- * 函数防抖
  * @public
- * @param func - 需要防抖的函数
- * @param timeFrame - 时间间隔
- * @returns 防抖后的函数
+ * The `debounce` function is implementing the debounce functionality for a given function. It takes in
+ * Ttwo parameters: `func`, which is the function to be debounced, and `timeFrame`, which is the time
+ * Tinterval in milliseconds. The returned function will only execute `func` if `timeFrame` milliseconds
+ * Thave passed since the last time it was called. If it is called again before `timeFrame` milliseconds
+ * Thave passed, the timer is reset and the function will not be executed.
  */
-export function debounce<T extends Fn>(
-  func: T,
-  timeFrame: number,
+function debounce<T extends Fn>(
+    func: T,
+    timeFrame: number,
 ) {
-  let lastTime = 0
-  return function (...args: unknown[]) {
-    const now = Date.now()
-    try {
-      if (now - lastTime >= timeFrame) {
-        return func(...args)
-      }
-    }
-    finally {
-      lastTime = now
-    }
-  } as T
+    let lastTime = 0
+    return function (...args: unknown[]) {
+        const now = Date.now()
+        try {
+            if (now - lastTime >= timeFrame) {
+                return func(...args)
+            }
+        }
+        finally {
+            lastTime = now
+        }
+    } as T
 }
 
 /**
- * 函数组合，前一个函数的返回值作为下一个函数的参数
  * @public
+ * The `compose` function is a higher-order function that takes in any number of functions as arguments
+ * and returns a new function that applies each of the input functions in sequence, passing the output
+ * of one function as the input to the next. The `T extends Fn` syntax is a TypeScript generic type
+ * constraint that ensures that each input function has the same signature, taking in one argument and
+ * returning a value. The returned function takes in one argument and applies each of the input
+ * functions in sequence, returning the final output.
  */
-export function compose<T extends Fn>(...fns: T[]) {
-  return function (arg: unknown) {
-    return fns.reduce((pre, fn) => {
-      return fn(pre)
-    }, arg)
-  }
+function compose<T extends Fn>(...fns: T[]) {
+    return function (arg: unknown) {
+        return fns.reduce((pre, fn) => {
+            return fn(pre)
+        }, arg)
+    }
+}
+
+export {
+    debounce,
+    throttle,
+    compose,
 }
