@@ -4,7 +4,7 @@
 
 ## image\_get\_type() function
 
-The function "imageGetType" takes a filename as input and returns the file type of the image.
+The function "image\_get\_type" takes a filename as input and returns the file type of the image.
 
 **Signature:**
 

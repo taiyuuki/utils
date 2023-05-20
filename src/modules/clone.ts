@@ -1,5 +1,5 @@
 /**
- * The function creates a shallow copy of an object in TypeScript.
+ * The function creates a deep copy of an object by using JSON.parse.
  * @public
  * @param source - The `source` parameter is of type `T`, which is a generic type that extends the
  * `object` type. It represents the object that needs to be cloned.
@@ -9,7 +9,7 @@ function clone_simple<T extends object>(source: T): T {
 }
 
 /**
- * This function creates a deep copy of an object in TypeScript.
+ * This function creates a deep copy of an object.
  * @public
  * @param source - The `source` parameter is of type `T`, which is a generic type that extends the
  * `object` type. It represents the object that needs to be cloned deeply, meaning that a new object
@@ -51,7 +51,7 @@ function clone_deep<T extends object>(source: T) {
 }
 
 /**
- * The function `clone` creates a deep copy of an object in TypeScript.
+ * The function `clone` creates a deep copy of an object.
  * @public
  * @param source - The `source` parameter is of type `T`, which is a generic type that extends the
  * `object` type. It represents the object that needs to be cloned.

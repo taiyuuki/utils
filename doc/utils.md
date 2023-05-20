@@ -22,11 +22,11 @@
 |  [arr\_unique(arr)](./utils.arr_unique.md) | This function takes an array of any type and returns a new array with only unique values. |
 |  [blob\_to\_date\_uri(blob)](./utils.blob_to_date_uri.md) | This function converts a Blob object to a data URI string or ArrayBuffer. |
 |  [canvas\_to\_blob(cvs)](./utils.canvas_to_blob.md) | This function converts an HTML canvas element to a Blob object and returns a Promise. |
-|  [canvas\_to\_image(cvs)](./utils.canvas_to_image.md) | This function converts a canvas element to an image element in TypeScript. |
-|  [clone\_deep(source)](./utils.clone_deep.md) | This function creates a deep copy of an object in TypeScript. |
-|  [clone\_simple(source)](./utils.clone_simple.md) | The function creates a shallow copy of an object in TypeScript. |
-|  [clone(source)](./utils.clone.md) | The function <code>clone</code> creates a deep copy of an object in TypeScript. |
-|  [compose(fns)](./utils.compose.md) | The <code>compose</code> function is a higher-order function that takes in any number of functions as arguments and returns a new function that applies each of the input functions in sequence, passing the output of one function as the input to the next. The <code>T extends Fn</code> syntax is a TypeScript generic type constraint that ensures that each input function has the same signature, taking in one argument and returning a value. The returned function takes in one argument and applies each of the input functions in sequence, returning the final output. |
+|  [canvas\_to\_image(cvs)](./utils.canvas_to_image.md) | This function converts a canvas element to an image element. |
+|  [clone\_deep(source)](./utils.clone_deep.md) | This function creates a deep copy of an object. |
+|  [clone\_simple(source)](./utils.clone_simple.md) | The function creates a deep copy of an object by using JSON.parse. |
+|  [clone(source)](./utils.clone.md) | The function <code>clone</code> creates a deep copy of an object. |
+|  [compose(fns)](./utils.compose.md) | This is a function that implements compose functionality for a given function. |
 |  [copy\_text(target, addition)](./utils.copy_text.md) | The function copies text to the clipboard using the Clipboard API if available, otherwise it falls back to creating a temporary textarea element and using the execCommand method. |
 |  [data\_URI\_to\_blob(dataURI, mimeType)](./utils.data_uri_to_blob.md) | This function converts a data URI to a Blob object. |
 |  [date\_now(format)](./utils.date_now.md) | The function returns the current date and time in a specified format. |
@@ -43,7 +43,7 @@
 |  [download\_image(img, imageName)](./utils.download_image.md) | This function downloads an image by its URL and saves it with a generated or provided name. |
 |  [get\_contrast\_color(color)](./utils.get_contrast_color.md) | The function takes a color as input and returns either black or white as the contrasting color based on the brightness of the input color. |
 |  [hex\_to\_rgb(hex)](./utils.hex_to_rgb.md) | The function converts a hexadecimal color code to its corresponding RGB values. |
-|  [image\_get\_type(filename)](./utils.image_get_type.md) | The function "imageGetType" takes a filename as input and returns the file type of the image. |
+|  [image\_get\_type(filename)](./utils.image_get_type.md) | The function "image\_get\_type" takes a filename as input and returns the file type of the image. |
 |  [image\_resize(img, size, type)](./utils.image_resize.md) | This function resizes an HTML image element to a specified size and MIME type. |
 |  [image\_to\_blob(img)](./utils.image_to_blob.md) | This function converts an HTML image element to a blob object using a canvas. |
 |  [image\_to\_canvas(img, size)](./utils.image_to_canvas.md) | This function converts an HTML image element to a canvas element with a specified size. |

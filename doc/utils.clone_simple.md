@@ -4,7 +4,7 @@
 
 ## clone\_simple() function
 
-The function creates a shallow copy of an object in TypeScript.
+The function creates a deep copy of an object by using JSON.parse.
 
 **Signature:**
 

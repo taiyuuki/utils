@@ -4,7 +4,7 @@
 
 ## canvas\_to\_image() function
 
-This function converts a canvas element to an image element in TypeScript.
+This function converts a canvas element to an image element.
 
 **Signature:**
 

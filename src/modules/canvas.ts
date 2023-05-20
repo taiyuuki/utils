@@ -1,7 +1,7 @@
 import { is_not_void } from './is'
 
 /**
- * This function converts a canvas element to an image element in TypeScript.
+ * This function converts a canvas element to an image element.
  * @public
  * @param cvs - HTMLCanvasElement - This is a reference to an HTML canvas element
  * that contains the image data that we want to convert to an image.

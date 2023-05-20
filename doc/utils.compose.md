@@ -4,7 +4,7 @@
 
 ## compose() function
 
-The `compose` function is a higher-order function that takes in any number of functions as arguments and returns a new function that applies each of the input functions in sequence, passing the output of one function as the input to the next. The `T extends Fn` syntax is a TypeScript generic type constraint that ensures that each input function has the same signature, taking in one argument and returning a value. The returned function takes in one argument and applies each of the input functions in sequence, returning the final output.
+This is a function that implements compose functionality for a given function.
 
 **Signature:**
 
@@ -16,9 +16,11 @@ declare function compose<T extends Fn>(...fns: T[]): (arg: unknown) => unknown;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  fns | T\[\] |  |
+|  fns | T\[\] | The functions to be composed. |
 
 **Returns:**
 
 (arg: unknown) =&gt; unknown
+
+The composed function is implementing the compose functionality for a given function.
 

@@ -63,7 +63,7 @@ function image_to_blob(img: HTMLImageElement): Promise<Blob> {
 }
 
 /**
- * The function "imageGetType" takes a filename as input and returns the file type of the image.
+ * The function "image_get_type" takes a filename as input and returns the file type of the image.
  * @public
  * @param filename - The filename parameter is a string that represents the name of an image
  * file.

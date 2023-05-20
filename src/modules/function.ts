@@ -61,13 +61,10 @@ function debounce<T extends Fn>(
 }
 
 /**
+ * This is a function that implements compose functionality for a given function.
  * @public
- * The `compose` function is a higher-order function that takes in any number of functions as arguments
- * and returns a new function that applies each of the input functions in sequence, passing the output
- * of one function as the input to the next. The `T extends Fn` syntax is a TypeScript generic type
- * constraint that ensures that each input function has the same signature, taking in one argument and
- * returning a value. The returned function takes in one argument and applies each of the input
- * functions in sequence, returning the final output.
+ * @param fns - The functions to be composed.
+ * @returns The composed function is implementing the compose functionality for a given function.
  */
 function compose<T extends Fn>(...fns: T[]) {
     return function (arg: unknown) {
