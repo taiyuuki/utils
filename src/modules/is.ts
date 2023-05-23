@@ -33,6 +33,10 @@ function is_date(d: any): d is Date {
  * @returns The function `is_regexp` returns a boolean value indicating whether the input parameter `r`
  * is a regular expression (`RegExp`) or not. It returns `true` if `r` is a `RegExp` object, and
  * `false` otherwise.
+ * @example
+ * ```ts
+ * is_regexp(/a/)
+ * ```
  */
 function is_regexp(r: any): r is RegExp {
     return Object.prototype.toString.call(r) === '[object RegExp]'
@@ -44,6 +48,12 @@ function is_regexp(r: any): r is RegExp {
  * @param n - The parameter `n` is of type `any`, which means it can be any data type.
  * @returns The function `is_number` is returning a boolean value. It returns `true` if the input `n`
  * is a finite number, and `false` otherwise.
+ * @example
+ * ```ts
+ * is_number(1)// true
+ * is_number(NaN)// false
+ * is_number(Number.NEGATIVE_INFINITY)// false
+ * ```
  */
 function is_number(n: any): n is number {
     return typeof n === 'number' && isFinite(n)
@@ -64,9 +74,7 @@ function is_fn(fn: any): fn is Fn {
  * @param u - The parameter "u" is of type "any", which means it can be any data type (string,
  * number, boolean, object, etc.).
  * @returns The function `is_undefined` returns a boolean value indicating whether the input parameter
- * `u` is `undefined` or not. The function uses the `void` operator to obtain the `undefined` value and
- * then compares it with the input parameter `u`. The function returns `true` if `u` is `undefined`,
- * and `false` otherwise.
+ * `u` is `undefined` or not. The function returns `true` if `u` is `undefined`, and `false` otherwise.
  */
 function is_undefined(u: any): u is undefined {
     return u === void 0

@@ -1,4 +1,5 @@
 import type { Color, RgbColor } from '../types'
+import { throw_type_error } from './error'
 import { is_rgb_color } from './is'
 import { math_to_hex } from './math'
 import { str_no_prefix } from './string'
@@ -14,7 +15,7 @@ import { str_no_prefix } from './string'
  */
 function rgb_to_hex(rgb: RgbColor) {
     if (!is_rgb_color(rgb)) {
-        throw new TypeError('Expected a array as rgb value')
+        throw_type_error('array', 'rgb')
     }
     const r = math_to_hex(rgb[0])
     const g = math_to_hex(rgb[1])

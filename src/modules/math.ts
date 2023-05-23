@@ -34,7 +34,7 @@ function math_random_int(from: number, to: number) {
  * @param min - The minimum value that the input number `v` can take. If `v` is less than
  * `min`, the function will return `min`.
  * @param max - The `max` parameter is a number representing the maximum value that `v` can
- * take. The `mathBetween` function is designed to ensure that `v` is always within the range of `min`
+ * take. The `math_between` function is designed to ensure that `v` is always within the range of `min`
  * and `max`.
  */
 function math_between(v: number, min: number, max: number) {

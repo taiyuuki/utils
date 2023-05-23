@@ -1,3 +1,5 @@
+import { math_between } from './math'
+
 /**
  * The function takes in a parameter that can be either a number or a string and returns the parameter
  * as a string.
@@ -20,11 +22,11 @@ function str_maybe_number(target: number | string) {
  * use a different
  * @example
  * ```ts
- * const str = strRandom(6, 16)// 获取取长度为6的随机16进制字符
+ * const str = str_random(6, 16)// generates a random string of length 6 using hexadecimal.
  * ```
  */
 function str_random(count: number, radix = 16) {
-    radix = radix > 36 ? 36 : radix
+    radix = math_between(radix, 2, 36)
     let result = ''
     for (let i = 1; i <= count; i++) {
         result += Math.floor(Math.random() * radix).toString(radix)

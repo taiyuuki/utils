@@ -31,7 +31,7 @@ function storage_set<T>(key: string, value: T) {
  * second argument. If no `empty` value is provided, it returns `undefined`. If there is an error while
  * parsing the data, it logs the error to the console and
  */
-function storage_get<T>(key: string, empty?: T) {
+function storage_get<T>(key: string, empty?: T): T | undefined {
     try {
         const data = localStorage.getItem(key)
         return is_not_void(data) ? JSON.parse(data) : (empty ?? void 0) as T

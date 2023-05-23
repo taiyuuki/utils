@@ -18,12 +18,12 @@ export type Fn = (...args: any[]) => any
 
 export type FnNoArgs = () => any
 
-export type ObjectKey = string | number | symbol
+export type Key = string | number | symbol
 
 export type TupleToUnion<Tuple extends Array<unknown>> = Tuple[number]
 
-export type TupleToObject<T extends ObjectKey[], V = boolean> = {
-    [k in TupleToUnion<T>]: V
+export type TupleToObject<T extends Key[], V = boolean> = {
+    [k in T[number]]: V
 }
 
 export type Keys<T extends object> = UnionToTuple<keyof T>

@@ -5,7 +5,7 @@ import type { Entries, Keys } from '../types'
  * @public
  * @param o - o is a generic parameter of type T that extends the object type. It represents the
  * object whose keys we want to retrieve.
- * @returns The function `objectKeys` returns an array of keys of the input object `o`, with the type
+ * @returns The function `object_keys` returns an array of keys of the input object `o`, with the type
  * of the keys being inferred based on the type of the input object. The type of the returned value is
  * `Keys<T>`, which is a type alias defined elsewhere in the code.
  */

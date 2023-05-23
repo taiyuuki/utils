@@ -1,5 +1,5 @@
 import { math_random_int } from './math'
-import type { TupleToObject } from '../types'
+import type { Key, TupleToObject } from '../types'
 
 /**
  * The function converts an array of strings and numbers into an object with boolean values.
@@ -12,10 +12,11 @@ import type { TupleToObject } from '../types'
  * set to `v` if provided, otherwise `true`. The type of the returned object is determined by the
  * generic type parameters `T` and `V`. The function returns an object of type `TupleToObject<T, V>`.
  */
-function arr_to_obj<T extends Array<string | number>, V = boolean>(arr: T, v?: V) {
-    const result = {} as Record<string, any>
+function arr_to_obj<T extends Key[], V = boolean>(arr: T, v?: V) {
+    const result: Record<Key, V> = {}
+    const value = v ?? true as V
     arr.forEach(i => {
-        result[i] = v ?? true
+        result[i] = value
     })
     return result as TupleToObject<T, V>
 }
