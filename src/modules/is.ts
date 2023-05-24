@@ -96,9 +96,8 @@ function is_null(n: any): n is null {
  * The function checks if a given value is null or undefined, or if it is a number that is NaN.
  * @public
  * @param t - The parameter `t` is of type `any`, which means it can be any data type.
- * @returns a boolean value indicating whether the input parameter `t` is either `null` or `undefined`.
- * The return type of the function is a type guard, which means that if the function returns `true`,
- * TypeScript will narrow the type of `t` to `null` or `undefined`.
+ * @returns a boolean value indicating whether the input parameter `t` is either `null` or `undefined`
+ * or `NaN`.
  */
 function is_void(t: any): t is null | undefined {
     if (typeof t === 'number') {
@@ -111,7 +110,8 @@ function is_void(t: any): t is null | undefined {
  * The function checks if a given value is not null and undefined, or if it is a number that is not NaN.
  * @public
  * @param t - The parameter `t` is of type `any`, which means it can be any data type.
- * @returns a boolean value indicating whether the input parameter `t` is either `null` or `undefined`.
+ * @returns a boolean value indicating whether the input parameter `t` is either `null` or `undefined`
+ * or `NaN`.
  */
 function is_not_void<T>(t: T): t is NonNullable<T> {
     return !is_void(t)

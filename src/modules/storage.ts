@@ -29,15 +29,16 @@ function storage_set<T>(key: string, value: T) {
  * @returns The function `storage_get` returns the parsed value of the item stored in the `localStorage`
  * with the given `key`. If the item is not found or is empty, it returns the `empty` value passed as a
  * second argument. If no `empty` value is provided, it returns `undefined`. If there is an error while
- * parsing the data, it logs the error to the console and
+ * parsing the data, it logs the error to the console and returns `undefined`.
  */
-function storage_get<T>(key: string, empty?: T): T | undefined {
+function storage_get<T, K extends T = T>(key: string, empty?: K): T | undefined {
     try {
         const data = localStorage.getItem(key)
-        return is_not_void(data) ? JSON.parse(data) : (empty ?? void 0) as T
+        return is_not_void(data) ? JSON.parse(data) : (empty ?? void 0)
     }
     catch (e) {
         console.error(e)
+        return void 0
     }
 }
 
