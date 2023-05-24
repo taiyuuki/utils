@@ -9,7 +9,7 @@ The function "image\_get\_type" takes a filename as input and returns the file t
 **Signature:**
 
 ```typescript
-declare function image_get_type(filename: string): string;
+declare function image_get_type(filename: string): "image/png" | "image/jpeg" | "image/gif" | "image/webp" | "image/bmp" | "image/svg+xml" | "image/x-icon" | "image/tiff";
 ```
 
 ## Parameters
@@ -20,5 +20,5 @@ declare function image_get_type(filename: string): string;
 
 **Returns:**
 
-string
+"image/png" \| "image/jpeg" \| "image/gif" \| "image/webp" \| "image/bmp" \| "image/svg+xml" \| "image/x-icon" \| "image/tiff"
 

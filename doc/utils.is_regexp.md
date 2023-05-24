@@ -24,3 +24,10 @@ r is RegExp
 
 The function `is_regexp` returns a boolean value indicating whether the input parameter `r` is a regular expression (`RegExp`<!-- -->) or not. It returns `true` if `r` is a `RegExp` object, and `false` otherwise.
 
+## Example
+
+
+```ts
+is_regexp(/a/)
+```
+

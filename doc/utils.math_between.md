@@ -18,7 +18,7 @@ declare function math_between(v: number, min: number, max: number): number;
 |  --- | --- | --- |
 |  v | number | a number that you want to check if it falls between the range of min and max. |
 |  min | number | The minimum value that the input number <code>v</code> can take. If <code>v</code> is less than <code>min</code>, the function will return <code>min</code>. |
-|  max | number | The <code>max</code> parameter is a number representing the maximum value that <code>v</code> can take. The <code>mathBetween</code> function is designed to ensure that <code>v</code> is always within the range of <code>min</code> and <code>max</code>. |
+|  max | number | The maximum value that the input number <code>v</code> can take. If <code>v</code> is greater than <code>max</code>, the function will return <code>max</code>. |
 
 **Returns:**
 

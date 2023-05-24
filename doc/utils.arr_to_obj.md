@@ -9,7 +9,7 @@ The function converts an array of strings and numbers into an object with boolea
 **Signature:**
 
 ```typescript
-declare function arr_to_obj<T extends Array<string | number>, V = boolean>(arr: T, v?: V): TupleToObject<T, V>;
+declare function arr_to_obj<T extends Key[], V = boolean>(arr: T, v?: V): TupleToObject<T, V>;
 ```
 
 ## Parameters

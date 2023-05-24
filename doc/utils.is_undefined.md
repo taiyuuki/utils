@@ -22,5 +22,5 @@ declare function is_undefined(u: any): u is undefined;
 
 u is undefined
 
-The function `is_undefined` returns a boolean value indicating whether the input parameter `u` is `undefined` or not. The function uses the `void` operator to obtain the `undefined` value and then compares it with the input parameter `u`<!-- -->. The function returns `true` if `u` is `undefined`<!-- -->, and `false` otherwise.
+The function `is_undefined` returns a boolean value indicating whether the input parameter `u` is `undefined` or not. The function returns `true` if `u` is `undefined`<!-- -->, and `false` otherwise.
 

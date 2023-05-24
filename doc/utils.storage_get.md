@@ -9,7 +9,7 @@ The function retrieves data from local storage and returns it as a parsed JSON o
 **Signature:**
 
 ```typescript
-declare function storage_get<T>(key: string, empty?: T): any;
+declare function storage_get<T, K extends T = T>(key: string, empty?: K): T | undefined;
 ```
 
 ## Parameters
@@ -17,11 +17,11 @@ declare function storage_get<T>(key: string, empty?: T): any;
 |  Parameter | Type | Description |
 |  --- | --- | --- |
 |  key | string | The key is a string that is used to identify the data that is being retrieved from the localStorage. It is used to store and retrieve data from the browser's localStorage object. |
-|  empty | T | _(Optional)_ The <code>empty</code> parameter is an optional parameter of generic type <code>T</code> that represents the default value to be returned if the value for the specified key is not found in the localStorage. If <code>empty</code> is not provided, the function will return <code>undefined</code> as the default value. |
+|  empty | K | _(Optional)_ The <code>empty</code> parameter is an optional parameter of generic type <code>T</code> that represents the default value to be returned if the value for the specified key is not found in the localStorage. If <code>empty</code> is not provided, the function will return <code>undefined</code> as the default value. |
 
 **Returns:**
 
-any
+T \| undefined
 
-The function `storage_get` returns the parsed value of the item stored in the `localStorage` with the given `key`<!-- -->. If the item is not found or is empty, it returns the `empty` value passed as a second argument. If no `empty` value is provided, it returns `undefined`<!-- -->. If there is an error while parsing the data, it logs the error to the console and
+The function `storage_get` returns the parsed value of the item stored in the `localStorage` with the given `key`<!-- -->. If the item is not found or is empty, it returns the `empty` value passed as a second argument. If no `empty` value is provided, it returns `undefined`<!-- -->. If there is an error while parsing the data, it logs the error to the console and returns `undefined`<!-- -->.
 

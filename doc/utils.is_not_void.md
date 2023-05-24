@@ -22,5 +22,5 @@ declare function is_not_void<T>(t: T): t is NonNullable<T>;
 
 t is NonNullable&lt;T&gt;
 
-a boolean value indicating whether the input parameter `t` is either `null` or `undefined`<!-- -->.
+a boolean value indicating whether the input parameter `t` is either `null` or `undefined` or `NaN`<!-- -->.
 

@@ -22,5 +22,5 @@ declare function object_keys<T extends object>(o: T): Keys<T>;
 
 Keys&lt;T&gt;
 
-The function `objectKeys` returns an array of keys of the input object `o`<!-- -->, with the type of the keys being inferred based on the type of the input object. The type of the returned value is `Keys<T>`<!-- -->, which is a type alias defined elsewhere in the code.
+The function `object_keys` returns an array of keys of the input object `o`<!-- -->, with the type of the keys being inferred based on the type of the input object. The type of the returned value is `Keys<T>`<!-- -->, which is a type alias defined elsewhere in the code.
 

@@ -44,7 +44,8 @@
 |  [get\_contrast\_color(color)](./utils.get_contrast_color.md) | The function takes a color as input and returns either black or white as the contrasting color based on the brightness of the input color. |
 |  [hex\_to\_rgb(hex)](./utils.hex_to_rgb.md) | The function converts a hexadecimal color code to its corresponding RGB values. |
 |  [image\_get\_type(filename)](./utils.image_get_type.md) | The function "image\_get\_type" takes a filename as input and returns the file type of the image. |
-|  [image\_resize(img, size, type)](./utils.image_resize.md) | This function resizes an HTML image element to a specified size and MIME type. |
+|  [image\_mini(img, quality)](./utils.image_mini.md) | This function minifies an HTML image element. |
+|  [image\_resize(img, options)](./utils.image_resize.md) | This function resizes an HTML image element to a specified size and MIME type. |
 |  [image\_to\_blob(img)](./utils.image_to_blob.md) | This function converts an HTML image element to a blob object using a canvas. |
 |  [image\_to\_canvas(img, size)](./utils.image_to_canvas.md) | This function converts an HTML image element to a canvas element with a specified size. |
 |  [image\_to\_data\_uri(img, type)](./utils.image_to_data_uri.md) | This function converts an HTML image element to a data URI. |

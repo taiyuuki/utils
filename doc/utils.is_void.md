@@ -22,5 +22,5 @@ declare function is_void(t: any): t is null | undefined;
 
 t is null \| undefined
 
-a boolean value indicating whether the input parameter `t` is either `null` or `undefined`<!-- -->. The return type of the function is a type guard, which means that if the function returns `true`<!-- -->, TypeScript will narrow the type of `t` to `null` or `undefined`<!-- -->.
+a boolean value indicating whether the input parameter `t` is either `null` or `undefined` or `NaN`<!-- -->.
 

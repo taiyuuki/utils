@@ -27,6 +27,6 @@ string
 
 
 ```ts
-const str = strRandom(6, 16)// 获取取长度为6的随机16进制字符
+const str = str_random(6, 16)// generates a random string of length 6 using hexadecimal.
 ```
 

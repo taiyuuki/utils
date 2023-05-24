@@ -9,7 +9,7 @@ This function resizes an HTML image element to a specified size and MIME type.
 **Signature:**
 
 ```typescript
-declare function image_resize(img: HTMLImageElement, size: ImageSize, type?: string): HTMLImageElement;
+declare function image_resize(img: HTMLImageElement, options: ImageOptions): HTMLImageElement;
 ```
 
 ## Parameters
@@ -17,8 +17,7 @@ declare function image_resize(img: HTMLImageElement, size: ImageSize, type?: str
 |  Parameter | Type | Description |
 |  --- | --- | --- |
 |  img | HTMLImageElement | An HTMLImageElement object representing the image that needs to be resized. |
-|  size | ImageSize | ImageSize is likely a custom type or interface that defines the desired dimensions of the resized image. It could include properties such as width and height. Without seeing the specific implementation of ImageSize, it's difficult to provide more information. |
-|  type | string | _(Optional)_ The <code>type</code> parameter is an optional parameter that specifies the MIME type of the output image. If no value is provided, the default MIME type is used. |
+|  options | ImageOptions | The options parameter is an optional object that specifies the width and height of the image. |
 
 **Returns:**
 

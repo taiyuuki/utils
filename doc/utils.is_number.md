@@ -24,3 +24,12 @@ n is number
 
 The function `is_number` is returning a boolean value. It returns `true` if the input `n` is a finite number, and `false` otherwise.
 
+## Example
+
+
+```ts
+is_number(1)// true
+is_number(NaN)// false
+is_number(Number.NEGATIVE_INFINITY)// false
+```
+

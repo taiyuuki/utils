@@ -9,14 +9,14 @@ This function checks if a given key exists in a given object and returns a boole
 **Signature:**
 
 ```typescript
-declare function key_in<T extends object>(key: keyof T, obj: T): key is keyof T;
+declare function key_in<T extends object>(key: Key, obj: T): key is keyof T;
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  key | keyof T | The first parameter <code>key</code> is a generic type that extends the keys of an object <code>T</code>. It represents the key that we want to check if it exists in the object <code>obj</code>. |
+|  key | Key | The first parameter <code>key</code> is a generic type that extends the keys of an object <code>T</code>. It represents the key that we want to check if it exists in the object <code>obj</code>. |
 |  obj | T | The <code>obj</code> parameter is an object of type <code>T</code>. The <code>T</code> type is a generic type that extends the <code>object</code> type, which means that <code>obj</code> can be any object type. |
 
 **Returns:**

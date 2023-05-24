@@ -24,10 +24,11 @@ export function arr_random<T>(arr: T[]): T;
 // @public
 export function arr_remove<T>(arr: T[], value: T): boolean;
 
+// Warning: (ae-forgotten-export) The symbol "Key" needs to be exported by the entry point index.d.ts
 // Warning: (ae-forgotten-export) The symbol "TupleToObject" needs to be exported by the entry point index.d.ts
 //
 // @public
-export function arr_to_obj<T extends Array<string | number>, V = boolean>(arr: T, v?: V): TupleToObject<T, V>;
+export function arr_to_obj<T extends Key[], V = boolean>(arr: T, v?: V): TupleToObject<T, V>;
 
 // @public
 export function arr_unique<T>(arr: T[]): T[];
@@ -119,16 +120,21 @@ export function get_contrast_color(color: Color): "black" | "white";
 export function hex_to_rgb(hex: string): number[];
 
 // @public
-export function image_get_type(filename: string): string;
+export function image_get_type(filename: string): "image/png" | "image/jpeg" | "image/gif" | "image/webp" | "image/bmp" | "image/svg+xml" | "image/x-icon" | "image/tiff";
 
-// Warning: (ae-forgotten-export) The symbol "ImageSize" needs to be exported by the entry point index.d.ts
+// @public
+export function image_mini(img: HTMLImageElement, quality: number): HTMLImageElement;
+
+// Warning: (ae-forgotten-export) The symbol "ImageOptions" needs to be exported by the entry point index.d.ts
 //
 // @public
-export function image_resize(img: HTMLImageElement, size: ImageSize, type?: string): HTMLImageElement;
+export function image_resize(img: HTMLImageElement, options: ImageOptions): HTMLImageElement;
 
 // @public
 export function image_to_blob(img: HTMLImageElement): Promise<Blob>;
 
+// Warning: (ae-forgotten-export) The symbol "ImageSize" needs to be exported by the entry point index.d.ts
+//
 // @public
 export function image_to_canvas(img: HTMLImageElement, size?: ImageSize): HTMLCanvasElement;
 
@@ -207,7 +213,7 @@ export function is_window(win: any): win is Window;
 export function is_window_or_element(el: any): el is Element | Window;
 
 // @public
-export function key_in<T extends object>(key: keyof T, obj: T): key is keyof T;
+export function key_in<T extends object>(key: Key, obj: T): key is keyof T;
 
 // @public
 export function log_type_error(type: string, name: string): void;
@@ -241,7 +247,7 @@ export function object_pick<T extends object, K extends keyof T>(obj: T, keys: K
 export function rgb_to_hex(rgb: RgbColor): string;
 
 // @public
-export function storage_get<T>(key: string, empty?: T): any;
+export function storage_get<T, K extends T = T>(key: string, empty?: K): T | undefined;
 
 // @public
 export function storage_remove(key: string): void;
