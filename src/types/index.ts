@@ -34,7 +34,7 @@ export type RgbColor = [number, number, number, number?]
 
 export type Color = string | RgbColor
 
-export type CSSStyleName<T = keyof CSSStyleDeclaration> = T extends string ? T : never
+export type CSSStyleName = Extract<keyof CSSStyleDeclaration, string>
 
 export type KeyboardEventType = 'keydown' | 'keypress' | 'keyup'
 

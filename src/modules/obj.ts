@@ -1,4 +1,4 @@
-import type { Entries, Keys } from '../types'
+import type { Entries, Key, Keys } from '../types'
 
 /**
  * This function returns the keys of an object as an array.
@@ -35,7 +35,7 @@ function object_entries<T extends object>(obj: T): Entries<T> {
  * @param obj - The `obj` parameter is an object of type `T`. The `T` type is a generic type that
  * extends the `object` type, which means that `obj` can be any object type.
  */
-function key_in<T extends object>(key: keyof T, obj: T): key is keyof T {
+function key_in<T extends object>(key: Key, obj: T): key is keyof T {
     return key in obj
 }
 
