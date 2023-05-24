@@ -57,7 +57,7 @@ function download_image(img: HTMLImageElement, imageName = str_uuid()) {
  * generated as the file name.
  */
 function download_canvas(cvs: HTMLCanvasElement, imageName = str_uuid()) {
-    download_by_url(cvs.toDataURL(), imageName)
+    download_by_url(cvs.toDataURL('image/png'), imageName)
 }
 
 export {

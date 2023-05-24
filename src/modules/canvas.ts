@@ -9,7 +9,7 @@ import { is_not_void } from './is'
  */
 function canvas_to_image(cvs: HTMLCanvasElement) {
     const img = new Image()
-    img.src = cvs.toDataURL()
+    img.src = cvs.toDataURL('image/png')
     return img
 }
 

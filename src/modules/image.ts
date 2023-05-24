@@ -1,8 +1,14 @@
 import { is_not_void } from './is'
+import { math_between } from './math'
 
 interface ImageSize {
     width: number
     height: number
+}
+
+interface ImageOptions extends ImageSize {
+    type?: string
+    quality?: number
 }
 
 const DEFAULT_MIMETYPE = 'image/png'
@@ -70,15 +76,27 @@ function image_to_blob(img: HTMLImageElement): Promise<Blob> {
  */
 function image_get_type(filename: string) {
     const imageExt = filename.substring(filename.lastIndexOf('.'))
-    let imageType = ''
-    imageType = imageExt === '.svg' ? 'image/svg+xml' : imageType
-    imageType = imageExt === '.png' ? 'image/png' : imageType
-    imageType
-    = imageExt === '.jpg' || imageExt === '.jpeg' ? 'image/jpeg' : imageType
-    imageType = imageExt === '.gif' ? 'image/gif' : imageType
-    imageType
-    = imageExt === '.tif' || imageExt === '.tiff' ? 'image/tiff' : imageType
-    return imageType
+    switch (imageExt) {
+        case '.jpg':
+        case '.jpeg':
+            return 'image/jpeg'
+        case '.png':
+            return 'image/png'
+        case '.gif':
+            return 'image/gif'
+        case '.webp':
+            return 'image/webp'
+        case '.bmp':
+            return 'image/bmp'
+        case '.svg':
+            return 'image/svg+xml'
+        case '.ico':
+            return 'image/x-icon'
+        case '.tiff':
+            return 'image/tiff'
+        default:
+            return DEFAULT_MIMETYPE
+    }
 }
 
 /**
@@ -86,17 +104,33 @@ function image_get_type(filename: string) {
  * @public
  * @param img - An HTMLImageElement object representing the image that needs to be
  * resized.
- * @param size - ImageSize is likely a custom type or interface that defines the desired
- * dimensions of the resized image. It could include properties such as width and height. Without
- * seeing the specific implementation of ImageSize, it's difficult to provide more information.
- * @param type - The `type` parameter is an optional parameter that specifies the MIME type of the
- * output image. If no value is provided, the default MIME type is used.
+ * @param options - The options parameter is an optional object that specifies the width and
+ * height of the image.
  * @returns a new HTMLImageElement that has been resized based on the input parameters.
  */
-function image_resize(img: HTMLImageElement, size: ImageSize, type = DEFAULT_MIMETYPE) {
+function image_resize(img: HTMLImageElement, options: ImageOptions) {
     const resizeImg = new Image()
-    const cvs = image_to_canvas(img, size)
-    resizeImg.src = cvs.toDataURL(type)
+    const cvs = image_to_canvas(img, options)
+    const type = options.type ?? image_get_type(img.src)
+    const quality = options.quality ?? 1
+    resizeImg.src = cvs.toDataURL(type, math_between(quality, 0, 1))
+    return resizeImg
+}
+
+/**
+ * This function minifies an HTML image element.
+ * @public
+ * @param img - An HTMLImageElement object representing the image that needs to be
+ * minified.
+ * @param quality - The quality parameter is an optional number that specifies the
+ * quality of the minified image, between 0 and 1.
+ * @returns a new HTMLImageElement that has been minified based on the input parameters.
+ */
+function image_mini(img: HTMLImageElement, quality: number) {
+    const resizeImg = new Image()
+    const cvs = image_to_canvas(img, { width: img.naturalWidth, height: img.naturalHeight })
+    const type = image_get_type(img.src)
+    resizeImg.src = cvs.toDataURL(type, math_between(quality, 0, 1))
     return resizeImg
 }
 
@@ -106,4 +140,5 @@ export {
     image_to_blob,
     image_to_canvas,
     image_to_data_uri,
+    image_mini,
 }
