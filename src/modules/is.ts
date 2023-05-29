@@ -175,7 +175,7 @@ function is_empty_array(v: any, nullable = true): v is [] {
  * @param v - The parameter `v` is of type `any`, which means it can be any data type.
  * @param nullable - The parameter `nullable` is of type `boolean`, which means it can be `true` or
  * `false`.
- * @returns The function `is_not_empty_array` returns a boolean value indicating whether the input
+ * @returns The function `is_empty_obj` returns a boolean value indicating whether the input
  * parameter `v` is not an empty array.
  * @example
  * ```ts
@@ -196,7 +196,7 @@ function is_empty_obj(v: any, nullable = true): v is {} {
  * @param v - The parameter `v` is of type `any`, which means it can be any data type.
  * @param nullable - The parameter `nullable` is of type `boolean`, which means it can be `true` or
  * `false`.
- * @returns The function `is_not_empty_obj` returns a boolean value indicating whether the input
+ * @returns The function `is_rgb_color` returns a boolean value indicating whether the input
  * parameter `v` is not an empty object.
  */
 function is_rgb_color(color: any): color is RgbColor {
