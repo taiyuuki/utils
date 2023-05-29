@@ -58,9 +58,26 @@ function object_pick<T extends object, K extends keyof T>(obj: T, keys: K[]) {
     }, {} as Pick<T, K>)
 }
 
+/**
+ * The function `object_concat` takes two objects of type `T` and `S` and returns a new object
+ * of type `T & S`.
+ * @public
+ * @param target - The first parameter `target` is an object of type `T` which is a generic type
+ * that extends the `object` type. This means that `target` can be any object that has properties
+ * and methods.
+ * @param source - The second parameter `source` is an object of type `S` which is a generic
+ * type that extends the `object` type. This means that `source` can be any object that has
+ * properties and methods.
+ * @returns The function `object_concat` returns an object of type `T & S`.
+ */
+function object_concat<T extends object, S extends object>(target: T, source: S) {
+    return Object.assign(target, source) as T & S
+}
+
 export {
     object_entries,
     object_keys,
     object_pick,
     key_in,
+    object_concat,
 }
