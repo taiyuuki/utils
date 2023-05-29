@@ -9,7 +9,7 @@ This function converts a Blob object to a data URI string or ArrayBuffer.
 **Signature:**
 
 ```typescript
-declare function blob_to_date_uri(blob: Blob): Promise<string | ArrayBuffer>;
+declare function blob_to_date_URI(blob: Blob): Promise<string | ArrayBuffer>;
 ```
 
 ## Parameters

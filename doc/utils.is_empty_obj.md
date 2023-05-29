@@ -23,7 +23,7 @@ declare function is_empty_obj(v: any, nullable?: boolean): v is {};
 
 v is {}
 
-The function `is_not_empty_array` returns a boolean value indicating whether the input parameter `v` is not an empty array.
+The function `is_empty_obj` returns a boolean value indicating whether the input parameter `v` is not an empty array.
 
 ## Example
 

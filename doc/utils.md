@@ -22,7 +22,7 @@
 |  [arr\_unique(arr)](./utils.arr_unique.md) | This function takes an array of any type and returns a new array with only unique values. |
 |  [blob\_to\_date\_uri(blob)](./utils.blob_to_date_uri.md) | This function converts a Blob object to a data URI string or ArrayBuffer. |
 |  [canvas\_to\_blob(cvs)](./utils.canvas_to_blob.md) | This function converts an HTML canvas element to a Blob object and returns a Promise. |
-|  [canvas\_to\_image(cvs)](./utils.canvas_to_image.md) | This function converts a canvas element to an image element. |
+|  [canvas\_to\_image(cvs, quality)](./utils.canvas_to_image.md) | This function converts a canvas element to an image element. |
 |  [clone\_deep(source)](./utils.clone_deep.md) | This function creates a deep copy of an object. |
 |  [clone\_simple(source)](./utils.clone_simple.md) | The function creates a deep copy of an object by using JSON.parse. |
 |  [clone(source)](./utils.clone.md) | The function <code>clone</code> creates a deep copy of an object. |

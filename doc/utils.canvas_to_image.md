@@ -9,7 +9,7 @@ This function converts a canvas element to an image element.
 **Signature:**
 
 ```typescript
-declare function canvas_to_image(cvs: HTMLCanvasElement): HTMLImageElement;
+declare function canvas_to_image(cvs: HTMLCanvasElement, quality?: number): HTMLImageElement;
 ```
 
 ## Parameters
@@ -17,6 +17,7 @@ declare function canvas_to_image(cvs: HTMLCanvasElement): HTMLImageElement;
 |  Parameter | Type | Description |
 |  --- | --- | --- |
 |  cvs | HTMLCanvasElement | HTMLCanvasElement - This is a reference to an HTML canvas element that contains the image data that we want to convert to an image. |
+|  quality | number | _(Optional)_ number - This is the quality of the image. Defaults to 1. |
 
 **Returns:**
 

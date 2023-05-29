@@ -43,7 +43,7 @@ function image_to_canvas(img: HTMLImageElement, size: ImageSize = { width: img.n
  * is a string that represents the image data in a format that can be used as a source for an image
  * element in HTML.
  */
-function image_to_data_uri(img: HTMLImageElement, type = DEFAULT_MIMETYPE) {
+function image_to_data_URI(img: HTMLImageElement, type = DEFAULT_MIMETYPE) {
     const cvs = image_to_canvas(img)
     return cvs.toDataURL(type)
 }
@@ -139,6 +139,6 @@ export {
     image_resize,
     image_to_blob,
     image_to_canvas,
-    image_to_data_uri,
+    image_to_data_URI as image_to_data_uri,
     image_mini,
 }

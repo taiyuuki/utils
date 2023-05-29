@@ -9,7 +9,7 @@ import { is_not_void } from './is'
  * @returns A Promise that resolves to a string or ArrayBuffer, depending on the result of reading the
  * provided Blob as a data URL.
  */
-function blob_to_date_uri(blob: Blob): Promise<string | ArrayBuffer> {
+function blob_to_date_URI(blob: Blob): Promise<string | ArrayBuffer> {
     const reader = new FileReader()
     return new Promise((resolve, reject) => {
         reader.onload = function (e) {
@@ -48,5 +48,5 @@ function url_to_blob(url: string): Promise<Blob> {
 
 export {
     url_to_blob,
-    blob_to_date_uri,
+    blob_to_date_URI as blob_to_date_uri,
 }

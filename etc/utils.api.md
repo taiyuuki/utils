@@ -40,7 +40,7 @@ export function blob_to_date_uri(blob: Blob): Promise<string | ArrayBuffer>;
 export function canvas_to_blob(cvs: HTMLCanvasElement): Promise<Blob>;
 
 // @public
-export function canvas_to_image(cvs: HTMLCanvasElement): HTMLImageElement;
+export function canvas_to_image(cvs: HTMLCanvasElement, quality?: number): HTMLImageElement;
 
 // @public
 export function clone<T extends object>(source: T): T;

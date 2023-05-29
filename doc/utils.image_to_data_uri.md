@@ -9,7 +9,7 @@ This function converts an HTML image element to a data URI.
 **Signature:**
 
 ```typescript
-declare function image_to_data_uri(img: HTMLImageElement, type?: string): string;
+declare function image_to_data_URI(img: HTMLImageElement, type?: string): string;
 ```
 
 ## Parameters

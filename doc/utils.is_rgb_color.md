@@ -22,5 +22,5 @@ declare function is_rgb_color(color: any): color is RgbColor;
 
 color is RgbColor
 
-The function `is_not_empty_obj` returns a boolean value indicating whether the input parameter `v` is not an empty object.
+The function `is_rgb_color` returns a boolean value indicating whether the input parameter `v` is not an empty object.
 
