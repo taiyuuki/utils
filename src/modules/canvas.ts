@@ -1,15 +1,17 @@
 import { is_not_void } from './is'
+import { math_between } from './math'
 
 /**
  * This function converts a canvas element to an image element.
  * @public
  * @param cvs - HTMLCanvasElement - This is a reference to an HTML canvas element
  * that contains the image data that we want to convert to an image.
+ * @param quality - number - This is the quality of the image. Defaults to 1.
  * @returns an HTMLImageElement object.
  */
-function canvas_to_image(cvs: HTMLCanvasElement) {
+function canvas_to_image(cvs: HTMLCanvasElement, quality = 1): HTMLImageElement {
     const img = new Image()
-    img.src = cvs.toDataURL('image/png')
+    img.src = cvs.toDataURL('image/png', math_between(quality, 0, 1))
     return img
 }
 
