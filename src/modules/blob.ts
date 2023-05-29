@@ -48,5 +48,5 @@ function url_to_blob(url: string): Promise<Blob> {
 
 export {
     url_to_blob,
-    blob_to_date_URI as blob_to_date_uri,
+    blob_to_date_URI,
 }

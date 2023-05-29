@@ -139,6 +139,6 @@ export {
     image_resize,
     image_to_blob,
     image_to_canvas,
-    image_to_data_URI as image_to_data_uri,
+    image_to_data_URI,
     image_mini,
 }
