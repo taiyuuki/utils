@@ -1,4 +1,4 @@
-import { arr_move, arr_remove, arr_to_obj, arr_unique } from '../src/modules/array'
+import { arr_move, arr_remove, arr_to_obj, arr_unique, arr_value_index } from '../src/modules/array'
 import { describe, expect, it } from 'vitest'
 
 describe('array', () => {
@@ -54,5 +54,15 @@ describe('array', () => {
         7,
       ]
     `)
+    })
+
+    it('数组键值交换', () => {
+        expect(arr_value_index(['a', 4, '4', '012'])).toMatchInlineSnapshot(`
+          {
+            "012": 3,
+            "4": 2,
+            "a": 0,
+          }
+        `)
     })
 })

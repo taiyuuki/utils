@@ -56,7 +56,7 @@ function arr_remove<T>(arr: T[], value: T) {
  * @param to - The "to" parameter is the index where the element in the array should be moved
  * to.
  */
-function arr_move<T extends any[]>(arr: T, from: number, to: number) {
+function arr_move<T extends any[]>(arr: T, from: number, to: number): T {
     arr.splice(to, 0, arr.splice(from, 1)[0])
     return arr
 }
@@ -72,10 +72,44 @@ function arr_random<T>(arr: T[]): T {
     return arr[math_random_int(0, arr.length)]
 }
 
+/**
+ * This is a function that creates an array of a specified length and fills it with a
+ * specified value.
+ * @public
+ * @param length - The length parameter is a number that specifies the desired length of the
+ * array to be created.
+ * @param value - The value parameter is the value that will be used to fill the array. It can be
+ * of any data type, as the function is generic and can be used with any type.
+ * @returns The function `arr_fill` is returning an array of length `length` filled with the value
+ * `value`. The type of the array elements is determined by the type of the `value` parameter, which is
+ * specified by the generic type parameter `T`.
+ */
+function get_fill_arr<T>(length: number, value: T) {
+    return Array.from<T>({ length }).fill(value)
+}
+
+/**
+ * This function takes an array of keys and returns an object with the keys as values and
+ * their indices as keys.
+ * @public
+ * @param arr - The input array of type T, where T extends the Key type.
+ * @returns an object with keys as the elements of the input array and values as their corresponding
+ * indices in the array. The object has a type of `Record<T, number>`, where `T` is the type of the
+ * elements in the input array and `number` is the type of the indices.
+ */
+function arr_value_index<T extends Key>(arr: T[]): Record<T, number> {
+    return arr.reduce((acc, key, index) => {
+        acc[key] = index
+        return acc
+    }, {} as Record<T, number>)
+}
+
 export {
     arr_move,
     arr_random,
     arr_remove,
     arr_to_obj,
     arr_unique,
+    get_fill_arr,
+    arr_value_index,
 }
