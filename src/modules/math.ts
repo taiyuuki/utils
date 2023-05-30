@@ -63,7 +63,7 @@ function math_to_hex(n: number) {
  * @returns The function `int_to_bytes` returns a `Uint8Array` containing the four bytes that represent
  * the input `num` as an unsigned 32-bit integer in big-endian byte order.
  * @example
- * ```
+ * ```ts
  * int_to_bytes(0x12345678) // [0x78, 0x56, 0x34, 0x12]
  * ```
  */
@@ -82,7 +82,7 @@ function int_to_bytes(num: number) {
  * @returns The function `bytes_to_int` is returning an integer value that is obtained by concatenating
  * the four bytes in the input array `bytes` in big-endian order.
  * @example
- * ```
+ * ```ts
  * bytes_to_int([0x78, 0x56, 0x34, 0x12]) // 0x12345678
  * ```
  */

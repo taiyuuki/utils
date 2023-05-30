@@ -27,7 +27,7 @@ The function `int_to_bytes` returns a `Uint8Array` containing the four bytes tha
 ## Example
 
 
-```
+```ts
 int_to_bytes(0x12345678) // [0x78, 0x56, 0x34, 0x12]
 ```
 

@@ -27,7 +27,7 @@ The function `bytes_to_int` is returning an integer value that is obtained by co
 ## Example
 
 
-```
+```ts
 bytes_to_int([0x78, 0x56, 0x34, 0x12]) // 0x12345678
 ```
 

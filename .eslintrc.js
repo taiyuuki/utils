@@ -4,6 +4,5 @@ module.exports = {
     rules: {
         'import/no-unresolved': [
             'error', { ignore: ['iem:./modules/*'] }],
-        'no-mixed-operators': 'off',
     },
 }
