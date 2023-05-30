@@ -44,12 +44,50 @@ function math_between(v: number, min: number, max: number) {
 }
 
 /**
- * The function takes a number as input and returns its hexadecimal equivalent.
+ * The function converts a number to a hexadecimal string with uppercase letters and a minimum length
+ * of 2 characters.
  * @public
- * @param n - The parameter "n" is a number that we want to convert to a hexadecimal string.
+ * @param n - The parameter "n" is a number that will be converted to a hexadecimal string.
+ * @returns The function `math_to_hex` takes a number as input and returns a string representing the
+ * hexadecimal value of that number. The returned string is padded with a leading zero if necessary to
+ * ensure that it has at least two characters, and all characters are in uppercase.
  */
 function math_to_hex(n: number) {
     return n.toString(16).padStart(2, '0').toUpperCase()
+}
+
+/**
+ * The function converts an integer into an array of 4 bytes using bitwise operations.
+ * @public
+ * @param num - The parameter `num` is a number that needs to be converted into a byte array.
+ * @returns The function `int_to_bytes` returns a `Uint8Array` containing the four bytes that represent
+ * the input `num` as an unsigned 32-bit integer in big-endian byte order.
+ * @example
+ * ```
+ * int_to_bytes(0x12345678) // [0x78, 0x56, 0x34, 0x12]
+ * ```
+ */
+function int_to_bytes(num: number) {
+    const bytes = new Uint8Array(4)
+    bytes.set([num & 0xff, (num >> 8) & 0xff, (num >> 16) & 0xff, (num >> 24) & 0xff])
+    return bytes
+}
+
+/**
+ * The function converts an array of four bytes into a single integer value.
+ * @public
+ * @param bytes - The parameter `bytes` is an array of four numbers representing a 32-bit integer in
+ * big-endian byte order. The function `bytes_to_int` converts this byte array into a single integer
+ * value.
+ * @returns The function `bytes_to_int` is returning an integer value that is obtained by concatenating
+ * the four bytes in the input array `bytes` in big-endian order.
+ * @example
+ * ```
+ * bytes_to_int([0x78, 0x56, 0x34, 0x12]) // 0x12345678
+ * ```
+ */
+function bytes_to_int(bytes: [number, number, number, number]) {
+    return (bytes[0] << 24) | (bytes[1] << 16) | (bytes[2] << 8) | bytes[3]
 }
 
 export {
@@ -57,4 +95,7 @@ export {
     math_random_int,
     math_to_fixed,
     math_to_hex,
+    int_to_bytes,
+    bytes_to_int,
 }
+

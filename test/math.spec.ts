@@ -1,4 +1,4 @@
-import { math_to_fixed, math_random_int, math_between, math_to_hex } from '../src/modules/math'
+import { math_to_fixed, math_random_int, math_between, math_to_hex, int_to_bytes, bytes_to_int } from '../src/modules/math'
 import { describe, expect, it } from 'vitest'
 import { object_keys } from '../src/modules/obj'
 
@@ -47,5 +47,33 @@ describe('math', () => {
 
     it('math_to_hex', () => {
         expect(math_to_hex(255)).equal('FF')
+    })
+
+    it('int_to_bytes', () => {
+        const bytes_1 = int_to_bytes(0x12345678)
+        expect(bytes_1[3]).equal(0x12)
+        expect(bytes_1[2]).equal(0x34)
+        expect(bytes_1[1]).equal(0x56)
+        expect(bytes_1[0]).equal(0x78)
+
+        const bf = new ArrayBuffer(4)
+        const u8 = new Uint8Array(bf)
+        const u32 = new Uint32Array(bf)
+        u32[0] = 0x12345678
+        const bytes_2 = int_to_bytes(u32[0])
+        expect(bytes_2[0]).equal(u8[0])
+        expect(bytes_2[1]).equal(u8[1])
+        expect(bytes_2[2]).equal(u8[2])
+        expect(bytes_2[3]).equal(u8[3])
+    })
+
+    it('bytes_to_int', () => {
+        expect(bytes_to_int([0x12, 0x34, 0x56, 0x78])).equal(0x12345678)
+
+        const bf = new ArrayBuffer(4)
+        const u8 = new Uint8Array(bf)
+        const u32 = new Uint32Array(bf)
+        u32[0] = 0x12345678
+        expect(bytes_to_int([u8[3], u8[2], u8[1], u8[0]])).equal(u32[0])
     })
 })
