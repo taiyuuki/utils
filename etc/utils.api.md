@@ -34,7 +34,13 @@ export function arr_to_obj<T extends Key[], V = boolean>(arr: T, v?: V): TupleTo
 export function arr_unique<T>(arr: T[]): T[];
 
 // @public
-export function blob_to_date_uri(blob: Blob): Promise<string | ArrayBuffer>;
+export function arr_value_index<T extends Key>(arr: T[]): Record<T, number>;
+
+// @public
+export function blob_to_date_URI(blob: Blob): Promise<string | ArrayBuffer>;
+
+// @public
+export function bytes_to_int(bytes: [number, number, number, number]): number;
 
 // @public
 export function canvas_to_blob(cvs: HTMLCanvasElement): Promise<Blob>;
@@ -117,7 +123,20 @@ export class EventsControler {
 export function get_contrast_color(color: Color): "black" | "white";
 
 // @public
-export function hex_to_rgb(hex: string): number[];
+export function get_fill_arr<T>(length: number, value: T): T[];
+
+// @public
+export function get_lightness_value(color: Color): number;
+
+// Warning: (ae-forgotten-export) The symbol "RgbColor" needs to be exported by the entry point index.d.ts
+//
+// @public
+export function hex_to_rgb(hex: string): RgbColor;
+
+// Warning: (ae-forgotten-export) The symbol "HslColor" needs to be exported by the entry point index.d.ts
+//
+// @public
+export function hsl_to_rgb(hsl: HslColor): RgbColor;
 
 // @public
 export function image_get_type(filename: string): "image/png" | "image/jpeg" | "image/gif" | "image/webp" | "image/bmp" | "image/svg+xml" | "image/x-icon" | "image/tiff";
@@ -139,7 +158,10 @@ export function image_to_blob(img: HTMLImageElement): Promise<Blob>;
 export function image_to_canvas(img: HTMLImageElement, size?: ImageSize): HTMLCanvasElement;
 
 // @public
-export function image_to_data_uri(img: HTMLImageElement, type?: string): string;
+export function image_to_data_URI(img: HTMLImageElement, type?: string): string;
+
+// @public
+export function int_to_bytes(num: number): Uint8Array;
 
 // @public
 export function is_base64(str: string): boolean;
@@ -192,8 +214,6 @@ export function is_object(o: any): o is Exclude<Object, Array<any>>;
 // @public
 export function is_regexp(r: any): r is RegExp;
 
-// Warning: (ae-forgotten-export) The symbol "RgbColor" needs to be exported by the entry point index.d.ts
-//
 // @public
 export function is_rgb_color(color: any): color is RgbColor;
 
@@ -228,7 +248,10 @@ export function math_random_int(from: number, to: number): number;
 export function math_to_fixed(n: number, digit?: number): number;
 
 // @public
-export function math_to_hex(n: number): number;
+export function math_to_hex(n: number): string;
+
+// @public
+export function object_concat<T extends object, S extends object>(target: T, source: S): T & S;
 
 // Warning: (ae-forgotten-export) The symbol "Entries" needs to be exported by the entry point index.d.ts
 //
@@ -245,6 +268,9 @@ export function object_pick<T extends object, K extends keyof T>(obj: T, keys: K
 
 // @public
 export function rgb_to_hex(rgb: RgbColor): string;
+
+// @public
+export function rgb_to_hsl(rgb: RgbColor): HslColor;
 
 // @public
 export function storage_get<T, K extends T = T>(key: string, empty?: K): T | undefined;

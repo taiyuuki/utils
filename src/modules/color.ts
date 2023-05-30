@@ -1,4 +1,4 @@
-import type { Color, RgbColor } from '../types'
+import type { Color, HslColor, RgbColor } from '../types'
 import { throw_type_error } from './error'
 import { is_rgb_color } from './is'
 import { math_to_hex } from './math'
@@ -82,9 +82,98 @@ function get_contrast_color(color: Color) {
     return yiq >= 10 ? 'black' : 'white'
 }
 
+/**
+ * The function converts an RGB color value to its corresponding HSL color value.
+ * @public
+ * @param rgb - The input parameter `rgb` is an array of four numbers representing the red,
+ * green, blue, and alpha values of a color in the RGB color space. The alpha value is optional and
+ * defaults to 1 if not provided.
+ * @returns The function `rgb_to_hsl` is returning an array of HSL values. If the input `rgb` color has
+ * an alpha value, the function returns an array with four values: hue (H), saturation (S), lightness
+ * (L), and alpha (A). If the input `rgb` color does not have an alpha value, the function returns an
+ * array with three values: hue (H), saturation (S), and lightness (L).
+ */
+function rgb_to_hsl(rgb: RgbColor): HslColor {
+    const r = rgb[0] / 255
+    const g = rgb[1] / 255
+    const b = rgb[2] / 255
+    const a = rgb[3]
+    const max = Math.max(r, g, b)
+    const min = Math.min(r, g, b)
+    let h = 0
+    let s = 0
+    const l = (max + min) / 2
+    if (max === min) {
+        h = s = 0
+    }
+    else {
+        const d = max - min
+        s = l > 0.5 ? d / (2 - max - min) : d / (max + min)
+        switch (max) {
+            case r:
+                h = ((g - b) / d) + (g < b ? 6 : 0)
+                break
+            case g:
+                h = ((b - r) / d) + 2
+                break
+            case b:
+                h = ((r - g) / d) + 4
+                break
+        }
+        h *= 360 / 6
+    }
+    return a ? [h, s, l, a] : [h, s, l]
+}
+
+/**
+ * The function converts HSL color values to RGB color values.
+ * @public
+ * @param hsl - An array of four numbers representing the HSL (hue, saturation, lightness,
+ * and alpha) values of a color. The hue value is a number between 0 and 1, representing the color's
+ * position on the color wheel. The saturation and lightness values are also numbers between 0
+ * @returns An array of four numbers representing the RGB values and alpha value of the input HSL
+ * color.
+ */
+function hsl_to_rgb(hsl: HslColor): RgbColor {
+    const h = hsl[0]
+    const s = hsl[1]
+    const l = hsl[2]
+    const a = hsl[3]
+    const c = (1 - Math.abs(2 * l - 1)) * s
+    const x = c * (1 - Math.abs(((h / 60) % 2) - 1))
+    const m = l - c / 2
+    const vRGB = []
+    if (h >= 0 && h < 60) {
+        vRGB.push(c, x, 0)
+    }
+    else if (h >= 60 && h < 120) {
+        vRGB.push(x, c, 0)
+    }
+    else if (h >= 120 && h < 180) {
+        vRGB.push(0, c, x)
+    }
+    else if (h >= 180 && h < 240) {
+        vRGB.push(0, x, c)
+    }
+    else if (h >= 240 && h < 300) {
+        vRGB.push(x, 0, c)
+    }
+    else if (h >= 300 && h < 360) {
+        vRGB.push(c, 0, x)
+    }
+    const [vR, vG, vB] = vRGB
+    const r = 255 * (vR + m)
+    const g = 255 * (vG + m)
+    const b = 255 * (vB + m)
+
+    return a ? [r, g, b, a] : [r, g, b]
+}
+
 export {
     rgb_to_hex,
     hex_to_rgb,
     get_contrast_color,
     get_lightness_value,
+    rgb_to_hsl,
+    hsl_to_rgb,
 }

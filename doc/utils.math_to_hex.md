@@ -4,21 +4,23 @@
 
 ## math\_to\_hex() function
 
-The function takes a number as input and returns its hexadecimal equivalent.
+The function converts a number to a hexadecimal string with uppercase letters and a minimum length of 2 characters.
 
 **Signature:**
 
 ```typescript
-declare function math_to_hex(n: number): number;
+declare function math_to_hex(n: number): string;
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  n | number | The parameter "n" is a number that we want to convert to a hexadecimal string. |
+|  n | number | The parameter "n" is a number that will be converted to a hexadecimal string. |
 
 **Returns:**
 
-number
+string
+
+The function `math_to_hex` takes a number as input and returns a string representing the hexadecimal value of that number. The returned string is padded with a leading zero if necessary to ensure that it has at least two characters, and all characters are in uppercase.
 

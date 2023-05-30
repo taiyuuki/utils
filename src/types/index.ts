@@ -32,6 +32,8 @@ export type Entries<T extends object, K extends keyof T = keyof T> = [K, T[K]][]
 
 export type RgbColor = [number, number, number, number?]
 
+export type HslColor = RgbColor
+
 export type Color = string | RgbColor
 
 export type CSSStyleName = Extract<keyof CSSStyleDeclaration, string>

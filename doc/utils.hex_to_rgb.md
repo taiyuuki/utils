@@ -9,7 +9,7 @@ The function converts a hexadecimal color code to its corresponding RGB values.
 **Signature:**
 
 ```typescript
-declare function hex_to_rgb(hex: string): number[];
+declare function hex_to_rgb(hex: string): RgbColor;
 ```
 
 ## Parameters
@@ -20,7 +20,7 @@ declare function hex_to_rgb(hex: string): number[];
 
 **Returns:**
 
-number\[\]
+RgbColor
 
 The function `hex_to_rgb` takes a hexadecimal color code as a string and returns an array of three integers representing the corresponding RGB values.
 

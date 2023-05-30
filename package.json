@@ -1,6 +1,6 @@
 {
   "name": "@taiyuuki/utils",
-  "version": "0.3.2",
+  "version": "0.4.0",
   "description": "Utils by Taiyuuki",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
@@ -36,26 +36,26 @@
     "dist"
   ],
   "devDependencies": {
-    "@babel/core": "^7.20.2",
-    "@microsoft/api-documenter": "^7.22.4",
-    "@microsoft/api-extractor": "^7.34.8",
-    "@rollup/plugin-babel": "^6.0.2",
+    "@babel/core": "^7.22.1",
+    "@microsoft/api-documenter": "^7.22.7",
+    "@microsoft/api-extractor": "^7.35.1",
+    "@rollup/plugin-babel": "^6.0.3",
     "@rollup/plugin-commonjs": "23.0.2",
     "@rollup/plugin-json": "^6.0.0",
     "@rollup/plugin-node-resolve": "^14.1.0",
-    "@rollup/plugin-terser": "^0.4.0",
+    "@rollup/plugin-terser": "^0.4.3",
     "@taiyuuki/eslint-config-ts": "^0.0.6",
-    "@types/jsdom": "^21.1.0",
-    "@types/node": "^18.11.18",
-    "eslint": "^8.10.0",
-    "jsdom": "^21.1.0",
-    "rollup": "^2.79.0",
-    "rollup-plugin-dts": "^4.2.2",
+    "@types/jsdom": "^21.1.1",
+    "@types/node": "^18.16.16",
+    "eslint": "^8.41.0",
+    "jsdom": "^21.1.2",
+    "rollup": "^2.79.1",
+    "rollup-plugin-dts": "^4.2.3",
     "rollup-plugin-import-export": "^0.0.1",
     "rollup-plugin-node-builtins": "^2.1.2",
     "rollup-plugin-node-globals": "^1.4.0",
-    "rollup-plugin-typescript2": "^0.34.0",
+    "rollup-plugin-typescript2": "^0.34.1",
     "typescript": "^4.9.5",
-    "vitest": "^0.24.1"
+    "vitest": "^0.24.5"
   }
 }

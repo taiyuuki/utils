@@ -20,7 +20,9 @@
 |  [arr\_remove(arr, value)](./utils.arr_remove.md) | This function removes a specific value from an array of any type. |
 |  [arr\_to\_obj(arr, v)](./utils.arr_to_obj.md) | The function converts an array of strings and numbers into an object with boolean values. |
 |  [arr\_unique(arr)](./utils.arr_unique.md) | This function takes an array of any type and returns a new array with only unique values. |
-|  [blob\_to\_date\_uri(blob)](./utils.blob_to_date_uri.md) | This function converts a Blob object to a data URI string or ArrayBuffer. |
+|  [arr\_value\_index(arr)](./utils.arr_value_index.md) | This function takes an array of keys and returns an object with the keys as values and their indices as keys. |
+|  [blob\_to\_date\_URI(blob)](./utils.blob_to_date_uri.md) | This function converts a Blob object to a data URI string or ArrayBuffer. |
+|  [bytes\_to\_int(bytes)](./utils.bytes_to_int.md) | The function converts an array of four bytes into a single integer value. |
 |  [canvas\_to\_blob(cvs)](./utils.canvas_to_blob.md) | This function converts an HTML canvas element to a Blob object and returns a Promise. |
 |  [canvas\_to\_image(cvs, quality)](./utils.canvas_to_image.md) | This function converts a canvas element to an image element. |
 |  [clone\_deep(source)](./utils.clone_deep.md) | This function creates a deep copy of an object. |
@@ -42,13 +44,17 @@
 |  [download\_canvas(cvs, imageName)](./utils.download_canvas.md) | This function downloads an HTML canvas element as an image with a default or specified name. |
 |  [download\_image(img, imageName)](./utils.download_image.md) | This function downloads an image by its URL and saves it with a generated or provided name. |
 |  [get\_contrast\_color(color)](./utils.get_contrast_color.md) | The function takes a color as input and returns either black or white as the contrasting color based on the brightness of the input color. |
+|  [get\_fill\_arr(length, value)](./utils.get_fill_arr.md) | This is a function that creates an array of a specified length and fills it with a specified value. |
+|  [get\_lightness\_value(color)](./utils.get_lightness_value.md) | The function calculates the lightness value of a given color in RGB or hex format. |
 |  [hex\_to\_rgb(hex)](./utils.hex_to_rgb.md) | The function converts a hexadecimal color code to its corresponding RGB values. |
+|  [hsl\_to\_rgb(hsl)](./utils.hsl_to_rgb.md) | The function converts HSL color values to RGB color values. |
 |  [image\_get\_type(filename)](./utils.image_get_type.md) | The function "image\_get\_type" takes a filename as input and returns the file type of the image. |
 |  [image\_mini(img, quality)](./utils.image_mini.md) | This function minifies an HTML image element. |
 |  [image\_resize(img, options)](./utils.image_resize.md) | This function resizes an HTML image element to a specified size and MIME type. |
 |  [image\_to\_blob(img)](./utils.image_to_blob.md) | This function converts an HTML image element to a blob object using a canvas. |
 |  [image\_to\_canvas(img, size)](./utils.image_to_canvas.md) | This function converts an HTML image element to a canvas element with a specified size. |
-|  [image\_to\_data\_uri(img, type)](./utils.image_to_data_uri.md) | This function converts an HTML image element to a data URI. |
+|  [image\_to\_data\_URI(img, type)](./utils.image_to_data_uri.md) | This function converts an HTML image element to a data URI. |
+|  [int\_to\_bytes(num)](./utils.int_to_bytes.md) | The function converts an integer into an array of 4 bytes using bitwise operations. |
 |  [is\_base64(str)](./utils.is_base64.md) | The function checks if a given value is a base64 encoded string. |
 |  [is\_blob(blob)](./utils.is_blob.md) | The function checks if a |
 |  [is\_date(d)](./utils.is_date.md) | The function checks if a given value is a Date object. |
@@ -77,11 +83,13 @@
 |  [math\_between(v, min, max)](./utils.math_between.md) | The function returns a value within a specified range. |
 |  [math\_random\_int(from, to)](./utils.math_random_int.md) | The function returns a random integer between a specified range. |
 |  [math\_to\_fixed(n, digit)](./utils.math_to_fixed.md) | The function returns a number rounded to a specified number of decimal places. |
-|  [math\_to\_hex(n)](./utils.math_to_hex.md) | The function takes a number as input and returns its hexadecimal equivalent. |
+|  [math\_to\_hex(n)](./utils.math_to_hex.md) | The function converts a number to a hexadecimal string with uppercase letters and a minimum length of 2 characters. |
+|  [object\_concat(target, source)](./utils.object_concat.md) | The function <code>object_concat</code> takes two objects of type <code>T</code> and <code>S</code> and returns a new object of type <code>T &amp; S</code>. |
 |  [object\_entries(obj)](./utils.object_entries.md) | This function returns the entries of an object as an array of key-value pairs. |
 |  [object\_keys(o)](./utils.object_keys.md) | This function returns the keys of an object as an array. |
 |  [object\_pick(obj, keys)](./utils.object_pick.md) | The function <code>object_pick</code> takes an object and an array of keys and returns a new object with only the specified keys from the original object. |
 |  [rgb\_to\_hex(rgb)](./utils.rgb_to_hex.md) | This function converts an RGB color value to a hexadecimal color value. |
+|  [rgb\_to\_hsl(rgb)](./utils.rgb_to_hsl.md) | The function converts an RGB color value to its corresponding HSL color value. |
 |  [storage\_get(key, empty)](./utils.storage_get.md) | The function retrieves data from local storage and returns it as a parsed JSON object or an optional default value. |
 |  [storage\_remove(key)](./utils.storage_remove.md) | The function removes an item from local storage based on a given key. |
 |  [storage\_set(key, value)](./utils.storage_set.md) | The function stores a value of any type in the browser's local storage using a specified key. |
