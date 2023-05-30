@@ -2,7 +2,7 @@ import { arr_move, arr_remove, arr_to_obj, arr_unique, arr_value_index } from '.
 import { describe, expect, it } from 'vitest'
 
 describe('array', () => {
-    it('数组转对象', () => {
+    it('arr_to_obj', () => {
         expect(arr_to_obj(['1', 'abc', 'xyz'])).toMatchInlineSnapshot(`
       {
         "1": true,
@@ -12,7 +12,7 @@ describe('array', () => {
     `)
     })
 
-    it('数组去重', () => {
+    it('arr_unique', () => {
         expect(arr_unique([1, 1, 2, 3, 4, 'abc', 'xyz', 0, 1, 'abc'])).toMatchInlineSnapshot(`
       [
         1,
@@ -26,7 +26,7 @@ describe('array', () => {
     `)
     })
 
-    it('数组移动', () => {
+    it('arr_move', () => {
         expect(arr_move([0, 1, 2, 3, 4, 5, 6, 7], 2, 5)).toMatchInlineSnapshot(`
       [
         0,
@@ -41,7 +41,7 @@ describe('array', () => {
     `)
     })
 
-    it('数组删除', () => {
+    it('arr_remove', () => {
         const arr = [1, 2, 3, 4, 5, 6, 7]
         expect(arr_remove(arr, 5)).equal(true)
         expect(arr).toMatchInlineSnapshot(`
@@ -56,7 +56,7 @@ describe('array', () => {
     `)
     })
 
-    it('数组键值交换', () => {
+    it('arr_value_index', () => {
         expect(arr_value_index(['a', 4, '4', '012'])).toMatchInlineSnapshot(`
           {
             "012": 3,

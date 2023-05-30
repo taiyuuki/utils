@@ -1,5 +1,5 @@
 import { throw_type_error } from './error'
-import { image_to_data_uri } from './image'
+import { image_to_data_URI } from './image'
 import { is_base64 } from './is'
 
 /**
@@ -48,7 +48,7 @@ function url_to_date_URI(url: string, type?: string): Promise<string> {
     img.src = url
     return new Promise((resolve, reject) => {
         img.onload = () => {
-            resolve(image_to_data_uri(img, type))
+            resolve(image_to_data_URI(img, type))
         }
         img.onerror = reject
     })

@@ -49,7 +49,7 @@ function math_between(v: number, min: number, max: number) {
  * @param n - The parameter "n" is a number that we want to convert to a hexadecimal string.
  */
 function math_to_hex(n: number) {
-    return parseInt(`${n}`, 16)
+    return n.toString(16).padStart(2, '0').toUpperCase()
 }
 
 export {

@@ -1,16 +1,16 @@
-import { math_to_fixed, math_random_int, math_between } from '../src/modules/math'
+import { math_to_fixed, math_random_int, math_between, math_to_hex } from '../src/modules/math'
 import { describe, expect, it } from 'vitest'
 import { object_keys } from '../src/modules/obj'
 
 describe('math', () => {
-    it('四舍五入', () => {
+    it('math_to_fixed', () => {
         expect(math_to_fixed(1.254)).equal(1)
         expect(math_to_fixed(1.554)).equal(2)
         expect(math_to_fixed(2.5)).equal(3)
         expect(math_to_fixed(2.5123, 3)).equal(2.512)
     })
 
-    it('随机整数', () => {
+    it('math_random_int', () => {
         const length = 6
         const count = 3000
         const numbers = Array.from({ length }).map((_, i) => {
@@ -36,12 +36,16 @@ describe('math', () => {
         })).equal(true)
     })
 
-    it('两数之间', () => {
+    it('math_between', () => {
         const a = 20, b = 100
         expect(math_between(0, a, b)).equal(20)
         expect(math_between(21, b, a)).equal(21)
         expect(math_between(50, a, b)).equal(50)
         expect(math_between(120, a, b)).equal(100)
         expect(math_between(30, b, a)).equal(30)
+    })
+
+    it('math_to_hex', () => {
+        expect(math_to_hex(255)).equal('FF')
     })
 })
