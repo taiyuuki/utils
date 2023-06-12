@@ -1,6 +1,6 @@
 ### taiyuuki/utils
 
-Utilitys by Taiyuuki.
+Utility by Taiyuuki.
 
 ```shell
 npm i @taiyuuki/utils
