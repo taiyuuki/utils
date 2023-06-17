@@ -6,6 +6,6 @@ Utility by Taiyuuki.
 npm i @taiyuuki/utils
 ```
 
-[Documentation](./doc/index.md)
+[Documentations in This Repo](./doc/index.md)
 
-Extract by [api-extractor](https://api-extractor.com/).
+[Documentations in Web Site](https://taiyuuki-utils.netlify.app)
