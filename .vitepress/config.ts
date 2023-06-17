@@ -83,6 +83,10 @@ export default defineConfig({
         socialLinks: [
             { icon: 'github', link: 'https://github.com/taiyuuki/utils' },
         ],
+
+        search: {
+            provider: 'local',
+        },
     },
 
     markdown: {

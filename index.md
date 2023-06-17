@@ -3,9 +3,9 @@
 layout: home
 
 hero:
-  name: "Utils"
-  text: "Documentations of @taiyuuki/utils"
-  tagline: My great project tagline
+  name: "Utilities"
+  text: "@taiyuuki/utils"
+  tagline: 个人用工具函数库
   actions:
     - theme: brand
       text: API

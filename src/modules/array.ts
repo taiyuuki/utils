@@ -24,8 +24,10 @@ function arr_to_obj<T extends Key[], V = boolean>(arr: T, v?: V) {
 /**
  * This function takes an array of any type and returns a new array with only unique values.
  * @public
- * @param arr - arr is an array of type T, which means it can hold any type of data. The function
- * arrUnique takes this array as input and returns a new array with all the duplicate elements removed.
+ * @param arr - The parameter "arr" is an array of type T, where T can be any data type such as
+ * string, number, boolean, etc. The function "arr_unique" takes this array as input and returns a new
+ * array with only unique elements. It uses the Set object to remove duplicates and then
+ * @returns The function `arr_unique` is returning an array of unique elements of type `T`.
  */
 function arr_unique<T>(arr: T[]): T[] {
     return Array.from(new Set(arr))
