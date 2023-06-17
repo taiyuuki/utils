@@ -111,6 +111,20 @@ function str_capital(str: string) {
 }
 
 /**
+ * The function capitalizes the first letter of each word in a given string.
+ * @public
+ * @param str - A string that contains one or more words separated by spaces.
+ * @returns The function `str_capital_all` is returning a new string where all the words in the input
+ * string are capitalized. It does this by splitting the input string into an array of words using the
+ * space character as a delimiter, then mapping each word to its capitalized version using the
+ * `str_capital` function, and finally joining the array of capitalized words back into a string using
+ * the space character as a
+ */
+function str_capital_all(str: string) {
+    return str.split(' ').map(str_capital).join(' ')
+}
+
+/**
  * The function takes a number or string and returns a string with a specified length, padded with a
  * specified character.
  * @public
@@ -137,5 +151,6 @@ export {
     str_no_prefix,
     str_no_suffix,
     str_capital,
+    str_capital_all,
     str_complement,
 }
