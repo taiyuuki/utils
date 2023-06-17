@@ -7,17 +7,17 @@ interface EventItem {
 }
 
 /**
- * DOM Event Controler
+ * DOM Event Controller
  * @beta
  * @example
  * ```ts
- * const evt_ctrl = new EventControler()
+ * const evt_ctrl = new EventsController()
  * evt_ctrl.add_evt(el1, 'click', callback1)
  * evt_ctrl.add_evt(el2, 'keypress', callback2)
  * evt_ctrl.close()
  * ```
  */
-export class EventsControler {
+export class EventsController {
     private _events: EventItem[]
     constructor() {
         this._events = []
