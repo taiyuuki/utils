@@ -8,7 +8,7 @@
 
 |  Class | Description |
 |  --- | --- |
-|  [EventsControler](./utils.eventscontroler.md) | **_(BETA)_** DOM Event Controler |
+|  [EventsController](./utils.eventscontroller.md) | **_(BETA)_** DOM Event Controller |
 
 ## Functions
 
@@ -93,6 +93,7 @@
 |  [storage\_get(key, empty)](./utils.storage_get.md) | The function retrieves data from local storage and returns it as a parsed JSON object or an optional default value. |
 |  [storage\_remove(key)](./utils.storage_remove.md) | The function removes an item from local storage based on a given key. |
 |  [storage\_set(key, value)](./utils.storage_set.md) | The function stores a value of any type in the browser's local storage using a specified key. |
+|  [str\_capital\_all(str)](./utils.str_capital_all.md) | The function capitalizes the first letter of each word in a given string. |
 |  [str\_capital(str)](./utils.str_capital.md) | The function takes a string as input and capitalizes the first letter of the string. |
 |  [str\_complement(n, len, char)](./utils.str_complement.md) | The function takes a number or string and returns a string with a specified length, padded with a specified character. |
 |  [str\_ensure\_prefix(s, prefix)](./utils.str_ensure_prefix.md) | The function ensures that a given string has a specified prefix. |

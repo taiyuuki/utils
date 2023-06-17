@@ -110,7 +110,7 @@ export function download_canvas(cvs: HTMLCanvasElement, imageName?: string): voi
 export function download_image(img: HTMLImageElement, imageName?: string): void;
 
 // @beta
-export class EventsControler {
+export class EventsController {
     constructor();
     // Warning: (ae-forgotten-export) The symbol "FnNoArgs" needs to be exported by the entry point index.d.ts
     add_evt<T extends EventTarget>(target: T, type: Parameters<T['addEventListener']>[0], callback: FnNoArgs): this;
@@ -283,6 +283,9 @@ export function storage_set<T>(key: string, value: T): void;
 
 // @public
 export function str_capital(str: string): string;
+
+// @public
+export function str_capital_all(str: string): string;
 
 // @public @deprecated
 export function str_complement(n: number | string, len?: number, char?: string): string;
