@@ -11,6 +11,13 @@ interface IndexTree {
     }
 }
 
+function copyright() {
+    const start = 2023
+    const now = new Date().getFullYear()
+    const year = now === start ? '2023' : `${start}-${now}`
+    return `Copyright © ${year} Taiyuuki`
+}
+
 function resolveTitle(title: string) {
     title = title === 'utils' ? title : title.replace('utils.', '')
     title = title.split('.').join(' ')
@@ -86,6 +93,11 @@ export default defineConfig({
 
         search: {
             provider: 'local',
+        },
+
+        footer: {
+            message: 'Released under the MIT License.',
+            copyright: copyright(),
         },
     },
 
