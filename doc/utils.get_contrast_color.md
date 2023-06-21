@@ -4,7 +4,7 @@
 
 ## get\_contrast\_color() function
 
-The function takes a color as input and returns either black or white as the contrasting color based on the brightness of the input color.
+该函数将颜色作为输入，并根据输入颜色的亮度返回黑色或白色作为对比色。
 
 **Signature:**
 
@@ -16,11 +16,11 @@ declare function get_contrast_color(color: Color): "black" | "white";
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  color | Color | The color parameter is of type Color, which could be either a string representing a color in hexadecimal format (e.g. "\#FF0000" for red) or an object with properties for red, green, and blue values \[255, 0, 0\]. |
+|  color | Color | 颜色参数是表示十六进制颜色代码的字符串（例如“\#FF0000”表示红色）或表示 RGB 颜色的对象（例如 \[255, 0, 0\] 表示红色）。 |
 
 **Returns:**
 
 "black" \| "white"
 
-either the string 'black' or 'white' based on the contrast of the input color.
+字符串“black”或“white”，具体取决于输入颜色的计算 YIQ 值。
 

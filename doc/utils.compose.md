@@ -4,7 +4,7 @@
 
 ## compose() function
 
-This is a function that implements compose functionality for a given function.
+`compose` 函数接受一个函数数组并返回一个新函数，该函数将数组中的每个函数从右到左应用于其参数。
 
 **Signature:**
 
@@ -16,11 +16,11 @@ declare function compose<T extends Fn>(...fns: T[]): (arg: unknown) => unknown;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  fns | T\[\] | The functions to be composed. |
+|  fns | T\[\] | <code>Fn</code> 类型的函数数组。允许将任意数量的函数作为参数传递给“compose”函数。 |
 
 **Returns:**
 
 (arg: unknown) =&gt; unknown
 
-The composed function is implementing the compose functionality for a given function.
+“compose”函数返回一个新函数，按从右到左的顺序对其应用一系列函数。返回组合的最终结果。
 

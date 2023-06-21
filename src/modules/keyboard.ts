@@ -1,18 +1,18 @@
 import type { KeyboardEventType, KeyboardEventOptions, KeyboardEventKeys, KeyboardEventCallback } from '../types'
+import { is_fn } from './is'
 import { key_in } from './obj'
 
 function resolve_options<T extends KeyboardEventOptions>(options: T) {
-    return typeof options === 'function' ? options() : options
+    return is_fn(options) ? options() : options
 }
 
 /**
- * This function adds keyboard events with specified options.
+ * 该函数添加带有选项的键盘事件，并提供关闭、关闭/打开和手动触发事件的方法。
  * @public
- * @param type - KeyboardEventType is a type alias that represents the different
- * types of keyboard events that can be listened to, such as "keydown", "keyup", or "keypress".
- * @param eventsOptions - `eventsOptions` is a generic type parameter that extends
- * `KeyboardEventOptions`. It is used to specify additional options for the keyboard event listener,
- * such as whether the event should be captured or not.
+ * @param type - 要侦听的键盘事件类型，例如“keydown”、“keyup”或“keypress”。
+ * @param eventsOptions - `eventsOptions` 参数是一个对象，其中包含要添加的键盘事件的选项。它可以包括
+ * `ctrlKey`、`altKey`、`shiftKey`、`metaKey`、`code`、`key`、`keyCode`、`charCode` 等属性。这些选项是
+ * @returns 函数 add_keyboard_events 返回一个具有四种方法的对象：close、off、on 和 emit。
  * @example
  * ```ts
  * // 绑定事件
@@ -24,7 +24,9 @@ function resolve_options<T extends KeyboardEventOptions>(options: T) {
  *    console.log('enter')
  *  }
  * })
+ * // 手动触发事件
  * ctrl.emit('KeyW')
+ * // 关闭事件
  * ctrl.off()
  * // 重新开启事件。
  * ctrl.on()

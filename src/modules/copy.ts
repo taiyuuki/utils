@@ -3,13 +3,10 @@ import { is_not_void, is_string_like } from './is'
 import { str_maybe_number } from './string'
 
 /**
- * The function copies text to the clipboard using the Clipboard API if available, otherwise it falls
- * back to creating a temporary textarea element and using the execCommand method.
+ * 该函数使用剪贴板 API（如果可用）将文本复制到剪贴板，否则它回退到创建临时文本区域元素并使用 execCommand 方法。
  * @public
- * @param target - The target can be a string, number, or HTMLElement
- * that contains the text to be copied.
- * @param addition - Optional string parameter that can be added to the end of the text to
- * be copied. If not provided, the copied text will be the same as the target.
+ * @param target - 目标可以是字符串、数字或 HTMLElement。它是将被复制到剪贴板的文本。
+ * @param addition - 在将文本复制到剪贴板之前将附加到文本的可选字符串。如果未提供任何值，则文本将按原样复制。
  */
 function copy_text(target: string | number | HTMLElement, addition?: string) {
     let text = is_string_like(target) ? str_maybe_number(target) : target.innerText

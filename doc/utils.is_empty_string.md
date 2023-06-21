@@ -4,7 +4,7 @@
 
 ## is\_empty\_string() function
 
-The `is_empty_string` function is checking if a given value is an empty string or a null or undefined value.
+该函数检查给定字符串是否为空，并使用可选参数在检查前修剪字符串。
 
 **Signature:**
 
@@ -16,10 +16,12 @@ declare function is_empty_string(s: any, trim?: boolean): boolean;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  s | any | The parameter <code>s</code> is of type <code>any</code>, which means it can be any data type. |
-|  trim | boolean | _(Optional)_ The parameter <code>trim</code> is of type <code>boolean</code>, which means it can be <code>true</code> or <code>false</code>. |
+|  s | any | 需要检查是否为空的输入值。它可以是任何数据类型，但此函数专门检查空字符串。 |
+|  trim | boolean | _(Optional)_ 一个布尔参数，指定是否在检查字符串是否为空之前从字符串中删除空格。如果设置为 true，则在检查字符串长度之前将删除任何前导或尾随空格。如果未提供或设置为 false，则将按原样检查字符串。 |
 
 **Returns:**
 
 boolean
+
+函数 is\_empty\_string 返回一个布尔值，指示输入字符串是否为空。如果输入不是字符串，它会检查它是否为空值（null 或 undefined）并相应地返回一个布尔值。
 

@@ -4,7 +4,7 @@
 
 ## arr\_unique() function
 
-This function takes an array of any type and returns a new array with only unique values.
+此函数接受任何类型的数组并返回一个仅包含唯一值的新数组。
 
 **Signature:**
 
@@ -16,9 +16,20 @@ declare function arr_unique<T>(arr: T[]): T[];
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  arr | T\[\] | arr is an array of type T, which means it can hold any type of data. The function arrUnique takes this array as input and returns a new array with all the duplicate elements removed. |
+|  arr | T\[\] | 参数“arr”是一个类型为T的数组，其中T可以是字符串、数字、布尔值、对象等任意数据类型。函数“arr\_unique”将这个数组作为输入，返回一个只有唯一元素的新数组.它使用 Set 对象来删除重复项 |
 
 **Returns:**
 
 T\[\]
+
+函数“arr\_unique”返回一个“T”类型的唯一元素数组。
+
+## Example
+
+
+```ts
+const arr = ['a', 'b', 'c', 'c', 'a']
+arr_unique(arr)
+// ['a', 'b', 'c']
+```
 

@@ -2,12 +2,12 @@ import type { Fn } from '../types'
 import { is_not_void } from './is'
 
 /**
- * This is a function that implements throttle functionality for a given function.
+ * 为给定函数实现节流功能。
  * @public
- * @param func - The function to be throttled
- * @param timeFrame - The time interval in milliseconds
- * @param immediately - Whether the function should be executed immediately or not
- * @returns The throttled function is implementing the throttle functionality for a given function.
+ * @param func - 需要节流的函数
+ * @param timeFrame - 时间间隔
+ * @param immediately - 是否立即执行，默认值为 true
+ * @returns 节流后的函数
  */
 function throttle<T extends Fn>(
     func: T,
@@ -36,11 +36,11 @@ function throttle<T extends Fn>(
 }
 
 /**
- * This is a function that implements debounce functionality for a given function.
+ * 为给定函数实现去抖动功能。
  * @public
- * @param func - The function to be debounced
- * @param timeFrame - The time interval in milliseconds
- * @returns The debounced function is implementing the debounce functionality for a given function.
+ * @param func - 需要去抖动的函数
+ * @param timeFrame - 时间间隔
+ * @returns 去抖动后的函数
  */
 function debounce<T extends Fn>(
     func: T,
@@ -61,10 +61,10 @@ function debounce<T extends Fn>(
 }
 
 /**
- * This is a function that implements compose functionality for a given function.
+ * `compose` 函数接受一个函数数组并返回一个新函数，该函数将数组中的每个函数从右到左应用于其参数。
  * @public
- * @param fns - The functions to be composed.
- * @returns The composed function is implementing the compose functionality for a given function.
+ * @param fns - `Fn` 类型的函数数组。允许将任意数量的函数作为参数传递给“compose”函数。
+ * @returns “compose”函数返回一个新函数，按从右到左的顺序对其应用一系列函数。返回组合的最终结果。
  */
 function compose<T extends Fn>(...fns: T[]) {
     return function (arg: unknown) {

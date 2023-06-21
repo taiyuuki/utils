@@ -4,7 +4,7 @@
 
 ## is\_not\_empty\_string() function
 
-The `is_not_empty_string` function is checking if a given value is not an empty string or a null or undefined value.
+该函数检查给定的输入是否为非空字符串或非空值。
 
 **Signature:**
 
@@ -16,10 +16,12 @@ declare function is_not_empty_string(s: any, trim?: boolean): boolean;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  s | any | The parameter <code>s</code> is of type <code>any</code>, which means it can be any data type. |
-|  trim | boolean | _(Optional)_ The parameter <code>trim</code> is of type <code>boolean</code>, which means it can be <code>true</code> or <code>false</code>. |
+|  s | any | 需要检查是否为空的输入值。它可以是任何数据类型，但此函数专门检查空字符串。 |
+|  trim | boolean | _(Optional)_ 一个布尔参数，指定是否在检查字符串是否为空之前从字符串中删除空格。如果设置为 true，将在检查字符串长度之前删除空格。如果未提供或设置为 false，则在检查字符串长度之前不会删除空格。 |
 
 **Returns:**
 
 boolean
+
+一个布尔值。如果输入的 s 是非空字符串（如果 trim 设置为 true ，则可选择修剪），或者如果 s 不是 null 或 undefined ，则返回 true 。否则返回 `false`<!-- -->。
 

@@ -4,7 +4,7 @@
 
 ## download\_image() function
 
-This function downloads an image by its URL and saves it with a generated or provided name.
+该函数通过其 URL 下载图像并使用生成或提供的名称保存它。
 
 **Signature:**
 
@@ -16,8 +16,8 @@ declare function download_image(img: HTMLImageElement, imageName?: string): void
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  img | HTMLImageElement | HTMLImageElement - this is an object that represents an image element in an HTML document. |
-|  imageName | string | _(Optional)_ The imageName parameter is a string that represents the name of the image file that will be downloaded. If no value is provided for imageName, the function will generate a random UUID string as the file name. |
+|  img | HTMLImageElement | 一个 HTMLImageElement 对象，表示需要下载的图像。 |
+|  imageName | string | _(Optional)_ imageName 参数是一个字符串，表示将要下载的图像文件的名称。如果未提供名称，将生成一个随机 UUID 字符串作为文件名。 |
 
 **Returns:**
 

@@ -4,7 +4,7 @@
 
 ## get\_fill\_arr() function
 
-This is a function that creates an array of a specified length and fills it with a specified value.
+该函数创建一个指定长度的数组，其中填充了指定的值。
 
 **Signature:**
 
@@ -16,12 +16,20 @@ declare function get_fill_arr<T>(length: number, value: T): T[];
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  length | number | The length parameter is a number that specifies the desired length of the array to be created. |
-|  value | T | The value parameter is the value that will be used to fill the array. It can be of any data type, as the function is generic and can be used with any type. |
+|  length | number | 长度参数是一个数字，指定要创建的数组的所需长度。 |
+|  value | T | value 参数是将用于填充数组的值。它可以是任何数据类型。 |
 
 **Returns:**
 
 T\[\]
 
-The function `arr_fill` is returning an array of length `length` filled with the value `value`<!-- -->. The type of the array elements is determined by the type of the `value` parameter, which is specified by the generic type parameter `T`<!-- -->.
+函数“get\_fill\_arr”返回一个长度为“length”的数组，其中填充了值“value”。数组元素的类型由作为参数传递给函数的通用类型“T”确定。
+
+## Example
+
+
+```ts
+get_fill_arr(3, 'a')
+// ['a', 'a', 'a']
+```
 

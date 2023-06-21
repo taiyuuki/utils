@@ -4,7 +4,7 @@
 
 ## arr\_remove() function
 
-This function removes a specific value from an array of any type.
+函数 arr\_remove 用于从数组中删除指定的值。
 
 **Signature:**
 
@@ -16,10 +16,21 @@ declare function arr_remove<T>(arr: T[], value: T): boolean;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  arr | T\[\] | an array of type T, where T can be any data type such as string, number, object, etc. |
-|  value | T | The value parameter is the element that needs to be removed from the array. |
+|  arr | T\[\] | T 类型元素的数组。 |
+|  value | T | 要从数组中删除的值。 |
 
 **Returns:**
 
 boolean
+
+函数 arr\_remove 返回一个布尔值。如果值已成功从数组中删除，则返回“true”；如果在数组中找不到该值，则返回“false”。
+
+## Example
+
+
+```ts
+const arr = ['a', 'b', 'c']
+arr_remove(arr, 'b')
+// ['a', 'c']
+```
 

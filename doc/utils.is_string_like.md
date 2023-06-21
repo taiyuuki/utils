@@ -4,7 +4,7 @@
 
 ## is\_string\_like() function
 
-The function checks if a given value is a function.
+该函数检查给定目标是字符串还是数字。
 
 **Signature:**
 
@@ -16,11 +16,11 @@ declare function is_string_like(target: any): target is string | number;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  target | any |  |
+|  target | any | 参数 <code>target</code> 是 <code>any</code> 类型，这意味着它可以是任何数据类型。 |
 
 **Returns:**
 
 target is string \| number
 
-The function `is_fn` returns a boolean value indicating whether the input parameter `fn` is a function.
+函数 is\_string\_like 返回一个布尔值。如果 `target` 参数是字符串或数字，则返回 `true`<!-- -->，否则返回 `false`<!-- -->。使用 typeof 运算符检查 target 参数以确定它是字符串还是数字，并且 isFinite 函数用于排除不是有限数字的值（例如
 

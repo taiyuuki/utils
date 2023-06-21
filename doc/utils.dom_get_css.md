@@ -4,7 +4,7 @@
 
 ## dom\_get\_css() function
 
-The function returns the value of a specified CSS property for a given DOM element.
+该函数返回给定 DOM 元素的指定 CSS 属性的值。
 
 **Signature:**
 
@@ -16,12 +16,12 @@ declare function dom_get_css<T extends Element>(el: T, prop: CSSStyleName): stri
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  el | T | The DOM element for which we want to get the computed CSS property value. |
-|  prop | CSSStyleName | prop is a string representing the name of the CSS property whose value is to be retrieved from the computed style of the given element. Examples of CSS properties include "color", "font-size", "background-image", etc. |
+|  el | T | 我们要为其获取计算的 CSS 样式的 HTML 元素。 |
+|  prop | CSSStyleName | CSSStyleName 是表示 CSS 属性名称的字符串的类型别名。它用作 dom\_get\_css 函数的第二个参数，以指定从给定元素的计算样式中检索哪个 CSS 属性。 |
 
 **Returns:**
 
 string
 
-The function `dom_getc_ss` returns the value of the specified CSS property (`prop`<!-- -->) for the given DOM element (`el`<!-- -->). The value is obtained using the `window.getComputedStyle` method and returned as a string.
+函数 dom\_get\_css 返回给定 DOM 元素 (el) 的指定 CSS 属性 (prop) 的值。该值是使用“window.getComputedStyle”方法获取的，并以字符串形式返回。
 

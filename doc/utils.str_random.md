@@ -4,7 +4,7 @@
 
 ## str\_random() function
 
-The function generates a random string of a specified length and radix.
+该函数生成指定长度和基数的随机字符串。
 
 **Signature:**
 
@@ -16,17 +16,12 @@ declare function str_random(count: number, radix?: number): string;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  count | number | The number of characters in the random string that will be generated. |
-|  radix | number | _(Optional)_ Radix refers to the base number system used for representing numbers. In this case, the default radix is 16, which means the function will generate a random string using hexadecimal characters (0-9 and A-F). However, you can also specify a different radix if you want to use a different |
+|  count | number | 将生成的随机字符串中的字符数。 |
+|  radix | number | _(Optional)_ Radix 是指用于随机字符串生成的基数系统。默认值为 16，这意味着字符串将使用十六进制数字（0-9 和 A-F）生成。但是，可以将基数设置为 2 到 36 之间的任何值以使用 |
 
 **Returns:**
 
 string
 
-## Example
-
-
-```ts
-const str = str_random(6, 16)// generates a random string of length 6 using hexadecimal.
-```
+具有指定长度和基数（基数）的随机生成的字符串。 radix 是可选的，如果未提供则默认为 16。
 

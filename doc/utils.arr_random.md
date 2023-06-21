@@ -4,7 +4,7 @@
 
 ## arr\_random() function
 
-This function returns a random element from an array of any type.
+该函数从数组中返回一个随机元素。
 
 **Signature:**
 
@@ -16,9 +16,22 @@ declare function arr_random<T>(arr: T[]): T;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  arr | T\[\] | The parameter "arr" is an array of type T, which means it can be an array of any type. The function "arr\_random" takes in this array as input and returns a random element from the array. |
+|  arr | T\[\] | 参数 arr 是 T 类型的数组。函数 arr\_random 将一个数组作为输入，并从该数组中返回一个随机元素。 <code>T</code> 类型是泛型类型，这意味着该函数可以处理任何类型的数组。 |
 
 **Returns:**
 
 T
+
+函数 arr\_random 从输入数组 arr 中返回一个随机元素。返回元素的类型与输入数组中元素的类型相同。
+
+## Example
+
+
+```ts
+const arr = ['a', 'b', 'c']
+arr_random(arr)
+// 'b'
+arr_random(arr)
+// 'a'
+```
 

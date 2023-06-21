@@ -4,7 +4,7 @@
 
 ## add\_keyboard\_events() function
 
-This function adds keyboard events with specified options.
+该函数添加带有选项的键盘事件，并提供关闭、关闭/打开和手动触发事件的方法。
 
 **Signature:**
 
@@ -21,12 +21,14 @@ declare function add_keyboard_events<T extends KeyboardEventOptions>(type: Keybo
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  type | KeyboardEventType | KeyboardEventType is a type alias that represents the different types of keyboard events that can be listened to, such as "keydown", "keyup", or "keypress". |
-|  eventsOptions | T | <code>eventsOptions</code> is a generic type parameter that extends <code>KeyboardEventOptions</code>. It is used to specify additional options for the keyboard event listener, such as whether the event should be captured or not. |
+|  type | KeyboardEventType | 要侦听的键盘事件类型，例如“keydown”、“keyup”或“keypress”。 |
+|  eventsOptions | T | <code>eventsOptions</code> 参数是一个对象，其中包含要添加的键盘事件的选项。它可以包括 <code>ctrlKey</code>、<code>altKey</code>、<code>shiftKey</code>、<code>metaKey</code>、<code>code</code>、<code>key</code>、<code>keyCode</code>、<code>charCode</code> 等属性。这些选项是 |
 
 **Returns:**
 
 { close(): void; off(): void; on(): void; emit: (code: KeyboardEventKeys&lt;T&gt;) =&gt; void; }
+
+函数 add\_keyboard\_events 返回一个具有四种方法的对象：close、off、on 和 emit。
 
 ## Example
 
@@ -41,7 +43,9 @@ const ctrl = add_keyboard_events('keydown', {
    console.log('enter')
  }
 })
+// 手动触发事件
 ctrl.emit('KeyW')
+// 关闭事件
 ctrl.off()
 // 重新开启事件。
 ctrl.on()

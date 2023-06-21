@@ -4,7 +4,7 @@
 
 ## math\_between() function
 
-The function returns a value within a specified range.
+该函数返回指定范围内的数字。
 
 **Signature:**
 
@@ -16,11 +16,13 @@ declare function math_between(v: number, min: number, max: number): number;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  v | number | a number that you want to check if it falls between the range of min and max. |
-|  min | number | The minimum value that the input number <code>v</code> can take. If <code>v</code> is less than <code>min</code>, the function will return <code>min</code>. |
-|  max | number | The maximum value that the input number <code>v</code> can take. If <code>v</code> is greater than <code>max</code>, the function will return <code>max</code>. |
+|  v | number | 一个你想检查它是否落在最小和最大范围之间的数字。 |
+|  min | number | 输入数字“v”可以是的最小值。 |
+|  max | number | 参数“max”是输入数字“v”所能达到的最大值。该函数通过在“v”大于“max”时返回“max”来确保“v”不大于“max”。 |
 
 **Returns:**
 
 number
+
+函数“math\_between”返回一个在“min”和“max”参数定义的范围内的数字。如果输入的“v”小于“min”，则函数返回“min”。如果 `v` 大于 `max`<!-- -->，函数返回 `max`<!-- -->。如果 `v` 在 `min` 和 `max` 之间，函数返回 `v`<!-- -->。
 

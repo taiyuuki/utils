@@ -1,13 +1,10 @@
 import { str_uuid } from './string'
 
 /**
- * This function downloads a file from a given URL with an optional filename.
+ * 此函数使用可选文件名从给定的 URL 下载文件。
  * @public
- * @param URL - The URL parameter is a string that represents the URL of the file that needs
- * to be downloaded.
- * @param fileName - The fileName parameter is a string that represents the name of the file that will
- * be downloaded. If no value is provided for fileName, the function will generate a random UUID string
- * as the file name.
+ * @param URL - URL参数是一个字符串，表示需要下载的文件的URL。
+ * @param fileName - fileName 参数是一个字符串，指定要下载的文件的名称。如果没有为 fileName 提供值，该函数将生成一个随机 UUID 字符串作为文件名。
  */
 function download_by_url(URL: string, fileName = str_uuid()) {
     const a = document.createElement('a')
@@ -17,16 +14,10 @@ function download_by_url(URL: string, fileName = str_uuid()) {
 }
 
 /**
- * This function downloads a Blob object by creating a URL and revoking it after the download is
- * complete.
+ * 该函数将 Blob 对象下载为具有给定文件名或生成的 UUID 的文件。
  * @public
- * @param blob - The `blob` parameter is a Blob object, which represents a file-like object of
- * immutable, raw data. It can be used to represent data that isn't necessarily in a JavaScript-native
- * format. The `downloadBlob` function takes this Blob object and downloads it as a file with a
- * specified file name
- * @param fileName - The fileName parameter is a string that represents the name of the file that will
- * be downloaded. If no value is provided for fileName, a random UUID (Universally Unique Identifier)
- * string will be generated as the file name.
+ * @param blob - blob 参数是一个 Blob 对象，它表示不可变的原始数据的类文件对象。它可用于表示不一定采用 JavaScript 原生格式的数据。
+ * @param fileName - fileName 参数是一个字符串，表示要下载的文件的名称。如果没有为 fileName 提供值，将生成一个随机 UUID 字符串作为文件名。
  */
 function download_blob(blob: Blob, fileName = str_uuid()) {
     const url = URL.createObjectURL(blob)
@@ -35,26 +26,20 @@ function download_blob(blob: Blob, fileName = str_uuid()) {
 }
 
 /**
- * This function downloads an image by its URL and saves it with a generated or provided name.
+ * 该函数通过其 URL 下载图像并使用生成或提供的名称保存它。
  * @public
- * @param img - HTMLImageElement - this is an object that represents an image
- * element in an HTML document.
- * @param imageName - The imageName parameter is a string that represents the name of the image file
- * that will be downloaded. If no value is provided for imageName, the function will generate a random
- * UUID string as the file name.
+ * @param img - 一个 HTMLImageElement 对象，表示需要下载的图像。
+ * @param imageName - imageName 参数是一个字符串，表示将要下载的图像文件的名称。如果未提供名称，将生成一个随机 UUID 字符串作为文件名。
  */
 function download_image(img: HTMLImageElement, imageName = str_uuid()) {
     download_by_url(img.src, imageName)
 }
 
 /**
- * This function downloads an HTML canvas element as an image with a default or specified name.
+ * 此函数将画布元素下载为具有默认名称或指定名称的 PNG 图像。
  * @public
- * @param cvs - HTMLCanvasElement - This is the canvas element that you want to
- * download as an image.
- * @param imageName - The imageName parameter is a string that represents the name of the downloaded
- * image file. If no name is provided, a random UUID (Universally Unique Identifier) string will be
- * generated as the file name.
+ * @param cvs - HTMLCanvasElement - 这是要作为图像下载的画布元素。
+ * @param imageName - imageName 是一个字符串参数，表示下载的图像文件的名称。如果没有提供名称，将生成一个随机的 UUID（通用唯一标识符）字符串作为文件名。
  */
 function download_canvas(cvs: HTMLCanvasElement, imageName = str_uuid()) {
     download_by_url(cvs.toDataURL('image/png'), imageName)

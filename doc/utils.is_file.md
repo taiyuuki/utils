@@ -4,7 +4,7 @@
 
 ## is\_file() function
 
-The function checks if a given value is a file.
+该函数检查给定对象是否是 File 类的实例。
 
 **Signature:**
 
@@ -16,11 +16,11 @@ declare function is_file(file: any): file is File;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  file | any | The parameter <code>file</code> is of type <code>File</code>. |
+|  file | any | 可以是任何数据类型。 |
 
 **Returns:**
 
 file is File
 
-The function `is_file` returns a boolean value indicating whether the input parameter `file` is a file.
+函数 is\_file 返回一个布尔值，指示输入的 file 是否是 File 类的实例。如果输入是一个 File 对象，它返回 true ，否则返回 false 。
 

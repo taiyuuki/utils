@@ -4,7 +4,7 @@
 
 ## is\_void() function
 
-The function checks if a given value is null or undefined, or if it is a number that is NaN.
+该函数检查给定值是否为 null 或 undefined，或者它是否为 NaN 的数字。
 
 **Signature:**
 
@@ -16,11 +16,11 @@ declare function is_void(t: any): t is null | undefined;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  t | any | The parameter <code>t</code> is of type <code>any</code>, which means it can be any data type. |
+|  t | any | 参数 <code>t</code> 是 <code>any</code> 类型，这意味着它可以是任何数据类型。 |
 
 **Returns:**
 
 t is null \| undefined
 
-a boolean value indicating whether the input parameter `t` is either `null` or `undefined` or `NaN`<!-- -->.
+一个布尔值，指示输入参数“t”是否“null”或“undefined”。
 

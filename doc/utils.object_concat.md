@@ -4,24 +4,24 @@
 
 ## object\_concat() function
 
-The function `object_concat` takes two objects of type `T` and `S` and returns a new object of type `T & S`<!-- -->.
+函数 object\_concat 连接两个通用类型的对象并返回连接后的对象。
 
 **Signature:**
 
 ```typescript
-declare function object_concat<T extends object, S extends object>(target: T, source: S): T & S;
+declare function object_concat<T extends object, S extends object>(target: T, source: S): Concat<T, S>;
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  target | T | The first parameter <code>target</code> is an object of type <code>T</code> which is a generic type that extends the <code>object</code> type. This means that <code>target</code> can be any object that has properties and methods. |
-|  source | S | The second parameter <code>source</code> is an object of type <code>S</code> which is a generic type that extends the <code>object</code> type. This means that <code>source</code> can be any object that has properties and methods. |
+|  target | T | 第一个参数表示将通过添加来自第二个参数“源”的属性来修改的对象。 |
+|  source | S | 表示将合并到“目标”对象中的对象。 |
 
 **Returns:**
 
-T &amp; S
+Concat&lt;T, S&gt;
 
-The function `object_concat` returns an object of type `T & S`<!-- -->.
+`object_concat` 函数返回 `Object.assign(target, source)` 的结果，这是一个合并了 `target` 和 `source` 对象属性的新对象。返回类型为“T”和“S”对象类型串联的类型。
 

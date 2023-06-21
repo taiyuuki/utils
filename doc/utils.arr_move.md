@@ -4,7 +4,7 @@
 
 ## arr\_move() function
 
-This function moves an element in an array from one index to another.
+函数 arr\_move 将数组中的元素从一个索引移动到另一个索引。
 
 **Signature:**
 
@@ -16,11 +16,22 @@ declare function arr_move<T extends any[]>(arr: T, from: number, to: number): T;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  arr | T | The <code>arr</code> parameter is an array of any type <code>T</code>. |
-|  from | number | The index of the element in the array that needs to be moved. |
-|  to | number | The "to" parameter is the index where the element in the array should be moved to. |
+|  arr | T | 需要修改的数组。 |
+|  from | number | 数组中需要移动的元素的索引。 |
+|  to | number | 数组中元素应移动到的索引。 |
 
 **Returns:**
 
 T
+
+将元素从索引“from”移动到索引“to”后修改后的数组“arr”。
+
+## Example
+
+
+```ts
+const arr = ['a', 'b', 'c']
+arr_move(arr, 1, 2)
+// ['a', 'c', 'b']
+```
 

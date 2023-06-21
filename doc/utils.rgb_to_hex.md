@@ -4,7 +4,7 @@
 
 ## rgb\_to\_hex() function
 
-This function converts an RGB color value to a hexadecimal color value.
+该函数将 RGB 颜色数组转换为十六进制颜色代码。
 
 **Signature:**
 
@@ -16,11 +16,11 @@ declare function rgb_to_hex(rgb: RgbColor): string;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  rgb | RgbColor | The <code>rgb</code> parameter is an array of numbers representing the red, green, and blue values of a color. It can also optionally include an alpha value as the fourth element of the array. |
+|  rgb | RgbColor | 参数 <code>rgb</code> 应该是一个数字数组，表示 RGB 颜色模型中颜色的红色、绿色和蓝色值。它还可能包括一个可选的第四个值，表示颜色的 alpha（透明度）值。 |
 
 **Returns:**
 
 string
 
-a string representing the hexadecimal value of the given RGB color. If the RGB color has an alpha channel, the function returns a string representing the hexadecimal value of the RGBA color.
+函数 rgb\_to\_hex 返回一个字符串，表示给定 RGB 颜色的十六进制颜色代码。如果 RGB 颜色有一个 alpha 通道，该函数返回一个字符串，表示带有 alpha 通道的十六进制颜色代码。
 

@@ -1,13 +1,11 @@
 import { is_not_void } from './is'
 
 /**
- * This function converts a Blob object to a data URI string or ArrayBuffer.
+ * 此函数将 Blob 对象转换为数据 URI 字符串或 ArrayBuffer。
  * @public
- * @param blob - The `blob` parameter is a `Blob` object, which represents a file-like object of
- * immutable, raw data. It can be used to represent data that is not necessarily in a JavaScript-native
- * format.
- * @returns A Promise that resolves to a string or ArrayBuffer, depending on the result of reading the
- * provided Blob as a data URL.
+ * @param  blob - `blob` 参数是一个 Blob 对象，它表示不可变的原始数据的类文件对象。它可用于表示不一定采用 JavaScript
+ * 原生格式的数据。在这种情况下，该函数采用 Blob 对象并将其转换为数据 URI 字符串或 ArrayBuffer
+ * @returns 解析为字符串或 ArrayBuffer 的 Promise，具体取决于将提供的 Blob 作为数据 URL 读取的结果。
  */
 function blob_to_date_URI(blob: Blob): Promise<string | ArrayBuffer> {
     const reader = new FileReader()
@@ -26,11 +24,10 @@ function blob_to_date_URI(blob: Blob): Promise<string | ArrayBuffer> {
 }
 
 /**
- * This function takes a URL and returns a Promise that resolves to a Blob object obtained by making an
- * XMLHttpRequest to the URL and converting the response to an array buffer.
+ * 此函数将 URL 作为输入并返回一个 Promise，该 Promise 解析为包含来自 URL 的数据的 Blob 对象。
  * @public
- * @param url - The URL of the resource that needs to be converted to a Blob object.
- * @returns The function `urlToBlob` returns a Promise that resolves to a Blob object.
+ * @param url - 需要转换为 Blob 对象的资源的 URL。
+ * @returns 函数 url_to_blob 返回解析为 Blob 对象的 Promise。
  */
 function url_to_blob(url: string): Promise<Blob> {
     const xhr = new XMLHttpRequest()

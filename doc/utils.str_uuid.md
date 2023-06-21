@@ -4,7 +4,7 @@
 
 ## str\_uuid() function
 
-The function returns a string representation of a UUID.
+生成 UUID 字符串。
 
 **Signature:**
 
@@ -14,4 +14,6 @@ declare function str_uuid(): string;
 **Returns:**
 
 string
+
+返回表示 UUID（通用唯一标识符）的字符串。
 

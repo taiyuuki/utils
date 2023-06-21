@@ -4,7 +4,7 @@
 
 ## image\_get\_type() function
 
-The function "image\_get\_type" takes a filename as input and returns the file type of the image.
+该函数根据文件扩展名返回图像文件的 MIME 类型。
 
 **Signature:**
 
@@ -16,9 +16,11 @@ declare function image_get_type(filename: string): "image/png" | "image/jpeg" | 
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  filename | string | The filename parameter is a string that represents the name of an image file. |
+|  filename | string | 表示图像文件名称的字符串，包括其扩展名。 |
 
 **Returns:**
 
 "image/png" \| "image/jpeg" \| "image/gif" \| "image/webp" \| "image/bmp" \| "image/svg+xml" \| "image/x-icon" \| "image/tiff"
+
+基于文件扩展名的图像文件的 MIME 类型。如果无法识别文件扩展名，它将返回默认的 MIME 类型。
 

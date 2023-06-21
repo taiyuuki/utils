@@ -4,7 +4,7 @@
 
 ## image\_to\_canvas() function
 
-This function converts an HTML image element to a canvas element with a specified size.
+此函数将 HTML 图像元素转换为具有指定大小的画布元素。
 
 **Signature:**
 
@@ -16,12 +16,12 @@ declare function image_to_canvas(img: HTMLImageElement, size?: ImageSize): HTMLC
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  img | HTMLImageElement | An HTMLImageElement object representing the image to be converted to a canvas. |
-|  size | ImageSize | _(Optional)_ The size parameter is an optional object that specifies the width and height of the canvas to be created. If not provided, it defaults to the natural width and height of the input image. |
+|  img | HTMLImageElement | 一个 HTMLImageElement 对象，表示要转换为画布的图像。 |
+|  size | ImageSize | _(Optional)_ size 参数是一个可选对象，用于指定所需的画布宽度和高度。如果未提供，则默认为输入图像的自然宽度和高度。 |
 
 **Returns:**
 
 HTMLCanvasElement
 
-a canvas element with the specified size and the image drawn on it.
+具有指定大小的画布元素和在其上绘制的图像。
 

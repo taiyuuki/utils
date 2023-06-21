@@ -4,7 +4,7 @@
 
 ## download\_by\_url() function
 
-This function downloads a file from a given URL with an optional filename.
+此函数使用可选文件名从给定的 URL 下载文件。
 
 **Signature:**
 
@@ -16,8 +16,8 @@ declare function download_by_url(URL: string, fileName?: string): void;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  URL | string | The URL parameter is a string that represents the URL of the file that needs to be downloaded. |
-|  fileName | string | _(Optional)_ The fileName parameter is a string that represents the name of the file that will be downloaded. If no value is provided for fileName, the function will generate a random UUID string as the file name. |
+|  URL | string | URL参数是一个字符串，表示需要下载的文件的URL。 |
+|  fileName | string | _(Optional)_ fileName 参数是一个字符串，指定要下载的文件的名称。如果没有为 fileName 提供值，该函数将生成一个随机 UUID 字符串作为文件名。 |
 
 **Returns:**
 

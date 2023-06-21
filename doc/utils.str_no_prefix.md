@@ -4,7 +4,7 @@
 
 ## str\_no\_prefix() function
 
-The function removes a specified prefix from a given string.
+该函数从字符串中删除给定的前缀（如果存在）。
 
 **Signature:**
 
@@ -16,10 +16,12 @@ declare function str_no_prefix(s: string, prefix: string): string;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  s | string | The <code>s</code> parameter is a string that we want to remove a prefix from. |
-|  prefix | string | The prefix parameter is a string that we want to remove from the beginning of the input string (s). |
+|  s | string | 可能有也可能没有需要删除的前缀的字符串。 |
+|  prefix | string | prefix 参数是一个字符串，表示我们要从输入字符串的开头删除的前缀。 |
 
 **Returns:**
 
 string
+
+函数 str\_no\_prefix 返回一个字符串。如果输入字符串 s 以输入前缀 prefix 结尾，该函数返回 s 的不包括前缀的子字符串。否则，该函数返回原始字符串 s。
 

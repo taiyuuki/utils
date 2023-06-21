@@ -4,23 +4,23 @@
 
 ## is\_object() function
 
-The function checks if a given value is an object and not an array.
+该函数检查给定值是否是对象而不是数组。
 
 **Signature:**
 
 ```typescript
-declare function is_object(o: any): o is Exclude<Object, Array<any>>;
+declare function is_object(o: any): o is object;
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  o | any | any type, which means it can be any data type including objects, arrays, strings, numbers, etc. |
+|  o | any | 参数 o 是 any 类型，这意味着它可以是任何数据类型。 |
 
 **Returns:**
 
-o is Exclude&lt;Object, Array&lt;any&gt;&gt;
+o is object
 
-a boolean value indicating whether the input parameter `o` is an object or not. The return type of the function is `o is Exclude<Object, Array<any>>`<!-- -->, which is a type predicate indicating that `o` is of type `Object` but not of type `Array<any>`<!-- -->.
+一个布尔值，指示输入参数“o”是否为对象。
 

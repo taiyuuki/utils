@@ -4,7 +4,7 @@
 
 ## hsl\_to\_rgb() function
 
-The function converts HSL color values to RGB color values.
+该函数将 HSL 格式的颜色转换为 RGB 格式。
 
 **Signature:**
 
@@ -16,11 +16,11 @@ declare function hsl_to_rgb(hsl: HslColor): RgbColor;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  hsl | HslColor | An array of four numbers representing the HSL (hue, saturation, lightness, and alpha) values of a color. The hue value is a number between 0 and 1, representing the color's position on the color wheel. The saturation and lightness values are also numbers between 0 |
+|  hsl | HslColor | 表示 HSL 颜色值的四个数字的数组：色调 (0-360)、饱和度 (0-1)、亮度 (0-1) 和 alpha (0-1)。 |
 
 **Returns:**
 
 RgbColor
 
-An array of four numbers representing the RGB values and alpha value of the input HSL color.
+函数“hsl\_to\_rgb”返回一个 RGB 颜色数组，具有三个值（红色、绿色、蓝色）或四个值（红色、绿色、蓝色、alpha），具体取决于输入 HSL 颜色是否具有 alpha 值。
 

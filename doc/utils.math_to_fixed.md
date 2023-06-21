@@ -4,7 +4,7 @@
 
 ## math\_to\_fixed() function
 
-The function returns a number rounded to a specified number of decimal places.
+该函数返回一个四舍五入到指定小数位数的数字。
 
 **Signature:**
 
@@ -16,12 +16,12 @@ declare function math_to_fixed(n: number, digit?: number): number;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  n | number | a number that needs to be rounded to a certain number of decimal places. |
-|  digit | number | _(Optional)_ The number of digits after the decimal point to which the given number should be rounded. If no value is provided for digit, it defaults to 0, which means the number will be rounded to the nearest integer. |
+|  n | number | 需要四舍五入到小数点后固定位数的数字。 |
+|  digit | number | _(Optional)_ 给定数字应四舍五入到小数点后的位数。如果没有为 digit 提供值，则默认为 0，这意味着数字将四舍五入到最接近的整数。 |
 
 **Returns:**
 
 number
 
-The function `math_to_fixed` is returning a number that has been rounded to a specified number of digits after the decimal point. The number of digits after the decimal point is determined by the `digit` parameter, which defaults to 0 if not provided.
+函数“math\_to\_fixed”返回一个数字，该数字已四舍五入到小数点后的指定位数。小数点后的位数由 digit 参数决定，如果不指定则默认为 0。
 

@@ -4,7 +4,7 @@
 
 ## data\_URI\_to\_blob() function
 
-This function converts a data URI to a Blob object.
+此函数将数据 URI 转换为 blob 对象。
 
 **Signature:**
 
@@ -16,12 +16,12 @@ declare function data_URI_to_blob(dataURI: string, mimeType?: string): Blob;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  dataURI | string | A string representing a data URI, which includes the data and metadata of a file in a single string format. |
-|  mimeType | string | _(Optional)_ The MIME type of the dataURI, which specifies the type of data being represented in the URI. It is an optional parameter, and if not provided, the function tries to extract it from the dataURI itself. |
+|  dataURI | string | 表示数据 URI 的字符串，其中包括以 base64 格式编码的文件的数据和元数据。 |
+|  mimeType | string | _(Optional)_ dataURI 的 MIME 类型，指定 URI 中表示的数据类型。它是一个可选参数，如果未提供，该函数会尝试从 dataURI 本身中提取它。 |
 
 **Returns:**
 
 Blob
 
-a Blob object.
+从 dataURI 字符串输入创建的 Blob 对象。 Blob 对象包含指定 MIME 类型的二进制数据。
 

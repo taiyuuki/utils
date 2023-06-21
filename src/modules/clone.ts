@@ -1,20 +1,19 @@
+
 /**
- * The function creates a deep copy of an object by using JSON.parse.
+ * 该函数使用 JSON 解析和字符串化克隆一个简单对象。
  * @public
- * @param source - The `source` parameter is of type `T`, which is a generic type that extends the
- * `object` type. It represents the object that needs to be cloned.
+ * @param source - `source` 参数的类型为 `T`，它是扩展 `object` 类型的通用类型。它代表需要克隆的对象。
+ * @returns `clone_simple` 函数返回作为参数传递的 `source` 对象的深层副本。返回的对象与原始对象具有相同的属性和值，但它是内存中的新对象。
  */
 function clone_simple<T extends object>(source: T): T {
     return JSON.parse(JSON.stringify(source))
 }
 
 /**
- * This function creates a deep copy of an object.
+ * 这是一个执行对象深度克隆的函数。
  * @public
- * @param source - The `source` parameter is of type `T`, which is a generic type that extends the
- * `object` type. It represents the object that needs to be cloned deeply, meaning that a new object
- * with the same properties and values as the original object is created, but with no reference to the
- * original
+ * @param  source - 需要深度克隆的对象。
+ * @returns 函数“clone_deep”返回输入对象的深度克隆。
  */
 function clone_deep<T extends object>(source: T) {
     const target = Object.create(Object.getPrototypeOf(source)) as T
@@ -51,10 +50,11 @@ function clone_deep<T extends object>(source: T) {
 }
 
 /**
- * The function `clone` creates a deep copy of an object.
+ * 该函数使用简单方法或深层方法克隆对象，具体取决于简单方法是否失败。
  * @public
- * @param source - The `source` parameter is of type `T`, which is a generic type that extends the
- * `object` type. It represents the object that needs to be cloned.
+ * @param source - 需要克隆的源对象。该函数根据源对象的类型使用简单或深度克隆方法。该函数返回源对象的克隆。
+ * @returns `clone` 函数返回与输入`source` 对象类型相同的克隆对象。如果 `clone_simple` 函数成功创建了 `source`
+ * 对象的浅拷贝，则返回该浅拷贝。否则，如果在浅拷贝过程中抛出错误，将调用 `clone_deep` 函数创建 `source` 的深拷贝
  */
 function clone<T extends object>(source: T): T {
     try {

@@ -4,7 +4,7 @@
 
 ## str\_capital\_all() function
 
-The function capitalizes the first letter of each word in a given string.
+该函数将给定字符串中每个单词的首字母大写。
 
 **Signature:**
 
@@ -16,11 +16,11 @@ declare function str_capital_all(str: string): string;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  str | string | A string that contains one or more words separated by spaces. |
+|  str | string | 包含一个或多个由空格分隔的单词的字符串。 |
 
 **Returns:**
 
 string
 
-The function `str_capital_all` is returning a new string where all the words in the input string are capitalized. It does this by splitting the input string into an array of words using the space character as a delimiter, then mapping each word to its capitalized version using the `str_capital` function, and finally joining the array of capitalized words back into a string using the space character as a
+函数 str\_capital\_all 返回一个新字符串，其中输入字符串中的所有单词都大写。
 

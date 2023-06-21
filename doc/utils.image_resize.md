@@ -4,7 +4,7 @@
 
 ## image\_resize() function
 
-This function resizes an HTML image element to a specified size and MIME type.
+此函数根据指定的选项调整 HTML 图像元素的大小，并将调整后的图像作为新的 HTML 图像元素返回。
 
 **Signature:**
 
@@ -16,12 +16,12 @@ declare function image_resize(img: HTMLImageElement, options: ImageOptions): HTM
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  img | HTMLImageElement | An HTMLImageElement object representing the image that needs to be resized. |
-|  options | ImageOptions | The options parameter is an optional object that specifies the width and height of the image. |
+|  img | HTMLImageElement | 表示要调整大小的图像的 HTMLImageElement 对象。 |
+|  options | ImageOptions | ImageOptions 是包含调整图像的大小、质量、类型的选项的对象。 |
 
 **Returns:**
 
 HTMLImageElement
 
-a new HTMLImageElement that has been resized based on the input parameters.
+已根据提供的选项调整大小的新 HTMLImageElement。
 

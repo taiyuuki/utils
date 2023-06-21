@@ -4,7 +4,7 @@
 
 ## is\_regexp() function
 
-The function checks if a given value is a regular expression.
+该函数检查给定值是否为正则表达式。
 
 **Signature:**
 
@@ -16,13 +16,13 @@ declare function is_regexp(r: any): r is RegExp;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  r | any | The parameter <code>r</code> is of type <code>any</code>, which means it can be any data type. |
+|  r | any | 参数 r 是 any 类型，这意味着它可以是任何数据类型。 |
 
 **Returns:**
 
 r is RegExp
 
-The function `is_regexp` returns a boolean value indicating whether the input parameter `r` is a regular expression (`RegExp`<!-- -->) or not. It returns `true` if `r` is a `RegExp` object, and `false` otherwise.
+函数 is\_regexp 返回一个布尔值，指示输入参数 r 是否为正则表达式 (RegExp)。如果 r 是 RegExp 对象，它返回 true ，否则返回 false 。
 
 ## Example
 

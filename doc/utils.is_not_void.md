@@ -4,7 +4,7 @@
 
 ## is\_not\_void() function
 
-The function checks if a given value is not null and undefined, or if it is a number that is not NaN.
+该函数检查值是否不为 undefined 或 null。
 
 **Signature:**
 
@@ -16,11 +16,11 @@ declare function is_not_void<T>(t: T): t is NonNullable<T>;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  t | T | The parameter <code>t</code> is of type <code>any</code>, which means it can be any data type. |
+|  t | T | 可以是任何类型的泛型类型参数，包括可为 null 的类型。 |
 
 **Returns:**
 
 t is NonNullable&lt;T&gt;
 
-a boolean value indicating whether the input parameter `t` is either `null` or `undefined` or `NaN`<!-- -->.
+函数 is\_not\_void 返回一个布尔值。如果输入的“t”不是“null”或“undefined”，则返回“true”，否则返回“false”。
 

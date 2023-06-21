@@ -4,7 +4,7 @@
 
 ## is\_empty\_obj() function
 
-The `is_not_empty_array` function is checking if a given value is not an empty array or a null or undefined value.
+检查给定值是否为空对象。
 
 **Signature:**
 
@@ -16,14 +16,14 @@ declare function is_empty_obj(v: any, nullable?: boolean): v is {};
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  v | any | The parameter <code>v</code> is of type <code>any</code>, which means it can be any data type. |
-|  nullable | boolean | _(Optional)_ The parameter <code>nullable</code> is of type <code>boolean</code>, which means it can be <code>true</code> or <code>false</code>. |
+|  v | any | 被检查为空对象的变量。 |
+|  nullable | boolean | _(Optional)_ 一个布尔参数，用于确定函数是否应将空值视为空对象。如果 nullable 设置为 true，则 null 值将被视为空对象。如果 nullable 设置为 false，则 null 值将不会被视为空对象，默认值为 true。 |
 
 **Returns:**
 
 v is {}
 
-The function `is_empty_obj` returns a boolean value indicating whether the input parameter `v` is not an empty array.
+一个布尔值。
 
 ## Example
 

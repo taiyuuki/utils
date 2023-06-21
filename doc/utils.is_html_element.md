@@ -4,7 +4,7 @@
 
 ## is\_html\_element() function
 
-The function checks if a given value is an HTML element.
+该函数检查给定变量是否是 HTMLElement 类的实例。
 
 **Signature:**
 
@@ -16,11 +16,11 @@ declare function is_html_element(hel: any): hel is HTMLElement;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  hel | any | The parameter <code>hel</code> is of type <code>any</code>. |
+|  hel | any | 参数“hel”的类型为“any”，这意味着它可以是任何数据类型。 |
 
 **Returns:**
 
 hel is HTMLElement
 
-The function `is_html_element` returns a boolean value indicating whether the input parameter `hel` is an HTML element.
+函数 is\_html\_element 返回一个布尔值，指示输入的 hel 是否是 HTMLElement 类的实例。
 

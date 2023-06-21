@@ -5,11 +5,11 @@ import { math_to_hex } from './math'
 import { str_no_prefix } from './string'
 
 /**
- * The function calculates the lightness value of a given color in RGB or hex format.
+ * 该函数以 RGB 或十六进制格式计算颜色的亮度值。
  * @public
- * @param color - The input color that we want to calculate the lightness of. It can be either
- * a string in hexadecimal format or an object of type RgbColor.
- * @returns the lightness value of a given color in the HSL color space.
+ * @param color - 颜色参数的类型为 Color，它可以是表示十六进制颜色代码的字符串（例如“#FF0000”表示红色），也可以是表示颜色的 RGB 值的三个整数数组（例如
+ * [255, 0, 0 ] 为红色）。
+ * @returns 颜色的亮度值，它是一个介于 0 和 1 之间的数字，表示颜色的感知亮度。
  */
 function get_lightness_value(color: Color) {
     let rgb = color as RgbColor
@@ -23,13 +23,12 @@ function get_lightness_value(color: Color) {
 }
 
 /**
- * This function converts an RGB color value to a hexadecimal color value.
+ * 该函数将 RGB 颜色数组转换为十六进制颜色代码。
  * @public
- * @param rgb - The `rgb` parameter is an array of numbers representing the red, green, and
- * blue values of a color. It can also optionally include an alpha value as the fourth element of the
- * array.
- * @returns a string representing the hexadecimal value of the given RGB color. If the RGB color has an
- * alpha channel, the function returns a string representing the hexadecimal value of the RGBA color.
+ * @param rgb - 参数 `rgb` 应该是一个数字数组，表示 RGB 颜色模型中颜色的红色、绿色和蓝色值。它还可能包括一个可选的第四个值，表示颜色的
+ * alpha（透明度）值。
+ * @returns 函数 rgb_to_hex 返回一个字符串，表示给定 RGB 颜色的十六进制颜色代码。如果 RGB 颜色有一个 alpha 通道，该函数返回一个字符串，表示带有 alpha
+ * 通道的十六进制颜色代码。
  */
 function rgb_to_hex(rgb: RgbColor) {
     if (!is_rgb_color(rgb)) {
@@ -46,13 +45,10 @@ function rgb_to_hex(rgb: RgbColor) {
 }
 
 /**
- * The function converts a hexadecimal color code to its corresponding RGB values.
+ * 该函数将十六进制颜色代码转换为其对应的 RGB 颜色值。
  * @public
- * @param hex - The hex parameter is a string representing a hexadecimal color value, such as
- * "#FF0000" for red or "#00FF00" for green. The function converts this hex value to an RGB array,
- * where each element represents the red, green, and blue values of the color, respectively.
- * @returns The function `hex_to_rgb` takes a hexadecimal color code as a string and returns an array of
- * three integers representing the corresponding RGB values.
+ * @param hex - hex 参数是表示十六进制颜色代码的字符串，例如“#FF0000”代表红色或“#00FF00”代表绿色。
+ * @returns 一个由三个整数组成的数组，表示 RGB 格式的颜色的红色、绿色和蓝色值。
  */
 function hex_to_rgb(hex: string): RgbColor {
     hex = str_no_prefix(hex, '#')
@@ -63,13 +59,11 @@ function hex_to_rgb(hex: string): RgbColor {
 }
 
 /**
- * The function takes a color as input and returns either black or white as the contrasting color based
- * on the brightness of the input color.
+ * 该函数将颜色作为输入，并根据输入颜色的亮度返回黑色或白色作为对比色。
  * @public
- * @param color - The color parameter is of type Color, which could be either a string
- * representing a color in hexadecimal format (e.g. "#FF0000" for red) or an object with properties for
- * red, green, and blue values [255, 0, 0].
- * @returns either the string 'black' or 'white' based on the contrast of the input color.
+ * @param color - 颜色参数是表示十六进制颜色代码的字符串（例如“#FF0000”表示红色）或表示 RGB 颜色的对象（例如 [255, 0, 0]
+ * 表示红色）。
+ * @returns 字符串“black”或“white”，具体取决于输入颜色的计算 YIQ 值。
  */
 function get_contrast_color(color: Color) {
     if (typeof color !== 'string') {
@@ -83,15 +77,12 @@ function get_contrast_color(color: Color) {
 }
 
 /**
- * The function converts an RGB color value to its corresponding HSL color value.
+ * 该函数将 RGB 颜色值转换为其对应的 HSL 颜色值。
  * @public
- * @param rgb - The input parameter `rgb` is an array of four numbers representing the red,
- * green, blue, and alpha values of a color in the RGB color space. The alpha value is optional and
- * defaults to 1 if not provided.
- * @returns The function `rgb_to_hsl` is returning an array of HSL values. If the input `rgb` color has
- * an alpha value, the function returns an array with four values: hue (H), saturation (S), lightness
- * (L), and alpha (A). If the input `rgb` color does not have an alpha value, the function returns an
- * array with three values: hue (H), saturation (S), and lightness (L).
+ * @param rgb - 一个包含四个数字的数组，表示 RGB 颜色空间中颜色的红色、绿色、蓝色和 alpha 值。 RGB 分量的值应介于 0 和 255 之间，alpha
+ * 分量的值应介于 0 和 1 之间。
+ * @returns 函数 rgb_to_hsl 返回一个 HSL 颜色值作为数字数组。如果输入的 `rgb` 颜色有一个 alpha
+ * 值，该函数返回一个数组，其中包含四个元素，分别代表色调、饱和度、亮度和 alpha 值。如果输入的 `rgb` 颜色没有 alpha 值，该函数返回一个数组，其中包含三个代表色调的元素，
  */
 function rgb_to_hsl(rgb: RgbColor): HslColor {
     const r = rgb[0] / 255
@@ -126,13 +117,10 @@ function rgb_to_hsl(rgb: RgbColor): HslColor {
 }
 
 /**
- * The function converts HSL color values to RGB color values.
+ * 该函数将 HSL 格式的颜色转换为 RGB 格式。
  * @public
- * @param hsl - An array of four numbers representing the HSL (hue, saturation, lightness,
- * and alpha) values of a color. The hue value is a number between 0 and 1, representing the color's
- * position on the color wheel. The saturation and lightness values are also numbers between 0
- * @returns An array of four numbers representing the RGB values and alpha value of the input HSL
- * color.
+ * @param hsl - 表示 HSL 颜色值的四个数字的数组：色调 (0-360)、饱和度 (0-1)、亮度 (0-1) 和 alpha (0-1)。
+ * @returns 函数“hsl_to_rgb”返回一个 RGB 颜色数组，具有三个值（红色、绿色、蓝色）或四个值（红色、绿色、蓝色、alpha），具体取决于输入 HSL 颜色是否具有 alpha 值。
  */
 function hsl_to_rgb(hsl: HslColor): RgbColor {
     const h = hsl[0]

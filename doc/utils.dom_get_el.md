@@ -4,7 +4,7 @@
 
 ## dom\_get\_el() function
 
-The function returns a DOM element selected by a given selector string or undefined if the selector is invalid or the element is not found.
+该函数根据给定的选择器字符串返回 DOM 元素，如果选择器无效或未找到该元素，则返回未定义的元素。
 
 **Signature:**
 
@@ -16,11 +16,11 @@ declare function dom_get_el(selector: string): Element | undefined;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  selector | string | A string representing a CSS selector used to select an element in the DOM. |
+|  selector | string | 表示用于从 DOM 中选择元素的 CSS 选择器的字符串。 |
 
 **Returns:**
 
 Element \| undefined
 
-This function returns either the DOM element that matches the given selector or `undefined` if the selector is invalid or no element is found.
+此函数返回与给定选择器匹配的 DOM 元素，如果选择器无效或未找到元素，则返回“undefined”。
 

@@ -4,23 +4,23 @@
 
 ## is\_base64() function
 
-The function checks if a given value is a base64 encoded string.
+该函数检查给定字符串是否是具有可选数据 URI 方案的有效 base64 编码字符串。
 
 **Signature:**
 
 ```typescript
-declare function is_base64(str: string): boolean;
+declare function is_base64(str: string): str is string;
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  str | string | The parameter <code>str</code> is of type <code>string</code>. |
+|  str | string | 表示数据 URI 方案的字符串，它可能是也可能不是 base64 编码的。 |
 
 **Returns:**
 
-boolean
+str is string
 
-The function `is_base64` returns a boolean value indicating whether the input parameter `str` is a base64 encoded string.
+函数 is\_base64 将字符串作为输入并返回一个布尔值，指示该字符串是否是有效的 base64 编码字符串。该函数使用正则表达式检查输入字符串是否与 base64 编码字符串的模式匹配。如果输入字符串与模式匹配，则函数返回“true”，否则返回“false”。
 

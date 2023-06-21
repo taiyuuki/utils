@@ -4,7 +4,7 @@
 
 ## is\_blob() function
 
-The function checks if a
+该函数检查给定对象是否是 Blob 类的实例。
 
 **Signature:**
 
@@ -16,11 +16,11 @@ declare function is_blob(blob: any): blob is Blob;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  blob | any | The parameter <code>blob</code> is of type <code>Blob</code>. |
+|  blob | any | 可以是任何数据类型。 |
 
 **Returns:**
 
 blob is Blob
 
-The function `is_blob` returns a boolean value indicating whether the input parameter `blob` is a blob.
+函数 is\_blob 返回一个布尔值，指示输入参数 blob 是否是 Blob 类的实例。
 

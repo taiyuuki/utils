@@ -4,7 +4,7 @@
 
 ## is\_rgb\_color() function
 
-The `is_not_empty_obj` function is checking if a given value is not an empty object or a null or undefined value.
+该函数检查给定颜色是否为 RGB 颜色。
 
 **Signature:**
 
@@ -16,11 +16,11 @@ declare function is_rgb_color(color: any): color is RgbColor;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  color | any |  |
+|  color | any | 它可以是任何数据类型。 |
 
 **Returns:**
 
 color is RgbColor
 
-The function `is_rgb_color` returns a boolean value indicating whether the input parameter `v` is not an empty object.
+返回一个布尔值。
 

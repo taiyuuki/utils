@@ -4,7 +4,7 @@
 
 ## is\_empty\_array() function
 
-The `is_empty_array` function is checking if a given value is an empty array or a null or undefined value.
+该函数检查给定值是否为空数组或 null/undefined。
 
 **Signature:**
 
@@ -16,12 +16,14 @@ declare function is_empty_array(v: any, nullable?: boolean): v is [];
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  v | any | The parameter <code>v</code> is of type <code>any</code>, which means it can be any data type. |
-|  nullable | boolean | _(Optional)_ The parameter <code>nullable</code> is of type <code>boolean</code>, which means it can be <code>true</code> or <code>false</code>. |
+|  v | any | 被检查为空数组的变量。 |
+|  nullable | boolean | _(Optional)_ 一个布尔参数，用于确定函数是否应将空值视为空数组。如果 nullable 设置为 true，则 null 值将被视为空数组。如果 nullable 设置为 false，则 null 值将不会被视为空数组，默认值为 true。 |
 
 **Returns:**
 
 v is \[\]
+
+一个布尔值，指示输入“v”是否为空数组。如果 `v` 是一个空数组，函数返回 `true`<!-- -->，否则返回 `false`<!-- -->。该函数还采用一个可选参数 `nullable`<!-- -->，默认为 `true`<!-- -->。如果 `nullable` 设置为 `false`<!-- -->，如果 `v` 是，函数将返回 `false`
 
 ## Example
 

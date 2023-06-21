@@ -4,7 +4,7 @@
 
 ## storage\_set() function
 
-The function stores a value of any type in the browser's local storage using a specified key.
+该函数使用指定的键将任何类型的值存储在浏览器的本地存储中。
 
 **Signature:**
 
@@ -16,8 +16,8 @@ declare function storage_set<T>(key: string, value: T): void;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  key | string | a string representing the key under which the value will be stored in the localStorage object. |
-|  value | T | The value to be stored in the local storage. It can be of any data type, as the function is using generics to handle different types of values. |
+|  key | string | 一个字符串，表示值将存储在浏览器的本地存储中所依据的键。 |
+|  value | T | value 参数是 T 类型，这意味着它可以是任何数据类型。它表示需要使用给定键存储在本地存储中的值。该函数将值转换为 JSON 字符串，然后将其存储在本地存储中。 |
 
 **Returns:**
 

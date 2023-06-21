@@ -4,7 +4,7 @@
 
 ## object\_keys() function
 
-This function returns the keys of an object as an array.
+该函数将对象的键作为数组返回。
 
 **Signature:**
 
@@ -16,11 +16,11 @@ declare function object_keys<T extends object>(o: T): Keys<T>;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  o | T | o is a generic parameter of type T that extends the object type. It represents the object whose keys we want to retrieve. |
+|  o | T | o 是扩展对象的类型 T 的泛型参数。它表示要返回其键的对象。 |
 
 **Returns:**
 
 Keys&lt;T&gt;
 
-The function `object_keys` returns an array of keys of the input object `o`<!-- -->, with the type of the keys being inferred based on the type of the input object. The type of the returned value is `Keys<T>`<!-- -->, which is a type alias defined elsewhere in the code.
+函数 object\_keys 返回输入对象 o 的键数组。
 

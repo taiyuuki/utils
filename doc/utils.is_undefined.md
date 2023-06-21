@@ -4,7 +4,7 @@
 
 ## is\_undefined() function
 
-The function checks if a given value is undefined.
+该函数检查给定值是否未定义。
 
 **Signature:**
 
@@ -16,11 +16,11 @@ declare function is_undefined(u: any): u is undefined;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  u | any | The parameter "u" is of type "any", which means it can be any data type (string, number, boolean, object, etc.). |
+|  u | any | 参数“u”的类型为“any”，这意味着它可以是任何数据类型（字符串、数字、布尔值、对象等）。 |
 
 **Returns:**
 
 u is undefined
 
-The function `is_undefined` returns a boolean value indicating whether the input parameter `u` is `undefined` or not. The function returns `true` if `u` is `undefined`<!-- -->, and `false` otherwise.
+函数 is\_undefined 返回一个布尔值，指示输入参数 u 是否为 undefined 。
 

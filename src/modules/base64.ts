@@ -3,14 +3,12 @@ import { image_to_data_URI } from './image'
 import { is_base64 } from './is'
 
 /**
- * This function converts a data URI to a Blob object.
+ * 此函数将数据 URI 转换为 blob 对象。
  * @public
- * @param dataURI - A string representing a data URI, which includes the data and metadata of
- * a file in a single string format.
- * @param mimeType - The MIME type of the dataURI, which specifies the type of data being
- * represented in the URI. It is an optional parameter, and if not provided, the function tries to
- * extract it from the dataURI itself.
- * @returns a Blob object.
+ * @param dataURI - 表示数据 URI 的字符串，其中包括以 base64 格式编码的文件的数据和元数据。
+ * @param mimeType - dataURI 的 MIME 类型，指定 URI 中表示的数据类型。它是一个可选参数，如果未提供，该函数会尝试从 dataURI
+ * 本身中提取它。
+ * @returns 从 dataURI 字符串输入创建的 Blob 对象。 Blob 对象包含指定 MIME 类型的二进制数据。
  */
 function data_URI_to_blob(dataURI: string, mimeType?: string) {
     if (!is_base64(dataURI)) {
@@ -34,14 +32,12 @@ function data_URI_to_blob(dataURI: string, mimeType?: string) {
 }
 
 /**
- * This function converts a URL to a data URI for an image.
+ * 此函数将 URL 转换为图像的数据 URI。
  * @public
- * @param url - The URL of the image that needs to be converted to a data URI.
- * @param type - The optional parameter "type" specifies the image format of the data URI to
- * be returned. If not provided, the default format is PNG. Possible values for "type" include
- * "image/jpeg", "image/png", "image/gif", etc.
- * @returns A Promise that resolves to a string representing the data URI of the image loaded from the
- * provided URL.
+ * @param url - 需要转换为数据 URI 的图像的URL。
+ * @param type - 可选参数“type”是一个字符串，指定数据 URI
+ * 的图像格式。如果未提供，则默认值为“image/png”。其他可能的值包括“image/jpeg”和“image/webp”。
+ * @returns 解析为表示从提供的 URL 加载的图像的数据 URI 的字符串的 Promise。
  */
 function url_to_date_URI(url: string, type?: string): Promise<string> {
     const img = new Image()

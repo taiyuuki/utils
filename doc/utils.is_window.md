@@ -4,7 +4,7 @@
 
 ## is\_window() function
 
-The function checks if a given value is a window.
+该函数检查给定参数是否是 TypeScript 中的全局窗口对象。
 
 **Signature:**
 
@@ -16,11 +16,11 @@ declare function is_window(win: any): win is Window;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  win | any | The parameter <code>win</code> is of type <code>any</code>. |
+|  win | any | 可以是任何数据类型。 |
 
 **Returns:**
 
 win is Window
 
-The function `is_window` returns a boolean value indicating whether the input parameter `win` is a window.
+函数 is\_window 返回一个布尔值，指示 win 参数是否与全局 window 对象相同。
 

@@ -4,7 +4,7 @@
 
 ## dom\_get\_size() function
 
-The function `dom_get_size` takes an element or window as input and returns its size.
+该函数返回 DOM 元素或窗口的大小。
 
 **Signature:**
 
@@ -19,9 +19,11 @@ declare function dom_get_size(el: Element | Window): {
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  el | Element \| Window | The <code>el</code> parameter is a reference to an HTML element or the window object. It is used to determine the size of the element or the viewport. |
+|  el | Element \| Window | 参数 <code>el</code> 的类型为 <code>Element &#124; Window</code>，这意味着它可以是 HTML 元素或window对象。函数 dom\_get\_size 返回元素或窗口的宽度和高度，具体取决于 el 的类型。 |
 
 **Returns:**
 
 { width: number; height: number; } \| undefined
+
+函数 dom\_get\_size 返回一个对象，该对象具有表示给定 DOM 元素或window大小的 `width` 和 `height` 属性。如果参数是window，它返回window的内部宽度和高度。如果参数是一个元素，它会返回从其 getBoundingClientRect() 方法获得的元素的宽度和高度。如果参数既不是 window也不是元素，它会抛出一个错误。
 

@@ -4,7 +4,7 @@
 
 ## str\_ensure\_prefix() function
 
-The function ensures that a given string has a specified prefix.
+该函数确保给定的字符串具有指定的前缀。
 
 **Signature:**
 
@@ -16,10 +16,12 @@ declare function str_ensure_prefix(s: string, prefix: string): string;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  s | string | The input string that we want to ensure has a certain prefix. |
-|  prefix | string | The prefix parameter is a string that we want to ensure is at the beginning of the input string s. If s already starts with prefix, then the function should return s unchanged. If s does not start with prefix, then the function should return prefix followed by s. |
+|  s | string | 我们要确保的字符串具有特定的前缀。 |
+|  prefix | string | prefix 参数是一个字符串，我们要确保它位于输入字符串的开头。如果输入字符串已经以前缀开头，则函数按原样返回输入字符串。否则，该函数将前缀添加到输入字符串的开头并返回结果字符串 |
 
 **Returns:**
 
 string
+
+函数“str\_ensure\_prefix”返回一个字符串。如果输入字符串“s”以“prefix”字符串开头，则该函数按原样返回“s”。否则，它返回一个新字符串，它是“prefix”字符串和原始“s”字符串的串联。
 

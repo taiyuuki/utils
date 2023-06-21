@@ -4,7 +4,7 @@
 
 ## is\_window\_or\_element() function
 
-The function checks if a given value is a window or an element.
+该函数检查给定对象是否是元素或window。
 
 **Signature:**
 
@@ -16,11 +16,11 @@ declare function is_window_or_element(el: any): el is Element | Window;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  el | any | The parameter <code>el</code> is of type <code>any</code>. |
+|  el | any | 参数 el 可以是任何数据类型。 |
 
 **Returns:**
 
 el is Element \| Window
 
-The function `is_window_or_element` returns a boolean value indicating whether the input parameter `el` is a window or an element.
+函数 is\_window\_or\_element 返回一个布尔值,表示给定对象是否是元素或window。
 

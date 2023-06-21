@@ -4,7 +4,7 @@
 
 ## clone\_deep() function
 
-This function creates a deep copy of an object.
+这是一个执行对象深度克隆的函数。
 
 **Signature:**
 
@@ -16,9 +16,11 @@ declare function clone_deep<T extends object>(source: T): T;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  source | T | The <code>source</code> parameter is of type <code>T</code>, which is a generic type that extends the <code>object</code> type. It represents the object that needs to be cloned deeply, meaning that a new object with the same properties and values as the original object is created, but with no reference to the original |
+|  source | T | 需要深度克隆的对象。 |
 
 **Returns:**
 
 T
+
+函数“clone\_deep”返回输入对象的深度克隆。
 

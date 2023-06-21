@@ -22,8 +22,8 @@ export type Key = string | number | symbol
 
 export type TupleToUnion<Tuple extends Array<unknown>> = Tuple[number]
 
-export type TupleToObject<T extends Key[], V = boolean> = {
-    [k in T[number]]: V
+export type TupleToObject<T extends Key, V = boolean> = {
+    [k in T]: V
 }
 
 export type Keys<T extends object> = UnionToTuple<keyof T>
@@ -47,3 +47,7 @@ export type KeyboardEventObject = Record<KeyboardEvent['code'], KeyboardEventCal
 export type KeyboardEventOptions = KeyboardEventObject | (() => KeyboardEventObject)
 
 export type KeyboardEventKeys<T> = T extends Fn ? keyof ReturnType<T> : keyof T
+
+export type Concat<T, S> = {
+    [k in (keyof T | keyof S)]: k extends keyof S ? S[k] : k extends keyof T ? T[k] : never
+}

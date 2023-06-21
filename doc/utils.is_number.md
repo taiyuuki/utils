@@ -4,7 +4,7 @@
 
 ## is\_number() function
 
-The function checks if a given value is a finite number.
+该函数检查给定值是否为有限数。
 
 **Signature:**
 
@@ -16,13 +16,13 @@ declare function is_number(n: any): n is number;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  n | any | The parameter <code>n</code> is of type <code>any</code>, which means it can be any data type. |
+|  n | any | 参数 <code>n</code> 是 <code>any</code> 类型，这意味着它可以是任何数据类型。 |
 
 **Returns:**
 
 n is number
 
-The function `is_number` is returning a boolean value. It returns `true` if the input `n` is a finite number, and `false` otherwise.
+函数 is\_number 返回一个布尔值。如果输入的“n”是有限数，它返回“true”，否则返回“false”。
 
 ## Example
 

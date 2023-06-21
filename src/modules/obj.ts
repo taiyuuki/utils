@@ -1,53 +1,42 @@
-import type { Entries, Key, Keys } from '../types'
+import type { Entries, Key, Keys, Concat } from '../types'
 
 /**
- * This function returns the keys of an object as an array.
+ * 该函数将对象的键作为数组返回。
  * @public
- * @param o - o is a generic parameter of type T that extends the object type. It represents the
- * object whose keys we want to retrieve.
- * @returns The function `object_keys` returns an array of keys of the input object `o`, with the type
- * of the keys being inferred based on the type of the input object. The type of the returned value is
- * `Keys<T>`, which is a type alias defined elsewhere in the code.
+ * @param o - o 是扩展对象的类型 T 的泛型参数。它表示要返回其键的对象。
+ * @returns 函数 object_keys 返回输入对象 o 的键数组。
  */
 function object_keys<T extends object>(o: T): Keys<T> {
     return Object.keys(o) as Keys<T>
 }
 
 /**
- * This function returns the entries of an object as an array of key-value pairs.
+ * 此函数将对象的条目作为键值对数组返回。
  * @public
- * @param obj - The `obj` parameter is of type `T`, which extends the `object` type. It represents
- * an object whose entries we want to retrieve.
- * @returns The function `object_entries` is returning an array of key-value pairs of the input object
- * `obj`. The type of the returned array is `Entries<T>`, which is a type alias defined elsewhere in
- * the code. The `as Entries<T>` syntax is used to assert the type of the returned value as
- * `Entries<T>`.
+ * @param obj - 对象
+ * @returns 函数 object_entries 返回输入对象 obj 的键值对数组。
  */
 function object_entries<T extends object>(obj: T): Entries<T> {
     return Object.entries(obj) as Entries<T>
 }
 
 /**
- * This function checks if a given key exists in a given object and returns a boolean value.
+ * 该函数检查给定对象中是否存在给定键并返回布尔值。
  * @public
- * @param key - The first parameter `key` is a generic type that extends the keys of an object `T`. It
- * represents the key that we want to check if it exists in the object `obj`.
- * @param obj - The `obj` parameter is an object of type `T`. The `T` type is a generic type that
- * extends the `object` type, which means that `obj` can be any object type.
+ * @param key - 第一个参数“key”的类型为“Key”，它可能是表示对象属性键的字符串或符号。
+ * @param obj - `obj` 参数是类型为 `T` 的对象，它是扩展了 `object` 类型的泛型。这意味着 `obj` 可以是任何具有属性和方法的对象。
+ * @returns 一个布尔值，指示提供的键是否存在于提供的对象的键中。
  */
 function key_in<T extends object>(key: Key, obj: T): key is keyof T {
     return key in obj
 }
 
 /**
- * The function `object_pick` takes an object and an array of keys and returns a new object with only
- * the specified keys from the original object.
+ * 函数“object_pick”接受一个对象和一个键数组，并返回一个新对象，该对象仅包含原始对象中的指定键。
  * @public
- * @param obj - The first parameter `obj` is an object of type `T` which is a generic type that
- * extends the `object` type. This means that `obj` can be any object that has properties and methods.
- * @param keys - `keys` is an array of keys of type `K` that we want to pick from the object
- * `obj` of type `T`. The `K` type parameter is a generic type that extends the keys of the object `T`.
- * This means that `K` can only be a key
+ * @param obj - 我们要从中选择特定键的对象。
+ * @param keys - keys 是一个字符串数组，表示我们要选择的对象的键。该函数将返回一个新对象，该对象仅包含原始对象中指定的键及其对应的值。
+ * @returns 函数 object_pick 返回一个新对象，该对象仅包含来自输入对象的指定键。
  */
 function object_pick<T extends object, K extends keyof T>(obj: T, keys: K[]) {
     return keys.reduce((result, key) => {
@@ -59,19 +48,15 @@ function object_pick<T extends object, K extends keyof T>(obj: T, keys: K[]) {
 }
 
 /**
- * The function `object_concat` takes two objects of type `T` and `S` and returns a new object
- * of type `T & S`.
+ * 函数 object_concat 连接两个通用类型的对象并返回连接后的对象。
  * @public
- * @param target - The first parameter `target` is an object of type `T` which is a generic type
- * that extends the `object` type. This means that `target` can be any object that has properties
- * and methods.
- * @param source - The second parameter `source` is an object of type `S` which is a generic
- * type that extends the `object` type. This means that `source` can be any object that has
- * properties and methods.
- * @returns The function `object_concat` returns an object of type `T & S`.
+ * @param target - 第一个参数表示将通过添加来自第二个参数“源”的属性来修改的对象。
+ * @param source - 表示将合并到“目标”对象中的对象。
+ * @returns `object_concat` 函数返回 `Object.assign(target, source)` 的结果，这是一个合并了 `target` 和 `source`
+ * 对象属性的新对象。返回类型为“T”和“S”对象类型串联的类型。
  */
 function object_concat<T extends object, S extends object>(target: T, source: S) {
-    return Object.assign(target, source) as T & S
+    return Object.assign(target, source) as Concat<T, S>
 }
 
 export {

@@ -4,7 +4,7 @@
 
 ## math\_to\_hex() function
 
-The function converts a number to a hexadecimal string with uppercase letters and a minimum length of 2 characters.
+该函数将数字转换为包含大写字母且最小长度为 2 个字符的十六进制字符串。
 
 **Signature:**
 
@@ -16,11 +16,11 @@ declare function math_to_hex(n: number): string;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  n | number | The parameter "n" is a number that will be converted to a hexadecimal string. |
+|  n | number | 参数“n”是一个将被转换为十六进制字符串的数字。 |
 
 **Returns:**
 
 string
 
-The function `math_to_hex` takes a number as input and returns a string representing the hexadecimal value of that number. The returned string is padded with a leading zero if necessary to ensure that it has at least two characters, and all characters are in uppercase.
+该函数返回一个包含大写字母且最小长度为 2 个字符的十六进制字符串。
 

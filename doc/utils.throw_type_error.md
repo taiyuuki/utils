@@ -4,7 +4,7 @@
 
 ## throw\_type\_error() function
 
-The function throws a TypeError with a specific message.
+该函数抛出带有特定消息的 TypeError。
 
 **Signature:**
 
@@ -16,8 +16,8 @@ declare function throw_type_error(type: string, name: string): void;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  type | string | a string representing the expected data type |
-|  name | string | The name of the variable or parameter that is expected to have a certain type. |
+|  type | string | 表示预期数据类型的字符串 |
+|  name | string | 参数是一个字符串，表示预期类型的名称。 |
 
 **Returns:**
 

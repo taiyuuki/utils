@@ -4,7 +4,7 @@
 
 ## is\_null() function
 
-The function checks if a given value is null.
+该函数检查给定值是否为空。
 
 **Signature:**
 
@@ -16,11 +16,11 @@ declare function is_null(n: any): n is null;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  n | any | The parameter <code>n</code> is of type <code>any</code>, which means it can be any data type. |
+|  n | any | 参数 <code>n</code> 是 <code>any</code> 类型，这意味着它可以是任何数据类型。 |
 
 **Returns:**
 
 n is null
 
-The function `is_null` is returning a boolean value indicating whether the input `n` is null or not. The return type of the function is `n is null`<!-- -->, which is a type predicate indicating that if the function returns `true`<!-- -->, then the input `n` is of type `null`<!-- -->.
+函数 is\_null 返回一个布尔值，指示输入的 n 是否为空。
 

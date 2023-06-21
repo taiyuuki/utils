@@ -4,7 +4,7 @@
 
 ## log\_type\_error() function
 
-The function logs an error message indicating an expected type and name.
+该函数使用预期的类型和名称记录类型错误消息。
 
 **Signature:**
 
@@ -16,8 +16,8 @@ declare function log_type_error(type: string, name: string): void;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  type | string | string - This parameter is used to specify the expected data type of the variable. |
-|  name | string | The name parameter is a string that represents the name of the variable or parameter that is expected to have a certain type. |
+|  type | string | 表示预期数据类型的字符串 |
+|  name | string | 名称参数是一个字符串，表示预期具有特定类型的变量或参数的名称。 |
 
 **Returns:**
 

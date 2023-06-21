@@ -4,7 +4,7 @@
 
 ## dom\_set\_css() function
 
-The function sets CSS styles on a given HTML element.
+该函数在给定的 HTML 元素上设置 CSS 样式。
 
 **Signature:**
 
@@ -16,8 +16,8 @@ declare function dom_set_css(el: HTMLElement, css: Partial<CSSStyleDeclaration>)
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  el | HTMLElement | HTMLElement - a reference to the HTML element that you want to apply the CSS styles to. |
-|  css | Partial&lt;CSSStyleDeclaration&gt; | The <code>css</code> parameter is an object that contains a partial CSSStyleDeclaration. It is used to set the CSS properties of an HTMLElement. The properties of the <code>css</code> object are the CSS property names, and their values are the corresponding CSS property values. |
+|  el | HTMLElement | HTMLElement - 应用 CSS 样式的 DOM 元素。 |
+|  css | Partial&lt;CSSStyleDeclaration&gt; | <code>css</code> 参数是一个包含 CSS 属性值对作为键值对的对象。 |
 
 **Returns:**
 

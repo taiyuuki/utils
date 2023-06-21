@@ -4,7 +4,7 @@
 
 ## arr\_value\_index() function
 
-This function takes an array of keys and returns an object with the keys as values and their indices as keys.
+这个 TypeScript 函数接受一个键数组并返回一个对象，每个键的值是它在数组中的索引。
 
 **Signature:**
 
@@ -16,11 +16,19 @@ declare function arr_value_index<T extends Key>(arr: T[]): Record<T, number>;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  arr | T\[\] | The input array of type T, where T extends the Key type. |
+|  arr | T\[\] | T 类型值的数组，其中 T 扩展了 Key 类型。这意味着 T 只能是字符串、数字或符号。 |
 
 **Returns:**
 
 Record&lt;T, number&gt;
 
-an object with keys as the elements of the input array and values as their corresponding indices in the array. The object has a type of `Record<T, number>`<!-- -->, where `T` is the type of the elements in the input array and `number` is the type of the indices.
+函数 arr\_value\_index 返回一个对象，该对象将输入数组中的每个值映射到它在数组中的索引。返回对象的键是输入数组中的值，返回对象的值是这些值在输入数组中的对应索引。
+
+## Example
+
+
+```ts
+arr_value_index(['a', 'b', 'c'])
+// { a: 0, b: 1, c: 2 }
+```
 

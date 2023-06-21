@@ -4,7 +4,7 @@
 
 ## hex\_to\_rgb() function
 
-The function converts a hexadecimal color code to its corresponding RGB values.
+该函数将十六进制颜色代码转换为其对应的 RGB 颜色值。
 
 **Signature:**
 
@@ -16,11 +16,11 @@ declare function hex_to_rgb(hex: string): RgbColor;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  hex | string | The hex parameter is a string representing a hexadecimal color value, such as "\#FF0000" for red or "\#00FF00" for green. The function converts this hex value to an RGB array, where each element represents the red, green, and blue values of the color, respectively. |
+|  hex | string | hex 参数是表示十六进制颜色代码的字符串，例如“\#FF0000”代表红色或“\#00FF00”代表绿色。 |
 
 **Returns:**
 
 RgbColor
 
-The function `hex_to_rgb` takes a hexadecimal color code as a string and returns an array of three integers representing the corresponding RGB values.
+一个由三个整数组成的数组，表示 RGB 格式的颜色的红色、绿色和蓝色值。
 

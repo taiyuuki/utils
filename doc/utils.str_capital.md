@@ -4,7 +4,7 @@
 
 ## str\_capital() function
 
-The function takes a string as input and capitalizes the first letter of the string.
+该函数将给定字符串的第一个字母大写。
 
 **Signature:**
 
@@ -16,9 +16,11 @@ declare function str_capital(str: string): string;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  str | string | The parameter "str" is a string type variable that represents the input string that needs to be capitalized. |
+|  str | string | 参数“str”是一个字符串输入，表示需要大写的文本。 |
 
 **Returns:**
 
 string
+
+函数 `str_capital` 返回一个新字符串，第一个字符大写，其余字符不变。
 

@@ -4,7 +4,7 @@
 
 ## str\_ensure\_suffix() function
 
-The function ensures that a given string ends with a specified suffix.
+该函数确保给定的字符串以指定的后缀结尾。
 
 **Signature:**
 
@@ -16,10 +16,12 @@ declare function str_ensure_suffix(s: string, suffix: string): string;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  s | string | The original string that we want to ensure has a certain suffix. |
-|  suffix | string | The <code>suffix</code> parameter is a string that we want to ensure is at the end of the <code>s</code> string. If <code>s</code> already ends with <code>suffix</code>, then the function should return <code>s</code> unchanged. If <code>s</code> does not end with <code>suffix</code>, then the function should append |
+|  s | string | 我们要确保以特定后缀结尾的字符串。 |
+|  suffix | string | “suffix”参数是一个字符串，它表示需要添加到“s”字符串末尾（如果不存在）的所需后缀。 |
 
 **Returns:**
 
 string
+
+函数“str\_ensure\_suffix”返回一个字符串。具体来说，如果它已经以 `suffix` 参数结尾，它返回原始字符串 `s`<!-- -->，或者如果 `s` 还没有以 `suffix` 结尾，它返回一个新的字符串，它是 `s` 和 `suffix` 的连接。
 

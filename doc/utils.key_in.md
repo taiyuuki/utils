@@ -4,7 +4,7 @@
 
 ## key\_in() function
 
-This function checks if a given key exists in a given object and returns a boolean value.
+该函数检查给定对象中是否存在给定键并返回布尔值。
 
 **Signature:**
 
@@ -16,10 +16,12 @@ declare function key_in<T extends object>(key: Key, obj: T): key is keyof T;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  key | Key | The first parameter <code>key</code> is a generic type that extends the keys of an object <code>T</code>. It represents the key that we want to check if it exists in the object <code>obj</code>. |
-|  obj | T | The <code>obj</code> parameter is an object of type <code>T</code>. The <code>T</code> type is a generic type that extends the <code>object</code> type, which means that <code>obj</code> can be any object type. |
+|  key | Key | 第一个参数“key”的类型为“Key”，它可能是表示对象属性键的字符串或符号。 |
+|  obj | T | <code>obj</code> 参数是类型为 <code>T</code> 的对象，它是扩展了 <code>object</code> 类型的泛型。这意味着 <code>obj</code> 可以是任何具有属性和方法的对象。 |
 
 **Returns:**
 
 key is keyof T
+
+一个布尔值，指示提供的键是否存在于提供的对象的键中。
 

@@ -4,7 +4,7 @@
 
 ## deep\_equal() function
 
-The function checks if two values are deeply equal.
+该函数检查两个对象或数组是否相等。
 
 **Signature:**
 
@@ -16,12 +16,12 @@ declare function deep_equal(a: any, b: any): boolean;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  a | any | The first parameter of the function, which can be of any type (primitive or object). |
-|  b | any | The parameter "b" is a variable of any data type that is being compared to another variable "a" using the deep\_equal function. |
+|  a | any | 函数的第一个参数，可以是任何数据类型。 |
+|  b | any | <code>deep_equal</code> 函数的第二个参数，可以是任何数据类型。它表示与第一个参数“a”进行深度相等比较的第二个值。 |
 
 **Returns:**
 
 boolean
 
-a boolean value indicating whether the two input values are deeply equal or not.
+一个布尔值，指示两个输入值是否深度相等。
 

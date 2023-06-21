@@ -1,12 +1,11 @@
 import { is_not_void } from './is'
 
 /**
- * The function stores a value of any type in the browser's local storage using a specified key.
+ * 该函数使用指定的键将任何类型的值存储在浏览器的本地存储中。
  * @public
- * @param key - a string representing the key under which the value will be stored in the
- * localStorage object.
- * @param value - The value to be stored in the local storage. It can be of any data type, as the
- * function is using generics to handle different types of values.
+ * @param key - 一个字符串，表示值将存储在浏览器的本地存储中所依据的键。
+ * @param value - value 参数是 T 类型，这意味着它可以是任何数据类型。它表示需要使用给定键存储在本地存储中的值。该函数将值转换为 JSON
+ * 字符串，然后将其存储在本地存储中。
  */
 function storage_set<T>(key: string, value: T) {
     try {
@@ -18,18 +17,14 @@ function storage_set<T>(key: string, value: T) {
 }
 
 /**
- * The function retrieves data from local storage and returns it as a parsed JSON object or an optional
- * default value.
+ * 该函数从本地存储中检索数据并将其作为已解析的 JSON 对象或可选的默认值返回。
  * @public
- * @param key - The key is a string that is used to identify the data that is being retrieved
- * from the localStorage. It is used to store and retrieve data from the browser's localStorage object.
- * @param empty - The `empty` parameter is an optional parameter of generic type `T` that
- * represents the default value to be returned if the value for the specified key is not found in the
- * localStorage. If `empty` is not provided, the function will return `undefined` as the default value.
- * @returns The function `storage_get` returns the parsed value of the item stored in the `localStorage`
- * with the given `key`. If the item is not found or is empty, it returns the `empty` value passed as a
- * second argument. If no `empty` value is provided, it returns `undefined`. If there is an error while
- * parsing the data, it logs the error to the console and returns `undefined`.
+ * @param key - 键是一个字符串，用于标识存储在 localStorage 中的数据。它用于在需要时检索数据。
+ * @param empty - 该参数是可选的，表示如果在 localStorage
+ * 中找不到指定键的值，则返回默认值。如果未提供“empty”，则如果找不到该值，该函数将返回“undefined”。
+ * @returns 函数 `storage_get` 返回类型为 `T` 或 `undefined` 的值。返回值的类型取决于 `empty` 参数的类型，该参数是可选的，默认值为
+ * `undefined`。如果未提供“empty”或为“undefined”，则该函数返回类型为“T”或“undefined”的值。如果提供了`empty`并且
+ * 该值为“undefined”，则该函数返回“undefined”。
  */
 function storage_get<T, K extends T = T>(key: string, empty?: K): T | undefined {
     try {
@@ -43,10 +38,9 @@ function storage_get<T, K extends T = T>(key: string, empty?: K): T | undefined 
 }
 
 /**
- * The function removes an item from local storage based on a given key.
+ * 该函数根据给定的键从本地存储中删除一个项目。
  * @public
- * @param key - The key parameter is a string that represents the name of the item to be
- * removed from the browser's local storage.
+ * @param key - key 参数是一个字符串，表示要从浏览器本地存储中删除的项目的名称。
  */
 function storage_remove(key: string) {
     localStorage.removeItem(key)

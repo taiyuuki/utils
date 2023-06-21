@@ -1,11 +1,8 @@
 ### taiyuuki/utils
 
-Utility by Taiyuuki.
+个人用工具函数库
 
 ```shell
 npm i @taiyuuki/utils
 ```
-
-[Documentations in This Repo](./doc/index.md)
-
-[Documentations in Web Site](https://taiyuuki-utils.netlify.app)
+[在线文档](https://taiyuuki-utils.netlify.app)

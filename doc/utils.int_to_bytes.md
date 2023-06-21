@@ -4,7 +4,7 @@
 
 ## int\_to\_bytes() function
 
-The function converts an integer into an array of 4 bytes using bitwise operations.
+该函数使用按位运算将整数转换为 4 字节的数组并返回该数组。
 
 **Signature:**
 
@@ -16,13 +16,13 @@ declare function int_to_bytes(num: number): Uint8Array;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  num | number | The parameter <code>num</code> is a number that needs to be converted into a byte array. |
+|  num | number | 参数 num 是需要转换为字节数组的数字。 |
 
 **Returns:**
 
 Uint8Array
 
-The function `int_to_bytes` returns a `Uint8Array` containing the four bytes that represent the input `num` as an unsigned 32-bit integer in big-endian byte order.
+函数“int\_to\_bytes”返回一个“Uint8Array”，其中包含以小端字节顺序排列的输入数字的四个字节。
 
 ## Example
 

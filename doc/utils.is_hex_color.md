@@ -4,7 +4,7 @@
 
 ## is\_hex\_color() function
 
-The function checks if a given value is a hex color.
+该函数检查给定的字符串是否是有效的十六进制颜色代码。
 
 **Signature:**
 
@@ -16,11 +16,11 @@ declare function is_hex_color(color: string): boolean;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  color | string | The parameter <code>color</code> is of type <code>string</code>. |
+|  color | string | 参数“color”是一个字符串，表示十六进制格式的颜色值。它可以有一个可选的“\#”符号开头，后跟 3 到 8 个字符，可以是数字 (0-9) 或字母（a-f 或 A-F）。 |
 
 **Returns:**
 
 boolean
 
-The function `is_hex_color` returns a boolean value indicating whether the input parameter `color` is a hex color.
+函数 is\_hex\_color 返回一个布尔值，指示输入的 color 是否是有效的十六进制颜色代码。
 

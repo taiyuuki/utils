@@ -4,13 +4,10 @@ import { is_element, is_void, is_window } from './is'
 import { str_ensure_prefix } from './string'
 
 /**
- * The function returns a DOM element selected by a given selector string or undefined if the selector
- * is invalid or the element is not found.
+ * 该函数根据给定的选择器字符串返回 DOM 元素，如果选择器无效或未找到该元素，则返回未定义的元素。
  * @public
- * @param selector - A string representing a CSS selector used to select an element in the
- * DOM.
- * @returns This function returns either the DOM element that matches the given selector or `undefined`
- * if the selector is invalid or no element is found.
+ * @param selector - 表示用于从 DOM 中选择元素的 CSS 选择器的字符串。
+ * @returns 此函数返回与给定选择器匹配的 DOM 元素，如果选择器无效或未找到元素，则返回“undefined”。
  */
 function dom_get_el(selector: string) {
     if (is_void(selector) || typeof selector !== 'string') {
@@ -25,28 +22,23 @@ function dom_get_el(selector: string) {
 }
 
 /**
- * The function returns the value of a specified CSS property for a given DOM element.
+ * 该函数返回给定 DOM 元素的指定 CSS 属性的值。
  * @public
- * @param el - The DOM element for which we want to get the computed CSS property value.
- * @param prop - prop is a string representing the name of the CSS property whose value
- * is to be retrieved from the computed style of the given element. Examples of CSS properties include
- * "color", "font-size", "background-image", etc.
- * @returns The function `dom_getc_ss` returns the value of the specified CSS property (`prop`) for the
- * given DOM element (`el`). The value is obtained using the `window.getComputedStyle` method and
- * returned as a string.
+ * @param el - 我们要为其获取计算的 CSS 样式的 HTML 元素。
+ * @param prop - CSSStyleName 是表示 CSS 属性名称的字符串的类型别名。它用作 dom_get_css
+ * 函数的第二个参数，以指定从给定元素的计算样式中检索哪个 CSS 属性。
+ * @returns 函数 dom_get_css 返回给定 DOM 元素 (el) 的指定 CSS 属性 (prop)
+ * 的值。该值是使用“window.getComputedStyle”方法获取的，并以字符串形式返回。
  */
 function dom_get_css<T extends Element>(el: T, prop: CSSStyleName) {
     return window.getComputedStyle(el).getPropertyValue(prop)
 }
 
 /**
- * The function sets CSS styles on a given HTML element.
+ * 该函数在给定的 HTML 元素上设置 CSS 样式。
  * @public
- * @param el - HTMLElement - a reference to the HTML element that you want to apply the
- * CSS styles to.
- * @param css - The `css` parameter is an object that contains a partial CSSStyleDeclaration. It is
- * used to set the CSS properties of an HTMLElement. The properties of the `css` object are the CSS
- * property names, and their values are the corresponding CSS property values.
+ * @param el - HTMLElement - 应用 CSS 样式的 DOM 元素。
+ * @param css - `css` 参数是一个包含 CSS 属性值对作为键值对的对象。
  */
 function dom_set_css(el: HTMLElement, css: Partial<CSSStyleDeclaration>) {
     const style = el.style
@@ -56,10 +48,13 @@ function dom_set_css(el: HTMLElement, css: Partial<CSSStyleDeclaration>) {
 }
 
 /**
- * The function `dom_get_size` takes an element or window as input and returns its size.
+ * 该函数返回 DOM 元素或窗口的大小。
  * @public
- * @param el - The `el` parameter is a reference to an HTML element or the window
- * object. It is used to determine the size of the element or the viewport.
+ * @param el - 参数 `el` 的类型为 `Element | Window`，这意味着它可以是 HTML 元素或window对象。函数 dom_get_size
+ * 返回元素或窗口的宽度和高度，具体取决于 el 的类型。
+ * @returns 函数 dom_get_size 返回一个对象，该对象具有表示给定 DOM 元素或window大小的 `width` 和 `height`
+ * 属性。如果参数是window，它返回window的内部宽度和高度。如果参数是一个元素，它会返回从其 getBoundingClientRect() 方法获得的元素的宽度和高度。如果参数既不是
+ * window也不是元素，它会抛出一个错误。
  */
 function dom_get_size(el: Element | Window) {
     if (is_window(el)) {
@@ -81,15 +76,11 @@ function dom_get_size(el: Element | Window) {
 }
 
 /**
- * This function sets a CSS variable with a given name and value on a specified element or the document
- * body.
+ * 这个函数在给定的 DOM 元素上设置一个 CSS 变量。
  * @public
- * @param varName - A string representing the name of the CSS variable to be set.
- * @param value - The value parameter is a string that represents the new value for the CSS
- * variable being set.
- * @param el - The `el` parameter is an optional parameter that specifies the element to which the CSS
- * variable should be applied. If no element is specified, the CSS variable will be applied to the
- * `document.body` element by default.
+ * @param varName - 一个字符串，表示要设置的 CSS 变量的名称。
+ * @param value - 为 CSS 变量设置的值。它应该是一个字符串。
+ * @param el - 应应用 CSS 变量的 DOM 元素。如果没有指定元素，CSS 变量将默认应用于文档主体。
  */
 function dom_set_css_var(varName: string, value: string, el = document.body) {
     if (typeof varName !== 'string') {

@@ -4,7 +4,7 @@
 
 ## clone\_simple() function
 
-The function creates a deep copy of an object by using JSON.parse.
+该函数使用 JSON 解析和字符串化克隆一个简单对象。
 
 **Signature:**
 
@@ -16,9 +16,11 @@ declare function clone_simple<T extends object>(source: T): T;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  source | T | The <code>source</code> parameter is of type <code>T</code>, which is a generic type that extends the <code>object</code> type. It represents the object that needs to be cloned. |
+|  source | T | <code>source</code> 参数的类型为 <code>T</code>，它是扩展 <code>object</code> 类型的通用类型。它代表需要克隆的对象。 |
 
 **Returns:**
 
 T
+
+`clone_simple` 函数返回作为参数传递的 `source` 对象的深层副本。返回的对象与原始对象具有相同的属性和值，但它是内存中的新对象。
 

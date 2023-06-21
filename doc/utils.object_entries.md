@@ -4,7 +4,7 @@
 
 ## object\_entries() function
 
-This function returns the entries of an object as an array of key-value pairs.
+此函数将对象的条目作为键值对数组返回。
 
 **Signature:**
 
@@ -16,11 +16,11 @@ declare function object_entries<T extends object>(obj: T): Entries<T>;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  obj | T | The <code>obj</code> parameter is of type <code>T</code>, which extends the <code>object</code> type. It represents an object whose entries we want to retrieve. |
+|  obj | T | 对象 |
 
 **Returns:**
 
 Entries&lt;T&gt;
 
-The function `object_entries` is returning an array of key-value pairs of the input object `obj`<!-- -->. The type of the returned array is `Entries<T>`<!-- -->, which is a type alias defined elsewhere in the code. The `as Entries<T>` syntax is used to assert the type of the returned value as `Entries<T>`<!-- -->.
+函数 object\_entries 返回输入对象 obj 的键值对数组。
 

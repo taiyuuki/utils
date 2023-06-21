@@ -2,12 +2,12 @@ import { is_not_void } from './is'
 import { math_between } from './math'
 
 /**
- * This function converts a canvas element to an image element.
+ * 此函数将画布元素转换为具有指定质量的图像元素。
  * @public
- * @param cvs - HTMLCanvasElement - This is a reference to an HTML canvas element
- * that contains the image data that we want to convert to an image.
- * @param quality - number - This is the quality of the image. Defaults to 1.
- * @returns an HTMLImageElement object.
+ * @param cvs - 一个 HTMLCanvasElement 对象，表示我们要转换为图像的画布元素。
+ * @param quality - 质量参数是一个介于 0 和 1 之间的数字，它决定了使用 toDataURL() 方法将图像从画布元素转换为图像元素时图像的质量。值 1 表示最高质量，而值
+ * 0 表示最低质量。
+ * @returns 函数 canvas_to_image 返回一个 HTMLImageElement 对象。
  */
 function canvas_to_image(cvs: HTMLCanvasElement, quality = 1): HTMLImageElement {
     const img = new Image()
@@ -16,11 +16,10 @@ function canvas_to_image(cvs: HTMLCanvasElement, quality = 1): HTMLImageElement 
 }
 
 /**
- * This function converts an HTML canvas element to a Blob object and returns a Promise.
+ * 此函数将 HTML canvas 元素转换为 Blob 对象并返回一个 Promise。
  * @public
- * @param cvs - HTMLCanvasElement - This is the canvas element from which we want
- * to create a blob.
- * @returns The function `canvas_to_blob` is returning a Promise that resolves to a Blob object.
+ * @param cvs - HTMLCanvasElement - 这是我们要从中创建 blob 的画布元素。
+ * @returns 函数 canvas_to_blob 返回一个解析为 Blob 对象的 Promise。
  */
 function canvas_to_blob(cvs: HTMLCanvasElement): Promise<Blob> {
     return new Promise((resolve, reject) => {

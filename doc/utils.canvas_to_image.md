@@ -4,7 +4,7 @@
 
 ## canvas\_to\_image() function
 
-This function converts a canvas element to an image element.
+此函数将画布元素转换为具有指定质量的图像元素。
 
 **Signature:**
 
@@ -16,12 +16,12 @@ declare function canvas_to_image(cvs: HTMLCanvasElement, quality?: number): HTML
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  cvs | HTMLCanvasElement | HTMLCanvasElement - This is a reference to an HTML canvas element that contains the image data that we want to convert to an image. |
-|  quality | number | _(Optional)_ number - This is the quality of the image. Defaults to 1. |
+|  cvs | HTMLCanvasElement | 一个 HTMLCanvasElement 对象，表示我们要转换为图像的画布元素。 |
+|  quality | number | _(Optional)_ 质量参数是一个介于 0 和 1 之间的数字，它决定了使用 toDataURL() 方法将图像从画布元素转换为图像元素时图像的质量。值 1 表示最高质量，而值 0 表示最低质量。 |
 
 **Returns:**
 
 HTMLImageElement
 
-an HTMLImageElement object.
+函数 canvas\_to\_image 返回一个 HTMLImageElement 对象。
 

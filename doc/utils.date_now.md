@@ -4,7 +4,7 @@
 
 ## date\_now() function
 
-The function returns the current date and time in a specified format.
+该函数以指定格式返回当前日期和时间。
 
 **Signature:**
 
@@ -16,18 +16,11 @@ declare function date_now(format?: string): string;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  format | string | _(Optional)_ The format parameter is a string that specifies the desired format of the date and time. It uses placeholders such as 'yyyy' for the year, 'MM' for the month, 'dd' for the day, 'HH' for the hour, 'mm' for the minute, and 'ss' for seconds. |
+|  format | string | _(Optional)_ 参数是一个字符串，用于指定所需的日期和时间格式。它使用占位符，例如年份的“yyyy”、月份的“MM”、日期的“dd”、小时的“HH”、分钟的“mm”和秒钟的“ss” |
 
 **Returns:**
 
 string
 
-a formatted date string based on the current date and time, using the format specified in the `format` parameter. The default format is `'yyyy-MM-dd|HH:mm:ss'`<!-- -->. The date string includes the year, month, day, hour, minute, and second, separated by the specified delimiters.
-
-## Example
-
-
-```ts
-const now = date_now('yyyy-MM-dd')// 1999-10-01
-```
+基于当前日期和时间的格式化日期字符串，使用 `format` 参数中指定的格式。默认格式为“yyyy-MM-dd\|HH:mm:ss”。该函数将格式字符串中的占位符替换为当前日期和时间的相应值，并返回结果字符串。
 

@@ -28,7 +28,7 @@ export function arr_remove<T>(arr: T[], value: T): boolean;
 // Warning: (ae-forgotten-export) The symbol "TupleToObject" needs to be exported by the entry point index.d.ts
 //
 // @public
-export function arr_to_obj<T extends Key[], V = boolean>(arr: T, v?: V): TupleToObject<T, V>;
+export function arr_to_obj<T extends Key, V = boolean>(arr: T[], v?: V): TupleToObject<T, V>;
 
 // @public
 export function arr_unique<T>(arr: T[]): T[];
@@ -164,7 +164,7 @@ export function image_to_data_URI(img: HTMLImageElement, type?: string): string;
 export function int_to_bytes(num: number): Uint8Array;
 
 // @public
-export function is_base64(str: string): boolean;
+export function is_base64(str: string): str is string;
 
 // @public
 export function is_blob(blob: any): blob is Blob;
@@ -209,7 +209,7 @@ export function is_null(n: any): n is null;
 export function is_number(n: any): n is number;
 
 // @public
-export function is_object(o: any): o is Exclude<Object, Array<any>>;
+export function is_object(o: any): o is object;
 
 // @public
 export function is_regexp(r: any): r is RegExp;
@@ -250,8 +250,10 @@ export function math_to_fixed(n: number, digit?: number): number;
 // @public
 export function math_to_hex(n: number): string;
 
+// Warning: (ae-forgotten-export) The symbol "Concat" needs to be exported by the entry point index.d.ts
+//
 // @public
-export function object_concat<T extends object, S extends object>(target: T, source: S): T & S;
+export function object_concat<T extends object, S extends object>(target: T, source: S): Concat<T, S>;
 
 // Warning: (ae-forgotten-export) The symbol "Entries" needs to be exported by the entry point index.d.ts
 //
@@ -328,7 +330,7 @@ export function url_to_date_URI(url: string, type?: string): Promise<string>;
 
 // Warnings were encountered during analysis:
 //
-// dist/types/modules/keyboard.d.ts:47:5 - (ae-forgotten-export) The symbol "KeyboardEventKeys" needs to be exported by the entry point index.d.ts
+// dist/types/modules/keyboard.d.ts:48:5 - (ae-forgotten-export) The symbol "KeyboardEventKeys" needs to be exported by the entry point index.d.ts
 
 // (No @packageDocumentation comment for this package)
 

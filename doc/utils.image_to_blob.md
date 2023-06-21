@@ -4,7 +4,7 @@
 
 ## image\_to\_blob() function
 
-This function converts an HTML image element to a blob object using a canvas.
+此函数使用画布将 HTML 图像元素转换为 blob 对象。
 
 **Signature:**
 
@@ -16,11 +16,11 @@ declare function image_to_blob(img: HTMLImageElement): Promise<Blob>;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  img | HTMLImageElement | HTMLImageElement - an image element in the HTML document. |
+|  img | HTMLImageElement | HTMLImageElement - HTML 文档中需要转换为 Blob 对象的图像元素。 |
 
 **Returns:**
 
 Promise&lt;Blob&gt;
 
-A Promise that resolves to a Blob object.
+函数 `image_to_blob` 返回解析为 Blob 对象的 Promise。
 

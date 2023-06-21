@@ -4,7 +4,7 @@
 
 ## dom\_set\_css\_var() function
 
-This function sets a CSS variable with a given name and value on a specified element or the document body.
+这个函数在给定的 DOM 元素上设置一个 CSS 变量。
 
 **Signature:**
 
@@ -16,9 +16,9 @@ declare function dom_set_css_var(varName: string, value: string, el?: HTMLElemen
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  varName | string | A string representing the name of the CSS variable to be set. |
-|  value | string | The value parameter is a string that represents the new value for the CSS variable being set. |
-|  el | HTMLElement | _(Optional)_ The <code>el</code> parameter is an optional parameter that specifies the element to which the CSS variable should be applied. If no element is specified, the CSS variable will be applied to the <code>document.body</code> element by default. |
+|  varName | string | 一个字符串，表示要设置的 CSS 变量的名称。 |
+|  value | string | 为 CSS 变量设置的值。它应该是一个字符串。 |
+|  el | HTMLElement | _(Optional)_ 应应用 CSS 变量的 DOM 元素。如果没有指定元素，CSS 变量将默认应用于文档主体。 |
 
 **Returns:**
 

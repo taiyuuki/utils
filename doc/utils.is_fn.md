@@ -4,7 +4,7 @@
 
 ## is\_fn() function
 
-The `is_fn` function is a type guard that checks if the input parameter `fn` is a function.
+该函数检查给定变量是否为函数。
 
 **Signature:**
 
@@ -16,9 +16,11 @@ declare function is_fn(fn: any): fn is Fn;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  fn | any |  |
+|  fn | any | <code>fn</code> 参数是 <code>any</code> 类型，这意味着它可以是任何数据类型。然而，函数 is\_fn 正在检查 fn 是否是一个函数。 |
 
 **Returns:**
 
 fn is Fn
+
+函数“is\_fn”返回一个布尔值，指示输入参数“fn”是否为“Fn”类型。如果 `fn` 是一个函数，它返回 `true`<!-- -->，否则返回 `false`<!-- -->。
 

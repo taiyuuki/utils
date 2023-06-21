@@ -2,17 +2,20 @@ import { math_random_int } from './math'
 import type { Key, TupleToObject } from '../types'
 
 /**
- * The function converts an array of strings and numbers into an object with boolean values.
+ * 该函数将数组转换为一个对象，其中键作为属性和一个可选的默认值。
  * @public
- * @param arr - An array of strings or numbers that will be used as keys in the resulting object.
- * @param v - The parameter "v" is an optional parameter with a default value of boolean type. It
- * is used to set the value of each key in the resulting object. If "v" is not provided, the default
- * value of "true" will be used.
- * @returns The function `arr_to_obj` returns an object with keys from the input array `arr` and values
- * set to `v` if provided, otherwise `true`. The type of the returned object is determined by the
- * generic type parameters `T` and `V`. The function returns an object of type `TupleToObject<T, V>`.
+ * @param arr - 将用作结果对象中的属性名称的数组，数组的元素类型为string | number | symbol。
+ * @param v - 参数“v”是“V”类型的可选参数，默认为布尔值“true”。它用于设置结果对象中每个键的值。
+ * @returns 函数 arr_to_obj 返回一个对象，该对象具有输入数组 arr 中的键和 V 类型的值。
+ * 它将键“T”的元组转换为具有这些键和值类型“V”的对象。
+ * @example
+ * ```ts
+ * const arr = ['a', 'b', 'c']
+ * arr_to_obj(arr)
+ * // { a: true, b: true, c: true }
+ * ```
  */
-function arr_to_obj<T extends Key[], V = boolean>(arr: T, v?: V) {
+function arr_to_obj<T extends Key, V = boolean>(arr: T[], v?: V) {
     const result: Record<Key, V> = {}
     const value = v ?? true as V
     arr.forEach(i => {
@@ -22,23 +25,34 @@ function arr_to_obj<T extends Key[], V = boolean>(arr: T, v?: V) {
 }
 
 /**
- * This function takes an array of any type and returns a new array with only unique values.
+ * 此函数接受任何类型的数组并返回一个仅包含唯一值的新数组。
  * @public
- * @param arr - The parameter "arr" is an array of type T, where T can be any data type such as
- * string, number, boolean, etc. The function "arr_unique" takes this array as input and returns a new
- * array with only unique elements. It uses the Set object to remove duplicates and then
- * @returns The function `arr_unique` is returning an array of unique elements of type `T`.
+ * @param arr -
+ * 参数“arr”是一个类型为T的数组，其中T可以是字符串、数字、布尔值、对象等任意数据类型。函数“arr_unique”将这个数组作为输入，返回一个只有唯一元素的新数组.它使用 Set 对象来删除重复项
+ * @returns 函数“arr_unique”返回一个“T”类型的唯一元素数组。
+ * @example
+ * ```ts
+ * const arr = ['a', 'b', 'c', 'c', 'a']
+ * arr_unique(arr)
+ * // ['a', 'b', 'c']
+ * ```
  */
 function arr_unique<T>(arr: T[]): T[] {
     return Array.from(new Set(arr))
 }
 
 /**
- * This function removes a specific value from an array of any type.
+ * 函数 arr_remove 用于从数组中删除指定的值。
  * @public
- * @param arr - an array of type T, where T can be any data type such as string, number, object,
- * etc.
- * @param value - The value parameter is the element that needs to be removed from the array.
+ * @param arr - T 类型元素的数组。
+ * @param value - 要从数组中删除的值。
+ * @returns 函数 arr_remove 返回一个布尔值。如果值已成功从数组中删除，则返回“true”；如果在数组中找不到该值，则返回“false”。
+ * @example
+ * ```ts
+ * const arr = ['a', 'b', 'c']
+ * arr_remove(arr, 'b')
+ * // ['a', 'c']
+ * ```
  */
 function arr_remove<T>(arr: T[], value: T) {
     if (!arr) { return false }
@@ -51,12 +65,18 @@ function arr_remove<T>(arr: T[], value: T) {
 }
 
 /**
- * This function moves an element in an array from one index to another.
+ * 函数 arr_move 将数组中的元素从一个索引移动到另一个索引。
  * @public
- * @param arr - The `arr` parameter is an array of any type `T`.
- * @param from - The index of the element in the array that needs to be moved.
- * @param to - The "to" parameter is the index where the element in the array should be moved
- * to.
+ * @param arr - 需要修改的数组。
+ * @param from - 数组中需要移动的元素的索引。
+ * @param to - 数组中元素应移动到的索引。
+ * @returns 将元素从索引“from”移动到索引“to”后修改后的数组“arr”。
+ * @example
+ * ```ts
+ * const arr = ['a', 'b', 'c']
+ * arr_move(arr, 1, 2)
+ * // ['a', 'c', 'b']
+ * ```
  */
 function arr_move<T extends any[]>(arr: T, from: number, to: number): T {
     arr.splice(to, 0, arr.splice(from, 1)[0])
@@ -64,40 +84,50 @@ function arr_move<T extends any[]>(arr: T, from: number, to: number): T {
 }
 
 /**
- * This function returns a random element from an array of any type.
+ * 该函数从数组中返回一个随机元素。
  * @public
- * @param arr - The parameter "arr" is an array of type T, which means it can be an array of any
- * type. The function "arr_random" takes in this array as input and returns a random element from the
- * array.
+ * @param arr - 参数 arr 是 T 类型的数组。函数 arr_random 将一个数组作为输入，并从该数组中返回一个随机元素。 `T`
+ * 类型是泛型类型，这意味着该函数可以处理任何类型的数组。
+ * @returns 函数 arr_random 从输入数组 arr 中返回一个随机元素。返回元素的类型与输入数组中元素的类型相同。
+ * @example
+ * ```ts
+ * const arr = ['a', 'b', 'c']
+ * arr_random(arr)
+ * // 'b'
+ * arr_random(arr)
+ * // 'a'
+ * ```
  */
 function arr_random<T>(arr: T[]): T {
     return arr[math_random_int(0, arr.length)]
 }
 
 /**
- * This is a function that creates an array of a specified length and fills it with a
- * specified value.
+ * 该函数创建一个指定长度的数组，其中填充了指定的值。
  * @public
- * @param length - The length parameter is a number that specifies the desired length of the
- * array to be created.
- * @param value - The value parameter is the value that will be used to fill the array. It can be
- * of any data type, as the function is generic and can be used with any type.
- * @returns The function `arr_fill` is returning an array of length `length` filled with the value
- * `value`. The type of the array elements is determined by the type of the `value` parameter, which is
- * specified by the generic type parameter `T`.
+ * @param length - 长度参数是一个数字，指定要创建的数组的所需长度。
+ * @param value - value 参数是将用于填充数组的值。它可以是任何数据类型。
+ * @returns 函数“get_fill_arr”返回一个长度为“length”的数组，其中填充了值“value”。数组元素的类型由作为参数传递给函数的通用类型“T”确定。
+ * @example
+ * ```ts
+ * get_fill_arr(3, 'a')
+ * // ['a', 'a', 'a']
+ * ```
  */
 function get_fill_arr<T>(length: number, value: T) {
     return Array.from<T>({ length }).fill(value)
 }
 
 /**
- * This function takes an array of keys and returns an object with the keys as values and
- * their indices as keys.
+ * 这个 TypeScript 函数接受一个键数组并返回一个对象，每个键的值是它在数组中的索引。
  * @public
- * @param arr - The input array of type T, where T extends the Key type.
- * @returns an object with keys as the elements of the input array and values as their corresponding
- * indices in the array. The object has a type of `Record<T, number>`, where `T` is the type of the
- * elements in the input array and `number` is the type of the indices.
+ * @param arr - T 类型值的数组，其中 T 扩展了 Key 类型。这意味着 T 只能是字符串、数字或符号。
+ * @returns 函数 arr_value_index 返回一个对象，该对象将输入数组中的每个值映射到它在数组中的索引。返回对象的键是输入数组中的值，返回对象的值是这些值在输入数组中的对应索引。
+ * @example
+ * ```ts
+ * arr_value_index(['a', 'b', 'c'])
+ * // { a: 0, b: 1, c: 2 }
+ * ```
  */
 function arr_value_index<T extends Key>(arr: T[]): Record<T, number> {
     return arr.reduce((acc, key, index) => {

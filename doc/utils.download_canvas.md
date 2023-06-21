@@ -4,7 +4,7 @@
 
 ## download\_canvas() function
 
-This function downloads an HTML canvas element as an image with a default or specified name.
+此函数将画布元素下载为具有默认名称或指定名称的 PNG 图像。
 
 **Signature:**
 
@@ -16,8 +16,8 @@ declare function download_canvas(cvs: HTMLCanvasElement, imageName?: string): vo
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  cvs | HTMLCanvasElement | HTMLCanvasElement - This is the canvas element that you want to download as an image. |
-|  imageName | string | _(Optional)_ The imageName parameter is a string that represents the name of the downloaded image file. If no name is provided, a random UUID (Universally Unique Identifier) string will be generated as the file name. |
+|  cvs | HTMLCanvasElement | HTMLCanvasElement - 这是要作为图像下载的画布元素。 |
+|  imageName | string | _(Optional)_ imageName 是一个字符串参数，表示下载的图像文件的名称。如果没有提供名称，将生成一个随机的 UUID（通用唯一标识符）字符串作为文件名。 |
 
 **Returns:**
 

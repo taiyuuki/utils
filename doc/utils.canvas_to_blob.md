@@ -4,7 +4,7 @@
 
 ## canvas\_to\_blob() function
 
-This function converts an HTML canvas element to a Blob object and returns a Promise.
+此函数将 HTML canvas 元素转换为 Blob 对象并返回一个 Promise。
 
 **Signature:**
 
@@ -16,11 +16,11 @@ declare function canvas_to_blob(cvs: HTMLCanvasElement): Promise<Blob>;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  cvs | HTMLCanvasElement | HTMLCanvasElement - This is the canvas element from which we want to create a blob. |
+|  cvs | HTMLCanvasElement | HTMLCanvasElement - 这是我们要从中创建 blob 的画布元素。 |
 
 **Returns:**
 
 Promise&lt;Blob&gt;
 
-The function `canvas_to_blob` is returning a Promise that resolves to a Blob object.
+函数 canvas\_to\_blob 返回一个解析为 Blob 对象的 Promise。
 

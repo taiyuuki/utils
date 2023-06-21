@@ -4,7 +4,7 @@
 
 ## throttle() function
 
-This is a function that implements throttle functionality for a given function.
+为给定函数实现节流功能。
 
 **Signature:**
 
@@ -16,13 +16,13 @@ declare function throttle<T extends Fn>(func: T, timeFrame: number, immediately?
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  func | T | The function to be throttled |
-|  timeFrame | number | The time interval in milliseconds |
-|  immediately | boolean | _(Optional)_ Whether the function should be executed immediately or not |
+|  func | T | 需要节流的函数 |
+|  timeFrame | number | 时间间隔 |
+|  immediately | boolean | _(Optional)_ 是否立即执行，默认值为 true |
 
 **Returns:**
 
 T
 
-The throttled function is implementing the throttle functionality for a given function.
+节流后的函数
 

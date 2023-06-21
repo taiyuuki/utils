@@ -4,7 +4,7 @@
 
 ## is\_date() function
 
-The function checks if a given value is a Date object.
+该函数检查给定值是否为 TypeScript 中的 Date 对象。
 
 **Signature:**
 
@@ -16,11 +16,11 @@ declare function is_date(d: any): d is Date;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  d | any | The parameter <code>d</code> is of type <code>any</code>, which means it can be any data type. However, the function is checking if <code>d</code> is a <code>Date</code> object using the <code>Object.prototype.toString.call()</code> method. |
+|  d | any | 参数 d 是 any 类型，这意味着它可以是任何数据类型。但是，该函数使用 Object.prototype.toString.call() 方法检查 date 是否为 Date 对象。 |
 
 **Returns:**
 
 d is Date
 
-The function `is_date` is returning a boolean value. It returns `true` if the input `d` is a `Date` object, and `false` otherwise.
+函数 is\_date 返回一个布尔值。如果输入的“d”是“Date”类型，它返回“true”，否则返回“false”。
 

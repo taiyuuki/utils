@@ -4,7 +4,7 @@
 
 ## get\_lightness\_value() function
 
-The function calculates the lightness value of a given color in RGB or hex format.
+该函数以 RGB 或十六进制格式计算颜色的亮度值。
 
 **Signature:**
 
@@ -16,11 +16,11 @@ declare function get_lightness_value(color: Color): number;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  color | Color | The input color that we want to calculate the lightness of. It can be either a string in hexadecimal format or an object of type RgbColor. |
+|  color | Color | 颜色参数的类型为 Color，它可以是表示十六进制颜色代码的字符串（例如“\#FF0000”表示红色），也可以是表示颜色的 RGB 值的三个整数数组（例如 \[255, 0, 0 \] 为红色）。 |
 
 **Returns:**
 
 number
 
-the lightness value of a given color in the HSL color space.
+颜色的亮度值，它是一个介于 0 和 1 之间的数字，表示颜色的感知亮度。
 

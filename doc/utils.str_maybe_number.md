@@ -4,7 +4,7 @@
 
 ## str\_maybe\_number() function
 
-The function takes in a parameter that can be either a number or a string and returns the parameter as a string.
+该函数接受一个数字或字符串并将其作为字符串返回。
 
 **Signature:**
 
@@ -16,11 +16,11 @@ declare function str_maybe_number(target: number | string): string;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  target | number \| string | The parameter "target" is a variable that can accept either a number or a string data type. |
+|  target | number \| string | 参数“目标”可以是数字或字符串。 |
 
 **Returns:**
 
 string
 
-the string representation of the input parameter, whether it is a number or a string.
+输入参数的字符串表示形式，无论是数字还是字符串。
 

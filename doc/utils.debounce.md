@@ -4,7 +4,7 @@
 
 ## debounce() function
 
-This is a function that implements debounce functionality for a given function.
+为给定函数实现去抖动功能。
 
 **Signature:**
 
@@ -16,12 +16,12 @@ declare function debounce<T extends Fn>(func: T, timeFrame: number): T;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  func | T | The function to be debounced |
-|  timeFrame | number | The time interval in milliseconds |
+|  func | T | 需要去抖动的函数 |
+|  timeFrame | number | 时间间隔 |
 
 **Returns:**
 
 T
 
-The debounced function is implementing the debounce functionality for a given function.
+去抖动后的函数
 

@@ -4,7 +4,7 @@
 
 ## image\_mini() function
 
-This function minifies an HTML image element.
+该函数接受一个 HTML 图像元素和一个质量参数，调整图像大小并返回一个包含调整后图像的新图像元素。
 
 **Signature:**
 
@@ -16,12 +16,12 @@ declare function image_mini(img: HTMLImageElement, quality: number): HTMLImageEl
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  img | HTMLImageElement | An HTMLImageElement object representing the image that needs to be minified. |
-|  quality | number | The quality parameter is an optional number that specifies the quality of the minified image, between 0 and 1. |
+|  img | HTMLImageElement | 表示要调整大小的图像的 HTMLImageElement 对象。 |
+|  quality | number | “质量”参数是一个介于 0 和 1 之间的数字，用于确定调整大小的图像的质量。值 1 表示最高质量，而值 0 表示最低质量。该函数使用此参数调整图像的质量 |
 
 **Returns:**
 
 HTMLImageElement
 
-a new HTMLImageElement that has been minified based on the input parameters.
+一个新的 HTMLImageElement，它包含具有指定质量的输入图像的调整大小版本。
 

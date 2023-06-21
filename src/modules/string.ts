@@ -1,29 +1,22 @@
 import { math_between } from './math'
 
 /**
- * The function takes in a parameter that can be either a number or a string and returns the parameter
- * as a string.
+ * 该函数接受一个数字或字符串并将其作为字符串返回。
  * @public
- * @param target - The parameter "target" is a variable that can accept either a
- * number or a string data type.
- * @returns the string representation of the input parameter, whether it is a number or a string.
+ * @param target - 参数“目标”可以是数字或字符串。
+ * @returns 输入参数的字符串表示形式，无论是数字还是字符串。
  */
 function str_maybe_number(target: number | string) {
     return target.toString()
 }
 
 /**
- * The function generates a random string of a specified length and radix.
+ * 该函数生成指定长度和基数的随机字符串。
  * @public
- * @param count - The number of characters in the random string that will be generated.
- * @param radix - Radix refers to the base number system used for representing numbers. In this
- * case, the default radix is 16, which means the function will generate a random string using
- * hexadecimal characters (0-9 and A-F). However, you can also specify a different radix if you want to
- * use a different
- * @example
- * ```ts
- * const str = str_random(6, 16)// generates a random string of length 6 using hexadecimal.
- * ```
+ * @param count - 将生成的随机字符串中的字符数。
+ * @param radix - Radix 是指用于随机字符串生成的基数系统。默认值为 16，这意味着字符串将使用十六进制数字（0-9 和 A-F）生成。但是，可以将基数设置为 2 到 36
+ * 之间的任何值以使用
+ * @returns 具有指定长度和基数（基数）的随机生成的字符串。 radix 是可选的，如果未提供则默认为 16。
  */
 function str_random(count: number, radix = 16) {
     radix = math_between(radix, 2, 36)
@@ -35,8 +28,9 @@ function str_random(count: number, radix = 16) {
 }
 
 /**
- * The function returns a string representation of a UUID.
+ * 生成 UUID 字符串。
  * @public
+ * @returns 返回表示 UUID（通用唯一标识符）的字符串。
  */
 function str_uuid(): string {
     let uuid = ''
@@ -55,87 +49,81 @@ function str_uuid(): string {
 }
 
 /**
- * The function ensures that a given string has a specified prefix.
+ * 该函数确保给定的字符串具有指定的前缀。
  * @public
- * @param s - The input string that we want to ensure has a certain prefix.
- * @param prefix - The prefix parameter is a string that we want to ensure is at the beginning
- * of the input string s. If s already starts with prefix, then the function should return s unchanged.
- * If s does not start with prefix, then the function should return prefix followed by s.
+ * @param s - 我们要确保的字符串具有特定的前缀。
+ * @param prefix - prefix
+ * 参数是一个字符串，我们要确保它位于输入字符串的开头。如果输入字符串已经以前缀开头，则函数按原样返回输入字符串。否则，该函数将前缀添加到输入字符串的开头并返回结果字符串
+ * @returns
+ * 函数“str_ensure_prefix”返回一个字符串。如果输入字符串“s”以“prefix”字符串开头，则该函数按原样返回“s”。否则，它返回一个新字符串，它是“prefix”字符串和原始“s”字符串的串联。
  */
 function str_ensure_prefix(s: string, prefix: string) {
     return s.startsWith(prefix) ? s : `${prefix}${s}`
 }
 
 /**
- * The function ensures that a given string ends with a specified suffix.
+ * 该函数确保给定的字符串以指定的后缀结尾。
  * @public
- * @param s - The original string that we want to ensure has a certain suffix.
- * @param suffix - The `suffix` parameter is a string that we want to ensure is at the end of
- * the `s` string. If `s` already ends with `suffix`, then the function should return `s` unchanged. If
- * `s` does not end with `suffix`, then the function should append
+ * @param s - 我们要确保以特定后缀结尾的字符串。
+ * @param suffix - “suffix”参数是一个字符串，它表示需要添加到“s”字符串末尾（如果不存在）的所需后缀。
+ * @returns 函数“str_ensure_suffix”返回一个字符串。具体来说，如果它已经以 `suffix` 参数结尾，它返回原始字符串 `s`，或者如果 `s` 还没有以 `suffix`
+ * 结尾，它返回一个新的字符串，它是 `s` 和 `suffix` 的连接。
  */
 function str_ensure_suffix(s: string, suffix: string) {
     return s.endsWith(suffix) ? s : `${s}${suffix}`
 }
 
 /**
- * The function removes a specified prefix from a given string.
+ * 该函数从字符串中删除给定的前缀（如果存在）。
  * @public
- * @param s - The `s` parameter is a string that we want to remove a prefix from.
- * @param prefix - The prefix parameter is a string that we want to remove from the beginning
- * of the input string (s).
+ * @param s - 可能有也可能没有需要删除的前缀的字符串。
+ * @param prefix - prefix 参数是一个字符串，表示我们要从输入字符串的开头删除的前缀。
+ * @returns 函数 str_no_prefix 返回一个字符串。如果输入字符串 s 以输入前缀 prefix 结尾，该函数返回 s 的不包括前缀的子字符串。否则，该函数返回原始字符串 s。
  */
 function str_no_prefix(s: string, prefix: string) {
     return s.startsWith(prefix) ? s.substring(prefix.length) : s
 }
 
 /**
- * The function takes in a string and a suffix, and returns the string without the suffix if it exists.
+ * 该函数从字符串中删除给定的后缀（如果存在）。
  * @public
- * @param s - A string that we want to remove the suffix from.
- * @param suffix - The `suffix` parameter is a string that represents the ending characters of
- * a word or phrase that we want to remove from the input string `s`.
+ * @param s - 可能以指定后缀结尾的字符串。
+ * @param suffix - “后缀”参数是一个字符串，表示我们要删除的输入字符串“s”的结尾字符。
+ * @returns 函数 str_no_suffix 返回一个字符串。如果输入字符串 s 以输入后缀 suffix 结尾，则该函数返回 s 的不包括后缀的子字符串。否则，该函数返回原始字符串 s。
  */
 function str_no_suffix(s: string, suffix: string) {
     return s.endsWith(suffix) ? s.substring(0, s.length - suffix.length) : s
 }
 
 /**
- * The function takes a string as input and capitalizes the first letter of the string.
+ * 该函数将给定字符串的第一个字母大写。
  * @public
- * @param str - The parameter "str" is a string type variable that represents the input string
- * that needs to be capitalized.
+ * @param str - 参数“str”是一个字符串输入，表示需要大写的文本。
+ * @returns 函数 `str_capital` 返回一个新字符串，第一个字符大写，其余字符不变。
  */
 function str_capital(str: string) {
     return str.charAt(0).toUpperCase() + str.slice(1)
 }
 
 /**
- * The function capitalizes the first letter of each word in a given string.
+ * 该函数将给定字符串中每个单词的首字母大写。
  * @public
- * @param str - A string that contains one or more words separated by spaces.
- * @returns The function `str_capital_all` is returning a new string where all the words in the input
- * string are capitalized. It does this by splitting the input string into an array of words using the
- * space character as a delimiter, then mapping each word to its capitalized version using the
- * `str_capital` function, and finally joining the array of capitalized words back into a string using
- * the space character as a
+ * @param str - 包含一个或多个由空格分隔的单词的字符串。
+ * @returns 函数 str_capital_all 返回一个新字符串，其中输入字符串中的所有单词都大写。
  */
 function str_capital_all(str: string) {
     return str.split(' ').map(str_capital).join(' ')
 }
 
 /**
- * The function takes a number or string and returns a string with a specified length, padded with a
- * specified character.
+ * 该函数将前导零添加到数字或字符串中以使其具有特定长度。
  * @public
- * @deprecated This function is deprecated, use padEnd or padStart instead.
- * @param n - The input number or string that needs to be complemented with leading
- * characters.
- * @param len - The `len` parameter is a number that specifies the desired length of the resulting
- * string. If the input string is shorter than the desired length, the function will add the `char`
- * parameter (default is '0') to the beginning of the string until it reaches the desired length.
- * @param char - The `char` parameter is a string that represents the character to be used for
- * padding the input string. By default, it is set to '0'.
+ * @deprecated 已废弃，建议使用 str_pad_left 或 str_pad_right。
+ * @param n - 需要用前导字符格式化的输入数字或字符串。
+ * @param len - 结果字符串的长度。如果输入字符串的长度小于 len，该函数将在字符串的开头添加字符，直到达到所需的长度。
+ * @param char - 用于填充字符串的字符。如果未提供任何字符，则使用“0”作为默认值。
+ * @returns 函数 `str_complement` 返回一个字符串，该字符串可以是原始输入 `n` 转换为字符串，也可以是长度为 `len` 的字符串，字符 `char`
+ * 根据需要重复多次以填充剩余空间，然后是原始输入 `n` 转换为字符串。
  */
 function str_complement(n: number | string, len = 2, char = '0') {
     n = n + ''

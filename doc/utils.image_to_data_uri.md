@@ -4,7 +4,7 @@
 
 ## image\_to\_data\_URI() function
 
-This function converts an HTML image element to a data URI.
+此函数将 HTML 图像元素转换为数据 URI。
 
 **Signature:**
 
@@ -16,12 +16,12 @@ declare function image_to_data_URI(img: HTMLImageElement, type?: string): string
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  img | HTMLImageElement | An HTMLImageElement object representing the image that needs to be converted to a data URI. |
-|  type | string | _(Optional)_ The type parameter is the MIME type of the image format to be used in the data URI. If no type is specified, the default MIME type is used. |
+|  img | HTMLImageElement | 一个 HTMLImageElement 对象，表示需要转换为数据 URI 的图像。 |
+|  type | string | _(Optional)_ type 参数是图像的 MIME 类型，例如 PNG图像为“image/png”或 PNG 图像为“image/jpeg”， 如果未提供，它将默认为 “image/png” 的值。 |
 
 **Returns:**
 
 string
 
-a data URI (Uniform Resource Identifier) of the image passed as an argument. The data URI is a string that represents the image data in a format that can be used as a source for an image element in HTML.
+作为参数传递的图像的数据 URI（统一资源标识符）。
 

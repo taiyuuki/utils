@@ -4,7 +4,7 @@
 
 ## storage\_remove() function
 
-The function removes an item from local storage based on a given key.
+该函数根据给定的键从本地存储中删除一个项目。
 
 **Signature:**
 
@@ -16,7 +16,7 @@ declare function storage_remove(key: string): void;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  key | string | The key parameter is a string that represents the name of the item to be removed from the browser's local storage. |
+|  key | string | key 参数是一个字符串，表示要从浏览器本地存储中删除的项目的名称。 |
 
 **Returns:**
 

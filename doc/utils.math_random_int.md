@@ -4,7 +4,7 @@
 
 ## math\_random\_int() function
 
-The function returns a random integer between a specified range.
+该函数返回指定范围内的随机整数。
 
 **Signature:**
 
@@ -16,12 +16,12 @@ declare function math_random_int(from: number, to: number): number;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  from | number | The minimum value of the range from which the random integer will be generated. |
-|  to | number | The "to" parameter is the upper limit of the range from which the random integer will be generated. |
+|  from | number | 生成随机整数的范围的最小值。 |
+|  to | number | “to”参数是生成随机整数的范围的上限。 |
 
 **Returns:**
 
 number
 
-The function `math_random_int` returns a random integer between the `from` and `to` parameters (inclusive).
+函数 `math_random_int` 返回介于 `from` 和 `to` 参数（含）之间的随机整数。
 

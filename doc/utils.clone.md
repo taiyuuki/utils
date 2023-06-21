@@ -4,7 +4,7 @@
 
 ## clone() function
 
-The function `clone` creates a deep copy of an object.
+该函数使用简单方法或深层方法克隆对象，具体取决于简单方法是否失败。
 
 **Signature:**
 
@@ -16,9 +16,11 @@ declare function clone<T extends object>(source: T): T;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  source | T | The <code>source</code> parameter is of type <code>T</code>, which is a generic type that extends the <code>object</code> type. It represents the object that needs to be cloned. |
+|  source | T | 需要克隆的源对象。该函数根据源对象的类型使用简单或深度克隆方法。该函数返回源对象的克隆。 |
 
 **Returns:**
 
 T
+
+`clone` 函数返回与输入`source` 对象类型相同的克隆对象。如果 `clone_simple` 函数成功创建了 `source` 对象的浅拷贝，则返回该浅拷贝。否则，如果在浅拷贝过程中抛出错误，将调用 `clone_deep` 函数创建 `source` 的深拷贝
 

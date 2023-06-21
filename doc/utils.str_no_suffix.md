@@ -4,7 +4,7 @@
 
 ## str\_no\_suffix() function
 
-The function takes in a string and a suffix, and returns the string without the suffix if it exists.
+该函数从字符串中删除给定的后缀（如果存在）。
 
 **Signature:**
 
@@ -16,10 +16,12 @@ declare function str_no_suffix(s: string, suffix: string): string;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  s | string | A string that we want to remove the suffix from. |
-|  suffix | string | The <code>suffix</code> parameter is a string that represents the ending characters of a word or phrase that we want to remove from the input string <code>s</code>. |
+|  s | string | 可能以指定后缀结尾的字符串。 |
+|  suffix | string | “后缀”参数是一个字符串，表示我们要删除的输入字符串“s”的结尾字符。 |
 
 **Returns:**
 
 string
+
+函数 str\_no\_suffix 返回一个字符串。如果输入字符串 s 以输入后缀 suffix 结尾，则该函数返回 s 的不包括后缀的子字符串。否则，该函数返回原始字符串 s。
 

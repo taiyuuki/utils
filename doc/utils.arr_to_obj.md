@@ -4,24 +4,33 @@
 
 ## arr\_to\_obj() function
 
-The function converts an array of strings and numbers into an object with boolean values.
+该函数将数组转换为一个对象，其中键作为属性和一个可选的默认值。
 
 **Signature:**
 
 ```typescript
-declare function arr_to_obj<T extends Key[], V = boolean>(arr: T, v?: V): TupleToObject<T, V>;
+declare function arr_to_obj<T extends Key, V = boolean>(arr: T[], v?: V): TupleToObject<T, V>;
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  arr | T | An array of strings or numbers that will be used as keys in the resulting object. |
-|  v | V | _(Optional)_ The parameter "v" is an optional parameter with a default value of boolean type. It is used to set the value of each key in the resulting object. If "v" is not provided, the default value of "true" will be used. |
+|  arr | T\[\] | 将用作结果对象中的属性名称的数组，数组的元素类型为string \| number \| symbol。 |
+|  v | V | _(Optional)_ 参数“v”是“V”类型的可选参数，默认为布尔值“true”。它用于设置结果对象中每个键的值。 |
 
 **Returns:**
 
 TupleToObject&lt;T, V&gt;
 
-The function `arr_to_obj` returns an object with keys from the input array `arr` and values set to `v` if provided, otherwise `true`<!-- -->. The type of the returned object is determined by the generic type parameters `T` and `V`<!-- -->. The function returns an object of type `TupleToObject<T, V>`<!-- -->.
+函数 arr\_to\_obj 返回一个对象，该对象具有输入数组 arr 中的键和 V 类型的值。 它将键“T”的元组转换为具有这些键和值类型“V”的对象。
+
+## Example
+
+
+```ts
+const arr = ['a', 'b', 'c']
+arr_to_obj(arr)
+// { a: true, b: true, c: true }
+```
 

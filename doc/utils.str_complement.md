@@ -6,10 +6,10 @@
 
 > Warning: This API is now obsolete.
 > 
-> This function is deprecated, use padEnd or padStart instead.
+> 已废弃，建议使用 str\_pad\_left 或 str\_pad\_right。
 > 
 
-The function takes a number or string and returns a string with a specified length, padded with a specified character.
+该函数将前导零添加到数字或字符串中以使其具有特定长度。
 
 **Signature:**
 
@@ -21,11 +21,13 @@ declare function str_complement(n: number | string, len?: number, char?: string)
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  n | number \| string | The input number or string that needs to be complemented with leading characters. |
-|  len | number | _(Optional)_ The <code>len</code> parameter is a number that specifies the desired length of the resulting string. If the input string is shorter than the desired length, the function will add the <code>char</code> parameter (default is '0') to the beginning of the string until it reaches the desired length. |
-|  char | string | _(Optional)_ The <code>char</code> parameter is a string that represents the character to be used for padding the input string. By default, it is set to '0'. |
+|  n | number \| string | 需要用前导字符格式化的输入数字或字符串。 |
+|  len | number | _(Optional)_ 结果字符串的长度。如果输入字符串的长度小于 len，该函数将在字符串的开头添加字符，直到达到所需的长度。 |
+|  char | string | _(Optional)_ 用于填充字符串的字符。如果未提供任何字符，则使用“0”作为默认值。 |
 
 **Returns:**
 
 string
+
+函数 `str_complement` 返回一个字符串，该字符串可以是原始输入 `n` 转换为字符串，也可以是长度为 `len` 的字符串，字符 `char` 根据需要重复多次以填充剩余空间，然后是原始输入 `n` 转换为字符串。
 

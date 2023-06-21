@@ -4,7 +4,7 @@
 
 ## is\_element() function
 
-the function checks if a given value is an element.
+该函数检查给定对象是否是 TypeScript 中 Element 类的实例。
 
 **Signature:**
 
@@ -16,11 +16,11 @@ declare function is_element(el: any): el is Element;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  el | any | The parameter <code>el</code> is of type <code>any</code>. |
+|  el | any | 可以是任何数据类型。 |
 
 **Returns:**
 
 el is Element
 
-The function `is_element` returns a boolean value indicating whether the input parameter `el` is an element.
+函数 is\_element 返回一个布尔值，指示输入的 el 是否是 Element 类的实例。
 

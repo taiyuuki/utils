@@ -4,7 +4,7 @@
 
 ## bytes\_to\_int() function
 
-The function converts an array of four bytes into a single integer value.
+该函数将四个字节的数组转换为单个整数值。
 
 **Signature:**
 
@@ -16,13 +16,13 @@ declare function bytes_to_int(bytes: [number, number, number, number]): number;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  bytes | \[number, number, number, number\] | The parameter <code>bytes</code> is an array of four numbers representing a 32-bit integer in big-endian byte order. The function <code>bytes_to_int</code> converts this byte array into a single integer value. |
+|  bytes | \[number, number, number, number\] | 参数“bytes”是一个由四个数字组成的数组，代表一个 32 位整数，以大端字节顺序排列。函数“bytes\_to\_int”将此字节数组转换为单个整数值。 |
 
 **Returns:**
 
 number
 
-The function `bytes_to_int` is returning an integer value that is obtained by concatenating the four bytes in the input array `bytes` in big-endian order.
+函数“bytes\_to\_int”返回一个整数值，该值是通过以大端顺序连接输入数组“bytes”中的四个字节获得的。
 
 ## Example
 
