@@ -19,7 +19,7 @@
     "doc": "api-extractor run --local --verbose && api-documenter markdown -i temp -o doc",
     "doc:debug": "api-extractor run --local --verbose --diagnostics && api-documenter markdown -i temp -o doc",
     "trace": "tsc dist/types/index.d.ts --traceResolution > trace.log",
-    "publish": "publish --registry=https://registry.npmjs.org --access=public",
+    "publish": "pnpm publish --registry=https://registry.npmjs.org --access=public",
     "docs:dev": "vitepress dev",
     "docs:build": "vitepress build",
     "docs:preview": "vitepress preview"
