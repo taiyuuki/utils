@@ -118,7 +118,7 @@ function str_capital_all(str: string) {
 /**
  * 该函数将前导零添加到数字或字符串中以使其具有特定长度。
  * @public
- * @deprecated 已废弃，建议使用 str_pad_left 或 str_pad_right。
+ * @deprecated 已废弃，建议使用 padStart 或 padEnd。
  * @param n - 需要用前导字符格式化的输入数字或字符串。
  * @param len - 结果字符串的长度。如果输入字符串的长度小于 len，该函数将在字符串的开头添加字符，直到达到所需的长度。
  * @param char - 用于填充字符串的字符。如果未提供任何字符，则使用“0”作为默认值。
