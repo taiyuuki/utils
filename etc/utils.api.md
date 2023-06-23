@@ -71,6 +71,15 @@ export function data_URI_to_blob(dataURI: string, mimeType?: string): Blob;
 // @public
 export function date_now(format?: string): string;
 
+// @beta
+export class DB<T = any> {
+    constructor(dbName: string, storeName: string, version?: number);
+    clear(): void;
+    get_item(id: string): Promise<T>;
+    remove_item(id: string): void;
+    set_item(id: string, data: T): void;
+}
+
 // @public
 export function debounce<T extends Fn>(func: T, timeFrame: number): T;
 

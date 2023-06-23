@@ -6,7 +6,7 @@
 
 > Warning: This API is now obsolete.
 > 
-> 已废弃，建议使用 str\_pad\_left 或 str\_pad\_right。
+> 已废弃，建议使用 padStart 或 padEnd。
 > 
 
 该函数将前导零添加到数字或字符串中以使其具有特定长度。

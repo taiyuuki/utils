@@ -1,6 +1,6 @@
 {
   "name": "@taiyuuki/utils",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "description": "Utils by Taiyuuki",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
@@ -10,14 +10,14 @@
     "url": "https://github.com/taiyuuki/utils"
   },
   "bugs": "https://github.com/taiyuuki/utils/issues",
-  "homepage": "https://github.com/taiyuuki/utils#readme",
+  "homepage": "https://taiyuuki-utils.netlify.app",
   "scripts": {
     "lint": "eslint --ext .js,.ts ./ --fix",
     "dev": "rollup -c --watch",
-    "build": "rollup -c",
+    "build": "rollup -c && pnpm doc",
     "test": "vitest",
     "doc": "api-extractor run --local --verbose && api-documenter markdown -i temp -o doc",
-    "doc debug": "npx api-extractor run --local --verbose --diagnostics && api-documenter markdown -i temp -o doc",
+    "doc:debug": "api-extractor run --local --verbose --diagnostics && api-documenter markdown -i temp -o doc",
     "trace": "tsc dist/types/index.d.ts --traceResolution > trace.log",
     "publish": "publish --registry=https://registry.npmjs.org --access=public",
     "docs:dev": "vitepress dev",

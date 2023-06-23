@@ -8,6 +8,7 @@
 
 |  Class | Description |
 |  --- | --- |
+|  [DB](./utils.db.md) | <p>**_(BETA)_** 这是一个类，用于简单创建和访问 IndexedDB 数据库中的储存对象。</p><p>每一个 DB 实例都只对应一个存储对象（object store）。</p> |
 |  [EventsController](./utils.eventscontroller.md) | **_(BETA)_** DOM Event Controller |
 
 ## Functions
