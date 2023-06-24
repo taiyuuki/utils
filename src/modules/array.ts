@@ -99,7 +99,7 @@ function arr_move<T extends any[]>(arr: T, from: number, to: number): T {
  * ```
  */
 function arr_random<T>(arr: T[]): T {
-    return arr[math_random_int(0, arr.length)]
+    return arr[math_random_int(0, arr.length - 1)]
 }
 
 /**

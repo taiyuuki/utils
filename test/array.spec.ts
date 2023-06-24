@@ -1,4 +1,4 @@
-import { arr_move, arr_remove, arr_to_obj, arr_unique, arr_value_index } from '../src/modules/array'
+import { arr_move, arr_random, arr_remove, arr_to_obj, arr_unique, arr_value_index } from '../src/modules/array'
 import { describe, expect, it } from 'vitest'
 
 describe('array', () => {
@@ -64,5 +64,28 @@ describe('array', () => {
             "a": 0,
           }
         `)
+    })
+
+    it('arr_random', () => {
+        const li = ['a', 'b', 'c']
+        expect(arr_random(['a'])).toMatch('a')
+        expect(arr_random(['a'])).toMatch('a')
+        expect(arr_random(['a'])).toMatch('a')
+        expect(arr_random(['a'])).toMatch('a')
+        expect(arr_random(['a'])).toMatch('a')
+        expect(arr_random(['a'])).toMatch('a')
+        expect(arr_random(['a'])).toMatch('a')
+        expect(arr_random(['a'])).toMatch('a')
+        expect(arr_random(['a'])).toMatch('a')
+        expect(li.includes(arr_random(li))).toBeTruthy()
+        expect(li.includes(arr_random(li))).toBeTruthy()
+        expect(li.includes(arr_random(li))).toBeTruthy()
+        expect(li.includes(arr_random(li))).toBeTruthy()
+        expect(li.includes(arr_random(li))).toBeTruthy()
+        expect(li.includes(arr_random(li))).toBeTruthy()
+        expect(li.includes(arr_random(li))).toBeTruthy()
+        expect(li.includes(arr_random(li))).toBeTruthy()
+        expect(li.includes(arr_random(li))).toBeTruthy()
+        expect(li.includes(arr_random(li))).toBeTruthy()
     })
 })
