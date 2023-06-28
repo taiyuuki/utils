@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { is_not_void, is_void, is_empty_string, is_empty_array, is_empty_obj, is_object, is_date, is_regexp, is_number, is_rgb_color, is_hex_color } from '../src/modules/is'
+import { is_not_void, is_void, is_empty_string, is_empty_array, is_empty_obj, is_object, is_date, is_regexp, is_number, is_rgb_color, is_hex_color, is_email } from '../src/modules/is'
 
 describe('is', () => {
     it('值判断', () => {
@@ -65,5 +65,15 @@ describe('is', () => {
         expect(is_hex_color('#66abll')).toEqual(false)
         expect(is_hex_color('fff')).toEqual(true)
         expect(is_hex_color('#aaa')).toEqual(true)
+
+        expect(is_email('taiyuuki.qq.com')).toEqual(false)
+        expect(is_email('taiyuuki@qq.com')).toEqual(true)
+        expect(is_email('taiyuuki@163.com')).toEqual(true)
+        expect(is_email('taiyuuki@gmail.com')).toEqual(true)
+        expect(is_email('taiyuuki@1234.com.cn')).toEqual(true)
+        expect(is_email('taiyuuki@abc.com@efg')).toEqual(false)
+        expect(is_email('taiyuuki@abc.com@efg.com')).toEqual(false)
+        expect(is_email('taiyuuki@abc')).toEqual(false)
+        expect(is_email('taiyuuki@abc-com')).toEqual(false)
     })
 })

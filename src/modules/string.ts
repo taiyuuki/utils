@@ -130,6 +130,16 @@ function str_complement(n: number | string, len = 2, char = '0') {
     return n.length >= len ? n : Array.from({ length: len - n.length + 1 }).join(char) + n
 }
 
+/**
+ * 函数从输入字符串中删除所有非中文字符。
+ * @public
+ * @param str - 输入字符串
+ * @returns 返回一个排除了非中文字符的新字符串，中文字符的判定范围`\u4e00-\u9fa5`。
+ */
+function str_ensure_chinese(str: string) {
+    return str.replace(/[^\u4e00-\u9fa5]/g, '')
+}
+
 export {
     str_maybe_number,
     str_random,
@@ -141,4 +151,5 @@ export {
     str_capital,
     str_capital_all,
     str_complement,
+    str_ensure_chinese,
 }

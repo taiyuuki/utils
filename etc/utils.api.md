@@ -179,10 +179,16 @@ export function is_base64(str: string): str is string;
 export function is_blob(blob: any): blob is Blob;
 
 // @public
+export function is_chinese(str: string): boolean;
+
+// @public
 export function is_date(d: any): d is Date;
 
 // @public
 export function is_element(el: any): el is Element;
+
+// @public
+export function is_email(str: string): boolean;
 
 // @public
 export function is_empty_array(v: any, nullable?: boolean): v is [];
@@ -300,6 +306,9 @@ export function str_capital_all(str: string): string;
 
 // @public @deprecated
 export function str_complement(n: number | string, len?: number, char?: string): string;
+
+// @public
+export function str_ensure_chinese(str: string): string;
 
 // @public
 export function str_ensure_prefix(s: string, prefix: string): string;

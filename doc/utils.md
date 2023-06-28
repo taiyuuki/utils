@@ -58,8 +58,10 @@
 |  [int\_to\_bytes(num)](./utils.int_to_bytes.md) | 该函数使用按位运算将整数转换为 4 字节的数组并返回该数组。 |
 |  [is\_base64(str)](./utils.is_base64.md) | 该函数检查给定字符串是否是具有可选数据 URI 方案的有效 base64 编码字符串。 |
 |  [is\_blob(blob)](./utils.is_blob.md) | 该函数检查给定对象是否是 Blob 类的实例。 |
+|  [is\_chinese(str)](./utils.is_chinese.md) | 该函数检查给定字符串是否全是汉字，范围为 \[0x4e00, 0x9fa5\]。 |
 |  [is\_date(d)](./utils.is_date.md) | 该函数检查给定值是否为 TypeScript 中的 Date 对象。 |
 |  [is\_element(el)](./utils.is_element.md) | 该函数检查给定对象是否是 TypeScript 中 Element 类的实例。 |
+|  [is\_email(str)](./utils.is_email.md) | 函数正在检查给定的字符串是否是有效的电子邮件地址。它使用正则表达式将字符串与有效电子邮件地址的模式进行匹配。 如果字符串与模式匹配，则函数返回“true”，表明它是有效的电子邮件地址。否则，它返回“false”。 |
 |  [is\_empty\_array(v, nullable)](./utils.is_empty_array.md) | 该函数检查给定值是否为空数组或 null/undefined。 |
 |  [is\_empty\_obj(v, nullable)](./utils.is_empty_obj.md) | 检查给定值是否为空对象。 |
 |  [is\_empty\_string(s, trim)](./utils.is_empty_string.md) | 该函数检查给定字符串是否为空，并使用可选参数在检查前修剪字符串。 |
@@ -97,6 +99,7 @@
 |  [str\_capital\_all(str)](./utils.str_capital_all.md) | 该函数将给定字符串中每个单词的首字母大写。 |
 |  [str\_capital(str)](./utils.str_capital.md) | 该函数将给定字符串的第一个字母大写。 |
 |  [str\_complement(n, len, char)](./utils.str_complement.md) | 该函数将前导零添加到数字或字符串中以使其具有特定长度。 |
+|  [str\_ensure\_chinese(str)](./utils.str_ensure_chinese.md) | 函数从输入字符串中删除所有非中文字符。 |
 |  [str\_ensure\_prefix(s, prefix)](./utils.str_ensure_prefix.md) | 该函数确保给定的字符串具有指定的前缀。 |
 |  [str\_ensure\_suffix(s, suffix)](./utils.str_ensure_suffix.md) | 该函数确保给定的字符串以指定的后缀结尾。 |
 |  [str\_maybe\_number(target)](./utils.str_maybe_number.md) | 该函数接受一个数字或字符串并将其作为字符串返回。 |

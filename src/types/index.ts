@@ -51,3 +51,4 @@ export type KeyboardEventKeys<T> = T extends Fn ? keyof ReturnType<T> : keyof T
 export type Concat<T, S> = {
     [k in (keyof T | keyof S)]: k extends keyof S ? S[k] : k extends keyof T ? T[k] : never
 }
+

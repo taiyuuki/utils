@@ -1,4 +1,5 @@
 import type { Fn, RgbColor } from '../types'
+import { key_in } from './obj'
 
 /**
  * 该函数检查给定值是否是对象而不是数组。
@@ -290,6 +291,27 @@ function is_string_like(target: any): target is string | number {
     return is_number(target) || typeof target === 'string'
 }
 
+/**
+ * 该函数检查给定字符串是否全是汉字，范围为 [0x4e00, 0x9fa5]。
+ * @public
+ * @param str - 参数 `str` 是 `any` 类型，这意味着它可以是任何数据类型
+ * @returns 函数 is_chinese 返回一个布尔值，指示输入的 str 是否全是汉字，范围为 [0x4e00, 0x9fa5]。
+ */
+function is_chinese(str: string): boolean {
+    return /^[\u4e00-\u9fa5]+$/.test(str)
+}
+
+/**
+ * 函数正在检查给定的字符串是否是有效的电子邮件地址。它使用正则表达式将字符串与有效电子邮件地址的模式进行匹配。
+ * 如果字符串与模式匹配，则函数返回“true”，表明它是有效的电子邮件地址。否则，它返回“false”。
+ * @public
+ * @param str - 参数 `str` 是 `any` 类型，这意味着它可以是任何数据类型
+ * @returns 函数 is_email 返回一个布尔值，指示输入的 str 是否是有效的电子邮件地址。
+ */
+function is_email(str: string): boolean {
+    return /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(str)
+}
+
 export {
     is_base64,
     is_blob,
@@ -314,4 +336,6 @@ export {
     is_undefined,
     is_void,
     is_regexp,
+    is_chinese,
+    is_email,
 }

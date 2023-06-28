@@ -31,7 +31,7 @@ function math_random_int(from: number, to: number) {
  * `max`。如果 `v` 在 `min` 和 `max` 之间，函数返回 `v`。
  */
 function math_between(v: number, min: number, max: number) {
-    if (min >= max) {
+    if (min > max) {
         [min, max] = [max, min]
     }
     return Math.min(max, Math.max(min, v))
