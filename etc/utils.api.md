@@ -57,11 +57,6 @@ export function clone_deep<T extends object>(source: T): T;
 // @public
 export function clone_simple<T extends object>(source: T): T;
 
-// Warning: (ae-forgotten-export) The symbol "Fn" needs to be exported by the entry point index.d.ts
-//
-// @public
-export function compose<T extends Fn>(...fns: T[]): (arg: unknown) => unknown;
-
 // @public
 export function copy_text(target: string | number | HTMLElement, addition?: string): void;
 
@@ -80,6 +75,8 @@ export class DB<T = any> {
     set_item(id: string, data: T): void;
 }
 
+// Warning: (ae-forgotten-export) The symbol "Fn" needs to be exported by the entry point index.d.ts
+//
 // @public
 export function debounce<T extends Fn>(func: T, timeFrame: number): T;
 

@@ -60,22 +60,7 @@ function debounce<T extends Fn>(
     } as T
 }
 
-/**
- * `compose` 函数接受一个函数数组并返回一个新函数，该函数将数组中的每个函数从右到左应用于其参数。
- * @public
- * @param fns - `Fn` 类型的函数数组。允许将任意数量的函数作为参数传递给“compose”函数。
- * @returns “compose”函数返回一个新函数，按从右到左的顺序对其应用一系列函数。返回组合的最终结果。
- */
-function compose<T extends Fn>(...fns: T[]) {
-    return function (arg: unknown) {
-        return fns.reduce((pre, fn) => {
-            return fn(pre)
-        }, arg)
-    }
-}
-
 export {
     debounce,
     throttle,
-    compose,
 }

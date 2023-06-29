@@ -29,7 +29,6 @@
 |  [clone\_deep(source)](./utils.clone_deep.md) | 这是一个执行对象深度克隆的函数。 |
 |  [clone\_simple(source)](./utils.clone_simple.md) | 该函数使用 JSON 解析和字符串化克隆一个简单对象。 |
 |  [clone(source)](./utils.clone.md) | 该函数使用简单方法或深层方法克隆对象，具体取决于简单方法是否失败。 |
-|  [compose(fns)](./utils.compose.md) | <code>compose</code> 函数接受一个函数数组并返回一个新函数，该函数将数组中的每个函数从右到左应用于其参数。 |
 |  [copy\_text(target, addition)](./utils.copy_text.md) | 该函数使用剪贴板 API（如果可用）将文本复制到剪贴板，否则它回退到创建临时文本区域元素并使用 execCommand 方法。 |
 |  [data\_URI\_to\_blob(dataURI, mimeType)](./utils.data_uri_to_blob.md) | 此函数将数据 URI 转换为 blob 对象。 |
 |  [date\_now(format)](./utils.date_now.md) | 该函数以指定格式返回当前日期和时间。 |
