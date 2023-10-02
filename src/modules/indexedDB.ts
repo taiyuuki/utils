@@ -4,7 +4,7 @@
  * 每一个 DB 实例都只对应一个存储对象（object store）。
  */
 class DB<T = any> {
-    private static dataFactory = window.indexedDB
+    private _dataFactory = window.indexedDB
     private _dbName: string
     private _storeName: string
     private _database!: IDBDatabase
@@ -18,9 +18,10 @@ class DB<T = any> {
      * @returns DB类的实例
      */
     constructor(dbName: string, storeName: string, version?: number) {
+        this._dataFactory = window.indexedDB
         this._dbName = dbName
         this._storeName = storeName
-        this._res = DB.dataFactory.open(this._dbName, version)
+        this._res = this._dataFactory.open(this._dbName, version)
 
         this._res.addEventListener('success', () => {
             this._database = this._res.result
