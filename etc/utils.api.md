@@ -116,11 +116,11 @@ export function download_canvas(cvs: HTMLCanvasElement, imageName?: string): voi
 export function download_image(img: HTMLImageElement, imageName?: string): void;
 
 // @beta
-export class EventsController {
-    constructor();
+export class EventsController<T extends EventTarget> {
+    constructor(target: T);
     // Warning: (ae-forgotten-export) The symbol "FnNoArgs" needs to be exported by the entry point index.d.ts
-    add_evt<T extends EventTarget>(target: T, type: Parameters<T['addEventListener']>[0], callback: FnNoArgs): this;
-    close(): void;
+    add_evt<T extends EventTarget>(type: Parameters<T['addEventListener']>[0], callback: FnNoArgs): this;
+    remove_all(): void;
 }
 
 // Warning: (ae-forgotten-export) The symbol "Color" needs to be exported by the entry point index.d.ts

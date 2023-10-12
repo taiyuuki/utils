@@ -12,5 +12,12 @@ Constructs a new instance of the `EventsController` class
 **Signature:**
 
 ```typescript
-constructor();
+constructor(target: T);
 ```
+
+## Parameters
+
+|  Parameter | Type | Description |
+|  --- | --- | --- |
+|  target | T | 绑定对象，例如DOM，每一个实例只维护一个对象 |
+

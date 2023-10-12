@@ -12,29 +12,29 @@ DOM Event Controller
 **Signature:**
 
 ```typescript
-declare class EventsController 
+declare class EventsController<T extends EventTarget> 
 ```
 
 ## Example
 
 
 ```ts
-const evt_ctrl = new EventsController()
-evt_ctrl.add_evt(el1, 'click', callback1)
-evt_ctrl.add_evt(el2, 'keypress', callback2)
-evt_ctrl.close()
+const evt_ctrl = new EventsController(el)
+evt_ctrl.add_evt('click', callback1)
+evt_ctrl.add_evt('keypress', callback2)
+evt_ctrl.remove_all()
 ```
 
 ## Constructors
 
 |  Constructor | Modifiers | Description |
 |  --- | --- | --- |
-|  [(constructor)()](./utils.eventscontroller._constructor_.md) |  | **_(BETA)_** Constructs a new instance of the <code>EventsController</code> class |
+|  [(constructor)(target)](./utils.eventscontroller._constructor_.md) |  | **_(BETA)_** Constructs a new instance of the <code>EventsController</code> class |
 
 ## Methods
 
 |  Method | Modifiers | Description |
 |  --- | --- | --- |
-|  [add\_evt(target, type, callback)](./utils.eventscontroller.add_evt.md) |  | **_(BETA)_** 绑定事件 |
-|  [close()](./utils.eventscontroller.close.md) |  | **_(BETA)_** 解除所有绑定的事件 |
+|  [add\_evt(type, callback)](./utils.eventscontroller.add_evt.md) |  | **_(BETA)_** 绑定事件 |
+|  [remove\_all()](./utils.eventscontroller.remove_all.md) |  | **_(BETA)_** 解除所有绑定的事件 |
 
