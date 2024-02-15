@@ -1,5 +1,5 @@
-import { math_random_int } from './math'
 import type { Key, TupleToObject } from '../types'
+import { math_random_int } from './math'
 
 /**
  * 该函数将数组转换为一个对象，其中键作为属性和一个可选的默认值。
@@ -18,7 +18,7 @@ import type { Key, TupleToObject } from '../types'
 function arr_to_obj<T extends Key, V = boolean>(arr: T[], v?: V) {
     const result: Record<Key, V> = {}
     const value = v ?? true as V
-    arr.forEach(i => {
+    arr.forEach((i) => {
         result[i] = value
     })
     return result as TupleToObject<T, V>
@@ -55,7 +55,9 @@ function arr_unique<T>(arr: T[]): T[] {
  * ```
  */
 function arr_remove<T>(arr: T[], value: T) {
-    if (!arr) { return false }
+    if (!arr) {
+        return false
+    }
     const index = arr.indexOf(value)
     if (index >= 0) {
         arr.splice(index, 1)

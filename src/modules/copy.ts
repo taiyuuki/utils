@@ -9,16 +9,16 @@ import { str_maybe_number } from './string'
  * @param addition - 在将文本复制到剪贴板之前将附加到文本的可选字符串。如果未提供任何值，则文本将按原样复制。
  */
 function copy_text(target: string | number | HTMLElement, addition?: string) {
-    let text = is_string_like(target) ? str_maybe_number(target) : target.innerText
+    let text = is_string_like(target) ? str_maybe_number(target) : target.textContent as string
     if (is_not_void(addition)) {
         text += addition
     }
     function copyBySelect() {
         const textarea = document.createElement('textarea')
         dom_set_css(textarea, {
-            'position': 'fixed',
-            'left': '-999px',
-            'opacity': '0',
+            position: 'fixed',
+            left: '-999px',
+            opacity: '0',
         })
         document.body.appendChild(textarea)
         textarea.value = text

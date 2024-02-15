@@ -49,7 +49,7 @@ function is_regexp(r: any): r is RegExp {
  * ```
  */
 function is_number(n: any): n is number {
-    return typeof n === 'number' && isFinite(n)
+    return typeof n === 'number' && Number.isFinite(n)
 }
 
 /**
@@ -90,7 +90,7 @@ function is_null(n: any): n is null {
  */
 function is_void(t: any): t is null | undefined {
     if (typeof t === 'number') {
-        return isNaN(t)
+        return Number.isNaN(t)
     }
     return is_null(t) || is_undefined(t)
 }
@@ -186,7 +186,9 @@ function is_empty_obj(v: any, nullable = true): v is {} {
  * @returns 返回一个布尔值。
  */
 function is_rgb_color(color: any): color is RgbColor {
-    if (!Array.isArray(color)) { return false }
+    if (!Array.isArray(color)) {
+        return false
+    }
     return (color.length === 4 || color.length === 3) && color.every((v, i) => {
         if (i === 3) {
             return Number(v) <= 1
@@ -298,7 +300,7 @@ function is_string_like(target: any): target is string | number {
  * @returns 函数 is_chinese 返回一个布尔值，指示输入的 str 是否全是汉字，范围为 [0x4e00, 0x9fa5]。
  */
 function is_chinese(str: string): boolean {
-    return /^[\u4e00-\u9fa5]+$/.test(str)
+    return /^[\u4E00-\u9FA5]+$/.test(str)
 }
 
 /**

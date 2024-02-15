@@ -1,4 +1,4 @@
-import type { Entries, Key, Keys, Concat } from '../types'
+import type { Concat, Entries, Key, Keys } from '../types'
 
 /**
  * 该函数将对象的键作为数组返回。

@@ -1,5 +1,5 @@
-import { clone_deep } from '../src/modules/clone'
 import { describe, expect, it } from 'vitest'
+import { clone_deep } from '../src/modules/clone'
 
 describe('clone', () => {
     it('deep clone', () => {

@@ -72,7 +72,7 @@ class DB<T = any> {
     /**
      * 从对象存储中删除数据。
      * @param id - 数据的唯一标识。
-    */
+     */
     remove_item(id: string) {
         this._store.delete(id)
     }

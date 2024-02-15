@@ -43,10 +43,10 @@ export class EventsController<T extends EventTarget> {
     }
 
     /**
-   * 解除所有绑定的事件
-   */
+     * 解除所有绑定的事件
+     */
     remove_all() {
-        this._events.forEach(item => {
+        this._events.forEach((item) => {
             this._target.removeEventListener(item.type, item.callback)
         })
         this._events.length = 0

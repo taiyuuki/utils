@@ -1,5 +1,5 @@
-import { arr_move, arr_random, arr_remove, arr_to_obj, arr_unique, arr_value_index } from '../src/modules/array'
 import { describe, expect, it } from 'vitest'
+import { arr_move, arr_random, arr_remove, arr_to_obj, arr_unique, arr_value_index } from '../src/modules/array'
 
 describe('array', () => {
     it('arr_to_obj', () => {

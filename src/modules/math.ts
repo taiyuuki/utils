@@ -1,4 +1,3 @@
-
 /**
  * 该函数返回一个四舍五入到指定小数位数的数字。
  * @public
@@ -18,7 +17,7 @@ function math_to_fixed(n: number, digit = 0) {
  * @returns 函数 `math_random_int` 返回介于 `from` 和 `to` 参数（含）之间的随机整数。
  */
 function math_random_int(from: number, to: number) {
-    return parseInt(((Math.random() * (to - from + 1)) + from).toString())
+    return Number.parseInt((Math.random() * (to - from + 1) + from).toString())
 }
 
 /**
@@ -59,7 +58,7 @@ function math_to_hex(n: number) {
  */
 function int_to_bytes(num: number) {
     const bytes = new Uint8Array(4)
-    bytes.set([num & 0xff, (num >> 8) & 0xff, (num >> 16) & 0xff, (num >> 24) & 0xff])
+    bytes.set([num & 0xFF, num >> 8 & 0xFF, num >> 16 & 0xFF, num >> 24 & 0xFF])
     return bytes
 }
 
@@ -74,7 +73,7 @@ function int_to_bytes(num: number) {
  * ```
  */
 function bytes_to_int(bytes: [number, number, number, number]) {
-    return (bytes[0] << 24) | (bytes[1] << 16) | (bytes[2] << 8) | bytes[3]
+    return bytes[0] << 24 | bytes[1] << 16 | bytes[2] << 8 | bytes[3]
 }
 
 export {
@@ -85,4 +84,3 @@ export {
     int_to_bytes,
     bytes_to_int,
 }
-

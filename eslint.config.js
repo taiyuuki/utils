@@ -12,6 +12,7 @@ const config = new Promise((resolve) => {
                 '**/docs',
                 '**/etc',
                 '**/temp',
+                '**/test',
             ],
         }])
     })

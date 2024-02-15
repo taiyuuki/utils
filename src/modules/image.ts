@@ -58,7 +58,7 @@ function image_to_data_URI(img: HTMLImageElement, type = DEFAULT_MIMETYPE) {
 function image_to_blob(img: HTMLImageElement): Promise<Blob> {
     const cvs = image_to_canvas(img)
     return new Promise((resolve, reject) => {
-        cvs.toBlob(blob => {
+        cvs.toBlob((blob) => {
             if (is_not_void(blob)) {
                 resolve(blob)
             }

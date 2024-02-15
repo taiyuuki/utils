@@ -1,4 +1,3 @@
-
 /**
  * 该函数使用 JSON 解析和字符串化克隆一个简单对象。
  * @public
@@ -22,7 +21,7 @@ function clone_deep<T extends object>(source: T) {
     map.set(source, target)
 
     while (loopStack.length > 0) {
-        const [ target, source ] = loopStack.pop()!
+        const [target, source] = loopStack.pop()!
         const keys = Object.getOwnPropertyNames(source)
 
         for (const key of keys) {
@@ -32,7 +31,7 @@ function clone_deep<T extends object>(source: T) {
                 }
                 else {
                     target[key] = Object.create(Object.getPrototypeOf(source[key]))
-                    loopStack.push([target[key], source[key] ])
+                    loopStack.push([target[key], source[key]])
                     map.set(source[key], target[key])
                 }
             }

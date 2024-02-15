@@ -1,4 +1,4 @@
-import type  { CSSStyleName } from '../types'
+import type { CSSStyleName } from '../types'
 import { throw_type_error } from './error'
 import { is_element, is_void, is_window } from './is'
 import { str_ensure_prefix } from './string'

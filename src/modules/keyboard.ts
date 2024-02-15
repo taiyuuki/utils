@@ -1,4 +1,4 @@
-import type { KeyboardEventType, KeyboardEventOptions, KeyboardEventKeys, KeyboardEventCallback } from '../types'
+import type { KeyboardEventCallback, KeyboardEventKeys, KeyboardEventOptions, KeyboardEventType } from '../types'
 import { is_fn } from './is'
 import { key_in } from './obj'
 
@@ -54,21 +54,21 @@ function add_keyboard_events<T extends KeyboardEventOptions>(type: KeyboardEvent
             document.removeEventListener(type, handler)
         },
         /**
-     * 临时关闭事件，可以再开启。
-     */
+         * 临时关闭事件，可以再开启。
+         */
         off() {
             valid = false
         },
         /**
-     * 重新开启事件。
-     */
+         * 重新开启事件。
+         */
         on() {
             valid = true
         },
         /**
-     * 手动触发按键事件，即使已经取消了绑定，也能触发。
-     * @param code - KeyboardEvent.code
-     */
+         * 手动触发按键事件，即使已经取消了绑定，也能触发。
+         * @param code - KeyboardEvent.code
+         */
         emit,
     }
 }

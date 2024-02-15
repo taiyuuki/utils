@@ -12,7 +12,7 @@ import { is_not_void } from './is'
 function throttle<T extends Fn>(
     func: T,
     timeFrame: number,
-    immediately?: boolean
+    immediately?: boolean,
 ): T {
     let lastTime = 0
     let timer: NodeJS.Timeout | undefined

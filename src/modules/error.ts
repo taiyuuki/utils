@@ -1,4 +1,3 @@
-
 /**
  * 该函数抛出带有特定消息的 TypeError。
  * @public

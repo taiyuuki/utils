@@ -126,7 +126,7 @@ function str_capital_all(str: string) {
  * 根据需要重复多次以填充剩余空间，然后是原始输入 `n` 转换为字符串。
  */
 function str_complement(n: number | string, len = 2, char = '0') {
-    n = n + ''
+    n = `${n}`
     return n.length >= len ? n : Array.from({ length: len - n.length + 1 }).join(char) + n
 }
 
@@ -137,7 +137,7 @@ function str_complement(n: number | string, len = 2, char = '0') {
  * @returns 返回一个排除了非中文字符的新字符串，中文字符的判定范围`\u4e00-\u9fa5`。
  */
 function str_ensure_chinese(str: string) {
-    return str.replace(/[^\u4e00-\u9fa5]/g, '')
+    return str.replace(/[^\u4E00-\u9FA5]/g, '')
 }
 
 export {

@@ -21,7 +21,7 @@ function deep_equal(a: any, b: any): boolean {
         }
         const aKeys = object_keys(a)
         if (aKeys.length === Object.keys(b).length) {
-            return aKeys.every(key => {
+            return aKeys.every((key) => {
                 return deep_equal(a[key], b[key])
             })
         }

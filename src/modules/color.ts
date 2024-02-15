@@ -19,7 +19,7 @@ function get_lightness_value(color: Color) {
     const r = rgb[0]
     const g = rgb[1]
     const b = rgb[2]
-    return  (Math.max(r, g, b) + Math.min(r, g, b)) / (2 * 255)
+    return (Math.max(r, g, b) + Math.min(r, g, b)) / (2 * 255)
 }
 
 /**
@@ -52,9 +52,9 @@ function rgb_to_hex(rgb: RgbColor) {
  */
 function hex_to_rgb(hex: string): RgbColor {
     hex = str_no_prefix(hex, '#')
-    const r = parseInt(hex.substring(0, 2), 16)
-    const g = parseInt(hex.substring(2, 4), 16)
-    const b = parseInt(hex.substring(4, 6), 16)
+    const r = Number.parseInt(hex.substring(0, 2), 16)
+    const g = Number.parseInt(hex.substring(2, 4), 16)
+    const b = Number.parseInt(hex.substring(4, 6), 16)
     return [r, g, b]
 }
 
@@ -69,10 +69,10 @@ function get_contrast_color(color: Color) {
     if (typeof color !== 'string') {
         color = rgb_to_hex(color)
     }
-    const r = parseInt(color.substring(1, 2), 16)
-    const g = parseInt(color.substring(3, 4), 16)
-    const b = parseInt(color.substring(5, 6), 16)
-    const yiq = ((r * 299) + (g * 587) + (b * 114)) / 1000
+    const r = Number.parseInt(color.substring(1, 2), 16)
+    const g = Number.parseInt(color.substring(3, 4), 16)
+    const b = Number.parseInt(color.substring(5, 6), 16)
+    const yiq = (r * 299 + g * 587 + b * 114) / 1000
     return yiq >= 10 ? 'black' : 'white'
 }
 
@@ -102,13 +102,13 @@ function rgb_to_hsl(rgb: RgbColor): HslColor {
         s = l > 0.5 ? d / (2 - max - min) : d / (max + min)
         switch (max) {
             case r:
-                h = ((g - b) / d) + (g < b ? 6 : 0)
+                h = (g - b) / d + (g < b ? 6 : 0)
                 break
             case g:
-                h = ((b - r) / d) + 2
+                h = (b - r) / d + 2
                 break
             case b:
-                h = ((r - g) / d) + 4
+                h = (r - g) / d + 4
                 break
         }
         h *= 360 / 6
@@ -128,7 +128,7 @@ function hsl_to_rgb(hsl: HslColor): RgbColor {
     const l = hsl[2]
     const a = hsl[3]
     const c = (1 - Math.abs(2 * l - 1)) * s
-    const x = c * (1 - Math.abs(((h / 60) % 2) - 1))
+    const x = c * (1 - Math.abs(h / 60 % 2 - 1))
     const m = l - c / 2
     const vRGB = []
     if (h >= 0 && h < 60) {
