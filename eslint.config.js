@@ -4,6 +4,10 @@ import { tyk_eslint } from '@taiyuuki/eslint-config'
 const config = new Promise((resolve) => {
     antfu(tyk_eslint({
         typescript: true,
+        rules: {
+            'no-new-func': 'off',
+            'curly': 'off',
+        },
     })).then((v) => {
         resolve([...v, {
             ignores: [

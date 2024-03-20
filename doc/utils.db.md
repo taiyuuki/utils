@@ -4,7 +4,7 @@
 
 ## DB class
 
-> This API is provided as a preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> This API is provided as a beta preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 > 
 
 这是一个类，用于简单创建和访问 IndexedDB 数据库中的储存对象。

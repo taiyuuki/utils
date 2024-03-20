@@ -281,6 +281,12 @@ export function object_keys<T extends object>(o: T): Keys<T>;
 export function object_pick<T extends object, K extends keyof T>(obj: T, keys: K[]): Pick<T, K>;
 
 // @public
+export function point_in_polygon<Point extends {
+    x: number;
+    y: number;
+}>(point: Point, polygon: Point[]): boolean;
+
+// @public
 export function rgb_to_hex(rgb: RgbColor): string;
 
 // @public
@@ -342,6 +348,22 @@ export function url_to_blob(url: string): Promise<Blob>;
 
 // @public
 export function url_to_date_URI(url: string, type?: string): Promise<string>;
+
+// @beta
+export class Vec2 {
+    constructor(x: number, y?: number);
+    add(v: number | Vec2): Vec2;
+    cross(v: number | Vec2): number;
+    div(v: number | Vec2): Vec2;
+    dot(v: number | Vec2): number;
+    mul(v: number | Vec2): Vec2;
+    reflect(v: Vec2): Vec2;
+    sub(v: number | Vec2): Vec2;
+    // (undocumented)
+    x: number;
+    // (undocumented)
+    y: number;
+}
 
 // Warnings were encountered during analysis:
 //

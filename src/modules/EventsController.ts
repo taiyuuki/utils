@@ -21,7 +21,7 @@ export class EventsController<T extends EventTarget> {
     private _target: T
     /**
      *
-     * @param target 绑定对象，例如DOM，每一个实例只维护一个对象
+     * @param target - 绑定对象，例如DOM，每一个实例只维护一个对象
      */
     constructor(target: T) {
         this._target = target

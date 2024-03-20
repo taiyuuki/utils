@@ -10,6 +10,7 @@
 |  --- | --- |
 |  [DB](./utils.db.md) | <p>**_(BETA)_** 这是一个类，用于简单创建和访问 IndexedDB 数据库中的储存对象。</p><p>每一个 DB 实例都只对应一个存储对象（object store）。</p> |
 |  [EventsController](./utils.eventscontroller.md) | **_(BETA)_** DOM Event Controller |
+|  [Vec2](./utils.vec2.md) | **_(BETA)_** 二维向量类 |
 
 ## Functions
 
@@ -90,6 +91,7 @@
 |  [object\_entries(obj)](./utils.object_entries.md) | 此函数将对象的条目作为键值对数组返回。 |
 |  [object\_keys(o)](./utils.object_keys.md) | 该函数将对象的键作为数组返回。 |
 |  [object\_pick(obj, keys)](./utils.object_pick.md) | 函数“object\_pick”接受一个对象和一个键数组，并返回一个新对象，该对象仅包含原始对象中的指定键。 |
+|  [point\_in\_polygon(point, polygon)](./utils.point_in_polygon.md) | 函数“point\_in\_polygon”使用光线投射算法确定点是否在多边形内部。 |
 |  [rgb\_to\_hex(rgb)](./utils.rgb_to_hex.md) | 该函数将 RGB 颜色数组转换为十六进制颜色代码。 |
 |  [rgb\_to\_hsl(rgb)](./utils.rgb_to_hsl.md) | 该函数将 RGB 颜色值转换为其对应的 HSL 颜色值。 |
 |  [storage\_get(key, empty)](./utils.storage_get.md) | 该函数从本地存储中检索数据并将其作为已解析的 JSON 对象或可选的默认值返回。 |
