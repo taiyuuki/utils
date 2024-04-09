@@ -176,6 +176,9 @@ export function is_base64(str: string): str is string;
 export function is_blob(blob: any): blob is Blob;
 
 // @public
+export function is_callable<T extends Function>(target: any): target is T;
+
+// @public
 export function is_chinese(str: string): boolean;
 
 // @public
@@ -191,7 +194,7 @@ export function is_email(str: string): boolean;
 export function is_empty_array(v: any, nullable?: boolean): v is [];
 
 // @public
-export function is_empty_obj(v: any, nullable?: boolean): v is {};
+export function is_empty_obj(v: any, nullable?: boolean): boolean;
 
 // @public
 export function is_empty_string(s: any, trim?: boolean): boolean;
@@ -250,6 +253,9 @@ export function key_in<T extends object>(key: Key, obj: T): key is keyof T;
 // @public
 export function log_type_error(type: string, name: string): void;
 
+// @beta
+export function match_range<T>(n: number, pattern: Record<string, T | ((range: MathRange) => T)>): T | null;
+
 // @public
 export function math_between(v: number, min: number, max: number): number;
 
@@ -261,6 +267,24 @@ export function math_to_fixed(n: number, digit?: number): number;
 
 // @public
 export function math_to_hex(n: number): string;
+
+// @beta
+export class MathRange {
+    constructor(r: string | number);
+    cross(other: MathRange): MathRange | null;
+    // (undocumented)
+    e_open: boolean;
+    // (undocumented)
+    end: number;
+    equals(other: MathRange): boolean;
+    is_between(num: number): boolean;
+    // (undocumented)
+    s_open: boolean;
+    // (undocumented)
+    start: number;
+    toString(): string;
+    static valid(origin: string | number): boolean;
+}
 
 // Warning: (ae-forgotten-export) The symbol "Concat" needs to be exported by the entry point index.d.ts
 //
@@ -291,6 +315,9 @@ export function rgb_to_hex(rgb: RgbColor): string;
 
 // @public
 export function rgb_to_hsl(rgb: RgbColor): HslColor;
+
+// @beta
+export function search_range(n: number, ranges: (string | number)[]): MathRange | null;
 
 // @public
 export function storage_get<T, K extends T = T>(key: string, empty?: K): T | undefined;

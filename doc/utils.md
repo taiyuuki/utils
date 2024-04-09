@@ -10,6 +10,7 @@
 |  --- | --- |
 |  [DB](./utils.db.md) | <p>**_(BETA)_** 这是一个类，用于简单创建和访问 IndexedDB 数据库中的储存对象。</p><p>每一个 DB 实例都只对应一个存储对象（object store）。</p> |
 |  [EventsController](./utils.eventscontroller.md) | **_(BETA)_** DOM Event Controller |
+|  [MathRange](./utils.mathrange.md) | **_(BETA)_** 数字区间类，构造一个形如 (4, 10\] 的区间对象，区分开闭区间。 |
 |  [Vec2](./utils.vec2.md) | **_(BETA)_** 二维向量类 |
 
 ## Functions
@@ -58,6 +59,7 @@
 |  [int\_to\_bytes(num)](./utils.int_to_bytes.md) | 该函数使用按位运算将整数转换为 4 字节的数组并返回该数组。 |
 |  [is\_base64(str)](./utils.is_base64.md) | 该函数检查给定字符串是否是具有可选数据 URI 方案的有效 base64 编码字符串。 |
 |  [is\_blob(blob)](./utils.is_blob.md) | 该函数检查给定对象是否是 Blob 类的实例。 |
+|  [is\_callable(target)](./utils.is_callable.md) | 判断给定的参数是否是函数 |
 |  [is\_chinese(str)](./utils.is_chinese.md) | 该函数检查给定字符串是否全是汉字，范围为 \[0x4e00, 0x9fa5\]。 |
 |  [is\_date(d)](./utils.is_date.md) | 该函数检查给定值是否为 TypeScript 中的 Date 对象。 |
 |  [is\_element(el)](./utils.is_element.md) | 该函数检查给定对象是否是 TypeScript 中 Element 类的实例。 |
@@ -83,6 +85,7 @@
 |  [is\_window(win)](./utils.is_window.md) | 该函数检查给定参数是否是 TypeScript 中的全局窗口对象。 |
 |  [key\_in(key, obj)](./utils.key_in.md) | 该函数检查给定对象中是否存在给定键并返回布尔值。 |
 |  [log\_type\_error(type, name)](./utils.log_type_error.md) | 该函数使用预期的类型和名称记录类型错误消息。 |
+|  [match\_range(n, pattern)](./utils.match_range.md) | **_(BETA)_** 对数字进行模式匹配 |
 |  [math\_between(v, min, max)](./utils.math_between.md) | 该函数返回指定范围内的数字。 |
 |  [math\_random\_int(from, to)](./utils.math_random_int.md) | 该函数返回指定范围内的随机整数。 |
 |  [math\_to\_fixed(n, digit)](./utils.math_to_fixed.md) | 该函数返回一个四舍五入到指定小数位数的数字。 |
@@ -94,6 +97,7 @@
 |  [point\_in\_polygon(point, polygon)](./utils.point_in_polygon.md) | 函数“point\_in\_polygon”使用光线投射算法确定点是否在多边形内部。 |
 |  [rgb\_to\_hex(rgb)](./utils.rgb_to_hex.md) | 该函数将 RGB 颜色数组转换为十六进制颜色代码。 |
 |  [rgb\_to\_hsl(rgb)](./utils.rgb_to_hsl.md) | 该函数将 RGB 颜色值转换为其对应的 HSL 颜色值。 |
+|  [search\_range(n, ranges)](./utils.search_range.md) | **_(BETA)_** 在数字区间列表中搜索数字所处的区间 |
 |  [storage\_get(key, empty)](./utils.storage_get.md) | 该函数从本地存储中检索数据并将其作为已解析的 JSON 对象或可选的默认值返回。 |
 |  [storage\_remove(key)](./utils.storage_remove.md) | 该函数根据给定的键从本地存储中删除一个项目。 |
 |  [storage\_set(key, value)](./utils.storage_set.md) | 该函数使用指定的键将任何类型的值存储在浏览器的本地存储中。 |

@@ -9,7 +9,7 @@
 **Signature:**
 
 ```typescript
-declare function is_empty_obj(v: any, nullable?: boolean): v is {};
+declare function is_empty_obj(v: any, nullable?: boolean): boolean;
 ```
 
 ## Parameters
@@ -21,7 +21,7 @@ declare function is_empty_obj(v: any, nullable?: boolean): v is {};
 
 **Returns:**
 
-v is {}
+boolean
 
 一个布尔值。
 

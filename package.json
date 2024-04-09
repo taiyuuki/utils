@@ -1,6 +1,6 @@
 {
   "name": "@taiyuuki/utils",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "description": "Utils by Taiyuuki",
   "main": "./dist/cjs/index.js",
   "type": "module",
@@ -48,6 +48,7 @@
     }
   },
   "devDependencies": {
+    "@antfu/eslint-config": "^2.13.2",
     "@babel/core": "^7.23.2",
     "@microsoft/api-documenter": "^7.23.9",
     "@microsoft/api-extractor": "^7.38.0",

@@ -1,5 +1,4 @@
 import type { Fn, RgbColor } from '../types'
-import { key_in } from './obj'
 
 /**
  * 该函数检查给定值是否是对象而不是数组。
@@ -174,7 +173,7 @@ function is_empty_array(v: any, nullable = true): v is [] {
  * is_empty_obj(null, false)// true
  * ```
  */
-function is_empty_obj(v: any, nullable = true): v is {} {
+function is_empty_obj(v: any, nullable = true) {
     const nullCheck = nullable ? false : is_void(v)
     return is_object(v) ? is_empty_array(Object.keys(v)) : nullCheck
 }
@@ -314,6 +313,15 @@ function is_email(str: string): boolean {
     return /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(str)
 }
 
+/**
+ * 判断给定的参数是否是函数
+ * @param target - 参数 `target` 是 `any` 类型，这意味着它可以是任何数据类型
+ * @returns 返回布尔值
+ */
+function is_callable<T extends Function>(target: any): target is T {
+    return typeof target === 'function'
+}
+
 export {
     is_base64,
     is_blob,
@@ -340,4 +348,5 @@ export {
     is_regexp,
     is_chinese,
     is_email,
+    is_callable,
 }
