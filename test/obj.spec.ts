@@ -1,5 +1,5 @@
-import { object_pick } from '../src/modules/obj'
 import { describe, expect, it } from 'vitest'
+import { object_pick } from '../src/modules/obj'
 
 describe('object', () => {
     it('object pick', () => {

@@ -1,6 +1,6 @@
 import { is_not_void } from './is'
-import { math_between } from './math'
 import { key_in } from './obj'
+import { math_between } from './math'
 
 interface ImageSize {
     width: number
@@ -8,10 +8,12 @@ interface ImageSize {
 }
 
 interface ImageOptions extends ImageSize {
+
     /**
      * @defaultValue "image/png"
      */
     type?: string
+
     /**
      * @defaultValue 1
      */
@@ -33,6 +35,7 @@ function image_to_canvas(img: HTMLImageElement, size: ImageSize = { width: img.n
     cvs.height = size.height
     const ctx = cvs.getContext('2d')
     is_not_void(ctx) && ctx.drawImage(img, 0, 0, cvs.width, cvs.height)
+
     return cvs
 }
 
@@ -46,6 +49,7 @@ function image_to_canvas(img: HTMLImageElement, size: ImageSize = { width: img.n
  */
 function image_to_data_URI(img: HTMLImageElement, type = DEFAULT_MIMETYPE) {
     const cvs = image_to_canvas(img)
+
     return cvs.toDataURL(type)
 }
 
@@ -57,12 +61,12 @@ function image_to_data_URI(img: HTMLImageElement, type = DEFAULT_MIMETYPE) {
  */
 function image_to_blob(img: HTMLImageElement): Promise<Blob> {
     const cvs = image_to_canvas(img)
+
     return new Promise((resolve, reject) => {
-        cvs.toBlob((blob) => {
+        cvs.toBlob(blob => {
             if (is_not_void(blob)) {
                 resolve(blob)
-            }
-            else {
+            } else {
                 reject(void 0)
             }
         })
@@ -88,6 +92,7 @@ function image_get_type(filename: string) {
         '.ico': 'image/x-icon',
         '.tiff': 'image/tiff',
     } as const
+
     return key_in(imageExt, mimes) ? mimes[imageExt] : DEFAULT_MIMETYPE
 }
 
@@ -104,6 +109,7 @@ function image_resize(img: HTMLImageElement, options: ImageOptions) {
     const type = options.type ?? image_get_type(img.src)
     const quality = options.quality ?? 1
     resizeImg.src = cvs.toDataURL(type, math_between(quality, 0, 1))
+
     return resizeImg
 }
 
@@ -120,6 +126,7 @@ function image_mini(img: HTMLImageElement, quality: number) {
     const cvs = image_to_canvas(img, { width: img.naturalWidth, height: img.naturalHeight })
     const type = image_get_type(img.src)
     resizeImg.src = cvs.toDataURL(type, math_between(quality, 0, 1))
+
     return resizeImg
 }
 

@@ -18,9 +18,10 @@ import { math_random_int } from './math'
 function arr_to_obj<T extends Key, V = boolean>(arr: T[], v?: V) {
     const result: Record<Key, V> = {}
     const value = v ?? true as V
-    arr.forEach((i) => {
+    arr.forEach(i => {
         result[i] = value
     })
+
     return result as TupleToObject<T, V>
 }
 
@@ -61,8 +62,10 @@ function arr_remove<T>(arr: T[], value: T) {
     const index = arr.indexOf(value)
     if (index >= 0) {
         arr.splice(index, 1)
+
         return true
     }
+
     return false
 }
 
@@ -82,6 +85,7 @@ function arr_remove<T>(arr: T[], value: T) {
  */
 function arr_move<T extends any[]>(arr: T, from: number, to: number): T {
     arr.splice(to, 0, arr.splice(from, 1)[0])
+
     return arr
 }
 
@@ -134,6 +138,7 @@ function get_fill_arr<T>(length: number, value: T) {
 function arr_value_index<T extends Key>(arr: T[]): Record<T, number> {
     return arr.reduce((acc, key, index) => {
         acc[key] = index
+
         return acc
     }, {} as Record<T, number>)
 }

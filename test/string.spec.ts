@@ -1,5 +1,5 @@
-import { str_capital, str_complement, str_ensure_prefix, str_ensure_suffix, str_no_prefix, str_no_suffix, str_random, str_uuid } from '../src/modules/string'
 import { describe, expect, it } from 'vitest'
+import { str_capital, str_complement, str_ensure_prefix, str_ensure_suffix, str_no_prefix, str_no_suffix, str_random, str_uuid } from '../src/modules/string'
 
 describe('string', () => {
     it('str_random', () => {

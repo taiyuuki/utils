@@ -16,6 +16,7 @@ function date_now(format = 'yyyy-MM-dd|HH:mm:ss') {
         .replace('HH', str_complement(time.getHours()))
         .replace('mm', str_complement(time.getMinutes()))
         .replace('ss', str_complement(time.getSeconds()))
+
     return result
 }
 

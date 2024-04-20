@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { is_not_void, is_void, is_empty_string, is_empty_array, is_empty_obj, is_object, is_date, is_regexp, is_number, is_rgb_color, is_hex_color, is_email } from '../src/modules/is'
+import { is_date, is_email, is_empty_array, is_empty_obj, is_empty_string, is_hex_color, is_not_void, is_number, is_object, is_regexp, is_rgb_color, is_void } from '../src/modules/is'
 
 describe('is', () => {
     it('值判断', () => {

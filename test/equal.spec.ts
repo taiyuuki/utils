@@ -1,5 +1,5 @@
-import { deep_equal } from '../src/modules/equal'
 import { describe, expect, it } from 'vitest'
+import { deep_equal } from '../src/modules/equal'
 
 describe('equal', () => {
     it('deep equal', () => {

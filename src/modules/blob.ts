@@ -7,15 +7,15 @@ import { is_not_void } from './is'
  * 原生格式的数据。在这种情况下，该函数采用 Blob 对象并将其转换为数据 URI 字符串或 ArrayBuffer
  * @returns 解析为字符串或 ArrayBuffer 的 Promise，具体取决于将提供的 Blob 作为数据 URL 读取的结果。
  */
-function blob_to_date_URI(blob: Blob): Promise<string | ArrayBuffer> {
+function blob_to_date_URI(blob: Blob): Promise<ArrayBuffer | string> {
     const reader = new FileReader()
+
     return new Promise((resolve, reject) => {
-        reader.onload = function (e) {
+        reader.onload = function(e) {
             const result = e.target?.result
             if (is_not_void(result)) {
                 resolve(result)
-            }
-            else {
+            } else {
                 reject(void 0)
             }
         }
@@ -33,8 +33,9 @@ function url_to_blob(url: string): Promise<Blob> {
     const xhr = new XMLHttpRequest()
     xhr.open('get', url, true)
     xhr.responseType = 'arraybuffer'
+
     return new Promise((resolve, reject) => {
-        xhr.onload = function () {
+        xhr.onload = function() {
             const blob = new Blob([this.response])
             resolve(blob)
         }

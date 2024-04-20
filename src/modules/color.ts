@@ -19,6 +19,7 @@ function get_lightness_value(color: Color) {
     const r = rgb[0]
     const g = rgb[1]
     const b = rgb[2]
+
     return (Math.max(r, g, b) + Math.min(r, g, b)) / (2 * 255)
 }
 
@@ -39,8 +40,10 @@ function rgb_to_hex(rgb: RgbColor) {
     const b = math_to_hex(rgb[2])
     if (rgb[3]) {
         const a = math_to_hex(Math.floor(rgb[3] * 255))
+
         return `#${r}${g}${b}${a}`
     }
+
     return `#${r}${g}${b}`
 }
 
@@ -55,6 +58,7 @@ function hex_to_rgb(hex: string): RgbColor {
     const r = Number.parseInt(hex.substring(0, 2), 16)
     const g = Number.parseInt(hex.substring(2, 4), 16)
     const b = Number.parseInt(hex.substring(4, 6), 16)
+
     return [r, g, b]
 }
 
@@ -73,6 +77,7 @@ function get_contrast_color(color: Color) {
     const g = Number.parseInt(color.substring(3, 4), 16)
     const b = Number.parseInt(color.substring(5, 6), 16)
     const yiq = (r * 299 + g * 587 + b * 114) / 1000
+
     return yiq >= 10 ? 'black' : 'white'
 }
 
@@ -96,8 +101,7 @@ function rgb_to_hsl(rgb: RgbColor): HslColor {
     const l = (max + min) / 2
     if (max === min) {
         h = s = 0
-    }
-    else {
+    } else {
         const d = max - min
         s = l > 0.5 ? d / (2 - max - min) : d / (max + min)
         switch (max) {
@@ -113,6 +117,7 @@ function rgb_to_hsl(rgb: RgbColor): HslColor {
         }
         h *= 360 / 6
     }
+
     return a ? [h, s, l, a] : [h, s, l]
 }
 
@@ -133,20 +138,15 @@ function hsl_to_rgb(hsl: HslColor): RgbColor {
     const vRGB = []
     if (h >= 0 && h < 60) {
         vRGB.push(c, x, 0)
-    }
-    else if (h >= 60 && h < 120) {
+    } else if (h >= 60 && h < 120) {
         vRGB.push(x, c, 0)
-    }
-    else if (h >= 120 && h < 180) {
+    } else if (h >= 120 && h < 180) {
         vRGB.push(0, c, x)
-    }
-    else if (h >= 180 && h < 240) {
+    } else if (h >= 180 && h < 240) {
         vRGB.push(0, x, c)
-    }
-    else if (h >= 240 && h < 300) {
+    } else if (h >= 240 && h < 300) {
         vRGB.push(x, 0, c)
-    }
-    else if (h >= 300 && h < 360) {
+    } else if (h >= 300 && h < 360) {
         vRGB.push(c, 0, x)
     }
     const [vR, vG, vB] = vRGB

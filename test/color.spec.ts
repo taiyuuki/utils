@@ -1,19 +1,13 @@
-import { get_contrast_color, hex_to_rgb, hsl_to_rgb, rgb_to_hex, rgb_to_hsl } from '../src/modules/color'
 import { describe, expect, it } from 'vitest'
+import { get_contrast_color, hex_to_rgb, hsl_to_rgb, rgb_to_hex, rgb_to_hsl } from '../src/modules/color'
 
 describe('color', () => {
     it('rgb_to_hex', () => {
-        expect(rgb_to_hex([255, 0, 0])).toMatchInlineSnapshot(
-            '"#FF0000"',
-        )
+        expect(rgb_to_hex([255, 0, 0])).toMatchInlineSnapshot('"#FF0000"')
 
-        expect(rgb_to_hex([0, 0, 0])).toMatchInlineSnapshot(
-            '"#000000"',
-        )
+        expect(rgb_to_hex([0, 0, 0])).toMatchInlineSnapshot('"#000000"')
 
-        expect(rgb_to_hex([255, 255, 255])).toMatchInlineSnapshot(
-            '"#FFFFFF"',
-        )
+        expect(rgb_to_hex([255, 255, 255])).toMatchInlineSnapshot('"#FFFFFF"')
     })
 
     it('hex_to_rgb', () => {

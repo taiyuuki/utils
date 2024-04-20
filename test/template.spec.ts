@@ -1,5 +1,5 @@
-import { temp_compiler } from '../src/modules/template'
 import { describe, expect, it } from 'vitest'
+import { temp_compiler } from '../src/modules/template'
 
 describe('模板编译', () => {
     it('temp_compiler', () => {

@@ -19,6 +19,7 @@ interface EventItem {
 export class EventsController<T extends EventTarget> {
     private _events: EventItem[]
     private _target: T
+
     /**
      *
      * @param target - 绑定对象，例如DOM，每一个实例只维护一个对象
@@ -39,6 +40,7 @@ export class EventsController<T extends EventTarget> {
             callback,
         })
         this._target.addEventListener(type, callback)
+
         return this
     }
 
@@ -46,7 +48,7 @@ export class EventsController<T extends EventTarget> {
      * 解除所有绑定的事件
      */
     remove_all() {
-        this._events.forEach((item) => {
+        this._events.forEach(item => {
             this._target.removeEventListener(item.type, item.callback)
         })
         this._events.length = 0

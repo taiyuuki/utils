@@ -17,16 +17,17 @@ function throttle<T extends Fn>(
     let lastTime = 0
     let timer: NodeJS.Timeout | undefined
     immediately = immediately ?? true
-    return function (...args: unknown[]) {
+
+    return function(...args: unknown[]) {
         const now = Date.now()
         if (is_not_void(timer)) {
             clearTimeout(timer)
         }
         if (now - lastTime >= timeFrame && immediately) {
             lastTime = now
+
             return func(...args)
-        }
-        else {
+        } else {
             timer = setTimeout(() => {
                 func(...args)
                 timer = void 0
@@ -47,14 +48,14 @@ function debounce<T extends Fn>(
     timeFrame: number,
 ) {
     let lastTime = 0
-    return function (...args: unknown[]) {
+
+    return function(...args: unknown[]) {
         const now = Date.now()
         try {
             if (now - lastTime >= timeFrame) {
                 return func(...args)
             }
-        }
-        finally {
+        } finally {
             lastTime = now
         }
     } as T

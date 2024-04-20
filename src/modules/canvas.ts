@@ -12,6 +12,7 @@ import { math_between } from './math'
 function canvas_to_image(cvs: HTMLCanvasElement, quality = 1): HTMLImageElement {
     const img = new Image()
     img.src = cvs.toDataURL('image/png', math_between(quality, 0, 1))
+
     return img
 }
 
@@ -23,11 +24,10 @@ function canvas_to_image(cvs: HTMLCanvasElement, quality = 1): HTMLImageElement 
  */
 function canvas_to_blob(cvs: HTMLCanvasElement): Promise<Blob> {
     return new Promise((resolve, reject) => {
-        cvs.toBlob((blob) => {
+        cvs.toBlob(blob => {
             if (is_not_void(blob)) {
                 resolve(blob)
-            }
-            else {
+            } else {
                 reject(void 0)
             }
         })

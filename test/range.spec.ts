@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { MathRange } from "src/modules/range";
+import { MathRange } from 'src/modules/range'
 
 describe('Range', () => {
     const range = new MathRange('(4, 10]')

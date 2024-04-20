@@ -8,7 +8,7 @@ import { str_maybe_number } from './string'
  * @param target - 目标可以是字符串、数字或 HTMLElement。它是将被复制到剪贴板的文本。
  * @param addition - 在将文本复制到剪贴板之前将附加到文本的可选字符串。如果未提供任何值，则文本将按原样复制。
  */
-function copy_text(target: string | number | HTMLElement, addition?: string) {
+function copy_text(target: HTMLElement | number | string, addition?: string) {
     let text = is_string_like(target) ? str_maybe_number(target) : target.textContent as string
     if (is_not_void(addition)) {
         text += addition
@@ -28,12 +28,9 @@ function copy_text(target: string | number | HTMLElement, addition?: string) {
     }
     if ('clipboard' in navigator) {
         navigator.clipboard.writeText(text).catch(copyBySelect)
-    }
-    else {
+    } else {
         copyBySelect()
     }
 }
 
-export {
-    copy_text,
-}
+export { copy_text }

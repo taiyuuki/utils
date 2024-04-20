@@ -19,8 +19,7 @@ function data_URI_to_blob(dataURI: string, mimeType?: string) {
     let baseStr = ''
     try {
         baseStr = atob(arr[1])
-    }
-    catch (e) {
+    } catch (e) {
         throw_type_error('base64', 'dataURI')
     }
     let len = baseStr.length
@@ -28,6 +27,7 @@ function data_URI_to_blob(dataURI: string, mimeType?: string) {
     while (len--) {
         u8arr[len] = baseStr.charCodeAt(len)
     }
+
     return new Blob([u8arr], { type: mimeType })
 }
 
@@ -42,6 +42,7 @@ function data_URI_to_blob(dataURI: string, mimeType?: string) {
 function url_to_date_URI(url: string, type?: string): Promise<string> {
     const img = new Image()
     img.src = url
+
     return new Promise((resolve, reject) => {
         img.onload = () => {
             resolve(image_to_data_URI(img, type))
