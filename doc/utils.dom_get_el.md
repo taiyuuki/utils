@@ -14,10 +14,39 @@ declare function dom_get_el(selector: string): Element | undefined;
 
 ## Parameters
 
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  selector | string | 表示用于从 DOM 中选择元素的 CSS 选择器的字符串。 |
+<table><thead><tr><th>
 
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+selector
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+表示用于从 DOM 中选择元素的 CSS 选择器的字符串。
+
+
+</td></tr>
+</tbody></table>
 **Returns:**
 
 Element \| undefined

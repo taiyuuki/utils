@@ -9,18 +9,47 @@
 **Signature:**
 
 ```typescript
-declare function blob_to_date_URI(blob: Blob): Promise<string | ArrayBuffer>;
+declare function blob_to_date_URI(blob: Blob): Promise<ArrayBuffer | string>;
 ```
 
 ## Parameters
 
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  blob | Blob | <code>blob</code> 参数是一个 Blob 对象，它表示不可变的原始数据的类文件对象。它可用于表示不一定采用 JavaScript 原生格式的数据。在这种情况下，该函数采用 Blob 对象并将其转换为数据 URI 字符串或 ArrayBuffer |
+<table><thead><tr><th>
 
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+blob
+
+
+</td><td>
+
+Blob
+
+
+</td><td>
+
+`blob` 参数是一个 Blob 对象，它表示不可变的原始数据的类文件对象。它可用于表示不一定采用 JavaScript 原生格式的数据。在这种情况下，该函数采用 Blob 对象并将其转换为数据 URI 字符串或 ArrayBuffer
+
+
+</td></tr>
+</tbody></table>
 **Returns:**
 
-Promise&lt;string \| ArrayBuffer&gt;
+Promise&lt;ArrayBuffer \| string&gt;
 
 解析为字符串或 ArrayBuffer 的 Promise，具体取决于将提供的 Blob 作为数据 URL 读取的结果。
 

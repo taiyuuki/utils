@@ -14,11 +14,55 @@ declare function storage_get<T, K extends T = T>(key: string, empty?: K): T | un
 
 ## Parameters
 
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  key | string | 键是一个字符串，用于标识存储在 localStorage 中的数据。它用于在需要时检索数据。 |
-|  empty | K | _(Optional)_ 该参数是可选的，表示如果在 localStorage 中找不到指定键的值，则返回默认值。如果未提供“empty”，则如果找不到该值，该函数将返回“undefined”。 |
+<table><thead><tr><th>
 
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+key
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+键是一个字符串，用于标识存储在 localStorage 中的数据。它用于在需要时检索数据。
+
+
+</td></tr>
+<tr><td>
+
+empty
+
+
+</td><td>
+
+K
+
+
+</td><td>
+
+_(Optional)_ 该参数是可选的，表示如果在 localStorage 中找不到指定键的值，则返回默认值。如果未提供“empty”，则如果找不到该值，该函数将返回“undefined”。
+
+
+</td></tr>
+</tbody></table>
 **Returns:**
 
 T \| undefined

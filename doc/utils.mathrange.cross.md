@@ -17,10 +17,37 @@ cross(other: MathRange): MathRange | null;
 
 ## Parameters
 
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  other | [MathRange](./utils.mathrange.md) |  |
+<table><thead><tr><th>
 
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+other
+
+
+</td><td>
+
+[MathRange](./utils.mathrange.md)
+
+
+</td><td>
+
+
+</td></tr>
+</tbody></table>
 **Returns:**
 
 [MathRange](./utils.mathrange.md) \| null

@@ -14,10 +14,39 @@ declare function is_regexp(r: any): r is RegExp;
 
 ## Parameters
 
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  r | any | 参数 r 是 any 类型，这意味着它可以是任何数据类型。 |
+<table><thead><tr><th>
 
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+r
+
+
+</td><td>
+
+any
+
+
+</td><td>
+
+参数 r 是 any 类型，这意味着它可以是任何数据类型。
+
+
+</td></tr>
+</tbody></table>
 **Returns:**
 
 r is RegExp

@@ -14,11 +14,55 @@ declare function get_fill_arr<T>(length: number, value: T): T[];
 
 ## Parameters
 
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  length | number | 长度参数是一个数字，指定要创建的数组的所需长度。 |
-|  value | T | value 参数是将用于填充数组的值。它可以是任何数据类型。 |
+<table><thead><tr><th>
 
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+length
+
+
+</td><td>
+
+number
+
+
+</td><td>
+
+长度参数是一个数字，指定要创建的数组的所需长度。
+
+
+</td></tr>
+<tr><td>
+
+value
+
+
+</td><td>
+
+T
+
+
+</td><td>
+
+value 参数是将用于填充数组的值。它可以是任何数据类型。
+
+
+</td></tr>
+</tbody></table>
 **Returns:**
 
 T\[\]

@@ -14,11 +14,55 @@ declare function arr_to_obj<T extends Key, V = boolean>(arr: T[], v?: V): TupleT
 
 ## Parameters
 
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  arr | T\[\] | 将用作结果对象中的属性名称的数组，数组的元素类型为string \| number \| symbol。 |
-|  v | V | _(Optional)_ 参数“v”是“V”类型的可选参数，默认为布尔值“true”。它用于设置结果对象中每个键的值。 |
+<table><thead><tr><th>
 
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+arr
+
+
+</td><td>
+
+T\[\]
+
+
+</td><td>
+
+将用作结果对象中的属性名称的数组，数组的元素类型为string \| number \| symbol。
+
+
+</td></tr>
+<tr><td>
+
+v
+
+
+</td><td>
+
+V
+
+
+</td><td>
+
+_(Optional)_ 参数“v”是“V”类型的可选参数，默认为布尔值“true”。它用于设置结果对象中每个键的值。
+
+
+</td></tr>
+</tbody></table>
 **Returns:**
 
 TupleToObject&lt;T, V&gt;

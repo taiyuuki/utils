@@ -14,10 +14,39 @@ declare function get_contrast_color(color: Color): "black" | "white";
 
 ## Parameters
 
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  color | Color | 颜色参数是表示十六进制颜色代码的字符串（例如“\#FF0000”表示红色）或表示 RGB 颜色的对象（例如 \[255, 0, 0\] 表示红色）。 |
+<table><thead><tr><th>
 
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+color
+
+
+</td><td>
+
+Color
+
+
+</td><td>
+
+颜色参数是表示十六进制颜色代码的字符串（例如“\#FF0000”表示红色）或表示 RGB 颜色的对象（例如 \[255, 0, 0\] 表示红色）。
+
+
+</td></tr>
+</tbody></table>
 **Returns:**
 
 "black" \| "white"

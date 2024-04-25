@@ -14,10 +14,39 @@ declare function is_object(o: any): o is object;
 
 ## Parameters
 
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  o | any | 参数 o 是 any 类型，这意味着它可以是任何数据类型。 |
+<table><thead><tr><th>
 
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+o
+
+
+</td><td>
+
+any
+
+
+</td><td>
+
+参数 o 是 any 类型，这意味着它可以是任何数据类型。
+
+
+</td></tr>
+</tbody></table>
 **Returns:**
 
 o is object

@@ -14,11 +14,55 @@ declare function debounce<T extends Fn>(func: T, timeFrame: number): T;
 
 ## Parameters
 
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  func | T | 需要去抖动的函数 |
-|  timeFrame | number | 时间间隔 |
+<table><thead><tr><th>
 
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+func
+
+
+</td><td>
+
+T
+
+
+</td><td>
+
+需要去抖动的函数
+
+
+</td></tr>
+<tr><td>
+
+timeFrame
+
+
+</td><td>
+
+number
+
+
+</td><td>
+
+时间间隔
+
+
+</td></tr>
+</tbody></table>
 **Returns:**
 
 T

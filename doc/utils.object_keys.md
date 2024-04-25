@@ -14,10 +14,39 @@ declare function object_keys<T extends object>(o: T): Keys<T>;
 
 ## Parameters
 
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  o | T | o 是扩展对象的类型 T 的泛型参数。它表示要返回其键的对象。 |
+<table><thead><tr><th>
 
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+o
+
+
+</td><td>
+
+T
+
+
+</td><td>
+
+o 是扩展对象的类型 T 的泛型参数。它表示要返回其键的对象。
+
+
+</td></tr>
+</tbody></table>
 **Returns:**
 
 Keys&lt;T&gt;

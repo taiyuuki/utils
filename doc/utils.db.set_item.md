@@ -17,11 +17,55 @@ set_item(id: string, data: T): void;
 
 ## Parameters
 
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  id | string | 数据的唯一标识。 |
-|  data | T | 数据。 |
+<table><thead><tr><th>
 
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+id
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+数据的唯一标识。
+
+
+</td></tr>
+<tr><td>
+
+data
+
+
+</td><td>
+
+T
+
+
+</td><td>
+
+数据。
+
+
+</td></tr>
+</tbody></table>
 **Returns:**
 
 void

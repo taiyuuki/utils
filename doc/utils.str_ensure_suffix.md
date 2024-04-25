@@ -14,11 +14,55 @@ declare function str_ensure_suffix(s: string, suffix: string): string;
 
 ## Parameters
 
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  s | string | 我们要确保以特定后缀结尾的字符串。 |
-|  suffix | string | “suffix”参数是一个字符串，它表示需要添加到“s”字符串末尾（如果不存在）的所需后缀。 |
+<table><thead><tr><th>
 
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+s
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+我们要确保以特定后缀结尾的字符串。
+
+
+</td></tr>
+<tr><td>
+
+suffix
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+“suffix”参数是一个字符串，它表示需要添加到“s”字符串末尾（如果不存在）的所需后缀。
+
+
+</td></tr>
+</tbody></table>
 **Returns:**
 
 string

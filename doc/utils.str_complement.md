@@ -19,12 +19,71 @@ declare function str_complement(n: number | string, len?: number, char?: string)
 
 ## Parameters
 
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  n | number \| string | 需要用前导字符格式化的输入数字或字符串。 |
-|  len | number | _(Optional)_ 结果字符串的长度。如果输入字符串的长度小于 len，该函数将在字符串的开头添加字符，直到达到所需的长度。 |
-|  char | string | _(Optional)_ 用于填充字符串的字符。如果未提供任何字符，则使用“0”作为默认值。 |
+<table><thead><tr><th>
 
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+n
+
+
+</td><td>
+
+number \| string
+
+
+</td><td>
+
+需要用前导字符格式化的输入数字或字符串。
+
+
+</td></tr>
+<tr><td>
+
+len
+
+
+</td><td>
+
+number
+
+
+</td><td>
+
+_(Optional)_ 结果字符串的长度。如果输入字符串的长度小于 len，该函数将在字符串的开头添加字符，直到达到所需的长度。
+
+
+</td></tr>
+<tr><td>
+
+char
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+_(Optional)_ 用于填充字符串的字符。如果未提供任何字符，则使用“0”作为默认值。
+
+
+</td></tr>
+</tbody></table>
 **Returns:**
 
 string

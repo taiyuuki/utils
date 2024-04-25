@@ -28,27 +28,27 @@ describe('模板编译', () => {
 
         expect(temp_compiler(temp1, data)).toMatchInlineSnapshot('"<div>姓名：Jack，分数：59, 及格：否</div>"')
         expect(temp_compiler(temp2, data)).toMatchInlineSnapshot(`
-      "
-            <div>姓名：Jack</div>
-            <div>分数：59</div>
-            <div>及格：否</div>
           "
-    `)
+                <div>姓名：Jack</div>
+                <div>分数：59</div>
+                <div>及格：否</div>
+              "
+        `)
         expect(temp_compiler(temp3, {
             name: '',
             age: -12,
         })).toMatchInlineSnapshot(`
-      "
-            <div>姓名：未知</div>
-            <div>年龄：0</div>
           "
-    `)
+                <div>姓名：未知</div>
+                <div>年龄：0</div>
+              "
+        `)
         expect(temp_compiler(temp4.replaceAll('{{', '${').replaceAll('}}', '}'), data)).toMatchInlineSnapshot(`
-      "
-            <div>姓名：Jack</div>
-            <div>分数：59</div>
-            <div>及格：否</div>
           "
-    `)
+                <div>姓名：Jack</div>
+                <div>分数：59</div>
+                <div>及格：否</div>
+              "
+        `)
     })
 })

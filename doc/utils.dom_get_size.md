@@ -17,10 +17,39 @@ declare function dom_get_size(el: Element | Window): {
 
 ## Parameters
 
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  el | Element \| Window | 参数 <code>el</code> 的类型为 <code>Element &#124; Window</code>，这意味着它可以是 HTML 元素或window对象。函数 dom\_get\_size 返回元素或窗口的宽度和高度，具体取决于 el 的类型。 |
+<table><thead><tr><th>
 
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+el
+
+
+</td><td>
+
+Element \| Window
+
+
+</td><td>
+
+参数 `el` 的类型为 `Element | Window`<!-- -->，这意味着它可以是 HTML 元素或window对象。函数 dom\_get\_size 返回元素或窗口的宽度和高度，具体取决于 el 的类型。
+
+
+</td></tr>
+</tbody></table>
 **Returns:**
 
 { width: number; height: number; } \| undefined

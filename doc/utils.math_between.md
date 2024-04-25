@@ -14,12 +14,71 @@ declare function math_between(v: number, min: number, max: number): number;
 
 ## Parameters
 
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  v | number | 一个你想检查它是否落在最小和最大范围之间的数字。 |
-|  min | number | 输入数字“v”可以是的最小值。 |
-|  max | number | 参数“max”是输入数字“v”所能达到的最大值。该函数通过在“v”大于“max”时返回“max”来确保“v”不大于“max”。 |
+<table><thead><tr><th>
 
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+v
+
+
+</td><td>
+
+number
+
+
+</td><td>
+
+一个你想检查它是否落在最小和最大范围之间的数字。
+
+
+</td></tr>
+<tr><td>
+
+min
+
+
+</td><td>
+
+number
+
+
+</td><td>
+
+输入数字“v”可以是的最小值。
+
+
+</td></tr>
+<tr><td>
+
+max
+
+
+</td><td>
+
+number
+
+
+</td><td>
+
+参数“max”是输入数字“v”所能达到的最大值。该函数通过在“v”大于“max”时返回“max”来确保“v”不大于“max”。
+
+
+</td></tr>
+</tbody></table>
 **Returns:**
 
 number

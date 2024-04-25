@@ -33,6 +33,7 @@ function math_between(v: number, min: number, max: number) {
     if (min > max) {
         [min, max] = [max, min]
     }
+
     return Math.min(max, Math.max(min, v))
 }
 
@@ -43,7 +44,8 @@ function math_between(v: number, min: number, max: number) {
  * @returns 该函数返回一个包含大写字母且最小长度为 2 个字符的十六进制字符串。
  */
 function math_to_hex(n: number) {
-    return n.toString(16).padStart(2, '0').toUpperCase()
+    return n.toString(16).padStart(2, '0')
+        .toUpperCase()
 }
 
 /**
@@ -59,6 +61,7 @@ function math_to_hex(n: number) {
 function int_to_bytes(num: number) {
     const bytes = new Uint8Array(4)
     bytes.set([num & 0xFF, num >> 8 & 0xFF, num >> 16 & 0xFF, num >> 24 & 0xFF])
+
     return bytes
 }
 

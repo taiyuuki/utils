@@ -14,10 +14,39 @@ declare function arr_random<T>(arr: T[]): T;
 
 ## Parameters
 
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  arr | T\[\] | 参数 arr 是 T 类型的数组。函数 arr\_random 将一个数组作为输入，并从该数组中返回一个随机元素。 <code>T</code> 类型是泛型类型，这意味着该函数可以处理任何类型的数组。 |
+<table><thead><tr><th>
 
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+arr
+
+
+</td><td>
+
+T\[\]
+
+
+</td><td>
+
+参数 arr 是 T 类型的数组。函数 arr\_random 将一个数组作为输入，并从该数组中返回一个随机元素。 `T` 类型是泛型类型，这意味着该函数可以处理任何类型的数组。
+
+
+</td></tr>
+</tbody></table>
 **Returns:**
 
 T

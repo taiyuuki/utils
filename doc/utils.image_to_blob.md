@@ -14,10 +14,39 @@ declare function image_to_blob(img: HTMLImageElement): Promise<Blob>;
 
 ## Parameters
 
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  img | HTMLImageElement | HTMLImageElement - HTML 文档中需要转换为 Blob 对象的图像元素。 |
+<table><thead><tr><th>
 
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+img
+
+
+</td><td>
+
+HTMLImageElement
+
+
+</td><td>
+
+HTMLImageElement - HTML 文档中需要转换为 Blob 对象的图像元素。
+
+
+</td></tr>
+</tbody></table>
 **Returns:**
 
 Promise&lt;Blob&gt;

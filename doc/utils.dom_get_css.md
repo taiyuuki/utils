@@ -14,11 +14,55 @@ declare function dom_get_css<T extends Element>(el: T, prop: CSSStyleName): stri
 
 ## Parameters
 
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  el | T | 我们要为其获取计算的 CSS 样式的 HTML 元素。 |
-|  prop | CSSStyleName | CSSStyleName 是表示 CSS 属性名称的字符串的类型别名。它用作 dom\_get\_css 函数的第二个参数，以指定从给定元素的计算样式中检索哪个 CSS 属性。 |
+<table><thead><tr><th>
 
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+el
+
+
+</td><td>
+
+T
+
+
+</td><td>
+
+我们要为其获取计算的 CSS 样式的 HTML 元素。
+
+
+</td></tr>
+<tr><td>
+
+prop
+
+
+</td><td>
+
+CSSStyleName
+
+
+</td><td>
+
+CSSStyleName 是表示 CSS 属性名称的字符串的类型别名。它用作 dom\_get\_css 函数的第二个参数，以指定从给定元素的计算样式中检索哪个 CSS 属性。
+
+
+</td></tr>
+</tbody></table>
 **Returns:**
 
 string

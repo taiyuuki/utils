@@ -14,11 +14,55 @@ declare function str_random(count: number, radix?: number): string;
 
 ## Parameters
 
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  count | number | 将生成的随机字符串中的字符数。 |
-|  radix | number | _(Optional)_ Radix 是指用于随机字符串生成的基数系统。默认值为 16，这意味着字符串将使用十六进制数字（0-9 和 A-F）生成。但是，可以将基数设置为 2 到 36 之间的任何值以使用 |
+<table><thead><tr><th>
 
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+count
+
+
+</td><td>
+
+number
+
+
+</td><td>
+
+将生成的随机字符串中的字符数。
+
+
+</td></tr>
+<tr><td>
+
+radix
+
+
+</td><td>
+
+number
+
+
+</td><td>
+
+_(Optional)_ Radix 是指用于随机字符串生成的基数系统。默认值为 16，这意味着字符串将使用十六进制数字（0-9 和 A-F）生成。但是，可以将基数设置为 2 到 36 之间的任何值以使用
+
+
+</td></tr>
+</tbody></table>
 **Returns:**
 
 string

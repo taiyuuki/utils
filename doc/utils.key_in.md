@@ -14,11 +14,55 @@ declare function key_in<T extends object>(key: Key, obj: T): key is keyof T;
 
 ## Parameters
 
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  key | Key | 第一个参数“key”的类型为“Key”，它可能是表示对象属性键的字符串或符号。 |
-|  obj | T | <code>obj</code> 参数是类型为 <code>T</code> 的对象，它是扩展了 <code>object</code> 类型的泛型。这意味着 <code>obj</code> 可以是任何具有属性和方法的对象。 |
+<table><thead><tr><th>
 
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+key
+
+
+</td><td>
+
+Key
+
+
+</td><td>
+
+第一个参数“key”的类型为“Key”，它可能是表示对象属性键的字符串或符号。
+
+
+</td></tr>
+<tr><td>
+
+obj
+
+
+</td><td>
+
+T
+
+
+</td><td>
+
+`obj` 参数是类型为 `T` 的对象，它是扩展了 `object` 类型的泛型。这意味着 `obj` 可以是任何具有属性和方法的对象。
+
+
+</td></tr>
+</tbody></table>
 **Returns:**
 
 key is keyof T

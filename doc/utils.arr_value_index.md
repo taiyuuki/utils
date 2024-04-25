@@ -14,10 +14,39 @@ declare function arr_value_index<T extends Key>(arr: T[]): Record<T, number>;
 
 ## Parameters
 
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  arr | T\[\] | T 类型值的数组，其中 T 扩展了 Key 类型。这意味着 T 只能是字符串、数字或符号。 |
+<table><thead><tr><th>
 
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+arr
+
+
+</td><td>
+
+T\[\]
+
+
+</td><td>
+
+T 类型值的数组，其中 T 扩展了 Key 类型。这意味着 T 只能是字符串、数字或符号。
+
+
+</td></tr>
+</tbody></table>
 **Returns:**
 
 Record&lt;T, number&gt;

@@ -46,25 +46,30 @@ function add_keyboard_events<T extends KeyboardEventOptions>(type: KeyboardEvent
         valid && !e.isComposing && emit(e.code as KeyboardEventKeys<T>)
     }
     document.addEventListener(type, handler)
+
     return {
-    /**
+
+        /**
      * 取消事件绑定，无法再开启。
      */
         close() {
             document.removeEventListener(type, handler)
         },
+
         /**
          * 临时关闭事件，可以再开启。
          */
         off() {
             valid = false
         },
+
         /**
          * 重新开启事件。
          */
         on() {
             valid = true
         },
+
         /**
          * 手动触发按键事件，即使已经取消了绑定，也能触发。
          * @param code - KeyboardEvent.code

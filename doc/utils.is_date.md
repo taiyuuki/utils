@@ -14,10 +14,39 @@ declare function is_date(d: any): d is Date;
 
 ## Parameters
 
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  d | any | 参数 d 是 any 类型，这意味着它可以是任何数据类型。但是，该函数使用 Object.prototype.toString.call() 方法检查 date 是否为 Date 对象。 |
+<table><thead><tr><th>
 
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+d
+
+
+</td><td>
+
+any
+
+
+</td><td>
+
+参数 d 是 any 类型，这意味着它可以是任何数据类型。但是，该函数使用 Object.prototype.toString.call() 方法检查 date 是否为 Date 对象。
+
+
+</td></tr>
+</tbody></table>
 **Returns:**
 
 d is Date

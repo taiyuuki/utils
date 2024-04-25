@@ -14,10 +14,39 @@ declare function rgb_to_hex(rgb: RgbColor): string;
 
 ## Parameters
 
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  rgb | RgbColor | 参数 <code>rgb</code> 应该是一个数字数组，表示 RGB 颜色模型中颜色的红色、绿色和蓝色值。它还可能包括一个可选的第四个值，表示颜色的 alpha（透明度）值。 |
+<table><thead><tr><th>
 
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+rgb
+
+
+</td><td>
+
+RgbColor
+
+
+</td><td>
+
+参数 `rgb` 应该是一个数字数组，表示 RGB 颜色模型中颜色的红色、绿色和蓝色值。它还可能包括一个可选的第四个值，表示颜色的 alpha（透明度）值。
+
+
+</td></tr>
+</tbody></table>
 **Returns:**
 
 string

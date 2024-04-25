@@ -24,6 +24,7 @@ function str_random(count: number, radix = 16) {
     for (let i = 1; i <= count; i++) {
         result += Math.floor(Math.random() * radix).toString(radix)
     }
+
     return result
 }
 
@@ -36,15 +37,14 @@ function str_uuid(): string {
     let uuid = ''
     if (typeof crypto !== 'undefined' && 'randomUUID' in crypto) {
         uuid = crypto.randomUUID()
-    }
-    else if (typeof Blob == 'undefined') {
+    } else if (typeof Blob === 'undefined') {
         uuid = `${str_random(8)}-${str_random(4)}-${str_random(4)}-${str_random(4)}-${str_random(12)}`
-    }
-    else {
+    } else {
         const url_uuid = URL.createObjectURL(new Blob())
         uuid = url_uuid.toString().substring(url_uuid.lastIndexOf('/') + 1)
         URL.revokeObjectURL(url_uuid)
     }
+
     return uuid
 }
 
@@ -112,7 +112,8 @@ function str_capital(str: string) {
  * @returns 函数 str_capital_all 返回一个新字符串，其中输入字符串中的所有单词都大写。
  */
 function str_capital_all(str: string) {
-    return str.split(' ').map(str_capital).join(' ')
+    return str.split(' ').map(str_capital)
+        .join(' ')
 }
 
 /**
@@ -127,6 +128,7 @@ function str_capital_all(str: string) {
  */
 function str_complement(n: number | string, len = 2, char = '0') {
     n = `${n}`
+
     return n.length >= len ? n : Array.from({ length: len - n.length + 1 }).join(char) + n
 }
 

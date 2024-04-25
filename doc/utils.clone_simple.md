@@ -14,10 +14,39 @@ declare function clone_simple<T extends object>(source: T): T;
 
 ## Parameters
 
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  source | T | <code>source</code> 参数的类型为 <code>T</code>，它是扩展 <code>object</code> 类型的通用类型。它代表需要克隆的对象。 |
+<table><thead><tr><th>
 
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+source
+
+
+</td><td>
+
+T
+
+
+</td><td>
+
+`source` 参数的类型为 `T`<!-- -->，它是扩展 `object` 类型的通用类型。它代表需要克隆的对象。
+
+
+</td></tr>
+</tbody></table>
 **Returns:**
 
 T

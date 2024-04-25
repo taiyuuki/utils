@@ -14,11 +14,55 @@ declare function arr_remove<T>(arr: T[], value: T): boolean;
 
 ## Parameters
 
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  arr | T\[\] | T 类型元素的数组。 |
-|  value | T | 要从数组中删除的值。 |
+<table><thead><tr><th>
 
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+arr
+
+
+</td><td>
+
+T\[\]
+
+
+</td><td>
+
+T 类型元素的数组。
+
+
+</td></tr>
+<tr><td>
+
+value
+
+
+</td><td>
+
+T
+
+
+</td><td>
+
+要从数组中删除的值。
+
+
+</td></tr>
+</tbody></table>
 **Returns:**
 
 boolean

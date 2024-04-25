@@ -14,11 +14,55 @@ declare function is_empty_obj(v: any, nullable?: boolean): boolean;
 
 ## Parameters
 
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  v | any | 被检查为空对象的变量。 |
-|  nullable | boolean | _(Optional)_ 一个布尔参数，用于确定函数是否应将空值视为空对象。如果 nullable 设置为 true，则 null 值将被视为空对象。如果 nullable 设置为 false，则 null 值将不会被视为空对象，默认值为 true。 |
+<table><thead><tr><th>
 
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+v
+
+
+</td><td>
+
+any
+
+
+</td><td>
+
+被检查为空对象的变量。
+
+
+</td></tr>
+<tr><td>
+
+nullable
+
+
+</td><td>
+
+boolean
+
+
+</td><td>
+
+_(Optional)_ 一个布尔参数，用于确定函数是否应将空值视为空对象。如果 nullable 设置为 true，则 null 值将被视为空对象。如果 nullable 设置为 false，则 null 值将不会被视为空对象，默认值为 true。
+
+
+</td></tr>
+</tbody></table>
 **Returns:**
 
 boolean

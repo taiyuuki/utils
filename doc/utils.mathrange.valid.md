@@ -12,15 +12,44 @@
 **Signature:**
 
 ```typescript
-static valid(origin: string | number): boolean;
+static valid(origin: number | string): boolean;
 ```
 
 ## Parameters
 
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  origin | string \| number | 一个数字区间的字符串，区分开区间和闭区间。 |
+<table><thead><tr><th>
 
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+origin
+
+
+</td><td>
+
+number \| string
+
+
+</td><td>
+
+一个数字区间的字符串，区分开区间和闭区间。
+
+
+</td></tr>
+</tbody></table>
 **Returns:**
 
 boolean

@@ -14,11 +14,55 @@ declare function image_mini(img: HTMLImageElement, quality: number): HTMLImageEl
 
 ## Parameters
 
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  img | HTMLImageElement | 表示要调整大小的图像的 HTMLImageElement 对象。 |
-|  quality | number | “质量”参数是一个介于 0 和 1 之间的数字，用于确定调整大小的图像的质量。值 1 表示最高质量，而值 0 表示最低质量。该函数使用此参数调整图像的质量 |
+<table><thead><tr><th>
 
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+img
+
+
+</td><td>
+
+HTMLImageElement
+
+
+</td><td>
+
+表示要调整大小的图像的 HTMLImageElement 对象。
+
+
+</td></tr>
+<tr><td>
+
+quality
+
+
+</td><td>
+
+number
+
+
+</td><td>
+
+“质量”参数是一个介于 0 和 1 之间的数字，用于确定调整大小的图像的质量。值 1 表示最高质量，而值 0 表示最低质量。该函数使用此参数调整图像的质量
+
+
+</td></tr>
+</tbody></table>
 **Returns:**
 
 HTMLImageElement

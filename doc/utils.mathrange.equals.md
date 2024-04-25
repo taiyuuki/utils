@@ -17,10 +17,39 @@ equals(other: MathRange): boolean;
 
 ## Parameters
 
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  other | [MathRange](./utils.mathrange.md) | 另一个区间对象 |
+<table><thead><tr><th>
 
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+other
+
+
+</td><td>
+
+[MathRange](./utils.mathrange.md)
+
+
+</td><td>
+
+另一个区间对象
+
+
+</td></tr>
+</tbody></table>
 **Returns:**
 
 boolean

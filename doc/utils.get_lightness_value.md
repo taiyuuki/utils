@@ -14,10 +14,39 @@ declare function get_lightness_value(color: Color): number;
 
 ## Parameters
 
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  color | Color | 颜色参数的类型为 Color，它可以是表示十六进制颜色代码的字符串（例如“\#FF0000”表示红色），也可以是表示颜色的 RGB 值的三个整数数组（例如 \[255, 0, 0 \] 为红色）。 |
+<table><thead><tr><th>
 
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+color
+
+
+</td><td>
+
+Color
+
+
+</td><td>
+
+颜色参数的类型为 Color，它可以是表示十六进制颜色代码的字符串（例如“\#FF0000”表示红色），也可以是表示颜色的 RGB 值的三个整数数组（例如 \[255, 0, 0 \] 为红色）。
+
+
+</td></tr>
+</tbody></table>
 **Returns:**
 
 number

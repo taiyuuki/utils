@@ -14,12 +14,71 @@ declare function arr_move<T extends any[]>(arr: T, from: number, to: number): T;
 
 ## Parameters
 
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  arr | T | 需要修改的数组。 |
-|  from | number | 数组中需要移动的元素的索引。 |
-|  to | number | 数组中元素应移动到的索引。 |
+<table><thead><tr><th>
 
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+arr
+
+
+</td><td>
+
+T
+
+
+</td><td>
+
+需要修改的数组。
+
+
+</td></tr>
+<tr><td>
+
+from
+
+
+</td><td>
+
+number
+
+
+</td><td>
+
+数组中需要移动的元素的索引。
+
+
+</td></tr>
+<tr><td>
+
+to
+
+
+</td><td>
+
+number
+
+
+</td><td>
+
+数组中元素应移动到的索引。
+
+
+</td></tr>
+</tbody></table>
 **Returns:**
 
 T

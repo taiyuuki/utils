@@ -14,10 +14,39 @@ declare function math_to_hex(n: number): string;
 
 ## Parameters
 
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  n | number | 参数“n”是一个将被转换为十六进制字符串的数字。 |
+<table><thead><tr><th>
 
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+n
+
+
+</td><td>
+
+number
+
+
+</td><td>
+
+参数“n”是一个将被转换为十六进制字符串的数字。
+
+
+</td></tr>
+</tbody></table>
 **Returns:**
 
 string

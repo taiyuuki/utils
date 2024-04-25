@@ -14,11 +14,55 @@ declare function url_to_date_URI(url: string, type?: string): Promise<string>;
 
 ## Parameters
 
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  url | string | 需要转换为数据 URI 的图像的URL。 |
-|  type | string | _(Optional)_ 可选参数“type”是一个字符串，指定数据 URI 的图像格式。如果未提供，则默认值为“image/png”。其他可能的值包括“image/jpeg”和“image/webp”。 |
+<table><thead><tr><th>
 
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+url
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+需要转换为数据 URI 的图像的URL。
+
+
+</td></tr>
+<tr><td>
+
+type
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+_(Optional)_ 可选参数“type”是一个字符串，指定数据 URI 的图像格式。如果未提供，则默认值为“image/png”。其他可能的值包括“image/jpeg”和“image/webp”。
+
+
+</td></tr>
+</tbody></table>
 **Returns:**
 
 Promise&lt;string&gt;

@@ -14,11 +14,55 @@ declare function data_URI_to_blob(dataURI: string, mimeType?: string): Blob;
 
 ## Parameters
 
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  dataURI | string | 表示数据 URI 的字符串，其中包括以 base64 格式编码的文件的数据和元数据。 |
-|  mimeType | string | _(Optional)_ dataURI 的 MIME 类型，指定 URI 中表示的数据类型。它是一个可选参数，如果未提供，该函数会尝试从 dataURI 本身中提取它。 |
+<table><thead><tr><th>
 
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+dataURI
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+表示数据 URI 的字符串，其中包括以 base64 格式编码的文件的数据和元数据。
+
+
+</td></tr>
+<tr><td>
+
+mimeType
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+_(Optional)_ dataURI 的 MIME 类型，指定 URI 中表示的数据类型。它是一个可选参数，如果未提供，该函数会尝试从 dataURI 本身中提取它。
+
+
+</td></tr>
+</tbody></table>
 **Returns:**
 
 Blob

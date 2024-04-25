@@ -9,15 +9,44 @@
 **Signature:**
 
 ```typescript
-declare function is_callable<T extends Function>(target: any): target is T;
+declare function is_callable<T extends Fn>(target: any): target is T;
 ```
 
 ## Parameters
 
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  target | any | 参数 <code>target</code> 是 <code>any</code> 类型，这意味着它可以是任何数据类型 |
+<table><thead><tr><th>
 
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+target
+
+
+</td><td>
+
+any
+
+
+</td><td>
+
+参数 `target` 是 `any` 类型，这意味着它可以是任何数据类型
+
+
+</td></tr>
+</tbody></table>
 **Returns:**
 
 target is T

@@ -14,11 +14,55 @@ declare function canvas_to_image(cvs: HTMLCanvasElement, quality?: number): HTML
 
 ## Parameters
 
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  cvs | HTMLCanvasElement | 一个 HTMLCanvasElement 对象，表示我们要转换为图像的画布元素。 |
-|  quality | number | _(Optional)_ 质量参数是一个介于 0 和 1 之间的数字，它决定了使用 toDataURL() 方法将图像从画布元素转换为图像元素时图像的质量。值 1 表示最高质量，而值 0 表示最低质量。 |
+<table><thead><tr><th>
 
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+cvs
+
+
+</td><td>
+
+HTMLCanvasElement
+
+
+</td><td>
+
+一个 HTMLCanvasElement 对象，表示我们要转换为图像的画布元素。
+
+
+</td></tr>
+<tr><td>
+
+quality
+
+
+</td><td>
+
+number
+
+
+</td><td>
+
+_(Optional)_ 质量参数是一个介于 0 和 1 之间的数字，它决定了使用 toDataURL() 方法将图像从画布元素转换为图像元素时图像的质量。值 1 表示最高质量，而值 0 表示最低质量。
+
+
+</td></tr>
+</tbody></table>
 **Returns:**
 
 HTMLImageElement

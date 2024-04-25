@@ -27,14 +27,82 @@ evt_ctrl.remove_all()
 
 ## Constructors
 
-|  Constructor | Modifiers | Description |
-|  --- | --- | --- |
-|  [(constructor)(target)](./utils.eventscontroller._constructor_.md) |  | **_(BETA)_** Constructs a new instance of the <code>EventsController</code> class |
+<table><thead><tr><th>
+
+Constructor
+
+
+</th><th>
+
+Modifiers
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+[(constructor)(target)](./utils.eventscontroller._constructor_.md)
+
+
+</td><td>
+
+
+</td><td>
+
+**_(BETA)_** Constructs a new instance of the `EventsController` class
+
+
+</td></tr>
+</tbody></table>
 
 ## Methods
 
-|  Method | Modifiers | Description |
-|  --- | --- | --- |
-|  [add\_evt(type, callback)](./utils.eventscontroller.add_evt.md) |  | **_(BETA)_** 绑定事件 |
-|  [remove\_all()](./utils.eventscontroller.remove_all.md) |  | **_(BETA)_** 解除所有绑定的事件 |
+<table><thead><tr><th>
 
+Method
+
+
+</th><th>
+
+Modifiers
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+[add\_evt(type, callback)](./utils.eventscontroller.add_evt.md)
+
+
+</td><td>
+
+
+</td><td>
+
+**_(BETA)_** 绑定事件
+
+
+</td></tr>
+<tr><td>
+
+[remove\_all()](./utils.eventscontroller.remove_all.md)
+
+
+</td><td>
+
+
+</td><td>
+
+**_(BETA)_** 解除所有绑定的事件
+
+
+</td></tr>
+</tbody></table>

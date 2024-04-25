@@ -14,11 +14,55 @@ declare function image_to_canvas(img: HTMLImageElement, size?: ImageSize): HTMLC
 
 ## Parameters
 
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  img | HTMLImageElement | 一个 HTMLImageElement 对象，表示要转换为画布的图像。 |
-|  size | ImageSize | _(Optional)_ size 参数是一个可选对象，用于指定所需的画布宽度和高度。如果未提供，则默认为输入图像的自然宽度和高度。 |
+<table><thead><tr><th>
 
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+img
+
+
+</td><td>
+
+HTMLImageElement
+
+
+</td><td>
+
+一个 HTMLImageElement 对象，表示要转换为画布的图像。
+
+
+</td></tr>
+<tr><td>
+
+size
+
+
+</td><td>
+
+ImageSize
+
+
+</td><td>
+
+_(Optional)_ size 参数是一个可选对象，用于指定所需的画布宽度和高度。如果未提供，则默认为输入图像的自然宽度和高度。
+
+
+</td></tr>
+</tbody></table>
 **Returns:**
 
 HTMLCanvasElement

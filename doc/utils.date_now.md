@@ -14,10 +14,39 @@ declare function date_now(format?: string): string;
 
 ## Parameters
 
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  format | string | _(Optional)_ 参数是一个字符串，用于指定所需的日期和时间格式。它使用占位符，例如年份的“yyyy”、月份的“MM”、日期的“dd”、小时的“HH”、分钟的“mm”和秒钟的“ss” |
+<table><thead><tr><th>
 
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+format
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+_(Optional)_ 参数是一个字符串，用于指定所需的日期和时间格式。它使用占位符，例如年份的“yyyy”、月份的“MM”、日期的“dd”、小时的“HH”、分钟的“mm”和秒钟的“ss”
+
+
+</td></tr>
+</tbody></table>
 **Returns:**
 
 string

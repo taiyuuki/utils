@@ -6,115 +6,1187 @@
 
 ## Classes
 
-|  Class | Description |
-|  --- | --- |
-|  [DB](./utils.db.md) | <p>**_(BETA)_** 这是一个类，用于简单创建和访问 IndexedDB 数据库中的储存对象。</p><p>每一个 DB 实例都只对应一个存储对象（object store）。</p> |
-|  [EventsController](./utils.eventscontroller.md) | **_(BETA)_** DOM Event Controller |
-|  [MathRange](./utils.mathrange.md) | **_(BETA)_** 数字区间类，构造一个形如 (4, 10\] 的区间对象，区分开闭区间。 |
-|  [Vec2](./utils.vec2.md) | **_(BETA)_** 二维向量类 |
+<table><thead><tr><th>
+
+Class
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+[DB](./utils.db.md)
+
+
+</td><td>
+
+**_(BETA)_** 这是一个类，用于简单创建和访问 IndexedDB 数据库中的储存对象。
+
+每一个 DB 实例都只对应一个存储对象（object store）。
+
+
+</td></tr>
+<tr><td>
+
+[EventsController](./utils.eventscontroller.md)
+
+
+</td><td>
+
+**_(BETA)_** DOM Event Controller
+
+
+</td></tr>
+<tr><td>
+
+[MathRange](./utils.mathrange.md)
+
+
+</td><td>
+
+**_(BETA)_** 数字区间类，构造一个形如 (4, 10\] 的区间对象，区分开闭区间。
+
+
+</td></tr>
+<tr><td>
+
+[Vec2](./utils.vec2.md)
+
+
+</td><td>
+
+**_(BETA)_** 二维向量类
+
+
+</td></tr>
+</tbody></table>
 
 ## Functions
 
-|  Function | Description |
-|  --- | --- |
-|  [add\_keyboard\_events(type, eventsOptions)](./utils.add_keyboard_events.md) | 该函数添加带有选项的键盘事件，并提供关闭、关闭/打开和手动触发事件的方法。 |
-|  [arr\_move(arr, from, to)](./utils.arr_move.md) | 函数 arr\_move 将数组中的元素从一个索引移动到另一个索引。 |
-|  [arr\_random(arr)](./utils.arr_random.md) | 该函数从数组中返回一个随机元素。 |
-|  [arr\_remove(arr, value)](./utils.arr_remove.md) | 函数 arr\_remove 用于从数组中删除指定的值。 |
-|  [arr\_to\_obj(arr, v)](./utils.arr_to_obj.md) | 该函数将数组转换为一个对象，其中键作为属性和一个可选的默认值。 |
-|  [arr\_unique(arr)](./utils.arr_unique.md) | 此函数接受任何类型的数组并返回一个仅包含唯一值的新数组。 |
-|  [arr\_value\_index(arr)](./utils.arr_value_index.md) | 这个 TypeScript 函数接受一个键数组并返回一个对象，每个键的值是它在数组中的索引。 |
-|  [blob\_to\_date\_URI(blob)](./utils.blob_to_date_uri.md) | 此函数将 Blob 对象转换为数据 URI 字符串或 ArrayBuffer。 |
-|  [bytes\_to\_int(bytes)](./utils.bytes_to_int.md) | 该函数将四个字节的数组转换为单个整数值。 |
-|  [canvas\_to\_blob(cvs)](./utils.canvas_to_blob.md) | 此函数将 HTML canvas 元素转换为 Blob 对象并返回一个 Promise。 |
-|  [canvas\_to\_image(cvs, quality)](./utils.canvas_to_image.md) | 此函数将画布元素转换为具有指定质量的图像元素。 |
-|  [clone\_deep(source)](./utils.clone_deep.md) | 这是一个执行对象深度克隆的函数。 |
-|  [clone\_simple(source)](./utils.clone_simple.md) | 该函数使用 JSON 解析和字符串化克隆一个简单对象。 |
-|  [clone(source)](./utils.clone.md) | 该函数使用简单方法或深层方法克隆对象，具体取决于简单方法是否失败。 |
-|  [copy\_text(target, addition)](./utils.copy_text.md) | 该函数使用剪贴板 API（如果可用）将文本复制到剪贴板，否则它回退到创建临时文本区域元素并使用 execCommand 方法。 |
-|  [data\_URI\_to\_blob(dataURI, mimeType)](./utils.data_uri_to_blob.md) | 此函数将数据 URI 转换为 blob 对象。 |
-|  [date\_now(format)](./utils.date_now.md) | 该函数以指定格式返回当前日期和时间。 |
-|  [debounce(func, timeFrame)](./utils.debounce.md) | 为给定函数实现去抖动功能。 |
-|  [deep\_equal(a, b)](./utils.deep_equal.md) | 该函数检查两个对象或数组是否相等。 |
-|  [dom\_get\_css(el, prop)](./utils.dom_get_css.md) | 该函数返回给定 DOM 元素的指定 CSS 属性的值。 |
-|  [dom\_get\_el(selector)](./utils.dom_get_el.md) | 该函数根据给定的选择器字符串返回 DOM 元素，如果选择器无效或未找到该元素，则返回未定义的元素。 |
-|  [dom\_get\_size(el)](./utils.dom_get_size.md) | 该函数返回 DOM 元素或窗口的大小。 |
-|  [dom\_set\_css\_var(varName, value, el)](./utils.dom_set_css_var.md) | 这个函数在给定的 DOM 元素上设置一个 CSS 变量。 |
-|  [dom\_set\_css(el, css)](./utils.dom_set_css.md) | 该函数在给定的 HTML 元素上设置 CSS 样式。 |
-|  [download\_blob(blob, fileName)](./utils.download_blob.md) | 该函数将 Blob 对象下载为具有给定文件名或生成的 UUID 的文件。 |
-|  [download\_by\_url(URL, fileName)](./utils.download_by_url.md) | 此函数使用可选文件名从给定的 URL 下载文件。 |
-|  [download\_canvas(cvs, imageName)](./utils.download_canvas.md) | 此函数将画布元素下载为具有默认名称或指定名称的 PNG 图像。 |
-|  [download\_image(img, imageName)](./utils.download_image.md) | 该函数通过其 URL 下载图像并使用生成或提供的名称保存它。 |
-|  [get\_contrast\_color(color)](./utils.get_contrast_color.md) | 该函数将颜色作为输入，并根据输入颜色的亮度返回黑色或白色作为对比色。 |
-|  [get\_fill\_arr(length, value)](./utils.get_fill_arr.md) | 该函数创建一个指定长度的数组，其中填充了指定的值。 |
-|  [get\_lightness\_value(color)](./utils.get_lightness_value.md) | 该函数以 RGB 或十六进制格式计算颜色的亮度值。 |
-|  [hex\_to\_rgb(hex)](./utils.hex_to_rgb.md) | 该函数将十六进制颜色代码转换为其对应的 RGB 颜色值。 |
-|  [hsl\_to\_rgb(hsl)](./utils.hsl_to_rgb.md) | 该函数将 HSL 格式的颜色转换为 RGB 格式。 |
-|  [image\_get\_type(filename)](./utils.image_get_type.md) | 该函数根据文件扩展名返回图像文件的 MIME 类型。 |
-|  [image\_mini(img, quality)](./utils.image_mini.md) | 该函数接受一个 HTML 图像元素和一个质量参数，调整图像大小并返回一个包含调整后图像的新图像元素。 |
-|  [image\_resize(img, options)](./utils.image_resize.md) | 此函数根据指定的选项调整 HTML 图像元素的大小，并将调整后的图像作为新的 HTML 图像元素返回。 |
-|  [image\_to\_blob(img)](./utils.image_to_blob.md) | 此函数使用画布将 HTML 图像元素转换为 blob 对象。 |
-|  [image\_to\_canvas(img, size)](./utils.image_to_canvas.md) | 此函数将 HTML 图像元素转换为具有指定大小的画布元素。 |
-|  [image\_to\_data\_URI(img, type)](./utils.image_to_data_uri.md) | 此函数将 HTML 图像元素转换为数据 URI。 |
-|  [int\_to\_bytes(num)](./utils.int_to_bytes.md) | 该函数使用按位运算将整数转换为 4 字节的数组并返回该数组。 |
-|  [is\_base64(str)](./utils.is_base64.md) | 该函数检查给定字符串是否是具有可选数据 URI 方案的有效 base64 编码字符串。 |
-|  [is\_blob(blob)](./utils.is_blob.md) | 该函数检查给定对象是否是 Blob 类的实例。 |
-|  [is\_callable(target)](./utils.is_callable.md) | 判断给定的参数是否是函数 |
-|  [is\_chinese(str)](./utils.is_chinese.md) | 该函数检查给定字符串是否全是汉字，范围为 \[0x4e00, 0x9fa5\]。 |
-|  [is\_date(d)](./utils.is_date.md) | 该函数检查给定值是否为 TypeScript 中的 Date 对象。 |
-|  [is\_element(el)](./utils.is_element.md) | 该函数检查给定对象是否是 TypeScript 中 Element 类的实例。 |
-|  [is\_email(str)](./utils.is_email.md) | 函数正在检查给定的字符串是否是有效的电子邮件地址。它使用正则表达式将字符串与有效电子邮件地址的模式进行匹配。 如果字符串与模式匹配，则函数返回“true”，表明它是有效的电子邮件地址。否则，它返回“false”。 |
-|  [is\_empty\_array(v, nullable)](./utils.is_empty_array.md) | 该函数检查给定值是否为空数组或 null/undefined。 |
-|  [is\_empty\_obj(v, nullable)](./utils.is_empty_obj.md) | 检查给定值是否为空对象。 |
-|  [is\_empty\_string(s, trim)](./utils.is_empty_string.md) | 该函数检查给定字符串是否为空，并使用可选参数在检查前修剪字符串。 |
-|  [is\_file(file)](./utils.is_file.md) | 该函数检查给定对象是否是 File 类的实例。 |
-|  [is\_fn(fn)](./utils.is_fn.md) | 该函数检查给定变量是否为函数。 |
-|  [is\_hex\_color(color)](./utils.is_hex_color.md) | 该函数检查给定的字符串是否是有效的十六进制颜色代码。 |
-|  [is\_html\_element(hel)](./utils.is_html_element.md) | 该函数检查给定变量是否是 HTMLElement 类的实例。 |
-|  [is\_not\_empty\_string(s, trim)](./utils.is_not_empty_string.md) | 该函数检查给定的输入是否为非空字符串或非空值。 |
-|  [is\_not\_void(t)](./utils.is_not_void.md) | 该函数检查值是否不为 undefined 或 null。 |
-|  [is\_null(n)](./utils.is_null.md) | 该函数检查给定值是否为空。 |
-|  [is\_number(n)](./utils.is_number.md) | 该函数检查给定值是否为有限数。 |
-|  [is\_object(o)](./utils.is_object.md) | 该函数检查给定值是否是对象而不是数组。 |
-|  [is\_regexp(r)](./utils.is_regexp.md) | 该函数检查给定值是否为正则表达式。 |
-|  [is\_rgb\_color(color)](./utils.is_rgb_color.md) | 该函数检查给定颜色是否为 RGB 颜色。 |
-|  [is\_string\_like(target)](./utils.is_string_like.md) | 该函数检查给定目标是字符串还是数字。 |
-|  [is\_undefined(u)](./utils.is_undefined.md) | 该函数检查给定值是否未定义。 |
-|  [is\_void(t)](./utils.is_void.md) | 该函数检查给定值是否为 null 或 undefined，或者它是否为 NaN 的数字。 |
-|  [is\_window\_or\_element(el)](./utils.is_window_or_element.md) | 该函数检查给定对象是否是元素或window。 |
-|  [is\_window(win)](./utils.is_window.md) | 该函数检查给定参数是否是 TypeScript 中的全局窗口对象。 |
-|  [key\_in(key, obj)](./utils.key_in.md) | 该函数检查给定对象中是否存在给定键并返回布尔值。 |
-|  [log\_type\_error(type, name)](./utils.log_type_error.md) | 该函数使用预期的类型和名称记录类型错误消息。 |
-|  [match\_range(n, pattern)](./utils.match_range.md) | **_(BETA)_** 对数字进行模式匹配 |
-|  [math\_between(v, min, max)](./utils.math_between.md) | 该函数返回指定范围内的数字。 |
-|  [math\_random\_int(from, to)](./utils.math_random_int.md) | 该函数返回指定范围内的随机整数。 |
-|  [math\_to\_fixed(n, digit)](./utils.math_to_fixed.md) | 该函数返回一个四舍五入到指定小数位数的数字。 |
-|  [math\_to\_hex(n)](./utils.math_to_hex.md) | 该函数将数字转换为包含大写字母且最小长度为 2 个字符的十六进制字符串。 |
-|  [object\_concat(target, source)](./utils.object_concat.md) | 函数 object\_concat 连接两个通用类型的对象并返回连接后的对象。 |
-|  [object\_entries(obj)](./utils.object_entries.md) | 此函数将对象的条目作为键值对数组返回。 |
-|  [object\_keys(o)](./utils.object_keys.md) | 该函数将对象的键作为数组返回。 |
-|  [object\_pick(obj, keys)](./utils.object_pick.md) | 函数“object\_pick”接受一个对象和一个键数组，并返回一个新对象，该对象仅包含原始对象中的指定键。 |
-|  [point\_in\_polygon(point, polygon)](./utils.point_in_polygon.md) | 函数“point\_in\_polygon”使用光线投射算法确定点是否在多边形内部。 |
-|  [rgb\_to\_hex(rgb)](./utils.rgb_to_hex.md) | 该函数将 RGB 颜色数组转换为十六进制颜色代码。 |
-|  [rgb\_to\_hsl(rgb)](./utils.rgb_to_hsl.md) | 该函数将 RGB 颜色值转换为其对应的 HSL 颜色值。 |
-|  [search\_range(n, ranges)](./utils.search_range.md) | **_(BETA)_** 在数字区间列表中搜索数字所处的区间 |
-|  [storage\_get(key, empty)](./utils.storage_get.md) | 该函数从本地存储中检索数据并将其作为已解析的 JSON 对象或可选的默认值返回。 |
-|  [storage\_remove(key)](./utils.storage_remove.md) | 该函数根据给定的键从本地存储中删除一个项目。 |
-|  [storage\_set(key, value)](./utils.storage_set.md) | 该函数使用指定的键将任何类型的值存储在浏览器的本地存储中。 |
-|  [str\_capital\_all(str)](./utils.str_capital_all.md) | 该函数将给定字符串中每个单词的首字母大写。 |
-|  [str\_capital(str)](./utils.str_capital.md) | 该函数将给定字符串的第一个字母大写。 |
-|  [str\_complement(n, len, char)](./utils.str_complement.md) | 该函数将前导零添加到数字或字符串中以使其具有特定长度。 |
-|  [str\_ensure\_chinese(str)](./utils.str_ensure_chinese.md) | 函数从输入字符串中删除所有非中文字符。 |
-|  [str\_ensure\_prefix(s, prefix)](./utils.str_ensure_prefix.md) | 该函数确保给定的字符串具有指定的前缀。 |
-|  [str\_ensure\_suffix(s, suffix)](./utils.str_ensure_suffix.md) | 该函数确保给定的字符串以指定的后缀结尾。 |
-|  [str\_maybe\_number(target)](./utils.str_maybe_number.md) | 该函数接受一个数字或字符串并将其作为字符串返回。 |
-|  [str\_no\_prefix(s, prefix)](./utils.str_no_prefix.md) | 该函数从字符串中删除给定的前缀（如果存在）。 |
-|  [str\_no\_suffix(s, suffix)](./utils.str_no_suffix.md) | 该函数从字符串中删除给定的后缀（如果存在）。 |
-|  [str\_random(count, radix)](./utils.str_random.md) | 该函数生成指定长度和基数的随机字符串。 |
-|  [str\_uuid()](./utils.str_uuid.md) | 生成 UUID 字符串。 |
-|  [temp\_compiler(temp, data)](./utils.temp_compiler.md) | 该函数接受一个字符串模板和一个数据对象，并返回一个已解析的字符串，其中包含插入到模板中的数据值。 |
-|  [throttle(func, timeFrame, immediately)](./utils.throttle.md) | 为给定函数实现节流功能。 |
-|  [throw\_type\_error(type, name)](./utils.throw_type_error.md) | 该函数抛出带有特定消息的 TypeError。 |
-|  [url\_to\_blob(url)](./utils.url_to_blob.md) | 此函数将 URL 作为输入并返回一个 Promise，该 Promise 解析为包含来自 URL 的数据的 Blob 对象。 |
-|  [url\_to\_date\_URI(url, type)](./utils.url_to_date_uri.md) | 此函数将 URL 转换为图像的数据 URI。 |
+<table><thead><tr><th>
 
+Function
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+[add\_keyboard\_events(type, eventsOptions)](./utils.add_keyboard_events.md)
+
+
+</td><td>
+
+该函数添加带有选项的键盘事件，并提供关闭、关闭/打开和手动触发事件的方法。
+
+
+</td></tr>
+<tr><td>
+
+[arr\_move(arr, from, to)](./utils.arr_move.md)
+
+
+</td><td>
+
+函数 arr\_move 将数组中的元素从一个索引移动到另一个索引。
+
+
+</td></tr>
+<tr><td>
+
+[arr\_random(arr)](./utils.arr_random.md)
+
+
+</td><td>
+
+该函数从数组中返回一个随机元素。
+
+
+</td></tr>
+<tr><td>
+
+[arr\_remove(arr, value)](./utils.arr_remove.md)
+
+
+</td><td>
+
+函数 arr\_remove 用于从数组中删除指定的值。
+
+
+</td></tr>
+<tr><td>
+
+[arr\_to\_obj(arr, v)](./utils.arr_to_obj.md)
+
+
+</td><td>
+
+该函数将数组转换为一个对象，其中键作为属性和一个可选的默认值。
+
+
+</td></tr>
+<tr><td>
+
+[arr\_unique(arr)](./utils.arr_unique.md)
+
+
+</td><td>
+
+此函数接受任何类型的数组并返回一个仅包含唯一值的新数组。
+
+
+</td></tr>
+<tr><td>
+
+[arr\_value\_index(arr)](./utils.arr_value_index.md)
+
+
+</td><td>
+
+这个 TypeScript 函数接受一个键数组并返回一个对象，每个键的值是它在数组中的索引。
+
+
+</td></tr>
+<tr><td>
+
+[blob\_to\_date\_URI(blob)](./utils.blob_to_date_uri.md)
+
+
+</td><td>
+
+此函数将 Blob 对象转换为数据 URI 字符串或 ArrayBuffer。
+
+
+</td></tr>
+<tr><td>
+
+[bubble\_message(e, mes, options)](./utils.bubble_message.md)
+
+
+</td><td>
+
+函数“bubble\_message”在鼠标点击事件的位置创建一个带有动画的动态气泡消息元素。
+
+
+</td></tr>
+<tr><td>
+
+[bytes\_to\_int(bytes)](./utils.bytes_to_int.md)
+
+
+</td><td>
+
+该函数将四个字节的数组转换为单个整数值。
+
+
+</td></tr>
+<tr><td>
+
+[canvas\_to\_blob(cvs)](./utils.canvas_to_blob.md)
+
+
+</td><td>
+
+此函数将 HTML canvas 元素转换为 Blob 对象并返回一个 Promise。
+
+
+</td></tr>
+<tr><td>
+
+[canvas\_to\_image(cvs, quality)](./utils.canvas_to_image.md)
+
+
+</td><td>
+
+此函数将画布元素转换为具有指定质量的图像元素。
+
+
+</td></tr>
+<tr><td>
+
+[clone\_deep(source)](./utils.clone_deep.md)
+
+
+</td><td>
+
+这是一个执行对象深度克隆的函数。
+
+
+</td></tr>
+<tr><td>
+
+[clone\_simple(source)](./utils.clone_simple.md)
+
+
+</td><td>
+
+该函数使用 JSON 解析和字符串化克隆一个简单对象。
+
+
+</td></tr>
+<tr><td>
+
+[clone(source)](./utils.clone.md)
+
+
+</td><td>
+
+该函数使用简单方法或深层方法克隆对象，具体取决于简单方法是否失败。
+
+
+</td></tr>
+<tr><td>
+
+[copy\_text(target, addition)](./utils.copy_text.md)
+
+
+</td><td>
+
+该函数使用剪贴板 API（如果可用）将文本复制到剪贴板，否则它回退到创建临时文本区域元素并使用 execCommand 方法。
+
+
+</td></tr>
+<tr><td>
+
+[data\_URI\_to\_blob(dataURI, mimeType)](./utils.data_uri_to_blob.md)
+
+
+</td><td>
+
+此函数将数据 URI 转换为 blob 对象。
+
+
+</td></tr>
+<tr><td>
+
+[date\_now(format)](./utils.date_now.md)
+
+
+</td><td>
+
+该函数以指定格式返回当前日期和时间。
+
+
+</td></tr>
+<tr><td>
+
+[debounce(func, timeFrame)](./utils.debounce.md)
+
+
+</td><td>
+
+为给定函数实现去抖动功能。
+
+
+</td></tr>
+<tr><td>
+
+[deep\_equal(a, b)](./utils.deep_equal.md)
+
+
+</td><td>
+
+该函数检查两个对象或数组是否相等。
+
+
+</td></tr>
+<tr><td>
+
+[dom\_get\_css(el, prop)](./utils.dom_get_css.md)
+
+
+</td><td>
+
+该函数返回给定 DOM 元素的指定 CSS 属性的值。
+
+
+</td></tr>
+<tr><td>
+
+[dom\_get\_el(selector)](./utils.dom_get_el.md)
+
+
+</td><td>
+
+该函数根据给定的选择器字符串返回 DOM 元素，如果选择器无效或未找到该元素，则返回未定义的元素。
+
+
+</td></tr>
+<tr><td>
+
+[dom\_get\_size(el)](./utils.dom_get_size.md)
+
+
+</td><td>
+
+该函数返回 DOM 元素或窗口的大小。
+
+
+</td></tr>
+<tr><td>
+
+[dom\_set\_css\_var(varName, value, el)](./utils.dom_set_css_var.md)
+
+
+</td><td>
+
+这个函数在给定的 DOM 元素上设置一个 CSS 变量。
+
+
+</td></tr>
+<tr><td>
+
+[dom\_set\_css(el, css)](./utils.dom_set_css.md)
+
+
+</td><td>
+
+该函数在给定的 HTML 元素上设置 CSS 样式。
+
+
+</td></tr>
+<tr><td>
+
+[download\_blob(blob, fileName)](./utils.download_blob.md)
+
+
+</td><td>
+
+该函数将 Blob 对象下载为具有给定文件名或生成的 UUID 的文件。
+
+
+</td></tr>
+<tr><td>
+
+[download\_by\_url(URL, fileName)](./utils.download_by_url.md)
+
+
+</td><td>
+
+此函数使用可选文件名从给定的 URL 下载文件。
+
+
+</td></tr>
+<tr><td>
+
+[download\_canvas(cvs, imageName)](./utils.download_canvas.md)
+
+
+</td><td>
+
+此函数将画布元素下载为具有默认名称或指定名称的 PNG 图像。
+
+
+</td></tr>
+<tr><td>
+
+[download\_image(img, imageName)](./utils.download_image.md)
+
+
+</td><td>
+
+该函数通过其 URL 下载图像并使用生成或提供的名称保存它。
+
+
+</td></tr>
+<tr><td>
+
+[get\_contrast\_color(color)](./utils.get_contrast_color.md)
+
+
+</td><td>
+
+该函数将颜色作为输入，并根据输入颜色的亮度返回黑色或白色作为对比色。
+
+
+</td></tr>
+<tr><td>
+
+[get\_fill\_arr(length, value)](./utils.get_fill_arr.md)
+
+
+</td><td>
+
+该函数创建一个指定长度的数组，其中填充了指定的值。
+
+
+</td></tr>
+<tr><td>
+
+[get\_lightness\_value(color)](./utils.get_lightness_value.md)
+
+
+</td><td>
+
+该函数以 RGB 或十六进制格式计算颜色的亮度值。
+
+
+</td></tr>
+<tr><td>
+
+[hex\_to\_rgb(hex)](./utils.hex_to_rgb.md)
+
+
+</td><td>
+
+该函数将十六进制颜色代码转换为其对应的 RGB 颜色值。
+
+
+</td></tr>
+<tr><td>
+
+[hsl\_to\_rgb(hsl)](./utils.hsl_to_rgb.md)
+
+
+</td><td>
+
+该函数将 HSL 格式的颜色转换为 RGB 格式。
+
+
+</td></tr>
+<tr><td>
+
+[image\_get\_type(filename)](./utils.image_get_type.md)
+
+
+</td><td>
+
+该函数根据文件扩展名返回图像文件的 MIME 类型。
+
+
+</td></tr>
+<tr><td>
+
+[image\_mini(img, quality)](./utils.image_mini.md)
+
+
+</td><td>
+
+该函数接受一个 HTML 图像元素和一个质量参数，调整图像大小并返回一个包含调整后图像的新图像元素。
+
+
+</td></tr>
+<tr><td>
+
+[image\_resize(img, options)](./utils.image_resize.md)
+
+
+</td><td>
+
+此函数根据指定的选项调整 HTML 图像元素的大小，并将调整后的图像作为新的 HTML 图像元素返回。
+
+
+</td></tr>
+<tr><td>
+
+[image\_to\_blob(img)](./utils.image_to_blob.md)
+
+
+</td><td>
+
+此函数使用画布将 HTML 图像元素转换为 blob 对象。
+
+
+</td></tr>
+<tr><td>
+
+[image\_to\_canvas(img, size)](./utils.image_to_canvas.md)
+
+
+</td><td>
+
+此函数将 HTML 图像元素转换为具有指定大小的画布元素。
+
+
+</td></tr>
+<tr><td>
+
+[image\_to\_data\_URI(img, type)](./utils.image_to_data_uri.md)
+
+
+</td><td>
+
+此函数将 HTML 图像元素转换为数据 URI。
+
+
+</td></tr>
+<tr><td>
+
+[int\_to\_bytes(num)](./utils.int_to_bytes.md)
+
+
+</td><td>
+
+该函数使用按位运算将整数转换为 4 字节的数组并返回该数组。
+
+
+</td></tr>
+<tr><td>
+
+[is\_base64(str)](./utils.is_base64.md)
+
+
+</td><td>
+
+该函数检查给定字符串是否是具有可选数据 URI 方案的有效 base64 编码字符串。
+
+
+</td></tr>
+<tr><td>
+
+[is\_blob(blob)](./utils.is_blob.md)
+
+
+</td><td>
+
+该函数检查给定对象是否是 Blob 类的实例。
+
+
+</td></tr>
+<tr><td>
+
+[is\_callable(target)](./utils.is_callable.md)
+
+
+</td><td>
+
+判断给定的参数是否是函数
+
+
+</td></tr>
+<tr><td>
+
+[is\_chinese(str)](./utils.is_chinese.md)
+
+
+</td><td>
+
+该函数检查给定字符串是否全是汉字，范围为 \[0x4e00, 0x9fa5\]。
+
+
+</td></tr>
+<tr><td>
+
+[is\_date(d)](./utils.is_date.md)
+
+
+</td><td>
+
+该函数检查给定值是否为 TypeScript 中的 Date 对象。
+
+
+</td></tr>
+<tr><td>
+
+[is\_element(el)](./utils.is_element.md)
+
+
+</td><td>
+
+该函数检查给定对象是否是 TypeScript 中 Element 类的实例。
+
+
+</td></tr>
+<tr><td>
+
+[is\_email(str)](./utils.is_email.md)
+
+
+</td><td>
+
+函数正在检查给定的字符串是否是有效的电子邮件地址。它使用正则表达式将字符串与有效电子邮件地址的模式进行匹配。 如果字符串与模式匹配，则函数返回“true”，表明它是有效的电子邮件地址。否则，它返回“false”。
+
+
+</td></tr>
+<tr><td>
+
+[is\_empty\_array(v, nullable)](./utils.is_empty_array.md)
+
+
+</td><td>
+
+该函数检查给定值是否为空数组或 null/undefined。
+
+
+</td></tr>
+<tr><td>
+
+[is\_empty\_obj(v, nullable)](./utils.is_empty_obj.md)
+
+
+</td><td>
+
+检查给定值是否为空对象。
+
+
+</td></tr>
+<tr><td>
+
+[is\_empty\_string(s, trim)](./utils.is_empty_string.md)
+
+
+</td><td>
+
+该函数检查给定字符串是否为空，并使用可选参数在检查前修剪字符串。
+
+
+</td></tr>
+<tr><td>
+
+[is\_file(file)](./utils.is_file.md)
+
+
+</td><td>
+
+该函数检查给定对象是否是 File 类的实例。
+
+
+</td></tr>
+<tr><td>
+
+[is\_fn(fn)](./utils.is_fn.md)
+
+
+</td><td>
+
+该函数检查给定变量是否为函数。
+
+
+</td></tr>
+<tr><td>
+
+[is\_hex\_color(color)](./utils.is_hex_color.md)
+
+
+</td><td>
+
+该函数检查给定的字符串是否是有效的十六进制颜色代码。
+
+
+</td></tr>
+<tr><td>
+
+[is\_html\_element(hel)](./utils.is_html_element.md)
+
+
+</td><td>
+
+该函数检查给定变量是否是 HTMLElement 类的实例。
+
+
+</td></tr>
+<tr><td>
+
+[is\_not\_empty\_string(s, trim)](./utils.is_not_empty_string.md)
+
+
+</td><td>
+
+该函数检查给定的输入是否为非空字符串或非空值。
+
+
+</td></tr>
+<tr><td>
+
+[is\_not\_void(t)](./utils.is_not_void.md)
+
+
+</td><td>
+
+该函数检查值是否不为 undefined 或 null。
+
+
+</td></tr>
+<tr><td>
+
+[is\_null(n)](./utils.is_null.md)
+
+
+</td><td>
+
+该函数检查给定值是否为空。
+
+
+</td></tr>
+<tr><td>
+
+[is\_number(n)](./utils.is_number.md)
+
+
+</td><td>
+
+该函数检查给定值是否为有限数。
+
+
+</td></tr>
+<tr><td>
+
+[is\_object(o)](./utils.is_object.md)
+
+
+</td><td>
+
+该函数检查给定值是否是对象而不是数组。
+
+
+</td></tr>
+<tr><td>
+
+[is\_regexp(r)](./utils.is_regexp.md)
+
+
+</td><td>
+
+该函数检查给定值是否为正则表达式。
+
+
+</td></tr>
+<tr><td>
+
+[is\_rgb\_color(color)](./utils.is_rgb_color.md)
+
+
+</td><td>
+
+该函数检查给定颜色是否为 RGB 颜色。
+
+
+</td></tr>
+<tr><td>
+
+[is\_string\_like(target)](./utils.is_string_like.md)
+
+
+</td><td>
+
+该函数检查给定目标是字符串还是数字。
+
+
+</td></tr>
+<tr><td>
+
+[is\_undefined(u)](./utils.is_undefined.md)
+
+
+</td><td>
+
+该函数检查给定值是否未定义。
+
+
+</td></tr>
+<tr><td>
+
+[is\_void(t)](./utils.is_void.md)
+
+
+</td><td>
+
+该函数检查给定值是否为 null 或 undefined，或者它是否为 NaN 的数字。
+
+
+</td></tr>
+<tr><td>
+
+[is\_window\_or\_element(el)](./utils.is_window_or_element.md)
+
+
+</td><td>
+
+该函数检查给定对象是否是元素或window。
+
+
+</td></tr>
+<tr><td>
+
+[is\_window(win)](./utils.is_window.md)
+
+
+</td><td>
+
+该函数检查给定参数是否是 TypeScript 中的全局窗口对象。
+
+
+</td></tr>
+<tr><td>
+
+[key\_in(key, obj)](./utils.key_in.md)
+
+
+</td><td>
+
+该函数检查给定对象中是否存在给定键并返回布尔值。
+
+
+</td></tr>
+<tr><td>
+
+[log\_type\_error(type, name)](./utils.log_type_error.md)
+
+
+</td><td>
+
+该函数使用预期的类型和名称记录类型错误消息。
+
+
+</td></tr>
+<tr><td>
+
+[match\_range(n, pattern)](./utils.match_range.md)
+
+
+</td><td>
+
+**_(BETA)_** 对数字进行模式匹配
+
+
+</td></tr>
+<tr><td>
+
+[math\_between(v, min, max)](./utils.math_between.md)
+
+
+</td><td>
+
+该函数返回指定范围内的数字。
+
+
+</td></tr>
+<tr><td>
+
+[math\_random\_int(from, to)](./utils.math_random_int.md)
+
+
+</td><td>
+
+该函数返回指定范围内的随机整数。
+
+
+</td></tr>
+<tr><td>
+
+[math\_to\_fixed(n, digit)](./utils.math_to_fixed.md)
+
+
+</td><td>
+
+该函数返回一个四舍五入到指定小数位数的数字。
+
+
+</td></tr>
+<tr><td>
+
+[math\_to\_hex(n)](./utils.math_to_hex.md)
+
+
+</td><td>
+
+该函数将数字转换为包含大写字母且最小长度为 2 个字符的十六进制字符串。
+
+
+</td></tr>
+<tr><td>
+
+[object\_concat(target, source)](./utils.object_concat.md)
+
+
+</td><td>
+
+函数 object\_concat 连接两个通用类型的对象并返回连接后的对象。
+
+
+</td></tr>
+<tr><td>
+
+[object\_entries(obj)](./utils.object_entries.md)
+
+
+</td><td>
+
+此函数将对象的条目作为键值对数组返回。
+
+
+</td></tr>
+<tr><td>
+
+[object\_keys(o)](./utils.object_keys.md)
+
+
+</td><td>
+
+该函数将对象的键作为数组返回。
+
+
+</td></tr>
+<tr><td>
+
+[object\_pick(obj, keys)](./utils.object_pick.md)
+
+
+</td><td>
+
+函数“object\_pick”接受一个对象和一个键数组，并返回一个新对象，该对象仅包含原始对象中的指定键。
+
+
+</td></tr>
+<tr><td>
+
+[point\_in\_polygon(point, polygon)](./utils.point_in_polygon.md)
+
+
+</td><td>
+
+函数“point\_in\_polygon”使用光线投射算法确定点是否在多边形内部。
+
+
+</td></tr>
+<tr><td>
+
+[rgb\_to\_hex(rgb)](./utils.rgb_to_hex.md)
+
+
+</td><td>
+
+该函数将 RGB 颜色数组转换为十六进制颜色代码。
+
+
+</td></tr>
+<tr><td>
+
+[rgb\_to\_hsl(rgb)](./utils.rgb_to_hsl.md)
+
+
+</td><td>
+
+该函数将 RGB 颜色值转换为其对应的 HSL 颜色值。
+
+
+</td></tr>
+<tr><td>
+
+[search\_range(n, ranges)](./utils.search_range.md)
+
+
+</td><td>
+
+**_(BETA)_** 在数字区间列表中搜索数字所处的区间
+
+
+</td></tr>
+<tr><td>
+
+[storage\_get(key, empty)](./utils.storage_get.md)
+
+
+</td><td>
+
+该函数从本地存储中检索数据并将其作为已解析的 JSON 对象或可选的默认值返回。
+
+
+</td></tr>
+<tr><td>
+
+[storage\_remove(key)](./utils.storage_remove.md)
+
+
+</td><td>
+
+该函数根据给定的键从本地存储中删除一个项目。
+
+
+</td></tr>
+<tr><td>
+
+[storage\_set(key, value)](./utils.storage_set.md)
+
+
+</td><td>
+
+该函数使用指定的键将任何类型的值存储在浏览器的本地存储中。
+
+
+</td></tr>
+<tr><td>
+
+[str\_capital\_all(str)](./utils.str_capital_all.md)
+
+
+</td><td>
+
+该函数将给定字符串中每个单词的首字母大写。
+
+
+</td></tr>
+<tr><td>
+
+[str\_capital(str)](./utils.str_capital.md)
+
+
+</td><td>
+
+该函数将给定字符串的第一个字母大写。
+
+
+</td></tr>
+<tr><td>
+
+[str\_complement(n, len, char)](./utils.str_complement.md)
+
+
+</td><td>
+
+该函数将前导零添加到数字或字符串中以使其具有特定长度。
+
+
+</td></tr>
+<tr><td>
+
+[str\_ensure\_chinese(str)](./utils.str_ensure_chinese.md)
+
+
+</td><td>
+
+函数从输入字符串中删除所有非中文字符。
+
+
+</td></tr>
+<tr><td>
+
+[str\_ensure\_prefix(s, prefix)](./utils.str_ensure_prefix.md)
+
+
+</td><td>
+
+该函数确保给定的字符串具有指定的前缀。
+
+
+</td></tr>
+<tr><td>
+
+[str\_ensure\_suffix(s, suffix)](./utils.str_ensure_suffix.md)
+
+
+</td><td>
+
+该函数确保给定的字符串以指定的后缀结尾。
+
+
+</td></tr>
+<tr><td>
+
+[str\_maybe\_number(target)](./utils.str_maybe_number.md)
+
+
+</td><td>
+
+该函数接受一个数字或字符串并将其作为字符串返回。
+
+
+</td></tr>
+<tr><td>
+
+[str\_no\_prefix(s, prefix)](./utils.str_no_prefix.md)
+
+
+</td><td>
+
+该函数从字符串中删除给定的前缀（如果存在）。
+
+
+</td></tr>
+<tr><td>
+
+[str\_no\_suffix(s, suffix)](./utils.str_no_suffix.md)
+
+
+</td><td>
+
+该函数从字符串中删除给定的后缀（如果存在）。
+
+
+</td></tr>
+<tr><td>
+
+[str\_random(count, radix)](./utils.str_random.md)
+
+
+</td><td>
+
+该函数生成指定长度和基数的随机字符串。
+
+
+</td></tr>
+<tr><td>
+
+[str\_uuid()](./utils.str_uuid.md)
+
+
+</td><td>
+
+生成 UUID 字符串。
+
+
+</td></tr>
+<tr><td>
+
+[temp\_compiler(temp, data)](./utils.temp_compiler.md)
+
+
+</td><td>
+
+该函数接受一个字符串模板和一个数据对象，并返回一个已解析的字符串，其中包含插入到模板中的数据值。
+
+
+</td></tr>
+<tr><td>
+
+[throttle(func, timeFrame, immediately)](./utils.throttle.md)
+
+
+</td><td>
+
+为给定函数实现节流功能。
+
+
+</td></tr>
+<tr><td>
+
+[throw\_type\_error(type, name)](./utils.throw_type_error.md)
+
+
+</td><td>
+
+该函数抛出带有特定消息的 TypeError。
+
+
+</td></tr>
+<tr><td>
+
+[url\_to\_blob(url)](./utils.url_to_blob.md)
+
+
+</td><td>
+
+此函数将 URL 作为输入并返回一个 Promise，该 Promise 解析为包含来自 URL 的数据的 Blob 对象。
+
+
+</td></tr>
+<tr><td>
+
+[url\_to\_date\_URI(url, type)](./utils.url_to_date_uri.md)
+
+
+</td><td>
+
+此函数将 URL 转换为图像的数据 URI。
+
+
+</td></tr>
+</tbody></table>

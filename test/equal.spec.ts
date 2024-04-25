@@ -22,7 +22,7 @@ describe('equal', () => {
                 g: null,
             },
         })).equal(true)
-        expect(deep_equal(NaN, NaN)).equal(true)
+        expect(deep_equal(Number.NaN, Number.NaN)).equal(true)
         expect(deep_equal([1, 'xyz', { name: 'abc' }], [1, 'xyz', { name: 'abc' }])).equal(true)
         expect(deep_equal(/abc/g, new RegExp(/abc/g))).equal(true)
     })

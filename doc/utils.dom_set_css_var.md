@@ -14,12 +14,71 @@ declare function dom_set_css_var(varName: string, value: string, el?: HTMLElemen
 
 ## Parameters
 
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  varName | string | 一个字符串，表示要设置的 CSS 变量的名称。 |
-|  value | string | 为 CSS 变量设置的值。它应该是一个字符串。 |
-|  el | HTMLElement | _(Optional)_ 应应用 CSS 变量的 DOM 元素。如果没有指定元素，CSS 变量将默认应用于文档主体。 |
+<table><thead><tr><th>
 
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+varName
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+一个字符串，表示要设置的 CSS 变量的名称。
+
+
+</td></tr>
+<tr><td>
+
+value
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+为 CSS 变量设置的值。它应该是一个字符串。
+
+
+</td></tr>
+<tr><td>
+
+el
+
+
+</td><td>
+
+HTMLElement
+
+
+</td><td>
+
+_(Optional)_ 应应用 CSS 变量的 DOM 元素。如果没有指定元素，CSS 变量将默认应用于文档主体。
+
+
+</td></tr>
+</tbody></table>
 **Returns:**
 
 void

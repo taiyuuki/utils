@@ -14,11 +14,55 @@ declare function deep_equal(a: any, b: any): boolean;
 
 ## Parameters
 
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  a | any | 函数的第一个参数，可以是任何数据类型。 |
-|  b | any | <code>deep_equal</code> 函数的第二个参数，可以是任何数据类型。它表示与第一个参数“a”进行深度相等比较的第二个值。 |
+<table><thead><tr><th>
 
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+a
+
+
+</td><td>
+
+any
+
+
+</td><td>
+
+函数的第一个参数，可以是任何数据类型。
+
+
+</td></tr>
+<tr><td>
+
+b
+
+
+</td><td>
+
+any
+
+
+</td><td>
+
+`deep_equal` 函数的第二个参数，可以是任何数据类型。它表示与第一个参数“a”进行深度相等比较的第二个值。
+
+
+</td></tr>
+</tbody></table>
 **Returns:**
 
 boolean

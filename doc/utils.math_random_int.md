@@ -14,11 +14,55 @@ declare function math_random_int(from: number, to: number): number;
 
 ## Parameters
 
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  from | number | 生成随机整数的范围的最小值。 |
-|  to | number | “to”参数是生成随机整数的范围的上限。 |
+<table><thead><tr><th>
 
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+from
+
+
+</td><td>
+
+number
+
+
+</td><td>
+
+生成随机整数的范围的最小值。
+
+
+</td></tr>
+<tr><td>
+
+to
+
+
+</td><td>
+
+number
+
+
+</td><td>
+
+“to”参数是生成随机整数的范围的上限。
+
+
+</td></tr>
+</tbody></table>
 **Returns:**
 
 number

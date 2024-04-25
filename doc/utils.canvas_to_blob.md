@@ -14,10 +14,39 @@ declare function canvas_to_blob(cvs: HTMLCanvasElement): Promise<Blob>;
 
 ## Parameters
 
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  cvs | HTMLCanvasElement | HTMLCanvasElement - 这是我们要从中创建 blob 的画布元素。 |
+<table><thead><tr><th>
 
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+cvs
+
+
+</td><td>
+
+HTMLCanvasElement
+
+
+</td><td>
+
+HTMLCanvasElement - 这是我们要从中创建 blob 的画布元素。
+
+
+</td></tr>
+</tbody></table>
 **Returns:**
 
 Promise&lt;Blob&gt;

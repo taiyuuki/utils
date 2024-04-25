@@ -14,10 +14,39 @@ declare function is_void(t: any): t is null | undefined;
 
 ## Parameters
 
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  t | any | 参数 <code>t</code> 是 <code>any</code> 类型，这意味着它可以是任何数据类型。 |
+<table><thead><tr><th>
 
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+t
+
+
+</td><td>
+
+any
+
+
+</td><td>
+
+参数 `t` 是 `any` 类型，这意味着它可以是任何数据类型。
+
+
+</td></tr>
+</tbody></table>
 **Returns:**
 
 t is null \| undefined

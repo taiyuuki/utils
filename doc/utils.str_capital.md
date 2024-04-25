@@ -14,10 +14,39 @@ declare function str_capital(str: string): string;
 
 ## Parameters
 
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  str | string | 参数“str”是一个字符串输入，表示需要大写的文本。 |
+<table><thead><tr><th>
 
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+str
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+参数“str”是一个字符串输入，表示需要大写的文本。
+
+
+</td></tr>
+</tbody></table>
 **Returns:**
 
 string

@@ -17,10 +17,39 @@ is_between(num: number): boolean;
 
 ## Parameters
 
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  num | number | 一个数字 |
+<table><thead><tr><th>
 
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+num
+
+
+</td><td>
+
+number
+
+
+</td><td>
+
+一个数字
+
+
+</td></tr>
+</tbody></table>
 **Returns:**
 
 boolean

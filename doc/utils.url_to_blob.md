@@ -14,10 +14,39 @@ declare function url_to_blob(url: string): Promise<Blob>;
 
 ## Parameters
 
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  url | string | 需要转换为 Blob 对象的资源的 URL。 |
+<table><thead><tr><th>
 
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+url
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+需要转换为 Blob 对象的资源的 URL。
+
+
+</td></tr>
+</tbody></table>
 **Returns:**
 
 Promise&lt;Blob&gt;

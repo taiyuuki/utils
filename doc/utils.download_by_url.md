@@ -14,11 +14,55 @@ declare function download_by_url(URL: string, fileName?: string): void;
 
 ## Parameters
 
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  URL | string | URL参数是一个字符串，表示需要下载的文件的URL。 |
-|  fileName | string | _(Optional)_ fileName 参数是一个字符串，指定要下载的文件的名称。如果没有为 fileName 提供值，该函数将生成一个随机 UUID 字符串作为文件名。 |
+<table><thead><tr><th>
 
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+URL
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+URL参数是一个字符串，表示需要下载的文件的URL。
+
+
+</td></tr>
+<tr><td>
+
+fileName
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+_(Optional)_ fileName 参数是一个字符串，指定要下载的文件的名称。如果没有为 fileName 提供值，该函数将生成一个随机 UUID 字符串作为文件名。
+
+
+</td></tr>
+</tbody></table>
 **Returns:**
 
 void

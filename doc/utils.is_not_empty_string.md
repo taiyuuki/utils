@@ -14,11 +14,55 @@ declare function is_not_empty_string(s: any, trim?: boolean): boolean;
 
 ## Parameters
 
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  s | any | 需要检查是否为空的输入值。它可以是任何数据类型，但此函数专门检查空字符串。 |
-|  trim | boolean | _(Optional)_ 一个布尔参数，指定是否在检查字符串是否为空之前从字符串中删除空格。如果设置为 true，将在检查字符串长度之前删除空格。如果未提供或设置为 false，则在检查字符串长度之前不会删除空格。 |
+<table><thead><tr><th>
 
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+s
+
+
+</td><td>
+
+any
+
+
+</td><td>
+
+需要检查是否为空的输入值。它可以是任何数据类型，但此函数专门检查空字符串。
+
+
+</td></tr>
+<tr><td>
+
+trim
+
+
+</td><td>
+
+boolean
+
+
+</td><td>
+
+_(Optional)_ 一个布尔参数，指定是否在检查字符串是否为空之前从字符串中删除空格。如果设置为 true，将在检查字符串长度之前删除空格。如果未提供或设置为 false，则在检查字符串长度之前不会删除空格。
+
+
+</td></tr>
+</tbody></table>
 **Returns:**
 
 boolean

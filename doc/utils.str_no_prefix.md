@@ -14,11 +14,55 @@ declare function str_no_prefix(s: string, prefix: string): string;
 
 ## Parameters
 
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  s | string | 可能有也可能没有需要删除的前缀的字符串。 |
-|  prefix | string | prefix 参数是一个字符串，表示我们要从输入字符串的开头删除的前缀。 |
+<table><thead><tr><th>
 
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+s
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+可能有也可能没有需要删除的前缀的字符串。
+
+
+</td></tr>
+<tr><td>
+
+prefix
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+prefix 参数是一个字符串，表示我们要从输入字符串的开头删除的前缀。
+
+
+</td></tr>
+</tbody></table>
 **Returns:**
 
 string

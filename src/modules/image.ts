@@ -29,7 +29,8 @@ const DEFAULT_MIMETYPE = 'image/png'
  * @param size - size 参数是一个可选对象，用于指定所需的画布宽度和高度。如果未提供，则默认为输入图像的自然宽度和高度。
  * @returns 具有指定大小的画布元素和在其上绘制的图像。
  */
-function image_to_canvas(img: HTMLImageElement, size: ImageSize = { width: img.naturalWidth, height: img.naturalWidth }) {
+function image_to_canvas(img: HTMLImageElement, size?: ImageSize) {
+    size = Object.assign({ width: img.naturalWidth, height: img.naturalHeight }, size)
     const cvs = document.createElement('canvas')
     cvs.width = size.width
     cvs.height = size.height

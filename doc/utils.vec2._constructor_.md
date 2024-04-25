@@ -17,8 +17,52 @@ constructor(x: number, y?: number);
 
 ## Parameters
 
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  x | number | x坐标 |
-|  y | number | _(Optional)_ y坐标 |
+<table><thead><tr><th>
 
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+x
+
+
+</td><td>
+
+number
+
+
+</td><td>
+
+x坐标
+
+
+</td></tr>
+<tr><td>
+
+y
+
+
+</td><td>
+
+number
+
+
+</td><td>
+
+_(Optional)_ y坐标
+
+
+</td></tr>
+</tbody></table>

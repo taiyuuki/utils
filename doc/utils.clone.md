@@ -14,10 +14,39 @@ declare function clone<T extends object>(source: T): T;
 
 ## Parameters
 
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  source | T | 需要克隆的源对象。该函数根据源对象的类型使用简单或深度克隆方法。该函数返回源对象的克隆。 |
+<table><thead><tr><th>
 
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+source
+
+
+</td><td>
+
+T
+
+
+</td><td>
+
+需要克隆的源对象。该函数根据源对象的类型使用简单或深度克隆方法。该函数返回源对象的克隆。
+
+
+</td></tr>
+</tbody></table>
 **Returns:**
 
 T

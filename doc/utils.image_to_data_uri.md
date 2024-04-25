@@ -14,11 +14,55 @@ declare function image_to_data_URI(img: HTMLImageElement, type?: string): string
 
 ## Parameters
 
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  img | HTMLImageElement | 一个 HTMLImageElement 对象，表示需要转换为数据 URI 的图像。 |
-|  type | string | _(Optional)_ type 参数是图像的 MIME 类型，例如 PNG图像为“image/png”或 PNG 图像为“image/jpeg”， 如果未提供，它将默认为 “image/png” 的值。 |
+<table><thead><tr><th>
 
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+img
+
+
+</td><td>
+
+HTMLImageElement
+
+
+</td><td>
+
+一个 HTMLImageElement 对象，表示需要转换为数据 URI 的图像。
+
+
+</td></tr>
+<tr><td>
+
+type
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+_(Optional)_ type 参数是图像的 MIME 类型，例如 PNG图像为“image/png”或 PNG 图像为“image/jpeg”， 如果未提供，它将默认为 “image/png” 的值。
+
+
+</td></tr>
+</tbody></table>
 **Returns:**
 
 string

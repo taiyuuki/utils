@@ -14,10 +14,39 @@ declare function object_entries<T extends object>(obj: T): Entries<T>;
 
 ## Parameters
 
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  obj | T | 对象 |
+<table><thead><tr><th>
 
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+obj
+
+
+</td><td>
+
+T
+
+
+</td><td>
+
+对象
+
+
+</td></tr>
+</tbody></table>
 **Returns:**
 
 Entries&lt;T&gt;

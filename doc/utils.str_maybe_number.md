@@ -14,10 +14,39 @@ declare function str_maybe_number(target: number | string): string;
 
 ## Parameters
 
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  target | number \| string | 参数“目标”可以是数字或字符串。 |
+<table><thead><tr><th>
 
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+target
+
+
+</td><td>
+
+number \| string
+
+
+</td><td>
+
+参数“目标”可以是数字或字符串。
+
+
+</td></tr>
+</tbody></table>
 **Returns:**
 
 string

@@ -37,7 +37,15 @@ export function arr_unique<T>(arr: T[]): T[];
 export function arr_value_index<T extends Key>(arr: T[]): Record<T, number>;
 
 // @public
-export function blob_to_date_URI(blob: Blob): Promise<string | ArrayBuffer>;
+export function blob_to_date_URI(blob: Blob): Promise<ArrayBuffer | string>;
+
+// @public
+export const bubble_message: (e: MouseEvent, mes: string, options?: {
+    duration?: string;
+    color?: string;
+    size?: string;
+    distance?: number;
+}) => void;
 
 // @public
 export function bytes_to_int(bytes: [number, number, number, number]): number;
@@ -58,7 +66,7 @@ export function clone_deep<T extends object>(source: T): T;
 export function clone_simple<T extends object>(source: T): T;
 
 // @public
-export function copy_text(target: string | number | HTMLElement, addition?: string): void;
+export function copy_text(target: HTMLElement | number | string, addition?: string): void;
 
 // @public
 export function data_URI_to_blob(dataURI: string, mimeType?: string): Blob;
@@ -176,7 +184,7 @@ export function is_base64(str: string): str is string;
 export function is_blob(blob: any): blob is Blob;
 
 // @public
-export function is_callable<T extends Function>(target: any): target is T;
+export function is_callable<T extends Fn>(target: any): target is T;
 
 // @public
 export function is_chinese(str: string): boolean;
@@ -233,7 +241,7 @@ export function is_regexp(r: any): r is RegExp;
 export function is_rgb_color(color: any): color is RgbColor;
 
 // @public
-export function is_string_like(target: any): target is string | number;
+export function is_string_like(target: any): target is number | string;
 
 // @public
 export function is_undefined(u: any): u is undefined;
@@ -270,7 +278,7 @@ export function math_to_hex(n: number): string;
 
 // @beta
 export class MathRange {
-    constructor(r: string | number);
+    constructor(r: number | string);
     cross(other: MathRange): MathRange | null;
     // (undocumented)
     e_open: boolean;
@@ -283,7 +291,7 @@ export class MathRange {
     // (undocumented)
     start: number;
     toString(): string;
-    static valid(origin: string | number): boolean;
+    static valid(origin: number | string): boolean;
 }
 
 // Warning: (ae-forgotten-export) The symbol "Concat" needs to be exported by the entry point index.d.ts
@@ -317,7 +325,7 @@ export function rgb_to_hex(rgb: RgbColor): string;
 export function rgb_to_hsl(rgb: RgbColor): HslColor;
 
 // @beta
-export function search_range(n: number, ranges: (string | number)[]): MathRange | null;
+export function search_range(n: number, ranges: (number | string)[]): MathRange | null;
 
 // @public
 export function storage_get<T, K extends T = T>(key: string, empty?: K): T | undefined;
@@ -379,13 +387,13 @@ export function url_to_date_URI(url: string, type?: string): Promise<string>;
 // @beta
 export class Vec2 {
     constructor(x: number, y?: number);
-    add(v: number | Vec2): Vec2;
-    cross(v: number | Vec2): number;
-    div(v: number | Vec2): Vec2;
-    dot(v: number | Vec2): number;
-    mul(v: number | Vec2): Vec2;
+    add(v: Vec2 | number): Vec2;
+    cross(v: Vec2 | number): number;
+    div(v: Vec2 | number): Vec2;
+    dot(v: Vec2 | number): number;
+    mul(v: Vec2 | number): Vec2;
     reflect(v: Vec2): Vec2;
-    sub(v: number | Vec2): Vec2;
+    sub(v: Vec2 | number): Vec2;
     // (undocumented)
     x: number;
     // (undocumented)

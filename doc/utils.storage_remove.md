@@ -14,10 +14,39 @@ declare function storage_remove(key: string): void;
 
 ## Parameters
 
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  key | string | key 参数是一个字符串，表示要从浏览器本地存储中删除的项目的名称。 |
+<table><thead><tr><th>
 
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+key
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+key 参数是一个字符串，表示要从浏览器本地存储中删除的项目的名称。
+
+
+</td></tr>
+</tbody></table>
 **Returns:**
 
 void

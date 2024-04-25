@@ -61,6 +61,7 @@ class DB<T = any> {
      */
     get_item(id: string): Promise<T> {
         const res = this._store.get(id)
+
         return new Promise((resolve, reject) => {
             res.addEventListener('success', () => {
                 resolve(res.result.data)
@@ -85,6 +86,4 @@ class DB<T = any> {
     }
 }
 
-export {
-    DB,
-}
+export { DB }

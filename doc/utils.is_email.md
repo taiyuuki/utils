@@ -14,10 +14,39 @@ declare function is_email(str: string): boolean;
 
 ## Parameters
 
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  str | string | 参数 <code>str</code> 是 <code>any</code> 类型，这意味着它可以是任何数据类型 |
+<table><thead><tr><th>
 
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+str
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+参数 `str` 是 `any` 类型，这意味着它可以是任何数据类型
+
+
+</td></tr>
+</tbody></table>
 **Returns:**
 
 boolean

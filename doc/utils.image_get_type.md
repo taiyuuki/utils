@@ -14,10 +14,39 @@ declare function image_get_type(filename: string): "image/png" | "image/jpeg" | 
 
 ## Parameters
 
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  filename | string | 表示图像文件名称的字符串，包括其扩展名。 |
+<table><thead><tr><th>
 
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+filename
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+表示图像文件名称的字符串，包括其扩展名。
+
+
+</td></tr>
+</tbody></table>
 **Returns:**
 
 "image/png" \| "image/jpeg" \| "image/gif" \| "image/webp" \| "image/bmp" \| "image/svg+xml" \| "image/x-icon" \| "image/tiff"

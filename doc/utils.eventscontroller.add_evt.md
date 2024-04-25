@@ -17,11 +17,55 @@ add_evt<T extends EventTarget>(type: Parameters<T['addEventListener']>[0], callb
 
 ## Parameters
 
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  type | Parameters&lt;T\['addEventListener'\]&gt;\[0\] | 事件类型 |
-|  callback | FnNoArgs | 回调 |
+<table><thead><tr><th>
 
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+type
+
+
+</td><td>
+
+Parameters&lt;T\['addEventListener'\]&gt;\[0\]
+
+
+</td><td>
+
+事件类型
+
+
+</td></tr>
+<tr><td>
+
+callback
+
+
+</td><td>
+
+FnNoArgs
+
+
+</td><td>
+
+回调
+
+
+</td></tr>
+</tbody></table>
 **Returns:**
 
 this

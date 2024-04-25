@@ -14,10 +14,39 @@ declare function is_undefined(u: any): u is undefined;
 
 ## Parameters
 
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  u | any | 参数“u”的类型为“any”，这意味着它可以是任何数据类型（字符串、数字、布尔值、对象等）。 |
+<table><thead><tr><th>
 
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+u
+
+
+</td><td>
+
+any
+
+
+</td><td>
+
+参数“u”的类型为“any”，这意味着它可以是任何数据类型（字符串、数字、布尔值、对象等）。
+
+
+</td></tr>
+</tbody></table>
 **Returns:**
 
 u is undefined

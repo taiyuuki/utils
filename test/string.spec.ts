@@ -3,13 +3,13 @@ import { str_capital, str_complement, str_ensure_prefix, str_ensure_suffix, str_
 
 describe('string', () => {
     it('str_random', () => {
-        expect(str_random(10, 36).match(/[a-z0-9]{10}/g) === null).equal(false)
-        expect(str_random(4).match(/[a-f0-9]{4}/g) === null).equal(false)
-        expect(str_random(6, 36).match(/[a-f0-9]{6}/g) === null).equal(true)
+        expect(str_random(10, 36).match(/[\da-z]{10}/g) === null).equal(false)
+        expect(str_random(4).match(/[\da-f]{4}/g) === null).equal(false)
+        expect(str_random(6, 36).match(/[\da-f]{6}/g) === null).equal(true)
     })
 
     it('str_uuid', () => {
-        expect(str_uuid().match(/[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}/g) === null).equal(false)
+        expect(str_uuid().match(/[\da-f]{8}(?:-[\da-f]{4}){3}-[\da-f]{12}/g) === null).equal(false)
     })
 
     it('str_ensure_prefix', () => {

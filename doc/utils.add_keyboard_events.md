@@ -19,11 +19,55 @@ declare function add_keyboard_events<T extends KeyboardEventOptions>(type: Keybo
 
 ## Parameters
 
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  type | KeyboardEventType | 要侦听的键盘事件类型，例如“keydown”、“keyup”或“keypress”。 |
-|  eventsOptions | T | <code>eventsOptions</code> 参数是一个对象，其中包含要添加的键盘事件的选项。它可以包括 <code>ctrlKey</code>、<code>altKey</code>、<code>shiftKey</code>、<code>metaKey</code>、<code>code</code>、<code>key</code>、<code>keyCode</code>、<code>charCode</code> 等属性。这些选项是 |
+<table><thead><tr><th>
 
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+type
+
+
+</td><td>
+
+KeyboardEventType
+
+
+</td><td>
+
+要侦听的键盘事件类型，例如“keydown”、“keyup”或“keypress”。
+
+
+</td></tr>
+<tr><td>
+
+eventsOptions
+
+
+</td><td>
+
+T
+
+
+</td><td>
+
+`eventsOptions` 参数是一个对象，其中包含要添加的键盘事件的选项。它可以包括 `ctrlKey`<!-- -->、`altKey`<!-- -->、`shiftKey`<!-- -->、`metaKey`<!-- -->、`code`<!-- -->、`key`<!-- -->、`keyCode`<!-- -->、`charCode` 等属性。这些选项是
+
+
+</td></tr>
+</tbody></table>
 **Returns:**
 
 { close(): void; off(): void; on(): void; emit: (code: KeyboardEventKeys&lt;T&gt;) =&gt; void; }

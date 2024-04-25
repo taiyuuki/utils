@@ -14,10 +14,39 @@ declare function arr_unique<T>(arr: T[]): T[];
 
 ## Parameters
 
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  arr | T\[\] | 参数“arr”是一个类型为T的数组，其中T可以是字符串、数字、布尔值、对象等任意数据类型。函数“arr\_unique”将这个数组作为输入，返回一个只有唯一元素的新数组.它使用 Set 对象来删除重复项 |
+<table><thead><tr><th>
 
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+arr
+
+
+</td><td>
+
+T\[\]
+
+
+</td><td>
+
+参数“arr”是一个类型为T的数组，其中T可以是字符串、数字、布尔值、对象等任意数据类型。函数“arr\_unique”将这个数组作为输入，返回一个只有唯一元素的新数组.它使用 Set 对象来删除重复项
+
+
+</td></tr>
+</tbody></table>
 **Returns:**
 
 T\[\]

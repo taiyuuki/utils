@@ -14,10 +14,39 @@ declare function is_blob(blob: any): blob is Blob;
 
 ## Parameters
 
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  blob | any | 可以是任何数据类型。 |
+<table><thead><tr><th>
 
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+blob
+
+
+</td><td>
+
+any
+
+
+</td><td>
+
+可以是任何数据类型。
+
+
+</td></tr>
+</tbody></table>
 **Returns:**
 
 blob is Blob

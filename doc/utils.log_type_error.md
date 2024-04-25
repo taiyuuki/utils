@@ -14,11 +14,55 @@ declare function log_type_error(type: string, name: string): void;
 
 ## Parameters
 
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  type | string | 表示预期数据类型的字符串 |
-|  name | string | 名称参数是一个字符串，表示预期具有特定类型的变量或参数的名称。 |
+<table><thead><tr><th>
 
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+type
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+表示预期数据类型的字符串
+
+
+</td></tr>
+<tr><td>
+
+name
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+名称参数是一个字符串，表示预期具有特定类型的变量或参数的名称。
+
+
+</td></tr>
+</tbody></table>
 **Returns:**
 
 void

@@ -91,6 +91,7 @@ function is_void(t: any): t is null | undefined {
     if (typeof t === 'number') {
         return Number.isNaN(t)
     }
+
     return is_null(t) || is_undefined(t)
 }
 
@@ -115,8 +116,7 @@ function is_not_void<T>(t: T): t is NonNullable<T> {
 function is_empty_string(s: any, trim?: boolean) {
     if (typeof s === 'string') {
         return (trim === true ? s.trim() : s).length === 0
-    }
-    else {
+    } else {
         return is_void(s)
     }
 }
@@ -133,8 +133,7 @@ function is_empty_string(s: any, trim?: boolean) {
 function is_not_empty_string(s: any, trim?: boolean) {
     if (typeof s === 'string') {
         return (trim === true ? s.trim() : s).length > 0
-    }
-    else {
+    } else {
         return is_not_void(s)
     }
 }
@@ -156,6 +155,7 @@ function is_not_empty_string(s: any, trim?: boolean) {
  */
 function is_empty_array(v: any, nullable = true): v is [] {
     const nullCheck = nullable ? false : is_void(v)
+
     return Array.isArray(v) ? v.length === 0 : nullCheck
 }
 
@@ -175,6 +175,7 @@ function is_empty_array(v: any, nullable = true): v is [] {
  */
 function is_empty_obj(v: any, nullable = true) {
     const nullCheck = nullable ? false : is_void(v)
+
     return is_object(v) ? is_empty_array(Object.keys(v)) : nullCheck
 }
 
@@ -188,11 +189,11 @@ function is_rgb_color(color: any): color is RgbColor {
     if (!Array.isArray(color)) {
         return false
     }
+
     return (color.length === 4 || color.length === 3) && color.every((v, i) => {
         if (i === 3) {
             return Number(v) <= 1
-        }
-        else {
+        } else {
             return Number(v) <= 255
         }
     })
@@ -207,7 +208,7 @@ function is_rgb_color(color: any): color is RgbColor {
  * 是否是有效的十六进制颜色代码。
  */
 function is_hex_color(color: string) {
-    return color.match(/^#?[0-9a-fA-F]{3,8}$/) !== null
+    return color.match(/^#?[\dA-Fa-f]{3,8}$/) !== null
 }
 
 /**
@@ -258,7 +259,7 @@ function is_window_or_element(el: any): el is Element | Window {
  * 编码字符串的模式匹配。如果输入字符串与模式匹配，则函数返回“true”，否则返回“false”。
  */
 function is_base64(str: string): str is string {
-    return /^([A-Za-z0-9+/]{4})*([A-Za-z0-9+/]{4}|[A-Za-z0-9+/]{3}=|[A-Za-z0-9+/]{2}==)|[A-Za-z0-9+/]{3}=|[A-Za-z0-9+/]{2}==$/i.test(str)
+    return /^([\d+/a-z]{4})*([\d+/a-z]{4}|[\d+/a-z]{3}=|[\d+/a-z]{2}==)|[\d+/a-z]{3}=|[\d+/a-z]{2}==$/i.test(str)
 }
 
 /**
@@ -288,7 +289,7 @@ function is_file(file: any): file is File {
  * @returns 函数 is_string_like 返回一个布尔值。如果 `target` 参数是字符串或数字，则返回 `true`，否则返回 `false`。使用 typeof 运算符检查
  * target 参数以确定它是字符串还是数字，并且 isFinite 函数用于排除不是有限数字的值（例如
  */
-function is_string_like(target: any): target is string | number {
+function is_string_like(target: any): target is number | string {
     return is_number(target) || typeof target === 'string'
 }
 
@@ -310,7 +311,7 @@ function is_chinese(str: string): boolean {
  * @returns 函数 is_email 返回一个布尔值，指示输入的 str 是否是有效的电子邮件地址。
  */
 function is_email(str: string): boolean {
-    return /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(str)
+    return /^(([^\s"(),.:;<>@[\\\]]+(\.[^\s"(),.:;<>@[\\\]]+)*)|(".+"))@((\[(?:\d{1,3}\.){3}\d{1,3}])|(([\dA-Za-z-]+\.)+[A-Za-z]{2,}))$/.test(str)
 }
 
 /**
@@ -318,7 +319,7 @@ function is_email(str: string): boolean {
  * @param target - 参数 `target` 是 `any` 类型，这意味着它可以是任何数据类型
  * @returns 返回布尔值
  */
-function is_callable<T extends Function>(target: any): target is T {
+function is_callable<T extends Fn>(target: any): target is T {
     return typeof target === 'function'
 }
 

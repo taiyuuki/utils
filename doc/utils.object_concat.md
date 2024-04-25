@@ -14,11 +14,55 @@ declare function object_concat<T extends object, S extends object>(target: T, so
 
 ## Parameters
 
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  target | T | 第一个参数表示将通过添加来自第二个参数“源”的属性来修改的对象。 |
-|  source | S | 表示将合并到“目标”对象中的对象。 |
+<table><thead><tr><th>
 
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+target
+
+
+</td><td>
+
+T
+
+
+</td><td>
+
+第一个参数表示将通过添加来自第二个参数“源”的属性来修改的对象。
+
+
+</td></tr>
+<tr><td>
+
+source
+
+
+</td><td>
+
+S
+
+
+</td><td>
+
+表示将合并到“目标”对象中的对象。
+
+
+</td></tr>
+</tbody></table>
 **Returns:**
 
 Concat&lt;T, S&gt;

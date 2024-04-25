@@ -8,10 +8,10 @@ describe('object', () => {
             value: false,
             age: 28,
         }, ['name', 'age'])).toMatchInlineSnapshot(`
-      {
-        "age": 28,
-        "name": "abc",
-      }
-    `)
+          {
+            "age": 28,
+            "name": "abc",
+          }
+        `)
     })
 })

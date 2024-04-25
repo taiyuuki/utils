@@ -14,10 +14,39 @@ declare function is_number(n: any): n is number;
 
 ## Parameters
 
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  n | any | 参数 <code>n</code> 是 <code>any</code> 类型，这意味着它可以是任何数据类型。 |
+<table><thead><tr><th>
 
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+n
+
+
+</td><td>
+
+any
+
+
+</td><td>
+
+参数 `n` 是 `any` 类型，这意味着它可以是任何数据类型。
+
+
+</td></tr>
+</tbody></table>
 **Returns:**
 
 n is number

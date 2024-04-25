@@ -10,8 +10,7 @@ import { is_not_void } from './is'
 function storage_set<T>(key: string, value: T) {
     try {
         localStorage.setItem(key, JSON.stringify(value))
-    }
-    catch (e) {
+    } catch (e) {
         console.error(e)
     }
 }
@@ -29,10 +28,11 @@ function storage_set<T>(key: string, value: T) {
 function storage_get<T, K extends T = T>(key: string, empty?: K): T | undefined {
     try {
         const data = localStorage.getItem(key)
+
         return is_not_void(data) ? JSON.parse(data) : empty ?? void 0
-    }
-    catch (e) {
+    } catch (e) {
         console.error(e)
+
         return void 0
     }
 }

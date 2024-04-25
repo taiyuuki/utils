@@ -14,11 +14,55 @@ declare function storage_set<T>(key: string, value: T): void;
 
 ## Parameters
 
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  key | string | 一个字符串，表示值将存储在浏览器的本地存储中所依据的键。 |
-|  value | T | value 参数是 T 类型，这意味着它可以是任何数据类型。它表示需要使用给定键存储在本地存储中的值。该函数将值转换为 JSON 字符串，然后将其存储在本地存储中。 |
+<table><thead><tr><th>
 
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+key
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+一个字符串，表示值将存储在浏览器的本地存储中所依据的键。
+
+
+</td></tr>
+<tr><td>
+
+value
+
+
+</td><td>
+
+T
+
+
+</td><td>
+
+value 参数是 T 类型，这意味着它可以是任何数据类型。它表示需要使用给定键存储在本地存储中的值。该函数将值转换为 JSON 字符串，然后将其存储在本地存储中。
+
+
+</td></tr>
+</tbody></table>
 **Returns:**
 
 void

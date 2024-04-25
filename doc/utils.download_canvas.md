@@ -14,11 +14,55 @@ declare function download_canvas(cvs: HTMLCanvasElement, imageName?: string): vo
 
 ## Parameters
 
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  cvs | HTMLCanvasElement | HTMLCanvasElement - 这是要作为图像下载的画布元素。 |
-|  imageName | string | _(Optional)_ imageName 是一个字符串参数，表示下载的图像文件的名称。如果没有提供名称，将生成一个随机的 UUID（通用唯一标识符）字符串作为文件名。 |
+<table><thead><tr><th>
 
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+cvs
+
+
+</td><td>
+
+HTMLCanvasElement
+
+
+</td><td>
+
+HTMLCanvasElement - 这是要作为图像下载的画布元素。
+
+
+</td></tr>
+<tr><td>
+
+imageName
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+_(Optional)_ imageName 是一个字符串参数，表示下载的图像文件的名称。如果没有提供名称，将生成一个随机的 UUID（通用唯一标识符）字符串作为文件名。
+
+
+</td></tr>
+</tbody></table>
 **Returns:**
 
 void

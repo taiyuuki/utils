@@ -14,11 +14,55 @@ declare function download_blob(blob: Blob, fileName?: string): void;
 
 ## Parameters
 
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  blob | Blob | blob 参数是一个 Blob 对象，它表示不可变的原始数据的类文件对象。它可用于表示不一定采用 JavaScript 原生格式的数据。 |
-|  fileName | string | _(Optional)_ fileName 参数是一个字符串，表示要下载的文件的名称。如果没有为 fileName 提供值，将生成一个随机 UUID 字符串作为文件名。 |
+<table><thead><tr><th>
 
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+blob
+
+
+</td><td>
+
+Blob
+
+
+</td><td>
+
+blob 参数是一个 Blob 对象，它表示不可变的原始数据的类文件对象。它可用于表示不一定采用 JavaScript 原生格式的数据。
+
+
+</td></tr>
+<tr><td>
+
+fileName
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+_(Optional)_ fileName 参数是一个字符串，表示要下载的文件的名称。如果没有为 fileName 提供值，将生成一个随机 UUID 字符串作为文件名。
+
+
+</td></tr>
+</tbody></table>
 **Returns:**
 
 void

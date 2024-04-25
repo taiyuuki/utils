@@ -14,11 +14,55 @@ declare function dom_set_css(el: HTMLElement, css: Partial<CSSStyleDeclaration>)
 
 ## Parameters
 
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  el | HTMLElement | HTMLElement - 应用 CSS 样式的 DOM 元素。 |
-|  css | Partial&lt;CSSStyleDeclaration&gt; | <code>css</code> 参数是一个包含 CSS 属性值对作为键值对的对象。 |
+<table><thead><tr><th>
 
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+el
+
+
+</td><td>
+
+HTMLElement
+
+
+</td><td>
+
+HTMLElement - 应用 CSS 样式的 DOM 元素。
+
+
+</td></tr>
+<tr><td>
+
+css
+
+
+</td><td>
+
+Partial&lt;CSSStyleDeclaration&gt;
+
+
+</td><td>
+
+`css` 参数是一个包含 CSS 属性值对作为键值对的对象。
+
+
+</td></tr>
+</tbody></table>
 **Returns:**
 
 void

@@ -17,11 +17,55 @@ declare function point_in_polygon<Point extends {
 
 ## Parameters
 
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  point | Point | 参数“point”表示具有“x”和“y”坐标的点。 |
-|  polygon | Point\[\] | “polygon”参数是表示多边形顶点的“Vec”对象数组。每个“Vec”对象都有“x”和“y”属性，指示 2D 空间中点的坐标。 |
+<table><thead><tr><th>
 
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+point
+
+
+</td><td>
+
+Point
+
+
+</td><td>
+
+参数“point”表示具有“x”和“y”坐标的点。
+
+
+</td></tr>
+<tr><td>
+
+polygon
+
+
+</td><td>
+
+Point\[\]
+
+
+</td><td>
+
+“polygon”参数是表示多边形顶点的“Vec”对象数组。每个“Vec”对象都有“x”和“y”属性，指示 2D 空间中点的坐标。
+
+
+</td></tr>
+</tbody></table>
 **Returns:**
 
 boolean

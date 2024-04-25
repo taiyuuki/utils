@@ -12,16 +12,60 @@
 **Signature:**
 
 ```typescript
-declare function search_range(n: number, ranges: (string | number)[]): MathRange | null;
+declare function search_range(n: number, ranges: (number | string)[]): MathRange | null;
 ```
 
 ## Parameters
 
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  n | number | 要搜索的数字 |
-|  ranges | (string \| number)\[\] | 数字区间列表，例如：\['\[0, 10\]', '(10, 20\]', '(20, 30\]'\]，注意开闭区间，且各区间不要有重叠。 |
+<table><thead><tr><th>
 
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+n
+
+
+</td><td>
+
+number
+
+
+</td><td>
+
+要搜索的数字
+
+
+</td></tr>
+<tr><td>
+
+ranges
+
+
+</td><td>
+
+(number \| string)\[\]
+
+
+</td><td>
+
+数字区间列表，例如：\['\[0, 10\]', '(10, 20\]', '(20, 30\]'\]，注意开闭区间，且各区间不要有重叠。
+
+
+</td></tr>
+</tbody></table>
 **Returns:**
 
 [MathRange](./utils.mathrange.md) \| null

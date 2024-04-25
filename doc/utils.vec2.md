@@ -17,26 +17,215 @@ declare class Vec2
 
 ## Constructors
 
-|  Constructor | Modifiers | Description |
-|  --- | --- | --- |
-|  [(constructor)(x, y)](./utils.vec2._constructor_.md) |  | **_(BETA)_** 类 Vec2 的构造函数，用于初始化 x 和 y 坐标。 |
+<table><thead><tr><th>
+
+Constructor
+
+
+</th><th>
+
+Modifiers
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+[(constructor)(x, y)](./utils.vec2._constructor_.md)
+
+
+</td><td>
+
+
+</td><td>
+
+**_(BETA)_** 类 Vec2 的构造函数，用于初始化 x 和 y 坐标。
+
+
+</td></tr>
+</tbody></table>
 
 ## Properties
 
-|  Property | Modifiers | Type | Description |
-|  --- | --- | --- | --- |
-|  [x](./utils.vec2.x.md) |  | number | **_(BETA)_** |
-|  [y](./utils.vec2.y.md) |  | number | **_(BETA)_** |
+<table><thead><tr><th>
+
+Property
+
+
+</th><th>
+
+Modifiers
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+[x](./utils.vec2.x.md)
+
+
+</td><td>
+
+
+</td><td>
+
+number
+
+
+</td><td>
+
+**_(BETA)_**
+
+
+</td></tr>
+<tr><td>
+
+[y](./utils.vec2.y.md)
+
+
+</td><td>
+
+
+</td><td>
+
+number
+
+
+</td><td>
+
+**_(BETA)_**
+
+
+</td></tr>
+</tbody></table>
 
 ## Methods
 
-|  Method | Modifiers | Description |
-|  --- | --- | --- |
-|  [add(v)](./utils.vec2.add.md) |  | **_(BETA)_** 计算两个点相加 |
-|  [cross(v)](./utils.vec2.cross.md) |  | **_(BETA)_** 计算两个点的叉积 |
-|  [div(v)](./utils.vec2.div.md) |  | **_(BETA)_** 计算两个点相除 |
-|  [dot(v)](./utils.vec2.dot.md) |  | **_(BETA)_** 计算两个点的点积 |
-|  [mul(v)](./utils.vec2.mul.md) |  | **_(BETA)_** 计算两个点相乘 |
-|  [reflect(v)](./utils.vec2.reflect.md) |  | **_(BETA)_** 计算这个向量在另一个向量方向上的反射（投影） |
-|  [sub(v)](./utils.vec2.sub.md) |  | **_(BETA)_** 计算两个点相减 |
+<table><thead><tr><th>
 
+Method
+
+
+</th><th>
+
+Modifiers
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+[add(v)](./utils.vec2.add.md)
+
+
+</td><td>
+
+
+</td><td>
+
+**_(BETA)_** 计算两个点相加
+
+
+</td></tr>
+<tr><td>
+
+[cross(v)](./utils.vec2.cross.md)
+
+
+</td><td>
+
+
+</td><td>
+
+**_(BETA)_** 计算两个点的叉积
+
+
+</td></tr>
+<tr><td>
+
+[div(v)](./utils.vec2.div.md)
+
+
+</td><td>
+
+
+</td><td>
+
+**_(BETA)_** 计算两个点相除
+
+
+</td></tr>
+<tr><td>
+
+[dot(v)](./utils.vec2.dot.md)
+
+
+</td><td>
+
+
+</td><td>
+
+**_(BETA)_** 计算两个点的点积
+
+
+</td></tr>
+<tr><td>
+
+[mul(v)](./utils.vec2.mul.md)
+
+
+</td><td>
+
+
+</td><td>
+
+**_(BETA)_** 计算两个点相乘
+
+
+</td></tr>
+<tr><td>
+
+[reflect(v)](./utils.vec2.reflect.md)
+
+
+</td><td>
+
+
+</td><td>
+
+**_(BETA)_** 计算这个向量在另一个向量方向上的反射（投影）
+
+
+</td></tr>
+<tr><td>
+
+[sub(v)](./utils.vec2.sub.md)
+
+
+</td><td>
+
+
+</td><td>
+
+**_(BETA)_** 计算两个点相减
+
+
+</td></tr>
+</tbody></table>

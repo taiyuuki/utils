@@ -14,11 +14,55 @@ declare function object_pick<T extends object, K extends keyof T>(obj: T, keys: 
 
 ## Parameters
 
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  obj | T | 我们要从中选择特定键的对象。 |
-|  keys | K\[\] | keys 是一个字符串数组，表示我们要选择的对象的键。该函数将返回一个新对象，该对象仅包含原始对象中指定的键及其对应的值。 |
+<table><thead><tr><th>
 
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+obj
+
+
+</td><td>
+
+T
+
+
+</td><td>
+
+我们要从中选择特定键的对象。
+
+
+</td></tr>
+<tr><td>
+
+keys
+
+
+</td><td>
+
+K\[\]
+
+
+</td><td>
+
+keys 是一个字符串数组，表示我们要选择的对象的键。该函数将返回一个新对象，该对象仅包含原始对象中指定的键及其对应的值。
+
+
+</td></tr>
+</tbody></table>
 **Returns:**
 
 Pick&lt;T, K&gt;

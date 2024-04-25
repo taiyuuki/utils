@@ -14,10 +14,39 @@ declare function hsl_to_rgb(hsl: HslColor): RgbColor;
 
 ## Parameters
 
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  hsl | HslColor | 表示 HSL 颜色值的四个数字的数组：色调 (0-360)、饱和度 (0-1)、亮度 (0-1) 和 alpha (0-1)。 |
+<table><thead><tr><th>
 
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+hsl
+
+
+</td><td>
+
+HslColor
+
+
+</td><td>
+
+表示 HSL 颜色值的四个数字的数组：色调 (0-360)、饱和度 (0-1)、亮度 (0-1) 和 alpha (0-1)。
+
+
+</td></tr>
+</tbody></table>
 **Returns:**
 
 RgbColor

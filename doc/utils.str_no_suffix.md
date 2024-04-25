@@ -14,11 +14,55 @@ declare function str_no_suffix(s: string, suffix: string): string;
 
 ## Parameters
 
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  s | string | 可能以指定后缀结尾的字符串。 |
-|  suffix | string | “后缀”参数是一个字符串，表示我们要删除的输入字符串“s”的结尾字符。 |
+<table><thead><tr><th>
 
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+s
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+可能以指定后缀结尾的字符串。
+
+
+</td></tr>
+<tr><td>
+
+suffix
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+“后缀”参数是一个字符串，表示我们要删除的输入字符串“s”的结尾字符。
+
+
+</td></tr>
+</tbody></table>
 **Returns:**
 
 string

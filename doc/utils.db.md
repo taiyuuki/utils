@@ -19,16 +19,110 @@ declare class DB<T = any>
 
 ## Constructors
 
-|  Constructor | Modifiers | Description |
-|  --- | --- | --- |
-|  [(constructor)(dbName, storeName, version)](./utils.db._constructor_.md) |  | **_(BETA)_** 这是 IndexedDB 数据库的构造函数，用于创建对象存储。 |
+<table><thead><tr><th>
+
+Constructor
+
+
+</th><th>
+
+Modifiers
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+[(constructor)(dbName, storeName, version)](./utils.db._constructor_.md)
+
+
+</td><td>
+
+
+</td><td>
+
+**_(BETA)_** 这是 IndexedDB 数据库的构造函数，用于创建对象存储。
+
+
+</td></tr>
+</tbody></table>
 
 ## Methods
 
-|  Method | Modifiers | Description |
-|  --- | --- | --- |
-|  [clear()](./utils.db.clear.md) |  | **_(BETA)_** 清空对象存储中的所有数据。 |
-|  [get\_item(id)](./utils.db.get_item.md) |  | **_(BETA)_** 从对象存储中读取数据。 |
-|  [remove\_item(id)](./utils.db.remove_item.md) |  | **_(BETA)_** 从对象存储中删除数据。 |
-|  [set\_item(id, data)](./utils.db.set_item.md) |  | **_(BETA)_** 将对象存储中的数据写入 IndexedDB 数据库。 |
+<table><thead><tr><th>
 
+Method
+
+
+</th><th>
+
+Modifiers
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+[clear()](./utils.db.clear.md)
+
+
+</td><td>
+
+
+</td><td>
+
+**_(BETA)_** 清空对象存储中的所有数据。
+
+
+</td></tr>
+<tr><td>
+
+[get\_item(id)](./utils.db.get_item.md)
+
+
+</td><td>
+
+
+</td><td>
+
+**_(BETA)_** 从对象存储中读取数据。
+
+
+</td></tr>
+<tr><td>
+
+[remove\_item(id)](./utils.db.remove_item.md)
+
+
+</td><td>
+
+
+</td><td>
+
+**_(BETA)_** 从对象存储中删除数据。
+
+
+</td></tr>
+<tr><td>
+
+[set\_item(id, data)](./utils.db.set_item.md)
+
+
+</td><td>
+
+
+</td><td>
+
+**_(BETA)_** 将对象存储中的数据写入 IndexedDB 数据库。
+
+
+</td></tr>
+</tbody></table>

@@ -1,4 +1,4 @@
-import { basename } from 'path'
+import { basename } from 'node:path'
 import type { DefaultTheme } from 'vitepress'
 import { defineConfig } from 'vitepress'
 import fg from 'fast-glob'
@@ -15,6 +15,7 @@ function copyright() {
     const start = 2023
     const now = new Date().getFullYear()
     const year = now === start ? '2023' : `${start}-${now}`
+
     return `Copyright © ${year} Taiyuuki`
 }
 
@@ -22,28 +23,27 @@ function resolveTitle(title: string) {
     title = title === 'utils' ? title : title.replace('utils.', '')
     title = title.split('.').join(' ')
     title = str_capital_all(title.replace(/_/g, ' '))
+
     return title
 }
 
 function getTree(file: string, prefix: string, tree = {}) {
-    const [ cur, ...rest ] = file.replace('.md', '').split('.')
+    const [cur, ...rest] = file.replace('.md', '').split('.')
     const curPath = prefix + cur
     if (!tree[curPath]) {
-        tree[curPath] = {
-            link: '/doc/' + curPath + '.md',
-        }
+        tree[curPath] = { link: `/doc/${curPath}.md` }
     }
     if (rest.length > 0) {
         if (!tree[curPath].items) {
             tree[curPath].items = {}
         }
-        getTree(rest.join('.'), curPath + '.', tree[curPath].items)
+        getTree(rest.join('.'), `${curPath}.`, tree[curPath].items)
     }
 }
 
 function treeToItems(tree: IndexTree) {
     const items: DefaultTheme.SidebarItem[] = []
-    Object.keys(tree).forEach((key) => {
+    Object.keys(tree).forEach(key => {
         const item: DefaultTheme.SidebarItem = {
             text: resolveTitle(key),
             link: tree[key].link,
@@ -56,14 +56,16 @@ function treeToItems(tree: IndexTree) {
         }
         items.push(item)
     })
+
     return items
 }
 
 const tree
 = fg.sync(['./doc/**/*.md'])
-    .map((path) => basename(path))
+    .map(path => basename(path))
     .reduce((tree, file) => {
         getTree(file, '', tree)
+
         return tree
     }, {})
 
@@ -74,7 +76,8 @@ export default defineConfig({
     title: 'Utils',
     description: 'Documentations of @taiyuuki/utils',
     themeConfig: {
-    // https://vitepress.dev/reference/default-theme-config
+
+        // https://vitepress.dev/reference/default-theme-config
         nav: [
             { text: 'Home', link: '/doc/index' },
             { text: 'API', link: '/doc/utils' },
@@ -91,9 +94,7 @@ export default defineConfig({
             { icon: 'github', link: 'https://github.com/taiyuuki/utils' },
         ],
 
-        search: {
-            provider: 'local',
-        },
+        search: { provider: 'local' },
 
         footer: {
             message: 'Released under the MIT License.',

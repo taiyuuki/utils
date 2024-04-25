@@ -14,10 +14,39 @@ declare function is_fn(fn: any): fn is Fn;
 
 ## Parameters
 
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  fn | any | <code>fn</code> 参数是 <code>any</code> 类型，这意味着它可以是任何数据类型。然而，函数 is\_fn 正在检查 fn 是否是一个函数。 |
+<table><thead><tr><th>
 
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+fn
+
+
+</td><td>
+
+any
+
+
+</td><td>
+
+`fn` 参数是 `any` 类型，这意味着它可以是任何数据类型。然而，函数 is\_fn 正在检查 fn 是否是一个函数。
+
+
+</td></tr>
+</tbody></table>
 **Returns:**
 
 fn is Fn

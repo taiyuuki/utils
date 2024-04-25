@@ -14,11 +14,55 @@ declare function download_image(img: HTMLImageElement, imageName?: string): void
 
 ## Parameters
 
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  img | HTMLImageElement | 一个 HTMLImageElement 对象，表示需要下载的图像。 |
-|  imageName | string | _(Optional)_ imageName 参数是一个字符串，表示将要下载的图像文件的名称。如果未提供名称，将生成一个随机 UUID 字符串作为文件名。 |
+<table><thead><tr><th>
 
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+img
+
+
+</td><td>
+
+HTMLImageElement
+
+
+</td><td>
+
+一个 HTMLImageElement 对象，表示需要下载的图像。
+
+
+</td></tr>
+<tr><td>
+
+imageName
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+_(Optional)_ imageName 参数是一个字符串，表示将要下载的图像文件的名称。如果未提供名称，将生成一个随机 UUID 字符串作为文件名。
+
+
+</td></tr>
+</tbody></table>
 **Returns:**
 
 void

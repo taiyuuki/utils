@@ -14,10 +14,39 @@ declare function clone_deep<T extends object>(source: T): T;
 
 ## Parameters
 
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  source | T | 需要深度克隆的对象。 |
+<table><thead><tr><th>
 
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+source
+
+
+</td><td>
+
+T
+
+
+</td><td>
+
+需要深度克隆的对象。
+
+
+</td></tr>
+</tbody></table>
 **Returns:**
 
 T

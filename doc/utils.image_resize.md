@@ -14,11 +14,55 @@ declare function image_resize(img: HTMLImageElement, options: ImageOptions): HTM
 
 ## Parameters
 
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  img | HTMLImageElement | 表示要调整大小的图像的 HTMLImageElement 对象。 |
-|  options | ImageOptions | ImageOptions 是包含调整图像的大小、质量、类型的选项的对象。 |
+<table><thead><tr><th>
 
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+img
+
+
+</td><td>
+
+HTMLImageElement
+
+
+</td><td>
+
+表示要调整大小的图像的 HTMLImageElement 对象。
+
+
+</td></tr>
+<tr><td>
+
+options
+
+
+</td><td>
+
+ImageOptions
+
+
+</td><td>
+
+ImageOptions 是包含调整图像的大小、质量、类型的选项的对象。
+
+
+</td></tr>
+</tbody></table>
 **Returns:**
 
 HTMLImageElement

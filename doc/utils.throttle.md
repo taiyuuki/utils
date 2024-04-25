@@ -14,12 +14,71 @@ declare function throttle<T extends Fn>(func: T, timeFrame: number, immediately?
 
 ## Parameters
 
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  func | T | 需要节流的函数 |
-|  timeFrame | number | 时间间隔 |
-|  immediately | boolean | _(Optional)_ 是否立即执行，默认值为 true |
+<table><thead><tr><th>
 
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+func
+
+
+</td><td>
+
+T
+
+
+</td><td>
+
+需要节流的函数
+
+
+</td></tr>
+<tr><td>
+
+timeFrame
+
+
+</td><td>
+
+number
+
+
+</td><td>
+
+时间间隔
+
+
+</td></tr>
+<tr><td>
+
+immediately
+
+
+</td><td>
+
+boolean
+
+
+</td><td>
+
+_(Optional)_ 是否立即执行，默认值为 true
+
+
+</td></tr>
+</tbody></table>
 **Returns:**
 
 T

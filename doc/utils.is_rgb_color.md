@@ -14,10 +14,39 @@ declare function is_rgb_color(color: any): color is RgbColor;
 
 ## Parameters
 
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  color | any | 它可以是任何数据类型。 |
+<table><thead><tr><th>
 
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+color
+
+
+</td><td>
+
+any
+
+
+</td><td>
+
+它可以是任何数据类型。
+
+
+</td></tr>
+</tbody></table>
 **Returns:**
 
 color is RgbColor

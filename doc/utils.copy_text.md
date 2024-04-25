@@ -9,16 +9,60 @@
 **Signature:**
 
 ```typescript
-declare function copy_text(target: string | number | HTMLElement, addition?: string): void;
+declare function copy_text(target: HTMLElement | number | string, addition?: string): void;
 ```
 
 ## Parameters
 
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  target | string \| number \| HTMLElement | 目标可以是字符串、数字或 HTMLElement。它是将被复制到剪贴板的文本。 |
-|  addition | string | _(Optional)_ 在将文本复制到剪贴板之前将附加到文本的可选字符串。如果未提供任何值，则文本将按原样复制。 |
+<table><thead><tr><th>
 
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+target
+
+
+</td><td>
+
+HTMLElement \| number \| string
+
+
+</td><td>
+
+目标可以是字符串、数字或 HTMLElement。它是将被复制到剪贴板的文本。
+
+
+</td></tr>
+<tr><td>
+
+addition
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+_(Optional)_ 在将文本复制到剪贴板之前将附加到文本的可选字符串。如果未提供任何值，则文本将按原样复制。
+
+
+</td></tr>
+</tbody></table>
 **Returns:**
 
 void

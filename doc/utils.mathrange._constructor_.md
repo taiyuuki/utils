@@ -12,12 +12,41 @@ Range 构造函数
 **Signature:**
 
 ```typescript
-constructor(r: string | number);
+constructor(r: number | string);
 ```
 
 ## Parameters
 
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  r | string \| number | 数字区间，也可以是单独一个数字。例如： (4, 10\]，表示大于 4 且小于等于 10 的区间。 |
+<table><thead><tr><th>
 
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+r
+
+
+</td><td>
+
+number \| string
+
+
+</td><td>
+
+数字区间，也可以是单独一个数字。例如： (4, 10\]，表示大于 4 且小于等于 10 的区间。
+
+
+</td></tr>
+</tbody></table>

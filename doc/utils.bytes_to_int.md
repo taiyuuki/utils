@@ -14,10 +14,39 @@ declare function bytes_to_int(bytes: [number, number, number, number]): number;
 
 ## Parameters
 
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  bytes | \[number, number, number, number\] | 参数“bytes”是一个由四个数字组成的数组，代表一个 32 位整数，以大端字节顺序排列。函数“bytes\_to\_int”将此字节数组转换为单个整数值。 |
+<table><thead><tr><th>
 
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+bytes
+
+
+</td><td>
+
+\[number, number, number, number\]
+
+
+</td><td>
+
+参数“bytes”是一个由四个数字组成的数组，代表一个 32 位整数，以大端字节顺序排列。函数“bytes\_to\_int”将此字节数组转换为单个整数值。
+
+
+</td></tr>
+</tbody></table>
 **Returns:**
 
 number

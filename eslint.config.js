@@ -6,6 +6,7 @@ export default tyk_eslint({
         '**/docs',
         '**/temp',
         '**/etc',
+        '**/cache',
     ],
     rules: { '@typescript-eslint/no-explicit-any': 'off' },
 })

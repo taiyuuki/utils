@@ -14,10 +14,39 @@ declare function str_capital_all(str: string): string;
 
 ## Parameters
 
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  str | string | 包含一个或多个由空格分隔的单词的字符串。 |
+<table><thead><tr><th>
 
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+str
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+包含一个或多个由空格分隔的单词的字符串。
+
+
+</td></tr>
+</tbody></table>
 **Returns:**
 
 string

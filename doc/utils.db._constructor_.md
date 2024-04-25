@@ -17,9 +17,68 @@ constructor(dbName: string, storeName: string, version?: number);
 
 ## Parameters
 
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  dbName | string | 将创建或访问的 IndexedDB 数据库的名称。 |
-|  storeName | string | 将在 IndexedDB 数据库中创建或访问的存储对象的名称。 |
-|  version | number | _(Optional)_ 存储对象的版本。 |
+<table><thead><tr><th>
 
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+dbName
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+将创建或访问的 IndexedDB 数据库的名称。
+
+
+</td></tr>
+<tr><td>
+
+storeName
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+将在 IndexedDB 数据库中创建或访问的存储对象的名称。
+
+
+</td></tr>
+<tr><td>
+
+version
+
+
+</td><td>
+
+number
+
+
+</td><td>
+
+_(Optional)_ 存储对象的版本。
+
+
+</td></tr>
+</tbody></table>

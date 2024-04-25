@@ -14,10 +14,39 @@ declare function is_not_void<T>(t: T): t is NonNullable<T>;
 
 ## Parameters
 
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  t | T | 可以是任何类型的泛型类型参数，包括可为 null 的类型。 |
+<table><thead><tr><th>
 
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+t
+
+
+</td><td>
+
+T
+
+
+</td><td>
+
+可以是任何类型的泛型类型参数，包括可为 null 的类型。
+
+
+</td></tr>
+</tbody></table>
 **Returns:**
 
 t is NonNullable&lt;T&gt;

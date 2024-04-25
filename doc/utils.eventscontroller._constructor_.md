@@ -17,7 +17,36 @@ constructor(target: T);
 
 ## Parameters
 
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  target | T | 绑定对象，例如DOM，每一个实例只维护一个对象 |
+<table><thead><tr><th>
 
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+target
+
+
+</td><td>
+
+T
+
+
+</td><td>
+
+绑定对象，例如DOM，每一个实例只维护一个对象
+
+
+</td></tr>
+</tbody></table>

@@ -17,10 +17,39 @@ remove_item(id: string): void;
 
 ## Parameters
 
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  id | string | 数据的唯一标识。 |
+<table><thead><tr><th>
 
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+id
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+数据的唯一标识。
+
+
+</td></tr>
+</tbody></table>
 **Returns:**
 
 void

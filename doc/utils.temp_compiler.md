@@ -14,11 +14,55 @@ declare function temp_compiler<T extends object>(temp: string, data: T): string;
 
 ## Parameters
 
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  temp | string | <code>temp</code> 参数是一个字符串，表示带有占位符的模板，这些占位符将被 <code>data</code> 对象中的值替换。 |
-|  data | T | <code>data</code> 参数是一个 <code>T</code> 类型的对象，其中包含将用于替换 <code>temp</code> 字符串中的占位符的数据。对象的键代表 temp 字符串中的占位符，值代表将替换这些占位符的值。 |
+<table><thead><tr><th>
 
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+temp
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+`temp` 参数是一个字符串，表示带有占位符的模板，这些占位符将被 `data` 对象中的值替换。
+
+
+</td></tr>
+<tr><td>
+
+data
+
+
+</td><td>
+
+T
+
+
+</td><td>
+
+`data` 参数是一个 `T` 类型的对象，其中包含将用于替换 `temp` 字符串中的占位符的数据。对象的键代表 temp 字符串中的占位符，值代表将替换这些占位符的值。
+
+
+</td></tr>
+</tbody></table>
 **Returns:**
 
 string

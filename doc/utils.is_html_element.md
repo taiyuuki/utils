@@ -14,10 +14,39 @@ declare function is_html_element(hel: any): hel is HTMLElement;
 
 ## Parameters
 
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  hel | any | 参数“hel”的类型为“any”，这意味着它可以是任何数据类型。 |
+<table><thead><tr><th>
 
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+hel
+
+
+</td><td>
+
+any
+
+
+</td><td>
+
+参数“hel”的类型为“any”，这意味着它可以是任何数据类型。
+
+
+</td></tr>
+</tbody></table>
 **Returns:**
 
 hel is HTMLElement

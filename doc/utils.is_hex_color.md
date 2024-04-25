@@ -14,10 +14,39 @@ declare function is_hex_color(color: string): boolean;
 
 ## Parameters
 
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  color | string | 参数“color”是一个字符串，表示十六进制格式的颜色值。它可以有一个可选的“\#”符号开头，后跟 3 到 8 个字符，可以是数字 (0-9) 或字母（a-f 或 A-F）。 |
+<table><thead><tr><th>
 
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+color
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+参数“color”是一个字符串，表示十六进制格式的颜色值。它可以有一个可选的“\#”符号开头，后跟 3 到 8 个字符，可以是数字 (0-9) 或字母（a-f 或 A-F）。
+
+
+</td></tr>
+</tbody></table>
 **Returns:**
 
 boolean

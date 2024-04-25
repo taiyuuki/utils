@@ -14,10 +14,39 @@ declare function int_to_bytes(num: number): Uint8Array;
 
 ## Parameters
 
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  num | number | 参数 num 是需要转换为字节数组的数字。 |
+<table><thead><tr><th>
 
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+num
+
+
+</td><td>
+
+number
+
+
+</td><td>
+
+参数 num 是需要转换为字节数组的数字。
+
+
+</td></tr>
+</tbody></table>
 **Returns:**
 
 Uint8Array

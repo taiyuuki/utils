@@ -17,11 +17,55 @@ declare function match_range<T>(n: number, pattern: Record<string, T | ((range: 
 
 ## Parameters
 
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  n | number | 一个数字 |
-|  pattern | Record&lt;string, T \| ((range: [MathRange](./utils.mathrange.md)<!-- -->) =&gt; T)&gt; | 模式匹配对象 |
+<table><thead><tr><th>
 
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+n
+
+
+</td><td>
+
+number
+
+
+</td><td>
+
+一个数字
+
+
+</td></tr>
+<tr><td>
+
+pattern
+
+
+</td><td>
+
+Record&lt;string, T \| ((range: [MathRange](./utils.mathrange.md)<!-- -->) =&gt; T)&gt;
+
+
+</td><td>
+
+模式匹配对象
+
+
+</td></tr>
+</tbody></table>
 **Returns:**
 
 T \| null

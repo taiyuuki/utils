@@ -14,10 +14,39 @@ declare function is_base64(str: string): str is string;
 
 ## Parameters
 
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  str | string | 表示数据 URI 方案的字符串，它可能是也可能不是 base64 编码的。 |
+<table><thead><tr><th>
 
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+str
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+表示数据 URI 方案的字符串，它可能是也可能不是 base64 编码的。
+
+
+</td></tr>
+</tbody></table>
 **Returns:**
 
 str is string

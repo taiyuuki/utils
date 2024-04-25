@@ -14,11 +14,55 @@ declare function str_ensure_prefix(s: string, prefix: string): string;
 
 ## Parameters
 
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  s | string | 我们要确保的字符串具有特定的前缀。 |
-|  prefix | string | prefix 参数是一个字符串，我们要确保它位于输入字符串的开头。如果输入字符串已经以前缀开头，则函数按原样返回输入字符串。否则，该函数将前缀添加到输入字符串的开头并返回结果字符串 |
+<table><thead><tr><th>
 
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+s
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+我们要确保的字符串具有特定的前缀。
+
+
+</td></tr>
+<tr><td>
+
+prefix
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+prefix 参数是一个字符串，我们要确保它位于输入字符串的开头。如果输入字符串已经以前缀开头，则函数按原样返回输入字符串。否则，该函数将前缀添加到输入字符串的开头并返回结果字符串
+
+
+</td></tr>
+</tbody></table>
 **Returns:**
 
 string

@@ -23,6 +23,7 @@ function temp_compiler<T extends object>(temp: string, data: T): string {
     const keys = Object.keys(data)
     const values = Object.values(data)
     const parser = new Function(...keys, `return \`${temp}\``)
+
     return parser(...values)
 }
 

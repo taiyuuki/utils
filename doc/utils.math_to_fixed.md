@@ -14,11 +14,55 @@ declare function math_to_fixed(n: number, digit?: number): number;
 
 ## Parameters
 
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  n | number | 需要四舍五入到小数点后固定位数的数字。 |
-|  digit | number | _(Optional)_ 给定数字应四舍五入到小数点后的位数。如果没有为 digit 提供值，则默认为 0，这意味着数字将四舍五入到最接近的整数。 |
+<table><thead><tr><th>
 
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+n
+
+
+</td><td>
+
+number
+
+
+</td><td>
+
+需要四舍五入到小数点后固定位数的数字。
+
+
+</td></tr>
+<tr><td>
+
+digit
+
+
+</td><td>
+
+number
+
+
+</td><td>
+
+_(Optional)_ 给定数字应四舍五入到小数点后的位数。如果没有为 digit 提供值，则默认为 0，这意味着数字将四舍五入到最接近的整数。
+
+
+</td></tr>
+</tbody></table>
 **Returns:**
 
 number

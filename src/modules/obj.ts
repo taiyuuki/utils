@@ -43,6 +43,7 @@ function object_pick<T extends object, K extends keyof T>(obj: T, keys: K[]) {
         if (key_in(key, obj)) {
             result[key] = obj[key]
         }
+
         return result
     }, {} as Pick<T, K>)
 }

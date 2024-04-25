@@ -14,10 +14,39 @@ declare function is_element(el: any): el is Element;
 
 ## Parameters
 
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  el | any | 可以是任何数据类型。 |
+<table><thead><tr><th>
 
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+el
+
+
+</td><td>
+
+any
+
+
+</td><td>
+
+可以是任何数据类型。
+
+
+</td></tr>
+</tbody></table>
 **Returns:**
 
 el is Element

@@ -17,26 +17,227 @@ declare class MathRange
 
 ## Constructors
 
-|  Constructor | Modifiers | Description |
-|  --- | --- | --- |
-|  [(constructor)(r)](./utils.mathrange._constructor_.md) |  | **_(BETA)_** Range 构造函数 |
+<table><thead><tr><th>
+
+Constructor
+
+
+</th><th>
+
+Modifiers
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+[(constructor)(r)](./utils.mathrange._constructor_.md)
+
+
+</td><td>
+
+
+</td><td>
+
+**_(BETA)_** Range 构造函数
+
+
+</td></tr>
+</tbody></table>
 
 ## Properties
 
-|  Property | Modifiers | Type | Description |
-|  --- | --- | --- | --- |
-|  [e\_open](./utils.mathrange.e_open.md) |  | boolean | **_(BETA)_** |
-|  [end](./utils.mathrange.end.md) |  | number | **_(BETA)_** |
-|  [s\_open](./utils.mathrange.s_open.md) |  | boolean | **_(BETA)_** |
-|  [start](./utils.mathrange.start.md) |  | number | **_(BETA)_** |
+<table><thead><tr><th>
+
+Property
+
+
+</th><th>
+
+Modifiers
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+[e\_open](./utils.mathrange.e_open.md)
+
+
+</td><td>
+
+
+</td><td>
+
+boolean
+
+
+</td><td>
+
+**_(BETA)_**
+
+
+</td></tr>
+<tr><td>
+
+[end](./utils.mathrange.end.md)
+
+
+</td><td>
+
+
+</td><td>
+
+number
+
+
+</td><td>
+
+**_(BETA)_**
+
+
+</td></tr>
+<tr><td>
+
+[s\_open](./utils.mathrange.s_open.md)
+
+
+</td><td>
+
+
+</td><td>
+
+boolean
+
+
+</td><td>
+
+**_(BETA)_**
+
+
+</td></tr>
+<tr><td>
+
+[start](./utils.mathrange.start.md)
+
+
+</td><td>
+
+
+</td><td>
+
+number
+
+
+</td><td>
+
+**_(BETA)_**
+
+
+</td></tr>
+</tbody></table>
 
 ## Methods
 
-|  Method | Modifiers | Description |
-|  --- | --- | --- |
-|  [cross(other)](./utils.mathrange.cross.md) |  | **_(BETA)_** 获取两个区间的交集，如果不存在交集则返回null |
-|  [equals(other)](./utils.mathrange.equals.md) |  | **_(BETA)_** 判断两个区间是否相等 |
-|  [is\_between(num)](./utils.mathrange.is_between.md) |  | **_(BETA)_** 判断一个数字是否在区间内 |
-|  [toString()](./utils.mathrange.tostring.md) |  | **_(BETA)_** <code>toString</code> 函数返回字符串格式的数字区间。 |
-|  [valid(origin)](./utils.mathrange.valid.md) | <code>static</code> | **_(BETA)_** 验证数字区间是否合法，但不验证数字的大小。 |
+<table><thead><tr><th>
 
+Method
+
+
+</th><th>
+
+Modifiers
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+[cross(other)](./utils.mathrange.cross.md)
+
+
+</td><td>
+
+
+</td><td>
+
+**_(BETA)_** 获取两个区间的交集，如果不存在交集则返回null
+
+
+</td></tr>
+<tr><td>
+
+[equals(other)](./utils.mathrange.equals.md)
+
+
+</td><td>
+
+
+</td><td>
+
+**_(BETA)_** 判断两个区间是否相等
+
+
+</td></tr>
+<tr><td>
+
+[is\_between(num)](./utils.mathrange.is_between.md)
+
+
+</td><td>
+
+
+</td><td>
+
+**_(BETA)_** 判断一个数字是否在区间内
+
+
+</td></tr>
+<tr><td>
+
+[toString()](./utils.mathrange.tostring.md)
+
+
+</td><td>
+
+
+</td><td>
+
+**_(BETA)_** `toString` 函数返回字符串格式的数字区间。
+
+
+</td></tr>
+<tr><td>
+
+[valid(origin)](./utils.mathrange.valid.md)
+
+
+</td><td>
+
+`static`
+
+
+</td><td>
+
+**_(BETA)_** 验证数字区间是否合法，但不验证数字的大小。
+
+
+</td></tr>
+</tbody></table>

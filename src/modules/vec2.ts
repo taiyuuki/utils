@@ -5,6 +5,7 @@
 class Vec2 {
     x: number
     y: number
+
     /**
      * 类 Vec2 的构造函数，用于初始化 x 和 y 坐标。
      * @param x - x坐标
@@ -20,11 +21,10 @@ class Vec2 {
      * @param v - 参数“v”是一个number或“Vec2”对象。
      * @returns - 点积
      */
-    dot(v: number | Vec2) {
+    dot(v: Vec2 | number) {
         if (typeof v === 'number') {
             return this.x * v + this.y * v
-        }
-        else {
+        } else {
             return this.x * v.x + this.y * v.y
         }
     }
@@ -34,11 +34,10 @@ class Vec2 {
      * @param v - 参数“v”是一个number或“Vec2”对象。
      * @returns - 叉积
      */
-    cross(v: number | Vec2) {
+    cross(v: Vec2 | number) {
         if (typeof v === 'number') {
             return this.x * v - this.y * v
-        }
-        else {
+        } else {
             return this.x * v.y - this.y * v.x
         }
     }
@@ -48,11 +47,10 @@ class Vec2 {
      * @param v - 参数“v”是一个number或“Vec2”对象。
      * @returns - 相加得到的点
      */
-    add(v: number | Vec2) {
+    add(v: Vec2 | number) {
         if (typeof v === 'number') {
             return new Vec2(this.x + v, this.y + v)
-        }
-        else {
+        } else {
             return new Vec2(this.x + v.x, this.y + v.y)
         }
     }
@@ -62,11 +60,10 @@ class Vec2 {
      * @param v - 参数“v”是一个number或“Vec2”对象。
      * @returns - 相减得到的点
      */
-    sub(v: number | Vec2) {
+    sub(v: Vec2 | number) {
         if (typeof v === 'number') {
             return new Vec2(this.x - v, this.y - v)
-        }
-        else {
+        } else {
             return new Vec2(this.x - v.x, this.y - v.y)
         }
     }
@@ -76,11 +73,10 @@ class Vec2 {
      * @param v - 参数“v”是一个number或“Vec2”对象。
      * @returns - 相乘得到的点
      */
-    mul(v: number | Vec2) {
+    mul(v: Vec2 | number) {
         if (typeof v === 'number') {
             return new Vec2(this.x * v, this.y * v)
-        }
-        else {
+        } else {
             return new Vec2(this.x * v.x, this.y * v.y)
         }
     }
@@ -90,11 +86,10 @@ class Vec2 {
      * @param v - 参数“v”是一个number或“Vec2”对象。
      * @returns - 相除得到的点
      */
-    div(v: number | Vec2) {
+    div(v: Vec2 | number) {
         if (typeof v === 'number') {
             return new Vec2(this.x / v, this.y / v)
-        }
-        else {
+        } else {
             return new Vec2(this.x / v.x, this.y / v.y)
         }
     }
@@ -125,11 +120,12 @@ function point_in_polygon<Point extends { x: number, y: number }>(point: Point, 
         const yi = polygon[i].y
         const xj = polygon[j].x
         const yj = polygon[j].y
-        const intersect = ((yi > y) !== (yj > y)) && (x < (xj - xi) * (y - yi) / (yj - yi) + xi)
+        const intersect = yi > y !== yj > y && x < (xj - xi) * (y - yi) / (yj - yi) + xi
         if (intersect) {
             inside = !inside
         }
     }
+
     return inside
 }
 

@@ -14,10 +14,39 @@ declare function hex_to_rgb(hex: string): RgbColor;
 
 ## Parameters
 
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  hex | string | hex 参数是表示十六进制颜色代码的字符串，例如“\#FF0000”代表红色或“\#00FF00”代表绿色。 |
+<table><thead><tr><th>
 
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+hex
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+hex 参数是表示十六进制颜色代码的字符串，例如“\#FF0000”代表红色或“\#00FF00”代表绿色。
+
+
+</td></tr>
+</tbody></table>
 **Returns:**
 
 RgbColor

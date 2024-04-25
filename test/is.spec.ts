@@ -10,7 +10,7 @@ describe('is', () => {
 
         expect(is_void(null)).toEqual(true)
         expect(is_void(undefined)).toEqual(true)
-        expect(is_void(NaN)).toEqual(true)
+        expect(is_void(Number.NaN)).toEqual(true)
         expect(is_void(0)).toEqual(false)
         expect(is_void('')).toEqual(false)
         expect(is_void({})).toEqual(false)
@@ -24,15 +24,15 @@ describe('is', () => {
 
         expect(is_empty_array([])).toEqual(true)
         expect(is_empty_array(null)).toEqual(false)
-        expect(is_empty_array(NaN)).toEqual(false)
+        expect(is_empty_array(Number.NaN)).toEqual(false)
         expect(is_empty_array(undefined, false)).toEqual(true)
         expect(is_empty_array([[]])).toEqual(false)
 
         expect(is_empty_obj([])).toEqual(false)
         expect(is_empty_obj({})).toEqual(true)
         expect(is_empty_obj(undefined)).toEqual(false)
-        expect(is_empty_obj(NaN)).toEqual(false)
-        expect(is_empty_obj(NaN, false)).toEqual(true)
+        expect(is_empty_obj(Number.NaN)).toEqual(false)
+        expect(is_empty_obj(Number.NaN, false)).toEqual(true)
         expect(is_empty_obj([{}])).toEqual(false)
 
         expect(is_object({})).toEqual(true)
@@ -48,7 +48,7 @@ describe('is', () => {
         expect(is_regexp({})).toEqual(false)
         expect(is_regexp('')).toEqual(false)
 
-        expect(is_number(NaN)).toEqual(false)
+        expect(is_number(Number.NaN)).toEqual(false)
         expect(is_number(123)).toEqual(true)
         expect(is_number(Number.MAX_SAFE_INTEGER)).toEqual(true)
         expect(is_number(Number.NEGATIVE_INFINITY)).toEqual(false)

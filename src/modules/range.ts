@@ -5,7 +5,7 @@ import { is_callable } from './is'
  * @beta
  */
 class MathRange {
-    private static _REG_1 = /^(\(|\[)\s*(-?\d+)\s*,\s*(-?\d+)\s*(\)|\])$/
+    private static _REG_1 = /^([([])\s*(-?\d+)\s*,\s*(-?\d+)\s*(\)])$/
     private static _REG_2 = /^\d+$/
 
     private _r: string
@@ -19,7 +19,7 @@ class MathRange {
      * Range 构造函数
      * @param r - 数字区间，也可以是单独一个数字。例如： (4, 10]，表示大于 4 且小于等于 10 的区间。
      */
-    constructor(r: string | number) {
+    constructor(r: number | string) {
         if (typeof r === 'number' || MathRange._REG_2.test(r)) {
             r = Number(r)
 
@@ -29,8 +29,7 @@ class MathRange {
             this.s_open = false
             this.e_open = false
             this._r = `[${r}, ${r}]`
-        }
-        else {
+        } else {
             if (!MathRange._REG_1.test(r)) {
                 throw new Error(`Invalid range: ${r}.`)
             }
@@ -65,7 +64,7 @@ class MathRange {
      * @param origin - 一个数字区间的字符串，区分开区间和闭区间。
      * @returns 验证结果
      */
-    static valid(origin: string | number) {
+    static valid(origin: number | string) {
         return typeof origin === 'number' || MathRange._REG_1.test(origin) || MathRange._REG_2.test(origin)
     }
 
@@ -81,15 +80,12 @@ class MathRange {
         if (this.s_open) {
             if (this.e_open) {
                 return num > this.start && num < this.end
-            }
-            else {
+            } else {
                 return num > this.start && num <= this.end
             }
-        }
-        else if (this.e_open) {
+        } else if (this.e_open) {
             return num >= this.start && num < this.end
-        }
-        else {
+        } else {
             return num >= this.start && num <= this.end
         }
     }
@@ -124,13 +120,14 @@ class MathRange {
  * @param ranges - 数字区间列表，例如：['[0, 10]', '(10, 20]', '(20, 30]']，注意开闭区间，且各区间不要有重叠。
  * @returns 搜索结果是一个 Range 对象，如果没有找到则返回 null
  */
-function search_range(n: number, ranges: (string | number)[]) {
+function search_range(n: number, ranges: (number | string)[]) {
     for (let i = 0; i < ranges.length; i++) {
         const range = new MathRange(ranges[i])
         if (range.is_between(n)) {
             return range
         }
     }
+
     return null
 }
 
@@ -150,7 +147,7 @@ function search_range(n: number, ranges: (string | number)[]) {
  * })   // result = 10
  * ```
  */
-function match_range<T>(n: number, pattern: Record<string, T | ((range: MathRange) => T)>) {
+function match_range<T>(n: number, pattern: Record<string, T | ((range: MathRange)=> T)>) {
     for (const p in pattern) {
         if (p === '_') {
             continue
@@ -158,13 +155,16 @@ function match_range<T>(n: number, pattern: Record<string, T | ((range: MathRang
         const range = new MathRange(p)
         if (range.is_between(n)) {
             const handle = pattern[p]
+
             return is_callable(handle) ? handle(range) : handle
         }
     }
     if ('_' in pattern) {
         const handle = pattern._
+
         return is_callable(handle) ? handle(new MathRange(n)) : handle
     }
+
     return null
 }
 

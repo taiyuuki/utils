@@ -14,10 +14,39 @@ declare function rgb_to_hsl(rgb: RgbColor): HslColor;
 
 ## Parameters
 
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  rgb | RgbColor | 一个包含四个数字的数组，表示 RGB 颜色空间中颜色的红色、绿色、蓝色和 alpha 值。 RGB 分量的值应介于 0 和 255 之间，alpha 分量的值应介于 0 和 1 之间。 |
+<table><thead><tr><th>
 
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+rgb
+
+
+</td><td>
+
+RgbColor
+
+
+</td><td>
+
+一个包含四个数字的数组，表示 RGB 颜色空间中颜色的红色、绿色、蓝色和 alpha 值。 RGB 分量的值应介于 0 和 255 之间，alpha 分量的值应介于 0 和 1 之间。
+
+
+</td></tr>
+</tbody></table>
 **Returns:**
 
 HslColor
