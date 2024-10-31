@@ -5,7 +5,7 @@ import { is_callable } from './is'
  * @beta
  */
 class MathRange {
-    private static _REG_1 = /^([([])\s*(-?\d+)\s*,\s*(-?\d+)\s*(\)])$/
+    private static _REG_1 = /^[([]\s*-?\d+\s*,\s*-?\d+\s*[)\]]$/
     private static _REG_2 = /^\d+$/
 
     private _r: string
@@ -20,6 +20,9 @@ class MathRange {
      * @param r - 数字区间，也可以是单独一个数字。例如： (4, 10]，表示大于 4 且小于等于 10 的区间。
      */
     constructor(r: number | string) {
+        if (!MathRange.valid(r)) {
+            throw new Error(`Invalid range: ${r}.`)
+        }
         if (typeof r === 'number' || MathRange._REG_2.test(r)) {
             r = Number(r)
 
@@ -29,10 +32,8 @@ class MathRange {
             this.s_open = false
             this.e_open = false
             this._r = `[${r}, ${r}]`
-        } else {
-            if (!MathRange._REG_1.test(r)) {
-                throw new Error(`Invalid range: ${r}.`)
-            }
+        }
+        else {
             this._r = r
 
             const [start, end] = r.slice(1, -1).split(',')
@@ -80,12 +81,15 @@ class MathRange {
         if (this.s_open) {
             if (this.e_open) {
                 return num > this.start && num < this.end
-            } else {
+            }
+            else {
                 return num > this.start && num <= this.end
             }
-        } else if (this.e_open) {
+        }
+        else if (this.e_open) {
             return num >= this.start && num < this.end
-        } else {
+        }
+        else {
             return num >= this.start && num <= this.end
         }
     }

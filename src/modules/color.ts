@@ -77,8 +77,8 @@ function get_contrast_color(color: Color) {
     const g = Number.parseInt(color.substring(3, 4), 16)
     const b = Number.parseInt(color.substring(5, 6), 16)
     const yiq = (r * 299 + g * 587 + b * 114) / 1000
-
-    return yiq >= 10 ? 'black' : 'white'
+ 
+    return yiq >= 7 ? 'black' : 'white'
 }
 
 /**

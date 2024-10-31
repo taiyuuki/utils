@@ -20,6 +20,6 @@ describe('Range', () => {
         expect(MathRange.valid('4,10')).toBe(false)
         expect(MathRange.valid('4,10)')).toBe(false)
         expect(MathRange.valid('[4,10')).toBe(false)
-        expect(MathRange.valid('123546')).toBe(false)
+        expect(MathRange.valid('123546')).toBe(true)
     })
 })

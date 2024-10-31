@@ -37,6 +37,7 @@ describe('color', () => {
 
     it('get_contrast_color', () => {
         expect(get_contrast_color('#FF0000')).toMatchInlineSnapshot('"white"')
+        expect(get_contrast_color('#FFFFFF')).toMatchInlineSnapshot('"black"')
     })
 
     it('rgb_to_hsl', () => {
