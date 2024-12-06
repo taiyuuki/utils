@@ -9,7 +9,7 @@
 **Signature:**
 
 ```typescript
-declare function url_to_blob(url: string): Promise<Blob>;
+declare function url_to_blob(url: string): Promise<Blob>
 ```
 
 ## Parameters

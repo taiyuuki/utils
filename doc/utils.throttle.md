@@ -9,7 +9,7 @@
 **Signature:**
 
 ```typescript
-declare function throttle<T extends Fn>(func: T, timeFrame: number, immediately?: boolean): T;
+declare function throttle<T extends Fn>(func: T, timeFrame: number, immediately?: boolean): T
 ```
 
 ## Parameters

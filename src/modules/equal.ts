@@ -24,7 +24,8 @@ function deep_equal(a: any, b: any): boolean {
             return aKeys.every(key => {
                 return deep_equal(a[key], b[key])
             })
-        } else {
+        }
+        else {
             return false
         }
     }
@@ -33,7 +34,8 @@ function deep_equal(a: any, b: any): boolean {
             return a.every((_, i) => {
                 return deep_equal(a[i], b[i])
             })
-        } else {
+        }
+        else {
             return false
         }
     }

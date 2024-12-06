@@ -9,7 +9,7 @@
 **Signature:**
 
 ```typescript
-declare function rgb_to_hex(rgb: RgbColor): string;
+declare function rgb_to_hex(rgb: RgbColor): string
 ```
 
 ## Parameters

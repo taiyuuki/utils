@@ -9,7 +9,7 @@
 **Signature:**
 
 ```typescript
-declare function is_date(d: any): d is Date;
+declare function is_date(d: any): d is Date
 ```
 
 ## Parameters

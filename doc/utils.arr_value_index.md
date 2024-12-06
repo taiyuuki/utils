@@ -9,7 +9,7 @@
 **Signature:**
 
 ```typescript
-declare function arr_value_index<T extends Key>(arr: T[]): Record<T, number>;
+declare function arr_value_index<T extends Key>(arr: T[]): Record<T, number>
 ```
 
 ## Parameters
@@ -58,6 +58,7 @@ Record&lt;T, number&gt;
 
 ```ts
 arr_value_index(['a', 'b', 'c'])
+
 // { a: 0, b: 1, c: 2 }
 ```
 

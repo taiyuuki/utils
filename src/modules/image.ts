@@ -35,7 +35,9 @@ function image_to_canvas(img: HTMLImageElement, size?: ImageSize) {
     cvs.width = size.width
     cvs.height = size.height
     const ctx = cvs.getContext('2d')
-    is_not_void(ctx) && ctx.drawImage(img, 0, 0, cvs.width, cvs.height)
+    if (is_not_void(ctx)) {
+        ctx.drawImage(img, 0, 0, cvs.width, cvs.height)
+    }
 
     return cvs
 }
@@ -67,7 +69,8 @@ function image_to_blob(img: HTMLImageElement): Promise<Blob> {
         cvs.toBlob(blob => {
             if (is_not_void(blob)) {
                 resolve(blob)
-            } else {
+            }
+            else {
                 reject(void 0)
             }
         })

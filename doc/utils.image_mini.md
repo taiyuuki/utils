@@ -9,7 +9,7 @@
 **Signature:**
 
 ```typescript
-declare function image_mini(img: HTMLImageElement, quality: number): HTMLImageElement;
+declare function image_mini(img: HTMLImageElement, quality: number): HTMLImageElement
 ```
 
 ## Parameters

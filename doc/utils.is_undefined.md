@@ -9,7 +9,7 @@
 **Signature:**
 
 ```typescript
-declare function is_undefined(u: any): u is undefined;
+declare function is_undefined(u: any): u is undefined
 ```
 
 ## Parameters

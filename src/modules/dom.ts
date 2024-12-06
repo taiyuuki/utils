@@ -15,7 +15,8 @@ function dom_get_el(selector: string) {
     }
     try {
         return document.querySelector(selector) || void 0
-    } catch (err) {
+    }
+    catch (_e) {
         return void 0
     }
 }
@@ -61,14 +62,16 @@ function dom_get_size(el: Element | Window) {
             width: window.innerWidth,
             height: window.innerHeight,
         }
-    } else if (is_element(el)) {
+    }
+    else if (is_element(el)) {
         const elSize = el.getBoundingClientRect()
 
         return {
             width: elSize.width,
             height: elSize.height,
         }
-    } else {
+    }
+    else {
         throw_type_error('DOM element or window', 'el')
     }
 }

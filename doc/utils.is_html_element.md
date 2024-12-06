@@ -9,7 +9,7 @@
 **Signature:**
 
 ```typescript
-declare function is_html_element(hel: any): hel is HTMLElement;
+declare function is_html_element(hel: any): hel is HTMLElement
 ```
 
 ## Parameters

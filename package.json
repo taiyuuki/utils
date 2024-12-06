@@ -13,7 +13,7 @@
   "bugs": "https://github.com/taiyuuki/utils/issues",
   "homepage": "https://taiyuuki-utils.netlify.app",
   "scripts": {
-    "lint": "eslint --ext .js,.ts ./ --fix",
+    "lint": "eslint --fix",
     "dev": "rollup -c --watch",
     "build": "rollup -c && pnpm doc",
     "test": "vitest",
@@ -49,18 +49,18 @@
   },
   "devDependencies": {
     "@babel/core": "^7.26.0",
-    "@microsoft/api-documenter": "^7.25.21",
-    "@microsoft/api-extractor": "^7.47.11",
+    "@microsoft/api-documenter": "^7.26.1",
+    "@microsoft/api-extractor": "^7.48.0",
     "@rollup/plugin-babel": "^6.0.4",
     "@rollup/plugin-commonjs": "23.0.2",
     "@rollup/plugin-json": "^6.1.0",
     "@rollup/plugin-node-resolve": "^15.3.0",
     "@rollup/plugin-terser": "^0.4.4",
-    "@taiyuuki/eslint-config": "^1.4.15",
+    "@taiyuuki/eslint-config": "^1.4.16",
     "@types/node": "^18.19.31",
-    "eslint": "^9.13.0",
+    "eslint": "^9.16.0",
     "fast-glob": "^3.3.2",
-    "rollup": "^4.24.3",
+    "rollup": "^4.28.0",
     "rollup-plugin-dts": "^6.1.1",
     "rollup-plugin-import-export": "^0.0.1",
     "rollup-plugin-node-builtins": "^2.1.2",
@@ -68,7 +68,7 @@
     "rollup-plugin-typescript2": "^0.36.0",
     "typescript": "^4.9.5",
     "vitepress": "1.0.0-beta.2",
-    "vitest": "^2.1.4",
-    "vue": "^3.5.12"
+    "vitest": "^2.1.8",
+    "vue": "^3.5.13"
   }
 }

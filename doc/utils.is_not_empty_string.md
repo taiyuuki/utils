@@ -9,7 +9,7 @@
 **Signature:**
 
 ```typescript
-declare function is_not_empty_string(s: any, trim?: boolean): boolean;
+declare function is_not_empty_string(s: any, trim?: boolean): boolean
 ```
 
 ## Parameters

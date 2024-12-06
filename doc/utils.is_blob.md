@@ -9,7 +9,7 @@
 **Signature:**
 
 ```typescript
-declare function is_blob(blob: any): blob is Blob;
+declare function is_blob(blob: any): blob is Blob
 ```
 
 ## Parameters

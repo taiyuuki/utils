@@ -9,7 +9,7 @@
 **Signature:**
 
 ```typescript
-declare function is_object(o: any): o is object;
+declare function is_object(o: any): o is object
 ```
 
 ## Parameters

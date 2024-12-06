@@ -9,7 +9,7 @@
 **Signature:**
 
 ```typescript
-declare function blob_to_date_URI(blob: Blob): Promise<ArrayBuffer | string>;
+declare function blob_to_date_URI(blob: Blob): Promise<ArrayBuffer | string>
 ```
 
 ## Parameters

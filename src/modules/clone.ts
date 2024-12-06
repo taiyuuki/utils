@@ -28,12 +28,14 @@ function clone_deep<T extends object>(source: T) {
             if (typeof source[key] === 'object' && source[key] !== null) {
                 if (map.has(source[key])) {
                     target[key] = map.get(source[key])
-                } else {
+                }
+                else {
                     target[key] = Object.create(Object.getPrototypeOf(source[key]))
                     loopStack.push([target[key], source[key]])
                     map.set(source[key], target[key])
                 }
-            } else {
+            }
+            else {
                 target[key] = source[key]
             }
         }
@@ -56,7 +58,8 @@ function clone_deep<T extends object>(source: T) {
 function clone<T extends object>(source: T): T {
     try {
         return clone_simple(source)
-    } catch (_) {
+    }
+    catch (_) {
         return clone_deep(source)
     }
 }

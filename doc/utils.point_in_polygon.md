@@ -12,7 +12,7 @@
 declare function point_in_polygon<Point extends {
     x: number;
     y: number;
-}>(point: Point, polygon: Point[]): boolean;
+}>(point: Point, polygon: Point[]): boolean
 ```
 
 ## Parameters

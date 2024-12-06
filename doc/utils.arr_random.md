@@ -9,7 +9,7 @@
 **Signature:**
 
 ```typescript
-declare function arr_random<T>(arr: T[]): T;
+declare function arr_random<T>(arr: T[]): T
 ```
 
 ## Parameters
@@ -59,8 +59,10 @@ T
 ```ts
 const arr = ['a', 'b', 'c']
 arr_random(arr)
+
 // 'b'
 arr_random(arr)
+
 // 'a'
 ```
 

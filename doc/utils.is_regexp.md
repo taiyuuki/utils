@@ -9,7 +9,7 @@
 **Signature:**
 
 ```typescript
-declare function is_regexp(r: any): r is RegExp;
+declare function is_regexp(r: any): r is RegExp
 ```
 
 ## Parameters

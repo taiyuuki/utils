@@ -9,7 +9,7 @@
 **Signature:**
 
 ```typescript
-declare function canvas_to_blob(cvs: HTMLCanvasElement): Promise<Blob>;
+declare function canvas_to_blob(cvs: HTMLCanvasElement): Promise<Blob>
 ```
 
 ## Parameters

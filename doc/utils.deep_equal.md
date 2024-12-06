@@ -9,7 +9,7 @@
 **Signature:**
 
 ```typescript
-declare function deep_equal(a: any, b: any): boolean;
+declare function deep_equal(a: any, b: any): boolean
 ```
 
 ## Parameters

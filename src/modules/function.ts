@@ -27,7 +27,8 @@ function throttle<T extends Fn>(
             lastTime = now
 
             return func(...args)
-        } else {
+        }
+        else {
             timer = setTimeout(() => {
                 func(...args)
                 timer = void 0
@@ -55,7 +56,8 @@ function debounce<T extends Fn>(
             if (now - lastTime >= timeFrame) {
                 return func(...args)
             }
-        } finally {
+        }
+        finally {
             lastTime = now
         }
     } as T

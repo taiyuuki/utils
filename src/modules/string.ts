@@ -37,9 +37,11 @@ function str_uuid(): string {
     let uuid = ''
     if (typeof crypto !== 'undefined' && 'randomUUID' in crypto) {
         uuid = crypto.randomUUID()
-    } else if (typeof Blob === 'undefined') {
+    }
+    else if (typeof Blob === 'undefined') {
         uuid = `${str_random(8)}-${str_random(4)}-${str_random(4)}-${str_random(4)}-${str_random(12)}`
-    } else {
+    }
+    else {
         const url_uuid = URL.createObjectURL(new Blob())
         uuid = url_uuid.toString().substring(url_uuid.lastIndexOf('/') + 1)
         URL.revokeObjectURL(url_uuid)

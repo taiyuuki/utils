@@ -9,7 +9,7 @@
 **Signature:**
 
 ```typescript
-declare function object_pick<T extends object, K extends keyof T>(obj: T, keys: K[]): Pick<T, K>;
+declare function object_pick<T extends object, K extends keyof T>(obj: T, keys: K[]): Pick<T, K>
 ```
 
 ## Parameters

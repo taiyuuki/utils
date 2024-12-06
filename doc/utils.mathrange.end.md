@@ -10,5 +10,5 @@
 **Signature:**
 
 ```typescript
-end: number;
+number
 ```

@@ -9,7 +9,7 @@
 **Signature:**
 
 ```typescript
-declare function is_fn(fn: any): fn is Fn;
+declare function is_fn(fn: any): fn is Fn
 ```
 
 ## Parameters

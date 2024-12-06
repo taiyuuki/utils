@@ -9,7 +9,7 @@
 **Signature:**
 
 ```typescript
-declare function is_rgb_color(color: any): color is RgbColor;
+declare function is_rgb_color(color: any): color is RgbColor
 ```
 
 ## Parameters

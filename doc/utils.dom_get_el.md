@@ -9,7 +9,7 @@
 **Signature:**
 
 ```typescript
-declare function dom_get_el(selector: string): Element | undefined;
+declare function dom_get_el(selector: string): Element | undefined
 ```
 
 ## Parameters

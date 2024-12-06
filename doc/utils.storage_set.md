@@ -9,7 +9,7 @@
 **Signature:**
 
 ```typescript
-declare function storage_set<T>(key: string, value: T): void;
+declare function storage_set<T>(key: string, value: T): void
 ```
 
 ## Parameters

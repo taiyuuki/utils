@@ -9,7 +9,7 @@
 **Signature:**
 
 ```typescript
-declare function is_file(file: any): file is File;
+declare function is_file(file: any): file is File
 ```
 
 ## Parameters

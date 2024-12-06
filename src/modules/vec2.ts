@@ -24,7 +24,8 @@ class Vec2 {
     dot(v: Vec2 | number) {
         if (typeof v === 'number') {
             return this.x * v + this.y * v
-        } else {
+        }
+        else {
             return this.x * v.x + this.y * v.y
         }
     }
@@ -37,7 +38,8 @@ class Vec2 {
     cross(v: Vec2 | number) {
         if (typeof v === 'number') {
             return this.x * v - this.y * v
-        } else {
+        }
+        else {
             return this.x * v.y - this.y * v.x
         }
     }
@@ -50,7 +52,8 @@ class Vec2 {
     add(v: Vec2 | number) {
         if (typeof v === 'number') {
             return new Vec2(this.x + v, this.y + v)
-        } else {
+        }
+        else {
             return new Vec2(this.x + v.x, this.y + v.y)
         }
     }
@@ -63,7 +66,8 @@ class Vec2 {
     sub(v: Vec2 | number) {
         if (typeof v === 'number') {
             return new Vec2(this.x - v, this.y - v)
-        } else {
+        }
+        else {
             return new Vec2(this.x - v.x, this.y - v.y)
         }
     }
@@ -76,7 +80,8 @@ class Vec2 {
     mul(v: Vec2 | number) {
         if (typeof v === 'number') {
             return new Vec2(this.x * v, this.y * v)
-        } else {
+        }
+        else {
             return new Vec2(this.x * v.x, this.y * v.y)
         }
     }
@@ -89,7 +94,8 @@ class Vec2 {
     div(v: Vec2 | number) {
         if (typeof v === 'number') {
             return new Vec2(this.x / v, this.y / v)
-        } else {
+        }
+        else {
             return new Vec2(this.x / v.x, this.y / v.y)
         }
     }

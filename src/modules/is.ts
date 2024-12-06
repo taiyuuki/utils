@@ -116,7 +116,8 @@ function is_not_void<T>(t: T): t is NonNullable<T> {
 function is_empty_string(s: any, trim?: boolean) {
     if (typeof s === 'string') {
         return (trim === true ? s.trim() : s).length === 0
-    } else {
+    }
+    else {
         return is_void(s)
     }
 }
@@ -133,7 +134,8 @@ function is_empty_string(s: any, trim?: boolean) {
 function is_not_empty_string(s: any, trim?: boolean) {
     if (typeof s === 'string') {
         return (trim === true ? s.trim() : s).length > 0
-    } else {
+    }
+    else {
         return is_not_void(s)
     }
 }
@@ -193,7 +195,8 @@ function is_rgb_color(color: any): color is RgbColor {
     return (color.length === 4 || color.length === 3) && color.every((v, i) => {
         if (i === 3) {
             return Number(v) <= 1
-        } else {
+        }
+        else {
             return Number(v) <= 255
         }
     })

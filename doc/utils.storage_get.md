@@ -9,7 +9,7 @@
 **Signature:**
 
 ```typescript
-declare function storage_get<T, K extends T = T>(key: string, empty?: K): T | undefined;
+declare function storage_get<T, K extends T = T>(key: string, empty?: K): T | undefined
 ```
 
 ## Parameters

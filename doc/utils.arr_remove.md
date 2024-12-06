@@ -9,7 +9,7 @@
 **Signature:**
 
 ```typescript
-declare function arr_remove<T>(arr: T[], value: T): boolean;
+declare function arr_remove<T>(arr: T[], value: T): boolean
 ```
 
 ## Parameters
@@ -75,6 +75,7 @@ boolean
 ```ts
 const arr = ['a', 'b', 'c']
 arr_remove(arr, 'b')
+
 // ['a', 'c']
 ```
 

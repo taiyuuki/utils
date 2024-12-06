@@ -9,7 +9,7 @@
 **Signature:**
 
 ```typescript
-declare function math_between(v: number, min: number, max: number): number;
+declare function math_between(v: number, min: number, max: number): number
 ```
 
 ## Parameters

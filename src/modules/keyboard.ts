@@ -43,7 +43,9 @@ function add_keyboard_events<T extends KeyboardEventOptions>(type: KeyboardEvent
         }
     }
     function handler(e: KeyboardEvent) {
-        valid && !e.isComposing && emit(e.code as KeyboardEventKeys<T>)
+        if(valid && !e.isComposing) {
+            emit(e.code as KeyboardEventKeys<T>)
+        }
     }
     document.addEventListener(type, handler)
 

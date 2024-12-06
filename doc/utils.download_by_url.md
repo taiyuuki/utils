@@ -9,7 +9,7 @@
 **Signature:**
 
 ```typescript
-declare function download_by_url(URL: string, fileName?: string): void;
+declare function download_by_url(URL: string, fileName?: string): void
 ```
 
 ## Parameters

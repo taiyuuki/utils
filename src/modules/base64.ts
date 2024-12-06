@@ -19,7 +19,8 @@ function data_URI_to_blob(dataURI: string, mimeType?: string) {
     let baseStr = ''
     try {
         baseStr = atob(arr[1])
-    } catch (e) {
+    }
+    catch (_e) {
         throw_type_error('base64', 'dataURI')
     }
     let len = baseStr.length

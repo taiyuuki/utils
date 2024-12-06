@@ -9,7 +9,7 @@
 **Signature:**
 
 ```typescript
-declare function log_type_error(type: string, name: string): void;
+declare function log_type_error(type: string, name: string): void
 ```
 
 ## Parameters

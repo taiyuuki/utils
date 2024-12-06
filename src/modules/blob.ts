@@ -15,7 +15,8 @@ function blob_to_date_URI(blob: Blob): Promise<ArrayBuffer | string> {
             const result = e.target?.result
             if (is_not_void(result)) {
                 resolve(result)
-            } else {
+            }
+            else {
                 reject(void 0)
             }
         }

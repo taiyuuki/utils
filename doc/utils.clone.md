@@ -9,7 +9,7 @@
 **Signature:**
 
 ```typescript
-declare function clone<T extends object>(source: T): T;
+declare function clone<T extends object>(source: T): T
 ```
 
 ## Parameters

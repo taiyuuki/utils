@@ -28,7 +28,8 @@ function copy_text(target: HTMLElement | number | string, addition?: string) {
     }
     if ('clipboard' in navigator) {
         navigator.clipboard.writeText(text).catch(copyBySelect)
-    } else {
+    }
+    else {
         copyBySelect()
     }
 }

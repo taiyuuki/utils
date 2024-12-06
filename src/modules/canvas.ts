@@ -27,7 +27,8 @@ function canvas_to_blob(cvs: HTMLCanvasElement): Promise<Blob> {
         cvs.toBlob(blob => {
             if (is_not_void(blob)) {
                 resolve(blob)
-            } else {
+            }
+            else {
                 reject(void 0)
             }
         })

@@ -101,7 +101,8 @@ function rgb_to_hsl(rgb: RgbColor): HslColor {
     const l = (max + min) / 2
     if (max === min) {
         h = s = 0
-    } else {
+    }
+    else {
         const d = max - min
         s = l > 0.5 ? d / (2 - max - min) : d / (max + min)
         switch (max) {
@@ -138,15 +139,20 @@ function hsl_to_rgb(hsl: HslColor): RgbColor {
     const vRGB = []
     if (h >= 0 && h < 60) {
         vRGB.push(c, x, 0)
-    } else if (h >= 60 && h < 120) {
+    }
+    else if (h >= 60 && h < 120) {
         vRGB.push(x, c, 0)
-    } else if (h >= 120 && h < 180) {
+    }
+    else if (h >= 120 && h < 180) {
         vRGB.push(0, c, x)
-    } else if (h >= 180 && h < 240) {
+    }
+    else if (h >= 180 && h < 240) {
         vRGB.push(0, x, c)
-    } else if (h >= 240 && h < 300) {
+    }
+    else if (h >= 240 && h < 300) {
         vRGB.push(x, 0, c)
-    } else if (h >= 300 && h < 360) {
+    }
+    else if (h >= 300 && h < 360) {
         vRGB.push(c, 0, x)
     }
     const [vR, vG, vB] = vRGB

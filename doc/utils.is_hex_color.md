@@ -9,7 +9,7 @@
 **Signature:**
 
 ```typescript
-declare function is_hex_color(color: string): boolean;
+declare function is_hex_color(color: string): boolean
 ```
 
 ## Parameters

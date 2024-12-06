@@ -21,7 +21,8 @@ describe('math', () => {
             const n = math_random_int(0, 5)
             if (list[n] === void 0) {
                 list[n] = 0
-            } else {
+            }
+            else {
                 list[n]++
             }
         }

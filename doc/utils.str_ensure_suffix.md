@@ -9,7 +9,7 @@
 **Signature:**
 
 ```typescript
-declare function str_ensure_suffix(s: string, suffix: string): string;
+declare function str_ensure_suffix(s: string, suffix: string): string
 ```
 
 ## Parameters

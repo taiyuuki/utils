@@ -9,7 +9,7 @@
 **Signature:**
 
 ```typescript
-declare function is_email(str: string): boolean;
+declare function is_email(str: string): boolean
 ```
 
 ## Parameters
