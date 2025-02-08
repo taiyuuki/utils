@@ -9,7 +9,7 @@
 **Signature:**
 
 ```typescript
-declare function int_to_bytes(num: number): Uint8Array
+declare function int_to_bytes(num: number): Uint8Array;
 ```
 
 ## Parameters

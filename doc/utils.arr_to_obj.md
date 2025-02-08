@@ -9,7 +9,7 @@
 **Signature:**
 
 ```typescript
-declare function arr_to_obj<T extends Key, V = boolean>(arr: T[], v?: V): TupleToObject<T, V>
+declare function arr_to_obj<T extends Key, V = boolean>(arr: T[], v?: V): TupleToObject<T, V>;
 ```
 
 ## Parameters
@@ -75,7 +75,6 @@ TupleToObject&lt;T, V&gt;
 ```ts
 const arr = ['a', 'b', 'c']
 arr_to_obj(arr)
-
 // { a: true, b: true, c: true }
 ```
 

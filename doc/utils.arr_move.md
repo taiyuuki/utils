@@ -9,7 +9,7 @@
 **Signature:**
 
 ```typescript
-declare function arr_move<T extends any[]>(arr: T, from: number, to: number): T
+declare function arr_move<T extends any[]>(arr: T, from: number, to: number): T;
 ```
 
 ## Parameters
@@ -91,7 +91,6 @@ T
 ```ts
 const arr = ['a', 'b', 'c']
 arr_move(arr, 1, 2)
-
 // ['a', 'c', 'b']
 ```
 

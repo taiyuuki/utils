@@ -9,7 +9,7 @@
 **Signature:**
 
 ```typescript
-declare function image_resize(img: HTMLImageElement, options: ImageOptions): HTMLImageElement
+declare function image_resize(img: HTMLImageElement, options: ImageOptions): HTMLImageElement;
 ```
 
 ## Parameters

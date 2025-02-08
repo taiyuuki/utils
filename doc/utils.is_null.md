@@ -9,7 +9,7 @@
 **Signature:**
 
 ```typescript
-declare function is_null(n: any): n is null
+declare function is_null(n: any): n is null;
 ```
 
 ## Parameters

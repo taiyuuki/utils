@@ -9,7 +9,7 @@
 **Signature:**
 
 ```typescript
-declare function str_ensure_chinese(str: string): string
+declare function str_ensure_chinese(str: string): string;
 ```
 
 ## Parameters

@@ -9,7 +9,7 @@
 **Signature:**
 
 ```typescript
-declare function image_to_data_URI(img: HTMLImageElement, type?: string): string
+declare function image_to_data_URI(img: HTMLImageElement, type?: string): string;
 ```
 
 ## Parameters

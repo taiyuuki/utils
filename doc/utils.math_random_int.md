@@ -9,7 +9,7 @@
 **Signature:**
 
 ```typescript
-declare function math_random_int(from: number, to: number): number
+declare function math_random_int(from: number, to: number): number;
 ```
 
 ## Parameters

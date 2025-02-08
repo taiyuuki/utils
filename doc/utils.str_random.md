@@ -9,7 +9,7 @@
 **Signature:**
 
 ```typescript
-declare function str_random(count: number, radix?: number): string
+declare function str_random(count: number, radix?: number): string;
 ```
 
 ## Parameters

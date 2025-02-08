@@ -9,7 +9,7 @@
 **Signature:**
 
 ```typescript
-declare function str_uuid(): string
+declare function str_uuid(): string;
 ```
 **Returns:**
 

@@ -9,7 +9,7 @@
 **Signature:**
 
 ```typescript
-declare function date_now(format?: string): string
+declare function date_now(format?: string): string;
 ```
 
 ## Parameters

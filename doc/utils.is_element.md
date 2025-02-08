@@ -9,7 +9,7 @@
 **Signature:**
 
 ```typescript
-declare function is_element(el: any): el is Element
+declare function is_element(el: any): el is Element;
 ```
 
 ## Parameters

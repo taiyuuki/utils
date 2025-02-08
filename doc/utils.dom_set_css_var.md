@@ -9,7 +9,7 @@
 **Signature:**
 
 ```typescript
-declare function dom_set_css_var(varName: string, value: string, el?: HTMLElement): void
+declare function dom_set_css_var(varName: string, value: string, el?: HTMLElement): void;
 ```
 
 ## Parameters

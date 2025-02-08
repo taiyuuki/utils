@@ -9,7 +9,7 @@
 **Signature:**
 
 ```typescript
-declare function get_lightness_value(color: Color): number
+declare function get_lightness_value(color: Color): number;
 ```
 
 ## Parameters

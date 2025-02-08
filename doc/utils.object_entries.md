@@ -9,7 +9,7 @@
 **Signature:**
 
 ```typescript
-declare function object_entries<T extends object>(obj: T): Entries<T>
+declare function object_entries<T extends object>(obj: T): Entries<T>;
 ```
 
 ## Parameters

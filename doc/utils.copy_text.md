@@ -9,7 +9,7 @@
 **Signature:**
 
 ```typescript
-declare function copy_text(target: HTMLElement | number | string, addition?: string): void
+declare function copy_text(target: HTMLElement | number | string, addition?: string): void;
 ```
 
 ## Parameters

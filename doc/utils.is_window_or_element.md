@@ -9,7 +9,7 @@
 **Signature:**
 
 ```typescript
-declare function is_window_or_element(el: any): el is Element | Window
+declare function is_window_or_element(el: any): el is Element | Window;
 ```
 
 ## Parameters

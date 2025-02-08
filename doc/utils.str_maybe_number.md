@@ -9,7 +9,7 @@
 **Signature:**
 
 ```typescript
-declare function str_maybe_number(target: number | string): string
+declare function str_maybe_number(target: number | string): string;
 ```
 
 ## Parameters

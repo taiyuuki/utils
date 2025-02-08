@@ -12,7 +12,7 @@
 declare function dom_get_size(el: Element | Window): {
     width: number;
     height: number;
-} | undefined
+} | undefined;
 ```
 
 ## Parameters

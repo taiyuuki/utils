@@ -9,7 +9,7 @@
 **Signature:**
 
 ```typescript
-declare function object_concat<T extends object, S extends object>(target: T, source: S): Concat<T, S>
+declare function object_concat<T extends object, S extends object>(target: T, source: S): Concat<T, S>;
 ```
 
 ## Parameters

@@ -9,7 +9,7 @@
 **Signature:**
 
 ```typescript
-declare function get_contrast_color(color: Color): 'black' | 'white'
+declare function get_contrast_color(color: Color): "black" | "white";
 ```
 
 ## Parameters

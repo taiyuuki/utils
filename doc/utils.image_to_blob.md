@@ -9,7 +9,7 @@
 **Signature:**
 
 ```typescript
-declare function image_to_blob(img: HTMLImageElement): Promise<Blob>
+declare function image_to_blob(img: HTMLImageElement): Promise<Blob>;
 ```
 
 ## Parameters

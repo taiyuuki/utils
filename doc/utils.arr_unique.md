@@ -9,7 +9,7 @@
 **Signature:**
 
 ```typescript
-declare function arr_unique<T>(arr: T[]): T[]
+declare function arr_unique<T>(arr: T[]): T[];
 ```
 
 ## Parameters
@@ -59,7 +59,6 @@ T\[\]
 ```ts
 const arr = ['a', 'b', 'c', 'c', 'a']
 arr_unique(arr)
-
 // ['a', 'b', 'c']
 ```
 

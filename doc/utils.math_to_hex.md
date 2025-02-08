@@ -9,7 +9,7 @@
 **Signature:**
 
 ```typescript
-declare function math_to_hex(n: number): string
+declare function math_to_hex(n: number): string;
 ```
 
 ## Parameters

@@ -28,7 +28,7 @@ const config = defineConfig([
         plugins: [
             importExportPlugin(),
             ts(),
-            babelPlugin({ exclude: '**/node_modules/**', extentions: ['.ts'] }),
+            babelPlugin({ exclude: '**/node_modules/**', extentions: ['.ts'], babelHelpers: 'bundled' }),
             json(),
             commonjs(),
         ],
@@ -45,7 +45,7 @@ const config = defineConfig([
         plugins: [
             importExportPlugin(),
             ts(),
-            babelPlugin({ exclude: '**/node_modules/**', extentions: ['.ts'] }),
+            babelPlugin({ exclude: '**/node_modules/**', extentions: ['.ts'], babelHelpers: 'bundled' }),
             json(),
             commonjs(),
             resolve({ preferBuiltins: true, mainFields: ['browser'] }),

@@ -9,7 +9,7 @@
 **Signature:**
 
 ```typescript
-declare function is_void(t: any): t is null | undefined
+declare function is_void(t: any): t is null | undefined;
 ```
 
 ## Parameters

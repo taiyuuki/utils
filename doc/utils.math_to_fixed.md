@@ -9,7 +9,7 @@
 **Signature:**
 
 ```typescript
-declare function math_to_fixed(n: number, digit?: number): number
+declare function math_to_fixed(n: number, digit?: number): number;
 ```
 
 ## Parameters

@@ -9,7 +9,7 @@
 **Signature:**
 
 ```typescript
-declare function is_number(n: any): n is number
+declare function is_number(n: any): n is number;
 ```
 
 ## Parameters
@@ -58,7 +58,7 @@ n is number
 
 ```ts
 is_number(1)// true
-is_number(Number.NaN)// false
+is_number(NaN)// false
 is_number(Number.NEGATIVE_INFINITY)// false
 ```
 

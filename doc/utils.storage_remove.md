@@ -9,7 +9,7 @@
 **Signature:**
 
 ```typescript
-declare function storage_remove(key: string): void
+declare function storage_remove(key: string): void;
 ```
 
 ## Parameters

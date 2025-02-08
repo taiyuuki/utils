@@ -9,7 +9,7 @@
 **Signature:**
 
 ```typescript
-declare function hsl_to_rgb(hsl: HslColor): RgbColor
+declare function hsl_to_rgb(hsl: HslColor): RgbColor;
 ```
 
 ## Parameters

@@ -9,7 +9,7 @@
 **Signature:**
 
 ```typescript
-declare function debounce<T extends Fn>(func: T, timeFrame: number): T
+declare function debounce<T extends Fn>(func: T, timeFrame: number): T;
 ```
 
 ## Parameters

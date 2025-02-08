@@ -10,5 +10,5 @@
 **Signature:**
 
 ```typescript
-boolean
+s_open: boolean;
 ```

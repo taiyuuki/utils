@@ -9,7 +9,7 @@
 **Signature:**
 
 ```typescript
-declare function is_empty_array(v: any, nullable?: boolean): v is []
+declare function is_empty_array(v: any, nullable?: boolean): v is [];
 ```
 
 ## Parameters

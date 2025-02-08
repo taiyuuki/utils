@@ -9,7 +9,7 @@
 **Signature:**
 
 ```typescript
-declare function object_keys<T extends object>(o: T): Keys<T>
+declare function object_keys<T extends object>(o: T): Keys<T>;
 ```
 
 ## Parameters

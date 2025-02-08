@@ -16,13 +16,13 @@ function clone_simple<T extends object>(source: T): T {
  */
 function clone_deep<T extends object>(source: T) {
     const target = Object.create(Object.getPrototypeOf(source)) as T
-    const loopStack = [[target, source]] as [Record<string, any>, Record<string, any>][]
+    const loopStack = [[target, source]] as [Record<string | symbol, any>, Record<string | symbol, any>][]
     const map = new WeakMap()
     map.set(source, target)
 
     while (loopStack.length > 0) {
         const [target, source] = loopStack.pop()!
-        const keys = Object.getOwnPropertyNames(source)
+        const keys = Reflect.ownKeys(source)
 
         for (const key of keys) {
             if (typeof source[key] === 'object' && source[key] !== null) {
@@ -38,6 +38,8 @@ function clone_deep<T extends object>(source: T) {
             else {
                 target[key] = source[key]
             }
+            const descriptor = Object.getOwnPropertyDescriptor(source, key)!
+            Object.defineProperty(target, key, { enumerable: descriptor.enumerable, writable: descriptor.writable, value: target[key] })
         }
     }
 

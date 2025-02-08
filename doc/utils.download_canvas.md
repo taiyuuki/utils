@@ -9,7 +9,7 @@
 **Signature:**
 
 ```typescript
-declare function download_canvas(cvs: HTMLCanvasElement, imageName?: string): void
+declare function download_canvas(cvs: HTMLCanvasElement, imageName?: string): void;
 ```
 
 ## Parameters

@@ -9,7 +9,7 @@
 **Signature:**
 
 ```typescript
-declare function is_string_like(target: any): target is number | string
+declare function is_string_like(target: any): target is number | string;
 ```
 
 ## Parameters

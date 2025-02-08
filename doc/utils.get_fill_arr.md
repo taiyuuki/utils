@@ -9,7 +9,7 @@
 **Signature:**
 
 ```typescript
-declare function get_fill_arr<T>(length: number, value: T): T[]
+declare function get_fill_arr<T>(length: number, value: T): T[];
 ```
 
 ## Parameters
@@ -74,7 +74,6 @@ T\[\]
 
 ```ts
 get_fill_arr(3, 'a')
-
 // ['a', 'a', 'a']
 ```
 

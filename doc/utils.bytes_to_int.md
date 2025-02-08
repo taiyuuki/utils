@@ -9,7 +9,7 @@
 **Signature:**
 
 ```typescript
-declare function bytes_to_int(bytes: [number, number, number, number]): number
+declare function bytes_to_int(bytes: [number, number, number, number]): number;
 ```
 
 ## Parameters

@@ -14,7 +14,7 @@
 **Signature:**
 
 ```typescript
-declare function str_complement(n: number | string, len?: number, char?: string): string
+declare function str_complement(n: number | string, len?: number, char?: string): string;
 ```
 
 ## Parameters

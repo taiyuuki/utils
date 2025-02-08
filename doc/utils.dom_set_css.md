@@ -9,7 +9,7 @@
 **Signature:**
 
 ```typescript
-declare function dom_set_css(el: HTMLElement, css: Partial<CSSStyleDeclaration>): void
+declare function dom_set_css(el: HTMLElement, css: Partial<CSSStyleDeclaration>): void;
 ```
 
 ## Parameters

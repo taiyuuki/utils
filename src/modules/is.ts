@@ -319,6 +319,7 @@ function is_email(str: string): boolean {
 
 /**
  * 判断给定的参数是否是函数
+ * @public
  * @param target - 参数 `target` 是 `any` 类型，这意味着它可以是任何数据类型
  * @returns 返回布尔值
  */

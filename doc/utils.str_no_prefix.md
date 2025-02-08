@@ -9,7 +9,7 @@
 **Signature:**
 
 ```typescript
-declare function str_no_prefix(s: string, prefix: string): string
+declare function str_no_prefix(s: string, prefix: string): string;
 ```
 
 ## Parameters

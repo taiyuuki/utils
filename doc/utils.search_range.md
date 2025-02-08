@@ -12,7 +12,7 @@
 **Signature:**
 
 ```typescript
-declare function search_range(n: number, ranges: (number | string)[]): MathRange | null
+declare function search_range(n: number, ranges: (number | string)[]): MathRange | null;
 ```
 
 ## Parameters

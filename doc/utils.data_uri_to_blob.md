@@ -9,7 +9,7 @@
 **Signature:**
 
 ```typescript
-declare function data_URI_to_blob(dataURI: string, mimeType?: string): Blob
+declare function data_URI_to_blob(dataURI: string, mimeType?: string): Blob;
 ```
 
 ## Parameters

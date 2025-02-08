@@ -9,7 +9,7 @@
 **Signature:**
 
 ```typescript
-declare function is_callable<T extends Fn>(target: any): target is T
+declare function is_callable<T extends Fn>(target: any): target is T;
 ```
 
 ## Parameters

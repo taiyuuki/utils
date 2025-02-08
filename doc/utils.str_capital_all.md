@@ -9,7 +9,7 @@
 **Signature:**
 
 ```typescript
-declare function str_capital_all(str: string): string
+declare function str_capital_all(str: string): string;
 ```
 
 ## Parameters

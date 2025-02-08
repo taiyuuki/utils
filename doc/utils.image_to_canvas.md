@@ -9,7 +9,7 @@
 **Signature:**
 
 ```typescript
-declare function image_to_canvas(img: HTMLImageElement, size?: ImageSize): HTMLCanvasElement
+declare function image_to_canvas(img: HTMLImageElement, size?: ImageSize): HTMLCanvasElement;
 ```
 
 ## Parameters

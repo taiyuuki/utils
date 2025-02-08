@@ -9,7 +9,7 @@
 **Signature:**
 
 ```typescript
-declare function is_not_void<T>(t: T): t is NonNullable<T>
+declare function is_not_void<T>(t: T): t is NonNullable<T>;
 ```
 
 ## Parameters

@@ -12,7 +12,7 @@
 **Signature:**
 
 ```typescript
-declare function match_range<T>(n: number, pattern: Record<string, T | ((range: MathRange)=> T)>): T | null
+declare function match_range<T>(n: number, pattern: Record<string, T | ((range: MathRange) => T)>): T | null;
 ```
 
 ## Parameters
@@ -78,9 +78,9 @@ T \| null
 ```ts
 const result = match_range(15, {
     '[0, 10]': 0,
-    '(10, 20]': range => range.end - range.start,
+    '(10, 20]': (range) => range.end - range.start,
     '(20, 30]': 2,
-    '_': 0, // _ 表示匹配任意其他范围的数字
-}) // result = 10
+    _: 0, // _ 表示匹配任意其他范围的数字
+})   // result = 10
 ```
 

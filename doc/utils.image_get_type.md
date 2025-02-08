@@ -9,7 +9,7 @@
 **Signature:**
 
 ```typescript
-declare function image_get_type(filename: string): 'image/bmp' | 'image/gif' | 'image/jpeg' | 'image/png' | 'image/svg+xml' | 'image/tiff' | 'image/webp' | 'image/x-icon'
+declare function image_get_type(filename: string): "image/png" | "image/jpeg" | "image/gif" | "image/webp" | "image/bmp" | "image/svg+xml" | "image/x-icon" | "image/tiff";
 ```
 
 ## Parameters

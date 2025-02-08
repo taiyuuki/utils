@@ -13,8 +13,8 @@ declare function add_keyboard_events<T extends KeyboardEventOptions>(type: Keybo
     close(): void;
     off(): void;
     on(): void;
-    emit: (code: KeyboardEventKeys<T>)=> void;
-}
+    emit: (code: KeyboardEventKeys<T>) => void;
+};
 ```
 
 ## Parameters
@@ -80,23 +80,19 @@ T
 ```ts
 // 绑定事件
 const ctrl = add_keyboard_events('keydown', {
-    KeyW() {
-        console.log('w')
-    },
-    Enter() {
-        console.log('enter')
-    },
+ KeyW(){
+   console.log('w')
+ },
+ Enter(){
+   console.log('enter')
+ }
 })
-
 // 手动触发事件
 ctrl.emit('KeyW')
-
 // 关闭事件
 ctrl.off()
-
 // 重新开启事件。
 ctrl.on()
-
 // 解除事件绑定，无法再开启。
 ctrl.close()
 ```

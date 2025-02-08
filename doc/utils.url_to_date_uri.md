@@ -9,7 +9,7 @@
 **Signature:**
 
 ```typescript
-declare function url_to_date_URI(url: string, type?: string): Promise<string>
+declare function url_to_date_URI(url: string, type?: string): Promise<string>;
 ```
 
 ## Parameters

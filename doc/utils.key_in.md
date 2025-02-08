@@ -9,7 +9,7 @@
 **Signature:**
 
 ```typescript
-declare function key_in<T extends object>(key: Key, obj: T): key is keyof T
+declare function key_in<T extends object>(key: Key, obj: T): key is keyof T;
 ```
 
 ## Parameters

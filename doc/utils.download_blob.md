@@ -9,7 +9,7 @@
 **Signature:**
 
 ```typescript
-declare function download_blob(blob: Blob, fileName?: string): void
+declare function download_blob(blob: Blob, fileName?: string): void;
 ```
 
 ## Parameters

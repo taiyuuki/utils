@@ -9,7 +9,7 @@
 **Signature:**
 
 ```typescript
-declare function is_base64(str: string): str is string
+declare function is_base64(str: string): str is string;
 ```
 
 ## Parameters

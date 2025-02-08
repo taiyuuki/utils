@@ -9,7 +9,7 @@
 **Signature:**
 
 ```typescript
-declare function dom_get_css<T extends Element>(el: T, prop: CSSStyleName): string
+declare function dom_get_css<T extends Element>(el: T, prop: CSSStyleName): string;
 ```
 
 ## Parameters

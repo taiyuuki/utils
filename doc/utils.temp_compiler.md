@@ -9,7 +9,7 @@
 **Signature:**
 
 ```typescript
-declare function temp_compiler<T extends object>(temp: string, data: T): string
+declare function temp_compiler<T extends object>(temp: string, data: T): string;
 ```
 
 ## Parameters
@@ -73,14 +73,14 @@ string
 
 
 ```ts
-const temp = '<div>name: ${name}, score: ${score()}, pass: ${pass ? "yes" : "no"}</div>'
-const data = {
-    name: 'Jack',
-    score() {
-        return 59
-    },
-    pass: false,
-}
-console.log(temp_compiler(temp, data)) // "<div>name: Jack, score: 59, pass: no</div>"
+ const temp = '<div>name: ${name}, score: ${score()}, pass: ${pass ? "yes" : "no"}</div>'
+ const data = {
+   name: 'Jack',
+   score(){
+     return 59
+   },
+   pass: false
+ }
+ console.log(temp_compiler(temp, data)) // "<div>name: Jack, score: 59, pass: no</div>"
 ```
 

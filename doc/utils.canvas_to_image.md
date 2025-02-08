@@ -9,7 +9,7 @@
 **Signature:**
 
 ```typescript
-declare function canvas_to_image(cvs: HTMLCanvasElement, quality?: number): HTMLImageElement
+declare function canvas_to_image(cvs: HTMLCanvasElement, quality?: number): HTMLImageElement;
 ```
 
 ## Parameters

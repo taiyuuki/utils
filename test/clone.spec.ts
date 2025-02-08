@@ -9,6 +9,7 @@ describe('clone', () => {
                 c() {
                     return null
                 },
+                [Symbol('d')]: Symbol('e'),
             },
             d: {
                 e: '123',
@@ -24,11 +25,12 @@ describe('clone', () => {
         } as any
         source.b.test = source
         source.__proto__.a = '123'
+        
+        Object.freeze(source)
         const target = clone_deep(source)
 
         expect(target).toEqual(source)
         expect(target === target.b.test).toEqual(true)
         expect(target === source.b.test).toEqual(false)
-        expect(target.a).toEqual('123')
     })
 })

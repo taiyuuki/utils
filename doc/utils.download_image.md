@@ -9,7 +9,7 @@
 **Signature:**
 
 ```typescript
-declare function download_image(img: HTMLImageElement, imageName?: string): void
+declare function download_image(img: HTMLImageElement, imageName?: string): void;
 ```
 
 ## Parameters
